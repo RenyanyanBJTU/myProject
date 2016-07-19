@@ -1,0 +1,62 @@
+一、qemu安装系统
+android-x86-4.2-20130228.iso 
+android-x86-4.3-20130725.iso 
+
+二、进入镜像（img 或raw）所在目录执行脚本autosh.sh，生成安卓系统目录树和比较目录差异文件
+autosh.sh中执行命令顺序解释：
+1、挂载系统4.2 and 4.3
+（1）sudo losetup /dev/loop0 android-4.2.raw
+#loop循环设备可把文件虚拟成块设备(Block Device),借以模拟整个文件系统，让用户得以将其视为硬盘、光驱或者软驱等设备，并加载当作目录来使用。losetup命令用于文件、块设备和循环设备的连接及设置，如果仅给予设备代号而没有其它参数，则会显示该设备当前的情况。loop0忙碌则使用loop1
+
+（2）sudo kpartx -av /dev/loop0
+kpartx未安装的话执行命令sudo apt-get install kpartx
+#在linux中，如果映像文件(.img)含有分区表的话，那么用losetup这个程序来加载文件系统就有点力不从心了。因为losetup只能加载无分区的文件系统映像文件。kpartx正好配合losetup来挂载带有分区表的映像文件。
+#其中，kpartx -a指定去添加哪个映像文件(add)，-v是指挂到loop设备(verbose)，-d就是delete的意思了。可以使用 kpartx -dv /dev/loopX 卸载刚才挂接的东西。然后再使用losetup -d /dev/loopX断掉和映像文件的挂接关系。
+
+（3）sudo mount /dev/mapper/loop0p1 /mnt/android4.2
+#此命令是挂载镜像文件的分区1（p1），因为安装系统时并没有为引导程序和文件系统以及其他子系统单独分区，所以此处是挂载了系统的所有文件夹，ls下可以看到安卓系统的文件夹有如下目录：
+	android-4.2-test  grub  lost+found
+
+(4)sudo cp -R /mnt/android4.2/. android4.2
+#将挂载的文件拷贝出来。
+(5)卸载挂载系统
+sudo umount /mnt/android4.2
+sudo kpartx -dv /dev/loop0
+sudo losetup -d /dev/loop0
+
+(6)查看安卓系统的文件系统ramdisk.img
+cd android4.2/android-4.2-test/
+sudo mkdir ramdisk
+cd ramdisk
+sudo cp ramdisk.img ---> ramdisk/
+sudo mv ramdisk.img ramdisk.img.gz
+
+#Ramdisk镜像是采用cpio打包，gzip压缩的,故使用下列命令还原为目录树
+sudo gunzip ramdisk.img.gz 
+sudo cpio -i -F ramdisk.img 
+
+#ls就可以看到ramdisk目录的内容
+#安卓运行时会把 system和 data分别加载到 ramdisk文件系统中的system和 data目录下。
+
+3、生成目录树，比较差异
+（1）安卓签名
+  Android系统要求所有的程序经过数字签名才能安装，如果没有可用的数字签名，系统将不许安装运行此程序。
+md5sum ramdisk.img 可以获取ramdisk.img的签名
+（2）diff
+-b或–ignore-space-change 　忽略空格造成的不同。
+-B或–ignore-blank-lines 　忽略空行造成的不同。
+-c：使用纲要输出格式
+-I：忽略大小写的变化。
+-n –rcs：输出RCS格式。
+diff有很多功能平时我们不常用到，最常用的功能莫过于生成patch文件了：
+
+diff -Nur treeforandroid4.2.txt treeforandroid4.3.txt  > foo.patch
+参数 -u 表示使用 unified 格式，-r 表示比较目录，-N 表示将不存在的文件当作空文件处理，这样新添加的文件也会出现在patch文件中。
+
+然后在需要应用patch的地方使用下述命令即可：
+patch -p0 < foo.patch
+
+diff的 -y 命令(长格式为 –side-by-side)可以将屏幕分成左右两部分，来比较两个文件之间的差异。许多图形化的比较工具都有这个功能，但如果只能使用命令行，这个参数 就相当有用了。如果要改变左右各部分的宽度，可以通过 -W (–width)参数来指定。
+–ignore-blank-lines 参数可以不检查空白行。这样DOS格式和Unix格式的文件互相比较时，就不至于因为换行符不一致而出现大量的差异。
+
+
