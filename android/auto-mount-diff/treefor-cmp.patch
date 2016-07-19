@@ -1,0 +1,2512 @@
+--- treeforandroid4.2.txt	2016-07-18 20:45:10.022226372 +0800
++++ treeforandroid4.3.txt	2016-07-18 20:45:10.318226376 +0800
+@@ -1,5 +1,5 @@
+-android4.2
+-├── android-4.2-test
++android4.3
++├── android-4.3-test
+ │   ├── data
+ │   │   ├── app
+ │   │   ├── app-asec
+@@ -7,33 +7,26 @@
+ │   │   ├── app-private
+ │   │   ├── backup
+ │   │   │   ├── com.android.internal.backup.LocalTransport
+-│   │   │   ├── com.google.android.backup.BackupTransportService
+ │   │   │   └── pending
+-│   │   │       └── journal808736927.tmp
++│   │   │       └── journal1248167152.tmp
++│   │   ├── bugreports -> data/com.android.shell/files/bugreports
+ │   │   ├── dalvik-cache
+ │   │   │   ├── system@app@AndroidTerm.apk@classes.dex
+-│   │   │   ├── system@app@GenieWidget.apk@classes.dex
+ │   │   │   ├── system@app@Gmail2.apk@classes.dex
+ │   │   │   ├── system@app@GmsCore.apk@classes.dex
+ │   │   │   ├── system@app@GMS_Maps.apk@classes.dex
+-│   │   │   ├── system@app@GoogleBackupTransport.apk@classes.dex
+ │   │   │   ├── system@app@GoogleCalendarSyncAdapter.apk@classes.dex
+ │   │   │   ├── system@app@GoogleContactsSyncAdapter.apk@classes.dex
+ │   │   │   ├── system@app@GoogleFeedback.apk@classes.dex
+ │   │   │   ├── system@app@GoogleLoginService.apk@classes.dex
++│   │   │   ├── system@app@GoogleOneTimeInitializer.apk@classes.dex
+ │   │   │   ├── system@app@GooglePartnerSetup.apk@classes.dex
+ │   │   │   ├── system@app@GoogleServicesFramework.apk@classes.dex
+-│   │   │   ├── system@app@LatinImeDictionaryPack.apk@classes.dex
+-│   │   │   ├── system@app@MediaUploader.apk@classes.dex
+-│   │   │   ├── system@app@Music2.apk@classes.dex
+ │   │   │   ├── system@app@NetworkLocation.apk@classes.dex
+-│   │   │   ├── system@app@OneTimeInitializer.apk@classes.dex
+ │   │   │   ├── system@app@Phonesky.apk@classes.dex
+ │   │   │   ├── system@app@SetupWizard.apk@classes.dex
+ │   │   │   ├── system@app@Street.apk@classes.dex
+-│   │   │   ├── system@app@Superuser.apk@classes.dex
+-│   │   │   ├── system@app@talkback.apk@classes.dex
+-│   │   │   ├── system@app@VideoEditorGoogle.apk@classes.dex
++│   │   │   ├── system@app@SunBeam.apk@classes.dex
+ │   │   │   ├── system@app@YouTube.apk@classes.dex
+ │   │   │   ├── system@framework@com.google.android.maps.jar@classes.dex
+ │   │   │   └── system@framework@com.google.android.media.effects.jar@classes.dex
+@@ -44,15 +37,16 @@
+ │   │   │   │   └── lib -> /data/app-lib/com.android.basicsmsreceiver
+ │   │   │   ├── com.android.bluetooth
+ │   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+ │   │   │   │   └── lib -> /data/app-lib/com.android.bluetooth
+ │   │   │   ├── com.android.browser
+ │   │   │   │   └── lib -> /data/app-lib/com.android.browser
+ │   │   │   ├── com.android.calculator2
++│   │   │   │   ├── cache
++│   │   │   │   ├── files
++│   │   │   │   │   └── calculator.data
+ │   │   │   │   └── lib -> /data/app-lib/com.android.calculator2
+ │   │   │   ├── com.android.calendar
+ │   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+ │   │   │   │   ├── lib -> /data/app-lib/com.android.calendar
+ │   │   │   │   └── shared_prefs
+ │   │   │   │       ├── calendar_alerts.xml
+@@ -61,13 +55,11 @@
+ │   │   │   ├── com.android.certinstaller
+ │   │   │   │   └── lib -> /data/app-lib/com.android.certinstaller
+ │   │   │   ├── com.android.contacts
+-│   │   │   │   ├── cache
+ │   │   │   │   └── lib -> /data/app-lib/com.android.contacts
+ │   │   │   ├── com.android.defcontainer
+ │   │   │   │   └── lib -> /data/app-lib/com.android.defcontainer
+ │   │   │   ├── com.android.deskclock
+ │   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+ │   │   │   │   ├── databases
+ │   │   │   │   │   ├── alarms.db
+ │   │   │   │   │   └── alarms.db-journal
+@@ -77,21 +69,32 @@
+ │   │   │   │       └── com.android.deskclock_preferences.xml
+ │   │   │   ├── com.android.development
+ │   │   │   │   └── lib -> /data/app-lib/com.android.development
+-│   │   │   ├── com.android.development_settings
+-│   │   │   │   └── lib -> /data/app-lib/com.android.development_settings
++│   │   │   ├── com.android.dialer
++│   │   │   │   ├── cache
++│   │   │   │   └── lib -> /data/app-lib/com.android.dialer
+ │   │   │   ├── com.android.dreams.basic
+ │   │   │   │   └── lib -> /data/app-lib/com.android.dreams.basic
+-│   │   │   ├── com.android.dreams.phototable
+-│   │   │   │   └── lib -> /data/app-lib/com.android.dreams.phototable
++│   │   │   ├── com.android.email
++│   │   │   │   ├── cache
++│   │   │   │   ├── databases
++│   │   │   │   │   ├── EmailProviderBackup.db
++│   │   │   │   │   ├── EmailProviderBackup.db-journal
++│   │   │   │   │   ├── EmailProviderBody.db
++│   │   │   │   │   ├── EmailProviderBody.db-journal
++│   │   │   │   │   ├── EmailProvider.db
++│   │   │   │   │   └── EmailProvider.db-journal
++│   │   │   │   ├── files
++│   │   │   │   │   └── deviceName
++│   │   │   │   ├── lib -> /data/app-lib/com.android.email
++│   │   │   │   └── shared_prefs
++│   │   │   │       └── AndroidMail.Main.xml
+ │   │   │   ├── com.android.exchange
+ │   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+ │   │   │   │   └── lib -> /data/app-lib/com.android.exchange
+ │   │   │   ├── com.android.galaxy4
+ │   │   │   │   └── lib -> /data/app-lib/com.android.galaxy4
+ │   │   │   ├── com.android.gallery3d
+ │   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+ │   │   │   │   ├── lib -> /data/app-lib/com.android.gallery3d
+ │   │   │   │   └── shared_prefs
+ │   │   │   │       └── com.android.gallery3d_preferences.xml
+@@ -101,21 +104,16 @@
+ │   │   │   │   └── lib -> /data/app-lib/com.android.inputdevices
+ │   │   │   ├── com.android.inputmethod.latin
+ │   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+ │   │   │   │   ├── files
+ │   │   │   │   │   ├── contacts.en_US.dict
+-│   │   │   │   │   ├── UserHistoryDictionary.en_US.dict
+ │   │   │   │   │   └── userunigram.en_US.dict
+-│   │   │   │   ├── lib -> /data/app-lib/com.android.inputmethod.latin
+-│   │   │   │   └── shared_prefs
+-│   │   │   │       └── com.android.inputmethod.latin_preferences.xml
+-│   │   │   ├── com.android.inputmethod.pinyin
+-│   │   │   │   └── lib -> /data/app-lib/com.android.inputmethod.pinyin
++│   │   │   │   └── lib -> /data/app-lib/com.android.inputmethod.latin
+ │   │   │   ├── com.android.keychain
+ │   │   │   │   └── lib -> /data/app-lib/com.android.keychain
+ │   │   │   ├── com.android.launcher
+ │   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
++│   │   │   │   │   ├── widgetpreviews.db
++│   │   │   │   │   └── widgetpreviews.db-journal
+ │   │   │   │   ├── databases
+ │   │   │   │   │   ├── launcher.db
+ │   │   │   │   │   └── launcher.db-journal
+@@ -125,30 +123,38 @@
+ │   │   │   │   └── shared_prefs
+ │   │   │   │       └── com.android.launcher2.prefs.xml
+ │   │   │   ├── com.android.location.fused
+-│   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+ │   │   │   │   └── lib -> /data/app-lib/com.android.location.fused
+ │   │   │   ├── com.android.magicsmoke
+ │   │   │   │   └── lib -> /data/app-lib/com.android.magicsmoke
+ │   │   │   ├── com.android.mms
+ │   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+ │   │   │   │   ├── lib -> /data/app-lib/com.android.mms
+ │   │   │   │   └── shared_prefs
+ │   │   │   │       ├── com.android.mms_preferences.xml
+ │   │   │   │       └── _has_set_default_values.xml
++│   │   │   ├── com.android.music
++│   │   │   │   ├── cache
++│   │   │   │   ├── lib -> /data/app-lib/com.android.music
++│   │   │   │   └── shared_prefs
++│   │   │   │       └── Music.xml
+ │   │   │   ├── com.android.musicfx
+ │   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+ │   │   │   │   └── lib -> /data/app-lib/com.android.musicfx
+ │   │   │   ├── com.android.musicvis
+ │   │   │   │   └── lib -> /data/app-lib/com.android.musicvis
+ │   │   │   ├── com.android.noisefield
+ │   │   │   │   └── lib -> /data/app-lib/com.android.noisefield
++│   │   │   ├── com.android.onetimeinitializer
++│   │   │   │   ├── cache
++│   │   │   │   ├── lib -> /data/app-lib/com.android.onetimeinitializer
++│   │   │   │   └── shared_prefs
++│   │   │   │       └── oti.xml
+ │   │   │   ├── com.android.packageinstaller
+ │   │   │   │   └── lib -> /data/app-lib/com.android.packageinstaller
+ │   │   │   ├── com.android.phasebeam
+ │   │   │   │   └── lib -> /data/app-lib/com.android.phasebeam
++│   │   │   ├── com.android.phasebeamorange
++│   │   │   │   └── lib -> /data/app-lib/com.android.phasebeamorange
+ │   │   │   ├── com.android.phone
+ │   │   │   │   ├── cache
+ │   │   │   │   ├── files
+@@ -159,7 +165,6 @@
+ │   │   │   │   └── lib -> /data/app-lib/com.android.providers.applications
+ │   │   │   ├── com.android.providers.calendar
+ │   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+ │   │   │   │   ├── databases
+ │   │   │   │   │   ├── calendar.db
+ │   │   │   │   │   └── calendar.db-journal
+@@ -182,7 +187,6 @@
+ │   │   │   │       ├── com.android.providers.contacts_preferences.xml
+ │   │   │   │       └── ContactsUpgradeReceiver.xml
+ │   │   │   ├── com.android.providers.downloads
+-│   │   │   │   ├── app_sslcache
+ │   │   │   │   ├── cache
+ │   │   │   │   ├── databases
+ │   │   │   │   │   ├── downloads.db
+@@ -208,8 +212,7 @@
+ │   │   │   ├── com.android.providers.settings
+ │   │   │   │   ├── databases
+ │   │   │   │   │   ├── settings.db
+-│   │   │   │   │   ├── settings.db-shm
+-│   │   │   │   │   └── settings.db-wal
++│   │   │   │   │   └── settings.db-journal
+ │   │   │   │   └── lib -> /data/app-lib/com.android.providers.settings
+ │   │   │   ├── com.android.providers.telephony
+ │   │   │   │   ├── databases
+@@ -227,44 +230,32 @@
+ │   │   │   ├── com.android.quicksearchbox
+ │   │   │   │   ├── app_sslcache
+ │   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+ │   │   │   │   └── lib -> /data/app-lib/com.android.quicksearchbox
+ │   │   │   ├── com.android.settings
+ │   │   │   │   ├── cache
+ │   │   │   │   └── lib -> /data/app-lib/com.android.settings
+ │   │   │   ├── com.android.sharedstoragebackup
+ │   │   │   │   └── lib -> /data/app-lib/com.android.sharedstoragebackup
+-│   │   │   ├── com.android.smspush
+-│   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+-│   │   │   │   └── lib -> /data/app-lib/com.android.smspush
++│   │   │   ├── com.android.shell
++│   │   │   │   └── lib -> /data/app-lib/com.android.shell
+ │   │   │   ├── com.android.soundrecorder
+ │   │   │   │   └── lib -> /data/app-lib/com.android.soundrecorder
+-│   │   │   ├── com.android.speechrecorder
+-│   │   │   │   └── lib -> /data/app-lib/com.android.speechrecorder
+-│   │   │   ├── com.android.stk
+-│   │   │   │   └── lib -> /data/app-lib/com.android.stk
+ │   │   │   ├── com.android.systemui
+ │   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+ │   │   │   │   └── lib -> /data/app-lib/com.android.systemui
+ │   │   │   ├── com.android.vending
+ │   │   │   │   ├── app_carrier_billing
+ │   │   │   │   ├── app_sslcache
+ │   │   │   │   ├── app_widgets
+ │   │   │   │   ├── cache
+-│   │   │   │   │   ├── com.android.renderscript.cache
+ │   │   │   │   │   ├── images
+ │   │   │   │   │   └── main
+ │   │   │   │   ├── databases
+ │   │   │   │   │   ├── localappstate.db
+ │   │   │   │   │   └── localappstate.db-journal
+-│   │   │   │   └── lib -> /data/app-lib/com.android.vending
+-│   │   │   ├── com.android.voicedialer
+-│   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+-│   │   │   │   ├── files
+-│   │   │   │   └── lib -> /data/app-lib/com.android.voicedialer
++│   │   │   │   ├── lib -> /data/app-lib/com.android.vending
++│   │   │   │   └── shared_prefs
++│   │   │   │       └── finsky.xml
+ │   │   │   ├── com.android.vpndialogs
+ │   │   │   │   └── lib -> /data/app-lib/com.android.vpndialogs
+ │   │   │   ├── com.android.wallpaper
+@@ -277,17 +268,8 @@
+ │   │   │   │   └── lib -> /data/app-lib/com.example.android.notepad
+ │   │   │   ├── com.example.android.rssreader
+ │   │   │   │   └── lib -> /data/app-lib/com.example.android.rssreader
+-│   │   │   ├── com.google.android.apps.genie.geniewidget
+-│   │   │   │   ├── app_news_image_cache
+-│   │   │   │   ├── cache
+-│   │   │   │   │   ├── com.android.renderscript.cache
+-│   │   │   │   │   └── news-content-cache
+-│   │   │   │   ├── files
+-│   │   │   │   │   └── DATA_Preferences
+-│   │   │   │   └── lib -> /data/app-lib/com.google.android.apps.genie.geniewidget
+ │   │   │   ├── com.google.android.apps.maps
+ │   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+ │   │   │   │   ├── databases
+ │   │   │   │   │   ├── LayerInfo
+ │   │   │   │   │   ├── LayerInfo-journal
+@@ -298,34 +280,48 @@
+ │   │   │   │   ├── files
+ │   │   │   │   │   └── DATA_Preferences
+ │   │   │   │   └── lib -> /data/app-lib/com.google.android.apps.maps
+-│   │   │   ├── com.google.android.apps.uploader
+-│   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+-│   │   │   │   ├── databases
+-│   │   │   │   │   ├── picasa.db
+-│   │   │   │   │   ├── picasa.db-journal
+-│   │   │   │   │   ├── picasa.upload.db
+-│   │   │   │   │   └── picasa.upload.db-journal
+-│   │   │   │   ├── lib -> /data/app-lib/com.google.android.apps.uploader
+-│   │   │   │   └── shared_prefs
+-│   │   │   │       └── com.google.android.apps.uploader_preferences.xml
+-│   │   │   ├── com.google.android.backup
+-│   │   │   │   ├── app_sslcache
+-│   │   │   │   ├── lib -> /data/app-lib/com.google.android.backup
+-│   │   │   │   └── shared_prefs
+-│   │   │   │       ├── BackupTransport.backupScheduler.xml
+-│   │   │   │       └── BackupTransport.restoreScheduler.xml
+ │   │   │   ├── com.google.android.feedback
+ │   │   │   │   └── lib -> /data/app-lib/com.google.android.feedback
+ │   │   │   ├── com.google.android.gm
+ │   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+ │   │   │   │   ├── lib -> /data/app-lib/com.google.android.gm
+ │   │   │   │   └── shared_prefs
+ │   │   │   │       ├── Gmail.xml
+-│   │   │   │       └── _has_set_default_values.xml
++│   │   │   │       ├── _has_set_default_values.xml
++│   │   │   │       └── MailAppProvider.xml
+ │   │   │   ├── com.google.android.gms
+-│   │   │   │   └── lib -> /data/app-lib/com.google.android.gms
++│   │   │   │   ├── app_APP
++│   │   │   │   ├── app_sslcache
++│   │   │   │   ├── cache
++│   │   │   │   ├── databases
++│   │   │   │   │   ├── gcore_ulr_ActivityDetection.db
++│   │   │   │   │   ├── gcore_ulr_ActivityDetection.db-journal
++│   │   │   │   │   ├── gcore_ulr_UlrLocation.db
++│   │   │   │   │   ├── gcore_ulr_UlrLocation.db-journal
++│   │   │   │   │   ├── peoplelog.db
++│   │   │   │   │   ├── pluscontacts.db
++│   │   │   │   │   ├── pluscontacts.db-journal
++│   │   │   │   │   ├── plus.db
++│   │   │   │   │   ├── plus.db-journal
++│   │   │   │   │   ├── rmq.db
++│   │   │   │   │   └── rmq.db-journal
++│   │   │   │   ├── files
++│   │   │   │   │   ├── AppDataSearch
++│   │   │   │   │   │   └── main
++│   │   │   │   │   │       └── tokens.s
++│   │   │   │   │   ├── geofencer_ks
++│   │   │   │   │   └── geofencer_state_list
++│   │   │   │   ├── lib -> /data/app-lib/com.google.android.gms
++│   │   │   │   └── shared_prefs
++│   │   │   │       ├── AppDataSearch-main-appauth.xml
++│   │   │   │       ├── AppDataSearch-main-config.xml
++│   │   │   │       ├── AppDataSearch-main-universalsearch.xml
++│   │   │   │       ├── AppDataSearch-main-version.xml
++│   │   │   │       ├── auth_recovery_state.xml
++│   │   │   │       ├── gms.people.xml
++│   │   │   │       ├── init.initialized_version.xml
++│   │   │   │       ├── LOCATION_REPORTING.xml
++│   │   │   │       └── ULR_USER_PREFS.xml
+ │   │   │   ├── com.google.android.gsf
+ │   │   │   │   ├── app_sslcache
+ │   │   │   │   ├── cache
+@@ -341,51 +337,26 @@
+ │   │   │   │   ├── files
+ │   │   │   │   ├── lib -> /data/app-lib/com.google.android.gsf
+ │   │   │   │   └── shared_prefs
++│   │   │   │       ├── CheckinService.xml
++│   │   │   │       ├── EventLogService.xml
+ │   │   │   │       ├── StatsUploadService.xml
+ │   │   │   │       └── update.xml
+ │   │   │   ├── com.google.android.gsf.login
+ │   │   │   │   ├── app_sslcache
+ │   │   │   │   ├── cache
+ │   │   │   │   └── lib -> /data/app-lib/com.google.android.gsf.login
+-│   │   │   ├── com.google.android.inputmethod.latin.dictionarypack
+-│   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+-│   │   │   │   ├── databases
+-│   │   │   │   │   ├── pendingUpdates
+-│   │   │   │   │   └── pendingUpdates-journal
+-│   │   │   │   ├── lib -> /data/app-lib/com.google.android.inputmethod.latin.dictionarypack
+-│   │   │   │   └── shared_prefs
+-│   │   │   │       └── metadata_download_id.xml
+ │   │   │   ├── com.google.android.location
+ │   │   │   │   ├── cache
+ │   │   │   │   ├── files
+ │   │   │   │   │   └── DATA_Preferences
+ │   │   │   │   └── lib -> /data/app-lib/com.google.android.location
+-│   │   │   ├── com.google.android.marvin.talkback
+-│   │   │   │   └── lib -> /data/app-lib/com.google.android.marvin.talkback
+-│   │   │   ├── com.google.android.music
+-│   │   │   │   ├── app_sslcache
+-│   │   │   │   ├── cache
+-│   │   │   │   │   ├── com.android.renderscript.cache
+-│   │   │   │   │   └── logs
+-│   │   │   │   ├── databases
+-│   │   │   │   │   ├── music.db
+-│   │   │   │   │   └── music.db-journal
+-│   │   │   │   ├── files
+-│   │   │   │   ├── lib -> /data/app-lib/com.google.android.music
+-│   │   │   │   └── shared_prefs
+-│   │   │   │       ├── autocache.prefs.xml
+-│   │   │   │       ├── MusicPreferences.xml
+-│   │   │   │       └── store.preferences.xml
+ │   │   │   ├── com.google.android.onetimeinitializer
+ │   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+ │   │   │   │   ├── lib -> /data/app-lib/com.google.android.onetimeinitializer
+ │   │   │   │   └── shared_prefs
+ │   │   │   │       └── oti.xml
+ │   │   │   ├── com.google.android.partnersetup
+ │   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+ │   │   │   │   ├── databases
+ │   │   │   │   │   ├── rlz_data.db
+ │   │   │   │   │   └── rlz_data.db-journal
+@@ -395,7 +366,6 @@
+ │   │   │   │       └── RLZ.xml
+ │   │   │   ├── com.google.android.setupwizard
+ │   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+ │   │   │   │   ├── lib -> /data/app-lib/com.google.android.setupwizard
+ │   │   │   │   └── shared_prefs
+ │   │   │   │       ├── LocationSharingActivity.xml
+@@ -407,11 +377,8 @@
+ │   │   │   ├── com.google.android.syncadapters.contacts
+ │   │   │   │   ├── app_sslcache
+ │   │   │   │   └── lib -> /data/app-lib/com.google.android.syncadapters.contacts
+-│   │   │   ├── com.google.android.videoeditor
+-│   │   │   │   └── lib -> /data/app-lib/com.google.android.videoeditor
+ │   │   │   ├── com.google.android.youtube
+ │   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+ │   │   │   │   ├── databases
+ │   │   │   │   │   ├── downloads.db
+ │   │   │   │   │   ├── downloads.db-journal
+@@ -421,31 +388,13 @@
+ │   │   │   │   └── shared_prefs
+ │   │   │   │       ├── com.google.android.youtube_preferences.xml
+ │   │   │   │       └── youtube.xml
+-│   │   │   ├── com.noshufou.android.su
+-│   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+-│   │   │   │   ├── databases
+-│   │   │   │   │   ├── permissions.sqlite
+-│   │   │   │   │   ├── permissions.sqlite-journal
+-│   │   │   │   │   ├── su.db
+-│   │   │   │   │   └── su.db-journal
+-│   │   │   │   ├── lib -> /data/app-lib/com.noshufou.android.su
+-│   │   │   │   └── shared_prefs
+-│   │   │   │       └── com.noshufou.android.su_preferences.xml
+ │   │   │   ├── com.svox.pico
+ │   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+ │   │   │   │   └── lib -> /data/app-lib/com.svox.pico
+-│   │   │   ├── jackpal.androidterm
+-│   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
+-│   │   │   │   └── lib -> /data/app-lib/jackpal.androidterm
+-│   │   │   └── jp.co.omronsoft.openwnn
+-│   │   │       └── lib -> /data/app-lib/jp.co.omronsoft.openwnn
++│   │   │   └── jackpal.androidterm
++│   │   │       └── lib -> /data/app-lib/jackpal.androidterm
+ │   │   ├── dontpanic
+ │   │   ├── drm
+-│   │   │   └── fwdlock
+-│   │   │       └── kek.dat
+ │   │   ├── local
+ │   │   │   └── tmp
+ │   │   ├── lost+found
+@@ -454,9 +403,6 @@
+ │   │   │   │   ├── Alarms
+ │   │   │   │   ├── Android
+ │   │   │   │   │   ├── data
+-│   │   │   │   │   │   ├── com.google.android.music
+-│   │   │   │   │   │   │   ├── cache
+-│   │   │   │   │   │   │   └── files
+ │   │   │   │   │   │   └── com.google.android.youtube
+ │   │   │   │   │   │       └── files
+ │   │   │   │   │   └── obb
+@@ -470,6 +416,7 @@
+ │   │   │   │   └── Ringtones
+ │   │   │   ├── legacy
+ │   │   │   └── obb
++│   │   ├── mediadrm
+ │   │   ├── misc
+ │   │   │   ├── adb
+ │   │   │   ├── bluedroid
+@@ -481,12 +428,16 @@
+ │   │   │   │   └── dhcpcd-eth0.pid
+ │   │   │   ├── keychain
+ │   │   │   ├── keystore
++│   │   │   │   └── user_0
++│   │   │   ├── media
++│   │   │   ├── radio
+ │   │   │   ├── sms
+ │   │   │   ├── systemkeys
+ │   │   │   ├── vpn
+-│   │   │   └── wifi
+-│   │   │       ├── sockets
+-│   │   │       └── softap.conf
++│   │   │   ├── wifi
++│   │   │   │   ├── sockets
++│   │   │   │   └── softap.conf
++│   │   │   └── zoneinfo
+ │   │   ├── property
+ │   │   │   ├── persist.service.bdroid.bdaddr
+ │   │   │   ├── persist.sys.country
+@@ -494,87 +445,58 @@
+ │   │   │   ├── persist.sys.localevar
+ │   │   │   └── persist.sys.profiler_ms
+ │   │   ├── resource-cache
++│   │   ├── security
+ │   │   ├── ssh
+ │   │   │   └── empty
+ │   │   ├── system
+ │   │   │   ├── batterystats.bin
+ │   │   │   ├── called_pre_boots.dat
+ │   │   │   ├── dropbox
+-│   │   │   │   ├── event_data@1468807276600.txt
+-│   │   │   │   ├── event_log@1468756165643.txt
+-│   │   │   │   ├── event_log@1468806641505.txt
+-│   │   │   │   ├── event_log@1468806837327.txt
+-│   │   │   │   ├── event_log@1468806914023.txt
+-│   │   │   │   ├── event_log@1468808084718.txt
+-│   │   │   │   ├── event_log@1468809634804.txt
+-│   │   │   │   ├── system_app_strictmode@1468756156755.txt.gz
+-│   │   │   │   ├── system_app_strictmode@1468756162421.txt.gz
+-│   │   │   │   ├── system_app_strictmode@1468756165498.txt.gz
+-│   │   │   │   ├── system_app_strictmode@1468756167286.txt.gz
+-│   │   │   │   ├── system_app_strictmode@1468756170546.txt
+-│   │   │   │   ├── system_app_strictmode@1468756184952.txt.gz
+-│   │   │   │   ├── system_app_strictmode@1468756195971.txt
+-│   │   │   │   ├── system_app_strictmode@1468756247778.txt.gz
+-│   │   │   │   ├── system_app_strictmode@1468756273516.txt.gz
+-│   │   │   │   ├── system_app_strictmode@1468756280618.txt.gz
+-│   │   │   │   ├── system_app_strictmode@1468756288818.txt.gz
+-│   │   │   │   ├── system_app_strictmode@1468756297139.txt.gz
+-│   │   │   │   ├── system_app_strictmode@1468806639322.txt.gz
+-│   │   │   │   ├── system_app_strictmode@1468806646047.txt.gz
+-│   │   │   │   ├── system_app_strictmode@1468806835505.txt.gz
+-│   │   │   │   ├── system_app_strictmode@1468806841605.txt.gz
+-│   │   │   │   ├── system_app_strictmode@1468806911065.txt.gz
+-│   │   │   │   ├── system_app_strictmode@1468806918332.txt.gz
+-│   │   │   │   ├── system_app_strictmode@1468806929184.txt.gz
+-│   │   │   │   ├── system_app_strictmode@1468806943735.txt
+-│   │   │   │   ├── system_app_strictmode@1468806981035.txt
+-│   │   │   │   ├── system_app_strictmode@1468807031068.txt
+-│   │   │   │   ├── system_app_strictmode@1468807081091.txt
+-│   │   │   │   ├── system_app_strictmode@1468807231747.txt
+-│   │   │   │   ├── system_app_strictmode@1468807281146.txt
+-│   │   │   │   ├── system_app_strictmode@1468807331157.txt
+-│   │   │   │   ├── system_app_strictmode@1468807381168.txt
+-│   │   │   │   ├── system_app_strictmode@1468808083682.txt.gz
+-│   │   │   │   ├── system_app_strictmode@1468808088737.txt.gz
+-│   │   │   │   ├── system_app_strictmode@1468808093972.txt.gz
+-│   │   │   │   ├── system_app_strictmode@1468809631093.txt.gz
+-│   │   │   │   ├── system_app_strictmode@1468809635797.txt.gz
+-│   │   │   │   ├── system_app_strictmode@1468809637132.txt
+-│   │   │   │   ├── system_app_strictmode@1468809650567.txt.gz
+-│   │   │   │   ├── system_app_strictmode@1468809657128.txt
+-│   │   │   │   ├── system_app_strictmode@1468809704895.txt
+-│   │   │   │   ├── system_app_strictmode@1468809754907.txt
+-│   │   │   │   ├── system_app_strictmode@1468809804918.txt
+-│   │   │   │   ├── system_app_strictmode@1468809854939.txt
+-│   │   │   │   ├── system_app_strictmode@1468810004984.txt
+-│   │   │   │   ├── system_app_strictmode@1468810055017.txt
+-│   │   │   │   ├── system_app_strictmode@1468810105028.txt
+-│   │   │   │   ├── SYSTEM_BOOT@1468756176105.txt
+-│   │   │   │   ├── SYSTEM_BOOT@1468806643118.txt
+-│   │   │   │   ├── SYSTEM_BOOT@1468806838209.txt
+-│   │   │   │   ├── SYSTEM_BOOT@1468806916984.txt
+-│   │   │   │   ├── SYSTEM_BOOT@1468808086564.txt
+-│   │   │   │   └── SYSTEM_BOOT@1468809637700.txt
++│   │   │   │   ├── event_data@1468809313022.txt
++│   │   │   │   ├── event_log@1468754225706.txt
++│   │   │   │   ├── event_log@1468808952103.txt
++│   │   │   │   ├── system_app_strictmode@1468754219301.txt.gz
++│   │   │   │   ├── system_app_strictmode@1468754224315.txt.gz
++│   │   │   │   ├── system_app_strictmode@1468754229893.txt.gz
++│   │   │   │   ├── system_app_strictmode@1468754236229.txt
++│   │   │   │   ├── system_app_strictmode@1468754241590.txt.gz
++│   │   │   │   ├── system_app_strictmode@1468754291027.txt
++│   │   │   │   ├── system_app_strictmode@1468754308767.txt.gz
++│   │   │   │   ├── system_app_strictmode@1468754351935.txt.gz
++│   │   │   │   ├── system_app_strictmode@1468754364324.txt.gz
++│   │   │   │   ├── system_app_strictmode@1468754375704.txt.gz
++│   │   │   │   ├── system_app_strictmode@1468754384151.txt.gz
++│   │   │   │   ├── system_app_strictmode@1468808947032.txt.gz
++│   │   │   │   ├── system_app_strictmode@1468808956753.txt.gz
++│   │   │   │   ├── system_app_strictmode@1468808964053.txt.gz
++│   │   │   │   ├── system_app_strictmode@1468809254099.txt
++│   │   │   │   ├── system_app_strictmode@1468809273834.txt
++│   │   │   │   ├── system_app_strictmode@1468809318246.txt
++│   │   │   │   ├── system_app_wtf@1468754215328.txt
++│   │   │   │   ├── SYSTEM_BOOT@1468754290671.txt
++│   │   │   │   ├── SYSTEM_BOOT@1468808955656.txt
++│   │   │   │   └── SYSTEM_TOMBSTONE@1468754290992.txt.gz
+ │   │   │   ├── entropy.dat
++│   │   │   ├── ifw
+ │   │   │   ├── inputmethod
+ │   │   │   │   └── subtypes.xml
+ │   │   │   ├── locksettings.db
+ │   │   │   ├── locksettings.db-shm
+ │   │   │   ├── locksettings.db-wal
++│   │   │   ├── ndebugsocket
+ │   │   │   ├── netstats
+ │   │   │   ├── packages.list
+ │   │   │   ├── packages.xml
+ │   │   │   ├── registered_services
+ │   │   │   │   ├── android.accounts.AccountAuthenticator.xml
+ │   │   │   │   └── android.content.SyncAdapter.xml
++│   │   │   ├── shared_prefs
++│   │   │   │   └── log_files.xml
+ │   │   │   ├── sync
+ │   │   │   │   ├── accounts.xml
+ │   │   │   │   ├── pending.bin
+ │   │   │   │   ├── stats.bin
+ │   │   │   │   └── status.bin
+-│   │   │   ├── throttle
+-│   │   │   │   ├── 0
+-│   │   │   │   └── temp
+ │   │   │   ├── uiderrors.txt
+ │   │   │   ├── usagestats
+ │   │   │   │   ├── usage-20160717
+@@ -589,6 +511,8 @@
+ │   │   │   │   ├── 0.xml
+ │   │   │   │   └── userlist.xml
+ │   │   │   └── wpa_supplicant
++│   │   ├── tombstones
++│   │   │   └── tombstone_00
+ │   │   └── user
+ │   │       └── 0 -> /data/data/
+ │   ├── initrd.img
+@@ -597,19 +521,22 @@
+ │   │   ├── data
+ │   │   ├── default.prop
+ │   │   ├── dev
++│   │   ├── file_contexts
+ │   │   ├── init
+ │   │   ├── init.rc
+ │   │   ├── init.trace.rc
+ │   │   ├── init.usb.rc
+ │   │   ├── init.x86.rc
+ │   │   ├── proc
++│   │   ├── property_contexts
+ │   │   ├── ramdisk.img
+ │   │   ├── sbin
+ │   │   │   ├── adbd
+ │   │   │   ├── modprobe -> ../init
+ │   │   │   ├── ueventd -> ../init
+-│   │   │   ├── v86d
+ │   │   │   └── watchdogd -> ../init
++│   │   ├── seapp_contexts
++│   │   ├── sepolicy
+ │   │   ├── sys
+ │   │   ├── system
+ │   │   ├── ueventd.android_x86.rc
+@@ -648,13 +575,16 @@
+ │       │   ├── DeskClock.odex
+ │       │   ├── Development.apk
+ │       │   ├── Development.odex
+-│       │   ├── DevelopmentSettings.apk
++│       │   ├── Dialer.apk
++│       │   ├── Dialer.odex
+ │       │   ├── DownloadProvider.apk
+ │       │   ├── DownloadProvider.odex
+ │       │   ├── DownloadProviderUi.apk
+ │       │   ├── DownloadProviderUi.odex
+ │       │   ├── DrmProvider.apk
+ │       │   ├── DrmProvider.odex
++│       │   ├── Email.apk
++│       │   ├── Email.odex
+ │       │   ├── Exchange2.apk
+ │       │   ├── Exchange2.odex
+ │       │   ├── FusedLocation.apk
+@@ -663,15 +593,14 @@
+ │       │   ├── Galaxy4.odex
+ │       │   ├── Gallery2.apk
+ │       │   ├── Gallery2.odex
+-│       │   ├── GenieWidget.apk
+ │       │   ├── Gmail2.apk
+ │       │   ├── GmsCore.apk
+ │       │   ├── GMS_Maps.apk
+-│       │   ├── GoogleBackupTransport.apk
+ │       │   ├── GoogleCalendarSyncAdapter.apk
+ │       │   ├── GoogleContactsSyncAdapter.apk
+ │       │   ├── GoogleFeedback.apk
+ │       │   ├── GoogleLoginService.apk
++│       │   ├── GoogleOneTimeInitializer.apk
+ │       │   ├── GooglePartnerSetup.apk
+ │       │   ├── GoogleServicesFramework.apk
+ │       │   ├── HoloSpiralWallpaper.apk
+@@ -683,7 +612,6 @@
+ │       │   ├── KeyChain.apk
+ │       │   ├── KeyChain.odex
+ │       │   ├── LatinIME.apk
+-│       │   ├── LatinImeDictionaryPack.apk
+ │       │   ├── LatinIME.odex
+ │       │   ├── Launcher2.apk
+ │       │   ├── Launcher2.odex
+@@ -695,20 +623,19 @@
+ │       │   ├── MagicSmokeWallpapers.odex
+ │       │   ├── MediaProvider.apk
+ │       │   ├── MediaProvider.odex
+-│       │   ├── MediaUploader.apk
+ │       │   ├── Mms.apk
+ │       │   ├── Mms.odex
+-│       │   ├── Music2.apk
++│       │   ├── Music.apk
+ │       │   ├── MusicFX.apk
+ │       │   ├── MusicFX.odex
++│       │   ├── Music.odex
+ │       │   ├── NetworkLocation.apk
+ │       │   ├── NoiseField.apk
+ │       │   ├── NoiseField.odex
+ │       │   ├── NotePad.apk
+ │       │   ├── NotePad.odex
+ │       │   ├── OneTimeInitializer.apk
+-│       │   ├── OpenWnn.apk
+-│       │   ├── OpenWnn.odex
++│       │   ├── OneTimeInitializer.odex
+ │       │   ├── PackageInstaller.apk
+ │       │   ├── PackageInstaller.odex
+ │       │   ├── PhaseBeam.apk
+@@ -716,12 +643,8 @@
+ │       │   ├── Phone.apk
+ │       │   ├── Phone.odex
+ │       │   ├── Phonesky.apk
+-│       │   ├── PhotoTable.apk
+-│       │   ├── PhotoTable.odex
+ │       │   ├── PicoTts.apk
+ │       │   ├── PicoTts.odex
+-│       │   ├── PinyinIME.apk
+-│       │   ├── PinyinIME.odex
+ │       │   ├── QuickSearchBox.apk
+ │       │   ├── QuickSearchBox.odex
+ │       │   ├── RSSReader.apk
+@@ -733,30 +656,22 @@
+ │       │   ├── SetupWizard.apk
+ │       │   ├── SharedStorageBackup.apk
+ │       │   ├── SharedStorageBackup.odex
++│       │   ├── Shell.apk
++│       │   ├── Shell.odex
+ │       │   ├── SoundRecorder.apk
+ │       │   ├── SoundRecorder.odex
+-│       │   ├── SpeechRecorder.apk
+-│       │   ├── SpeechRecorder.odex
+-│       │   ├── Stk.apk
+-│       │   ├── Stk.odex
+ │       │   ├── Street.apk
+-│       │   ├── Superuser.apk
++│       │   ├── SunBeam.apk
+ │       │   ├── SystemUI.apk
+ │       │   ├── SystemUI.odex
+-│       │   ├── talkback.apk
+ │       │   ├── TelephonyProvider.apk
+ │       │   ├── TelephonyProvider.odex
+ │       │   ├── UserDictionaryProvider.apk
+ │       │   ├── UserDictionaryProvider.odex
+-│       │   ├── VideoEditorGoogle.apk
+ │       │   ├── VisualizationWallpapers.apk
+ │       │   ├── VisualizationWallpapers.odex
+-│       │   ├── VoiceDialer.apk
+-│       │   ├── VoiceDialer.odex
+ │       │   ├── VpnDialogs.apk
+ │       │   ├── VpnDialogs.odex
+-│       │   ├── WAPPushManager.apk
+-│       │   ├── WAPPushManager.odex
+ │       │   └── YouTube.apk
+ │       ├── bin
+ │       │   ├── abcc
+@@ -765,7 +680,6 @@
+ │       │   ├── alsa_aplay
+ │       │   ├── alsa_ctl
+ │       │   ├── am
+-│       │   ├── applypatch
+ │       │   ├── app_process
+ │       │   ├── atrace
+ │       │   ├── audioloop
+@@ -775,16 +689,19 @@
+ │       │   ├── bu
+ │       │   ├── bugreport
+ │       │   ├── cat -> toolbox
++│       │   ├── chcon -> toolbox
+ │       │   ├── chmod -> toolbox
+ │       │   ├── chown -> toolbox
++│       │   ├── clatd
++│       │   ├── clear -> toolbox
+ │       │   ├── cmp -> toolbox
++│       │   ├── cmpprop -> toolbox
+ │       │   ├── codec
+ │       │   ├── content
+ │       │   ├── corrupt_gdt_free_blocks
+ │       │   ├── cp -> toolbox
+ │       │   ├── dalvikvm
+ │       │   ├── date -> toolbox
+-│       │   ├── dbus-daemon
+ │       │   ├── dd -> toolbox
+ │       │   ├── debuggerd
+ │       │   ├── decoder
+@@ -799,13 +716,17 @@
+ │       │   ├── dumpsys
+ │       │   ├── e2fsck
+ │       │   ├── eject
++│       │   ├── enable_houdini
+ │       │   ├── fsck_msdos
+ │       │   ├── gdbserver
++│       │   ├── getenforce -> toolbox
+ │       │   ├── getevent -> toolbox
+ │       │   ├── getprop -> toolbox
++│       │   ├── getsebool -> toolbox
+ │       │   ├── grep -> toolbox
+ │       │   ├── gzip
+ │       │   ├── hd -> toolbox
++│       │   ├── houdini
+ │       │   ├── id -> toolbox
+ │       │   ├── ifconfig -> toolbox
+ │       │   ├── iftop -> toolbox
+@@ -823,6 +744,7 @@
+ │       │   ├── kill -> toolbox
+ │       │   ├── linker
+ │       │   ├── ln -> toolbox
++│       │   ├── load_policy -> toolbox
+ │       │   ├── log -> toolbox
+ │       │   ├── logcat
+ │       │   ├── logwrapper
+@@ -832,6 +754,7 @@
+ │       │   ├── make_ext4fs
+ │       │   ├── md5 -> toolbox
+ │       │   ├── mdnsd
++│       │   ├── media
+ │       │   ├── mediaserver
+ │       │   ├── mkdir -> toolbox
+ │       │   ├── mke2fs
+@@ -839,6 +762,7 @@
+ │       │   ├── monkey
+ │       │   ├── mount -> toolbox
+ │       │   ├── mtpd
++│       │   ├── muxer
+ │       │   ├── mv -> toolbox
+ │       │   ├── nandread -> toolbox
+ │       │   ├── ndc
+@@ -848,6 +772,7 @@
+ │       │   ├── newfs_msdos -> toolbox
+ │       │   ├── notify -> toolbox
+ │       │   ├── ping
++│       │   ├── ping6
+ │       │   ├── pm
+ │       │   ├── pngtest
+ │       │   ├── powerbtnd
+@@ -863,12 +788,14 @@
+ │       │   ├── renice -> toolbox
+ │       │   ├── requestsync
+ │       │   ├── resize2fs
++│       │   ├── restorecon -> toolbox
+ │       │   ├── rild
+ │       │   ├── rm -> toolbox
+ │       │   ├── rmdir -> toolbox
+ │       │   ├── rmmod -> toolbox
+ │       │   ├── route -> toolbox
+ │       │   ├── run-as
++│       │   ├── runcon -> toolbox
+ │       │   ├── schedtest
+ │       │   ├── schedtop -> toolbox
+ │       │   ├── screencap
+@@ -879,8 +806,10 @@
+ │       │   ├── service
+ │       │   ├── servicemanager
+ │       │   ├── setconsole -> toolbox
++│       │   ├── setenforce -> toolbox
+ │       │   ├── set_ext4_err_bit
+ │       │   ├── setprop -> toolbox
++│       │   ├── setsebool -> toolbox
+ │       │   ├── settings
+ │       │   ├── sf2
+ │       │   ├── sh -> mksh
+@@ -900,9 +829,10 @@
+ │       │   ├── toolbox
+ │       │   ├── top -> toolbox
+ │       │   ├── touch -> toolbox
++│       │   ├── trycmpprop -> toolbox
++│       │   ├── trygetprop -> toolbox
+ │       │   ├── ts_calibrate
+ │       │   ├── tune2fs
+-│       │   ├── udptest
+ │       │   ├── uiautomator
+ │       │   ├── umount -> toolbox
+ │       │   ├── uptime -> toolbox
+@@ -912,6 +842,7 @@
+ │       │   ├── watchprops -> toolbox
+ │       │   ├── wfd
+ │       │   ├── wipe -> toolbox
++│       │   ├── wm
+ │       │   ├── wpa_cli
+ │       │   └── wpa_supplicant
+ │       ├── build.prop
+@@ -923,7 +854,7 @@
+ │       │   │   ├── auto_pair_devlist.conf
+ │       │   │   ├── bt_did.conf
+ │       │   │   └── bt_stack.conf
+-│       │   ├── dbus.conf
++│       │   ├── clatd.conf
+ │       │   ├── dhcpcd
+ │       │   │   ├── dhcpcd-hooks
+ │       │   │   │   ├── 20-dns.conf
+@@ -986,6 +917,7 @@
+ │       │   │   │   ├── 1dac3003.0
+ │       │   │   │   ├── 1dbdda5b.0
+ │       │   │   │   ├── 1dcd6f4c.0
++│       │   │   │   ├── 1df5a75f.0
+ │       │   │   │   ├── 1df5ec47.0
+ │       │   │   │   ├── 1e1eab7c.0
+ │       │   │   │   ├── 1e8e7201.0
+@@ -994,6 +926,7 @@
+ │       │   │   │   ├── 23f4c490.0
+ │       │   │   │   ├── 27af790d.0
+ │       │   │   │   ├── 2afc57aa.0
++│       │   │   │   ├── 2d9dafe4.0
+ │       │   │   │   ├── 2e8714cb.0
+ │       │   │   │   ├── 2fa87019.0
+ │       │   │   │   ├── 2fb1850a.0
+@@ -1007,9 +940,11 @@
+ │       │   │   │   ├── 3d441de8.0
+ │       │   │   │   ├── 3e7271e8.0
+ │       │   │   │   ├── 418595b9.0
++│       │   │   │   ├── 450c6e38.0
+ │       │   │   │   ├── 455f1b52.0
+ │       │   │   │   ├── 46b2fd3b.0
+ │       │   │   │   ├── 48478734.0
++│       │   │   │   ├── 48a195d8.0
+ │       │   │   │   ├── 4d654d1d.0
+ │       │   │   │   ├── 4e18c148.0
+ │       │   │   │   ├── 4fbd6bfa.0
+@@ -1044,6 +979,7 @@
+ │       │   │   │   ├── 7d3cd826.0
+ │       │   │   │   ├── 7d453d8f.0
+ │       │   │   │   ├── 81b9768f.0
++│       │   │   │   ├── 82223c44.0
+ │       │   │   │   ├── 8470719d.0
+ │       │   │   │   ├── 84cba82f.0
+ │       │   │   │   ├── 85cde254.0
+@@ -1088,6 +1024,7 @@
+ │       │   │   │   ├── d537fba6.0
+ │       │   │   │   ├── d59297b8.0
+ │       │   │   │   ├── d64f06f3.0
++│       │   │   │   ├── d7746a63.0
+ │       │   │   │   ├── d777342d.0
+ │       │   │   │   ├── d8274e24.0
+ │       │   │   │   ├── dbc54cab.0
+@@ -1111,6 +1048,7 @@
+ │       │   │   │   ├── fb126c6d.0
+ │       │   │   │   ├── fde84897.0
+ │       │   │   │   └── ff783690.0
++│       │   │   ├── mac_permissions.xml
+ │       │   │   └── otacerts.zip
+ │       │   ├── system_fonts.xml
+ │       │   ├── ts.conf
+@@ -1124,10 +1062,9 @@
+ │       │   ├── AndroidClock_Solid.ttf
+ │       │   ├── AndroidClock.ttf
+ │       │   ├── AndroidEmoji.ttf
+-│       │   ├── AnjaliNewLipi-light.ttf
+ │       │   ├── Clockopia.ttf
+-│       │   ├── DroidNaskh-Regular-SystemUI.ttf
+ │       │   ├── DroidNaskh-Regular.ttf
++│       │   ├── DroidNaskhUI-Regular.ttf
+ │       │   ├── DroidSansArmenian.ttf
+ │       │   ├── DroidSans-Bold.ttf -> Roboto-Bold.ttf
+ │       │   ├── DroidSansDevanagari-Regular.ttf
+@@ -1145,11 +1082,24 @@
+ │       │   ├── DroidSerif-Bold.ttf
+ │       │   ├── DroidSerif-Italic.ttf
+ │       │   ├── DroidSerif-Regular.ttf
+-│       │   ├── Lohit-Bengali.ttf
+-│       │   ├── Lohit-Kannada.ttf
+-│       │   ├── Lohit-Telugu.ttf
+ │       │   ├── MTLmr3m.ttf
+ │       │   ├── NanumGothic.ttf
++│       │   ├── NotoSansBengali-Bold.ttf
++│       │   ├── NotoSansBengali-Regular.ttf
++│       │   ├── NotoSansBengaliUI-Bold.ttf
++│       │   ├── NotoSansBengaliUI-Regular.ttf
++│       │   ├── NotoSansKannada-Bold.ttf
++│       │   ├── NotoSansKannada-Regular.ttf
++│       │   ├── NotoSansKannadaUI-Bold.ttf
++│       │   ├── NotoSansKannadaUI-Regular.ttf
++│       │   ├── NotoSansMalayalam-Bold.ttf
++│       │   ├── NotoSansMalayalam-Regular.ttf
++│       │   ├── NotoSansMalayalamUI-Bold.ttf
++│       │   ├── NotoSansMalayalamUI-Regular.ttf
++│       │   ├── NotoSansTelugu-Bold.ttf
++│       │   ├── NotoSansTelugu-Regular.ttf
++│       │   ├── NotoSansTeluguUI-Bold.ttf
++│       │   ├── NotoSansTeluguUI-Regular.ttf
+ │       │   ├── Roboto-BoldItalic.ttf
+ │       │   ├── Roboto-Bold.ttf
+ │       │   ├── RobotoCondensed-BoldItalic.ttf
+@@ -1200,6 +1150,8 @@
+ │       │   ├── input.odex
+ │       │   ├── javax.obex.jar
+ │       │   ├── javax.obex.odex
++│       │   ├── media_cmd.jar
++│       │   ├── media_cmd.odex
+ │       │   ├── mms-common.jar
+ │       │   ├── mms-common.odex
+ │       │   ├── monkey.jar
+@@ -1217,15 +1169,82 @@
+ │       │   ├── telephony-common.jar
+ │       │   ├── telephony-common.odex
+ │       │   ├── uiautomator.jar
+-│       │   └── uiautomator.odex
++│       │   ├── uiautomator.odex
++│       │   ├── voip-common.jar
++│       │   ├── voip-common.odex
++│       │   ├── wm.jar
++│       │   └── wm.odex
+ │       ├── lib
++│       │   ├── arm
++│       │   │   ├── check.xml
++│       │   │   ├── cpuinfo
++│       │   │   ├── cpuinfo.neon
++│       │   │   ├── libandroidfw.so
++│       │   │   ├── libandroid_runtime.so
++│       │   │   ├── libandroid.so
++│       │   │   ├── libaudioutils.so
++│       │   │   ├── libbinder.so
++│       │   │   ├── libcamera_client.so
++│       │   │   ├── libc_orig.so
++│       │   │   ├── libcorkscrew.so
++│       │   │   ├── libcrypto.so
++│       │   │   ├── libc.so
++│       │   │   ├── libcutils.so
++│       │   │   ├── libdl.so
++│       │   │   ├── libdrmframework.so
++│       │   │   ├── libdvm.so
++│       │   │   ├── libEGL.so
++│       │   │   ├── libemoji.so
++│       │   │   ├── libETC1.so
++│       │   │   ├── libexpat.so
++│       │   │   ├── libfilterfw.so
++│       │   │   ├── libfilterpack_imageproc.so
++│       │   │   ├── libgabi++.so
++│       │   │   ├── libgccdemangle.so
++│       │   │   ├── libGLESv1_CM.so
++│       │   │   ├── libGLESv2.so
++│       │   │   ├── libgui.so
++│       │   │   ├── libhardware_legacy.so
++│       │   │   ├── libhardware.so
++│       │   │   ├── libharfbuzz.so
++│       │   │   ├── libhwui.so
++│       │   │   ├── libicui18n.so
++│       │   │   ├── libicuuc.so
++│       │   │   ├── libjnigraphics.so
++│       │   │   ├── libjpeg.so
++│       │   │   ├── liblog.so
++│       │   │   ├── libmedia_native.so
++│       │   │   ├── libmedia.so
++│       │   │   ├── libm_orig.so
++│       │   │   ├── libm.so
++│       │   │   ├── libnativehelper.so
++│       │   │   ├── libnetutils.so
++│       │   │   ├── libnfc_ndef.so
++│       │   │   ├── libOpenMAXAL.so
++│       │   │   ├── libOpenSLES.so
++│       │   │   ├── libpixelflinger.so
++│       │   │   ├── libskia.so
++│       │   │   ├── libsonivox.so
++│       │   │   ├── libspeexresampler.so
++│       │   │   ├── libsqlite.so
++│       │   │   ├── libssl.so
++│       │   │   ├── libstagefright_foundation.so
++│       │   │   ├── libstagefright.so
++│       │   │   ├── libstdc++.so
++│       │   │   ├── libstlport.so
++│       │   │   ├── libsurfaceflinger.so
++│       │   │   ├── libsync.so
++│       │   │   ├── libui.so
++│       │   │   ├── libusbhost.so
++│       │   │   ├── libutils.so
++│       │   │   ├── libvorbisidec.so
++│       │   │   ├── libwpa_client.so
++│       │   │   ├── libz.so
++│       │   │   └── linker
+ │       │   ├── crtbegin_so.o
+ │       │   ├── crtend_so.o
+ │       │   ├── dri
+-│       │   │   ├── i915_dri.so
+ │       │   │   └── i965_dri.so
+-│       │   ├── drm
+-│       │   │   └── libfwdlockengine.so
+ │       │   ├── egl
+ │       │   │   ├── egl.cfg
+ │       │   │   ├── libGLES_android.so
+@@ -1239,6 +1258,45 @@
+ │       │   │   ├── adaptec
+ │       │   │   │   ├── starfire_rx.bin
+ │       │   │   │   └── starfire_tx.bin
++│       │   │   ├── ar3k
++│       │   │   │   ├── 1020200
++│       │   │   │   │   ├── ar3kbdaddr.pst
++│       │   │   │   │   ├── PS_ASIC.pst
++│       │   │   │   │   └── RamPatch.txt
++│       │   │   │   ├── 1020201
++│       │   │   │   │   ├── PS_ASIC.pst
++│       │   │   │   │   └── RamPatch.txt
++│       │   │   │   ├── 30000
++│       │   │   │   │   ├── ar3kbdaddr.pst
++│       │   │   │   │   ├── PS_ASIC.pst
++│       │   │   │   │   └── RamPatch.txt
++│       │   │   │   ├── 30101
++│       │   │   │   │   ├── ar3kbdaddr.pst
++│       │   │   │   │   ├── PS_ASIC.pst
++│       │   │   │   │   └── RamPatch.txt
++│       │   │   │   ├── 30101coex
++│       │   │   │   │   ├── ar3kbdaddr.pst
++│       │   │   │   │   ├── PS_ASIC_aclHighPri.pst
++│       │   │   │   │   ├── PS_ASIC_aclLowPri.pst
++│       │   │   │   │   ├── PS_ASIC.pst
++│       │   │   │   │   └── RamPatch.txt
++│       │   │   │   ├── AthrBT_0x01020001.dfu
++│       │   │   │   ├── AthrBT_0x01020200.dfu
++│       │   │   │   ├── AthrBT_0x01020201.dfu
++│       │   │   │   ├── AthrBT_0x11020000.dfu
++│       │   │   │   ├── AthrBT_0x31010000.dfu
++│       │   │   │   ├── ramps_0x01020001_26.dfu
++│       │   │   │   ├── ramps_0x01020200_26.dfu
++│       │   │   │   ├── ramps_0x01020200_40.dfu
++│       │   │   │   ├── ramps_0x01020201_26.dfu
++│       │   │   │   ├── ramps_0x01020201_40.dfu
++│       │   │   │   ├── ramps_0x11020000_40.dfu
++│       │   │   │   └── ramps_0x31010000_40.dfu
++│       │   │   ├── ar7010_1_1.fw
++│       │   │   ├── ar7010.fw
++│       │   │   ├── ar9170-1.fw
++│       │   │   ├── ar9170-2.fw
++│       │   │   ├── ar9271.fw
+ │       │   │   ├── ath3k-1.fw
+ │       │   │   ├── ath6k
+ │       │   │   │   ├── AR6002
+@@ -1305,7 +1363,8 @@
+ │       │   │   │   ├── bcm43xx_hdr-0.fw
+ │       │   │   │   ├── brcmfmac43236b.bin
+ │       │   │   │   ├── brcmfmac4329.bin
+-│       │   │   │   └── brcmfmac4330.bin
++│       │   │   │   ├── brcmfmac4330.bin
++│       │   │   │   └── brcmfmac4334.bin
+ │       │   │   ├── carl9170-1.fw
+ │       │   │   ├── cis
+ │       │   │   │   ├── 3CCFEM556.cis
+@@ -1354,105 +1413,29 @@
+ │       │   │   ├── ess
+ │       │   │   │   ├── maestro3_assp_kernel.fw
+ │       │   │   │   └── maestro3_assp_minisrc.fw
++│       │   │   ├── htc_7010.fw
+ │       │   │   ├── htc_9271.fw
+ │       │   │   ├── i2400m-fw-usb-1.4.sbcf
+ │       │   │   ├── i2400m-fw-usb-1.5.sbcf
+ │       │   │   ├── i6050-fw-usb-1.5.sbcf
+-│       │   │   ├── intel-ucode
+-│       │   │   │   ├── 06-03-02
+-│       │   │   │   ├── 06-05-00
+-│       │   │   │   ├── 06-05-01
+-│       │   │   │   ├── 06-05-02
+-│       │   │   │   ├── 06-05-03
+-│       │   │   │   ├── 06-06-00
+-│       │   │   │   ├── 06-06-05
+-│       │   │   │   ├── 06-06-0a
+-│       │   │   │   ├── 06-06-0d
+-│       │   │   │   ├── 06-07-01
+-│       │   │   │   ├── 06-07-02
+-│       │   │   │   ├── 06-07-03
+-│       │   │   │   ├── 06-08-01
+-│       │   │   │   ├── 06-08-03
+-│       │   │   │   ├── 06-08-06
+-│       │   │   │   ├── 06-08-0a
+-│       │   │   │   ├── 06-09-05
+-│       │   │   │   ├── 06-0a-00
+-│       │   │   │   ├── 06-0a-01
+-│       │   │   │   ├── 06-0b-01
+-│       │   │   │   ├── 06-0b-04
+-│       │   │   │   ├── 06-0d-06
+-│       │   │   │   ├── 06-0e-08
+-│       │   │   │   ├── 06-0e-0c
+-│       │   │   │   ├── 06-0f-02
+-│       │   │   │   ├── 06-0f-06
+-│       │   │   │   ├── 06-0f-07
+-│       │   │   │   ├── 06-0f-0a
+-│       │   │   │   ├── 06-0f-0b
+-│       │   │   │   ├── 06-0f-0d
+-│       │   │   │   ├── 06-16-01
+-│       │   │   │   ├── 06-17-06
+-│       │   │   │   ├── 06-17-07
+-│       │   │   │   ├── 06-17-0a
+-│       │   │   │   ├── 06-1a-04
+-│       │   │   │   ├── 06-1c-02
+-│       │   │   │   ├── 06-1c-0a
+-│       │   │   │   ├── 06-1d-01
+-│       │   │   │   ├── 06-1e-04
+-│       │   │   │   ├── 06-1e-05
+-│       │   │   │   ├── 06-25-02
+-│       │   │   │   ├── 06-25-05
+-│       │   │   │   ├── 06-26-01
+-│       │   │   │   ├── 06-2a-07
+-│       │   │   │   ├── 06-2d-06
+-│       │   │   │   ├── 06-2d-07
+-│       │   │   │   ├── 06-3a-09
+-│       │   │   │   ├── 0f-00-07
+-│       │   │   │   ├── 0f-00-0a
+-│       │   │   │   ├── 0f-01-02
+-│       │   │   │   ├── 0f-02-04
+-│       │   │   │   ├── 0f-02-05
+-│       │   │   │   ├── 0f-02-06
+-│       │   │   │   ├── 0f-02-07
+-│       │   │   │   ├── 0f-02-09
+-│       │   │   │   ├── 0f-03-02
+-│       │   │   │   ├── 0f-03-03
+-│       │   │   │   ├── 0f-03-04
+-│       │   │   │   ├── 0f-04-01
+-│       │   │   │   ├── 0f-04-03
+-│       │   │   │   ├── 0f-04-04
+-│       │   │   │   ├── 0f-04-07
+-│       │   │   │   ├── 0f-04-08
+-│       │   │   │   ├── 0f-04-09
+-│       │   │   │   ├── 0f-04-0a
+-│       │   │   │   ├── 0f-06-02
+-│       │   │   │   ├── 0f-06-04
+-│       │   │   │   ├── 0f-06-05
+-│       │   │   │   └── 0f-06-08
+ │       │   │   ├── ipw2100-1.3.fw
+ │       │   │   ├── ipw2100-1.3-i.fw
+ │       │   │   ├── ipw2100-1.3-p.fw
+ │       │   │   ├── ipw2200-bss.fw
+ │       │   │   ├── ipw2200-ibss.fw
+ │       │   │   ├── ipw2200-sniffer.fw
+-│       │   │   ├── iwlwifi-1000-3.ucode
+ │       │   │   ├── iwlwifi-1000-5.ucode
+ │       │   │   ├── iwlwifi-100-5.ucode
+ │       │   │   ├── iwlwifi-105-6.ucode
+ │       │   │   ├── iwlwifi-135-6.ucode
+ │       │   │   ├── iwlwifi-2000-6.ucode
+ │       │   │   ├── iwlwifi-2030-6.ucode
+-│       │   │   ├── iwlwifi-3945-1.ucode
+ │       │   │   ├── iwlwifi-3945-2.ucode
+-│       │   │   ├── iwlwifi-3945.ucode
+-│       │   │   ├── iwlwifi-4965-1.ucode
+ │       │   │   ├── iwlwifi-4965-2.ucode
+-│       │   │   ├── iwlwifi-5000-1.ucode
+-│       │   │   ├── iwlwifi-5000-2.ucode
+ │       │   │   ├── iwlwifi-5000-5.ucode
+ │       │   │   ├── iwlwifi-5150-2.ucode
+ │       │   │   ├── iwlwifi-6000-4.ucode
+-│       │   │   ├── iwlwifi-6000g2a-5.ucode
+-│       │   │   ├── iwlwifi-6000g2b-5.ucode
++│       │   │   ├── iwlwifi-6000g2a-6.ucode
+ │       │   │   ├── iwlwifi-6000g2b-6.ucode
+ │       │   │   ├── iwlwifi-6050-4.ucode
+ │       │   │   ├── iwlwifi-6050-5.ucode
+@@ -1486,20 +1469,20 @@
+ │       │   │   │   ├── sd8686_v8_helper.bin
+ │       │   │   │   ├── sd8686_v9.bin
+ │       │   │   │   ├── sd8686_v9_helper.bin
+-│       │   │   │   ├── sd8688.bin
+-│       │   │   │   ├── sd8688_helper.bin
+ │       │   │   │   ├── usb8388_olpc.bin
+ │       │   │   │   ├── usb8388_v5.bin
+ │       │   │   │   ├── usb8388_v9.bin
+ │       │   │   │   └── usb8682.bin
+-│       │   │   ├── LICENSE.ipw2200
+-│       │   │   ├── LICENSE.iwlwifi
+-│       │   │   ├── LICENSE.ralink-firmware.txt
+ │       │   │   ├── matrox
+ │       │   │   │   ├── g200_warp.fw
+ │       │   │   │   └── g400_warp.fw
+ │       │   │   ├── mrvl
+-│       │   │   │   └── sd8787_uapsta.bin
++│       │   │   │   ├── pcie8897_uapsta.bin
++│       │   │   │   ├── sd8688.bin
++│       │   │   │   ├── sd8688_helper.bin
++│       │   │   │   ├── sd8787_uapsta.bin
++│       │   │   │   ├── sd8797_uapsta.bin
++│       │   │   │   └── usb8797_uapsta.bin
+ │       │   │   ├── mts_cdma.fw
+ │       │   │   ├── mts_edge.fw
+ │       │   │   ├── mts_gsm.fw
+@@ -1528,9 +1511,20 @@
+ │       │   │   │   ├── CYPRESS_me.bin
+ │       │   │   │   ├── CYPRESS_pfp.bin
+ │       │   │   │   ├── CYPRESS_rlc.bin
++│       │   │   │   ├── CYPRESS_uvd.bin
++│       │   │   │   ├── HAINAN_ce.bin
++│       │   │   │   ├── HAINAN_mc.bin
++│       │   │   │   ├── HAINAN_me.bin
++│       │   │   │   ├── HAINAN_pfp.bin
++│       │   │   │   ├── HAINAN_rlc.bin
+ │       │   │   │   ├── JUNIPER_me.bin
+ │       │   │   │   ├── JUNIPER_pfp.bin
+ │       │   │   │   ├── JUNIPER_rlc.bin
++│       │   │   │   ├── OLAND_ce.bin
++│       │   │   │   ├── OLAND_mc.bin
++│       │   │   │   ├── OLAND_me.bin
++│       │   │   │   ├── OLAND_pfp.bin
++│       │   │   │   ├── OLAND_rlc.bin
+ │       │   │   │   ├── PALM_me.bin
+ │       │   │   │   ├── PALM_pfp.bin
+ │       │   │   │   ├── PITCAIRN_ce.bin
+@@ -1566,18 +1560,23 @@
+ │       │   │   │   ├── RV670_pfp.bin
+ │       │   │   │   ├── RV710_me.bin
+ │       │   │   │   ├── RV710_pfp.bin
++│       │   │   │   ├── RV710_uvd.bin
+ │       │   │   │   ├── RV730_me.bin
+ │       │   │   │   ├── RV730_pfp.bin
+ │       │   │   │   ├── RV770_me.bin
+ │       │   │   │   ├── RV770_pfp.bin
+ │       │   │   │   ├── SUMO2_me.bin
+ │       │   │   │   ├── SUMO2_pfp.bin
++│       │   │   │   ├── SUMO_me.bin
++│       │   │   │   ├── SUMO_pfp.bin
+ │       │   │   │   ├── SUMO_rlc.bin
++│       │   │   │   ├── SUMO_uvd.bin
+ │       │   │   │   ├── TAHITI_ce.bin
+ │       │   │   │   ├── TAHITI_mc.bin
+ │       │   │   │   ├── TAHITI_me.bin
+ │       │   │   │   ├── TAHITI_pfp.bin
+ │       │   │   │   ├── TAHITI_rlc.bin
++│       │   │   │   ├── TAHITI_uvd.bin
+ │       │   │   │   ├── TURKS_mc.bin
+ │       │   │   │   ├── TURKS_me.bin
+ │       │   │   │   ├── TURKS_pfp.bin
+@@ -1600,6 +1599,8 @@
+ │       │   │   │   └── main.img
+ │       │   │   ├── rtl_nic
+ │       │   │   │   ├── rtl8105e-1.fw
++│       │   │   │   ├── rtl8106e-1.fw
++│       │   │   │   ├── rtl8106e-2.fw
+ │       │   │   │   ├── rtl8168d-1.fw
+ │       │   │   │   ├── rtl8168d-2.fw
+ │       │   │   │   ├── rtl8168e-1.fw
+@@ -1607,14 +1608,22 @@
+ │       │   │   │   ├── rtl8168e-3.fw
+ │       │   │   │   ├── rtl8168f-1.fw
+ │       │   │   │   ├── rtl8168f-2.fw
++│       │   │   │   ├── rtl8168g-1.fw
++│       │   │   │   ├── rtl8168g-2.fw
++│       │   │   │   ├── rtl8168g-3.fw
+ │       │   │   │   ├── rtl8402-1.fw
+ │       │   │   │   └── rtl8411-1.fw
+ │       │   │   ├── rtlwifi
++│       │   │   │   ├── rtl8188efw.bin
+ │       │   │   │   ├── rtl8192cfw.bin
++│       │   │   │   ├── rtl8192cfwU_B.bin
++│       │   │   │   ├── rtl8192cfwU.bin
+ │       │   │   │   ├── rtl8192cufw.bin
+ │       │   │   │   ├── rtl8192defw.bin
+ │       │   │   │   ├── rtl8192sefw.bin
+-│       │   │   │   └── rtl8712u.bin
++│       │   │   │   ├── rtl8712u.bin
++│       │   │   │   ├── rtl8723fw_B.bin
++│       │   │   │   └── rtl8723fw.bin
+ │       │   │   ├── sb16
+ │       │   │   │   ├── alaw_main.csp
+ │       │   │   │   ├── ima_adpcm_capture.csp
+@@ -1633,6 +1642,7 @@
+ │       │   │   │   └── tg3_tso.bin
+ │       │   │   ├── ttusb-budget
+ │       │   │   │   └── dspbootcode.bin
++│       │   │   ├── vntwusb.fw
+ │       │   │   ├── whiteheat.fw
+ │       │   │   ├── whiteheat_loader.fw
+ │       │   │   ├── yamaha
+@@ -1641,7 +1651,6 @@
+ │       │   │   │   ├── ds1e_ctrl.fw
+ │       │   │   │   └── yss225_registers.bin
+ │       │   │   └── zd1211
+-│       │   │       ├── README
+ │       │   │       ├── zd1211b_ub
+ │       │   │       ├── zd1211b_uph
+ │       │   │       ├── zd1211b_uphm
+@@ -1658,11 +1667,10 @@
+ │       │   │   ├── audio.primary.default.so
+ │       │   │   ├── audio.primary.x86.so
+ │       │   │   ├── bluetooth.default.so
+-│       │   │   ├── camera.default.so
++│       │   │   ├── camera.x86.so
+ │       │   │   ├── gps.default.so
+ │       │   │   ├── gralloc.default.so
+ │       │   │   ├── gralloc.drm.so
+-│       │   │   ├── hwcomposer.x86.so
+ │       │   │   ├── keystore.default.so
+ │       │   │   ├── lights.default.so
+ │       │   │   ├── local_time.default.so
+@@ -1675,6 +1683,7 @@
+ │       │   ├── libandroid_runtime.so
+ │       │   ├── libandroid_servers.so
+ │       │   ├── libandroid.so
++│       │   ├── libAppDataSearch.so
+ │       │   ├── libasound.so
+ │       │   ├── libaudioeffect_jni.so
+ │       │   ├── libaudioflinger.so
+@@ -1691,15 +1700,17 @@
+ │       │   ├── libcameraservice.so
+ │       │   ├── libchromium_net.so
+ │       │   ├── libclcore.bc
++│       │   ├── libclcore_debug.bc
++│       │   ├── libclcore_x86.bc
+ │       │   ├── libc_malloc_debug_leak.so
+ │       │   ├── libc_malloc_debug_qemu.so
+ │       │   ├── libcommon_time_client.so
++│       │   ├── libcompiler_rt.so
+ │       │   ├── libcorkscrew.so
+ │       │   ├── libcrypto.so
+ │       │   ├── libc.so
+ │       │   ├── libctest.so
+ │       │   ├── libcutils.so
+-│       │   ├── libdbus.so
+ │       │   ├── libdefcontainer_jni.so
+ │       │   ├── libdiskconfig.so
+ │       │   ├── libdl.so
+@@ -1710,6 +1721,7 @@
+ │       │   ├── libdrm_intel.so
+ │       │   ├── libdrm_radeon.so
+ │       │   ├── libdrm.so
++│       │   ├── libdvm_houdini.so
+ │       │   ├── libdvm.so
+ │       │   ├── libeffects.so
+ │       │   ├── libEGL.so
+@@ -1727,17 +1739,25 @@
+ │       │   ├── libext4_utils.so
+ │       │   ├── libFFTEm.so
+ │       │   ├── libfilterfw.so
++│       │   ├── libfilterpack_facedetect.so
+ │       │   ├── libfilterpack_imageproc.so
++│       │   ├── libfrsdk.so
+ │       │   ├── libgabi++.so
++│       │   ├── libgames_rtmp_jni.so
+ │       │   ├── libgccdemangle.so
+ │       │   ├── libglapi.so
+ │       │   ├── libGLES_trace.so
+ │       │   ├── libGLESv1_CM.so
+ │       │   ├── libGLESv2.so
++│       │   ├── libGLESv3.so -> libGLESv2.so
++│       │   ├── libgralloc_drm.so
+ │       │   ├── libgui.so
+ │       │   ├── libhardware_legacy.so
+ │       │   ├── libhardware.so
++│       │   ├── libharfbuzz_ng.so
+ │       │   ├── libharfbuzz.so
++│       │   ├── libhoudini.so
++│       │   ├── libhwui.so
+ │       │   ├── libicui18n.so
+ │       │   ├── libicuuc.so
+ │       │   ├── libinput.so
+@@ -1749,13 +1769,14 @@
+ │       │   ├── libjnigraphics.so
+ │       │   ├── libjni_latinime.so
+ │       │   ├── libjni_mosaic.so
+-│       │   ├── libjni_pinyinime.so
+ │       │   ├── libjpeg.so
+-│       │   ├── libkeystore_client.so
++│       │   ├── libkeystore_binder.so
++│       │   ├── libLLVM.so
+ │       │   ├── liblog.so
++│       │   ├── liblogwrap.so
+ │       │   ├── libmdnssd.so
+ │       │   ├── libmedia_jni.so
+-│       │   ├── libmedia_native.so
++│       │   ├── libmedialogservice.so
+ │       │   ├── libmediaplayerservice.so
+ │       │   ├── libmedia.so
+ │       │   ├── libm.so
+@@ -1764,6 +1785,7 @@
+ │       │   ├── libnbaio.so
+ │       │   ├── libnetlink.so
+ │       │   ├── libnetutils.so
++│       │   ├── libnfc_ndef.so
+ │       │   ├── libOpenMAXAL.so
+ │       │   ├── libOpenSLES.so
+ │       │   ├── libpagemap.so
+@@ -1773,10 +1795,14 @@
+ │       │   ├── libpower.so
+ │       │   ├── libreference-ril.so
+ │       │   ├── libril.so
++│       │   ├── librilutils.so
++│       │   ├── libRScpp.so
++│       │   ├── libRSCpuRef.so
+ │       │   ├── libRSDriver.so
+ │       │   ├── librs_jni.so
+ │       │   ├── libRS.so
+ │       │   ├── librtp_jni.so
++│       │   ├── libselinux.so
+ │       │   ├── libsensorservice.so
+ │       │   ├── libskia.so
+ │       │   ├── libsonivox.so
+@@ -1802,6 +1828,7 @@
+ │       │   ├── libstagefright_soft_amrwbenc.so
+ │       │   ├── libstagefright_soft_flacenc.so
+ │       │   ├── libstagefright_soft_g711dec.so
++│       │   ├── libstagefright_soft_gsmdec.so
+ │       │   ├── libstagefright_soft_h264dec.so
+ │       │   ├── libstagefright_soft_h264enc.so
+ │       │   ├── libstagefright_soft_mp3dec.so
+@@ -1810,6 +1837,7 @@
+ │       │   ├── libstagefright_soft_rawdec.so
+ │       │   ├── libstagefright_soft_vorbisdec.so
+ │       │   ├── libstagefright_soft_vpxdec.so
++│       │   ├── libstagefright_soft_vpxenc.so
+ │       │   ├── libstagefright_wfd.so
+ │       │   ├── libstagefright_yuv.so
+ │       │   ├── libstdc++.so
+@@ -1827,6 +1855,7 @@
+ │       │   ├── libttspico.so
+ │       │   ├── libui.so
+ │       │   ├── libusbhost.so
++│       │   ├── libusb.so
+ │       │   ├── libutils.so
+ │       │   ├── libvariablespeed.so
+ │       │   ├── libvideoeditor_core.so
+@@ -1838,13 +1867,10 @@
+ │       │   ├── libwebcore.so
+ │       │   ├── libwebrtc_audio_preprocessing.so
+ │       │   ├── libwilhelm.so
+-│       │   ├── libwnndict.so
+-│       │   ├── libWnnEngDic.so
+-│       │   ├── libWnnJpnDic.so
+ │       │   ├── libwpa_client.so
+ │       │   ├── libz.so
+ │       │   ├── modules
+-│       │   │   └── 3.8.0-android-x86+
++│       │   │   └── 3.10.2-android-x86+
+ │       │   │       ├── kernel
+ │       │   │       │   ├── arch
+ │       │   │       │   │   └── x86
+@@ -1878,7 +1904,8 @@
+ │       │   │       │   │   ├── tea.ko
+ │       │   │       │   │   ├── tgr192.ko
+ │       │   │       │   │   ├── wp512.ko
+-│       │   │       │   │   └── xcbc.ko
++│       │   │       │   │   ├── xcbc.ko
++│       │   │       │   │   └── xor.ko
+ │       │   │       │   ├── drivers
+ │       │   │       │   │   ├── acpi
+ │       │   │       │   │   │   ├── hed.ko
+@@ -1932,7 +1959,6 @@
+ │       │   │       │   │   ├── cpufreq
+ │       │   │       │   │   │   ├── acpi-cpufreq.ko
+ │       │   │       │   │   │   ├── cpufreq-nforce2.ko
+-│       │   │       │   │   │   ├── cpufreq_snb.ko
+ │       │   │       │   │   │   ├── e_powersaver.ko
+ │       │   │       │   │   │   ├── gx-suspmod.ko
+ │       │   │       │   │   │   ├── longhaul.ko
+@@ -1953,46 +1979,45 @@
+ │       │   │       │   │   ├── gpio
+ │       │   │       │   │   │   └── gpio-pca953x.ko
+ │       │   │       │   │   ├── gpu
+-│       │   │       │   │   │   ├── drm
+-│       │   │       │   │   │   │   ├── ast
+-│       │   │       │   │   │   │   │   └── ast.ko
+-│       │   │       │   │   │   │   ├── cirrus
+-│       │   │       │   │   │   │   │   └── cirrus.ko
+-│       │   │       │   │   │   │   ├── drm_kms_helper.ko
+-│       │   │       │   │   │   │   ├── drm.ko
+-│       │   │       │   │   │   │   ├── drm_usb.ko
+-│       │   │       │   │   │   │   ├── i2c
+-│       │   │       │   │   │   │   │   └── ch7006.ko
+-│       │   │       │   │   │   │   ├── i915
+-│       │   │       │   │   │   │   │   └── i915.ko
+-│       │   │       │   │   │   │   ├── mga
+-│       │   │       │   │   │   │   │   └── mga.ko
+-│       │   │       │   │   │   │   ├── mgag200
+-│       │   │       │   │   │   │   │   └── mgag200.ko
+-│       │   │       │   │   │   │   ├── nouveau
+-│       │   │       │   │   │   │   │   └── nouveau.ko
+-│       │   │       │   │   │   │   ├── r128
+-│       │   │       │   │   │   │   │   └── r128.ko
+-│       │   │       │   │   │   │   ├── radeon
+-│       │   │       │   │   │   │   │   └── radeon.ko
+-│       │   │       │   │   │   │   ├── savage
+-│       │   │       │   │   │   │   │   └── savage.ko
+-│       │   │       │   │   │   │   ├── sis
+-│       │   │       │   │   │   │   │   └── sis.ko
+-│       │   │       │   │   │   │   ├── tdfx
+-│       │   │       │   │   │   │   │   └── tdfx.ko
+-│       │   │       │   │   │   │   ├── ttm
+-│       │   │       │   │   │   │   │   └── ttm.ko
+-│       │   │       │   │   │   │   ├── udl
+-│       │   │       │   │   │   │   │   └── udl.ko
+-│       │   │       │   │   │   │   ├── via
+-│       │   │       │   │   │   │   │   └── via.ko
+-│       │   │       │   │   │   │   └── vmwgfx
+-│       │   │       │   │   │   │       └── vmwgfx.ko
+-│       │   │       │   │   │   └── stub
+-│       │   │       │   │   │       └── poulsbo.ko
++│       │   │       │   │   │   └── drm
++│       │   │       │   │   │       ├── ast
++│       │   │       │   │   │       │   └── ast.ko
++│       │   │       │   │   │       ├── cirrus
++│       │   │       │   │   │       │   └── cirrus.ko
++│       │   │       │   │   │       ├── drm_kms_helper.ko
++│       │   │       │   │   │       ├── drm.ko
++│       │   │       │   │   │       ├── drm_usb.ko
++│       │   │       │   │   │       ├── i2c
++│       │   │       │   │   │       │   ├── ch7006.ko
++│       │   │       │   │   │       │   ├── sil164.ko
++│       │   │       │   │   │       │   └── tda998x.ko
++│       │   │       │   │   │       ├── i915
++│       │   │       │   │   │       │   └── i915.ko
++│       │   │       │   │   │       ├── mga
++│       │   │       │   │   │       │   └── mga.ko
++│       │   │       │   │   │       ├── mgag200
++│       │   │       │   │   │       │   └── mgag200.ko
++│       │   │       │   │   │       ├── nouveau
++│       │   │       │   │   │       │   └── nouveau.ko
++│       │   │       │   │   │       ├── r128
++│       │   │       │   │   │       │   └── r128.ko
++│       │   │       │   │   │       ├── radeon
++│       │   │       │   │   │       │   └── radeon.ko
++│       │   │       │   │   │       ├── savage
++│       │   │       │   │   │       │   └── savage.ko
++│       │   │       │   │   │       ├── sis
++│       │   │       │   │   │       │   └── sis.ko
++│       │   │       │   │   │       ├── tdfx
++│       │   │       │   │   │       │   └── tdfx.ko
++│       │   │       │   │   │       ├── ttm
++│       │   │       │   │   │       │   └── ttm.ko
++│       │   │       │   │   │       ├── udl
++│       │   │       │   │   │       │   └── udl.ko
++│       │   │       │   │   │       └── via
++│       │   │       │   │   │           └── via.ko
+ │       │   │       │   │   ├── hid
+ │       │   │       │   │   │   ├── hid-a4tech.ko
++│       │   │       │   │   │   ├── hid-appleir.ko
+ │       │   │       │   │   │   ├── hid-apple.ko
+ │       │   │       │   │   │   ├── hid-aureal.ko
+ │       │   │       │   │   │   ├── hid-axff.ko
+@@ -2008,7 +2033,6 @@
+ │       │   │       │   │   │   ├── hid-gyration.ko
+ │       │   │       │   │   │   ├── hid-holtekff.ko
+ │       │   │       │   │   │   ├── hid-holtek-kbd.ko
+-│       │   │       │   │   │   ├── hid-hyperv.ko
+ │       │   │       │   │   │   ├── hid-icade.ko
+ │       │   │       │   │   │   ├── hid-kensington.ko
+ │       │   │       │   │   │   ├── hid-keytouch.ko
+@@ -2035,6 +2059,7 @@
+ │       │   │       │   │   │   ├── hid-roccat.ko
+ │       │   │       │   │   │   ├── hid-roccat-kone.ko
+ │       │   │       │   │   │   ├── hid-roccat-koneplus.ko
++│       │   │       │   │   │   ├── hid-roccat-konepure.ko
+ │       │   │       │   │   │   ├── hid-roccat-kovaplus.ko
+ │       │   │       │   │   │   ├── hid-roccat-lua.ko
+ │       │   │       │   │   │   ├── hid-roccat-pyra.ko
+@@ -2045,7 +2070,9 @@
+ │       │   │       │   │   │   ├── hid-sjoy.ko
+ │       │   │       │   │   │   ├── hid-sony.ko
+ │       │   │       │   │   │   ├── hid-speedlink.ko
++│       │   │       │   │   │   ├── hid-steelseries.ko
+ │       │   │       │   │   │   ├── hid-sunplus.ko
++│       │   │       │   │   │   ├── hid-thingm.ko
+ │       │   │       │   │   │   ├── hid-tivo.ko
+ │       │   │       │   │   │   ├── hid-tmff.ko
+ │       │   │       │   │   │   ├── hid-topseed.ko
+@@ -2058,9 +2085,6 @@
+ │       │   │       │   │   │   ├── hid-zydacron.ko
+ │       │   │       │   │   │   └── i2c-hid
+ │       │   │       │   │   │       └── i2c-hid.ko
+-│       │   │       │   │   ├── hv
+-│       │   │       │   │   │   ├── hv_utils.ko
+-│       │   │       │   │   │   └── hv_vmbus.ko
+ │       │   │       │   │   ├── hwmon
+ │       │   │       │   │   │   ├── applesmc.ko
+ │       │   │       │   │   │   ├── hwmon.ko
+@@ -2107,18 +2131,27 @@
+ │       │   │       │   │   │   └── ide-gd_mod.ko
+ │       │   │       │   │   ├── iio
+ │       │   │       │   │   │   ├── accel
+-│       │   │       │   │   │   │   └── hid-sensor-accel-3d.ko
++│       │   │       │   │   │   │   ├── hid-sensor-accel-3d.ko
++│       │   │       │   │   │   │   ├── kxsd9.ko
++│       │   │       │   │   │   │   ├── st_accel_i2c.ko
++│       │   │       │   │   │   │   ├── st_accel.ko
++│       │   │       │   │   │   │   └── st_accel_spi.ko
+ │       │   │       │   │   │   ├── adc
+ │       │   │       │   │   │   │   ├── ad7298.ko
+ │       │   │       │   │   │   │   ├── ad7476.ko
+ │       │   │       │   │   │   │   ├── ad7793.ko
+ │       │   │       │   │   │   │   ├── ad7887.ko
++│       │   │       │   │   │   │   ├── ad7923.ko
+ │       │   │       │   │   │   │   ├── ad_sigma_delta.ko
+ │       │   │       │   │   │   │   └── max1363.ko
+ │       │   │       │   │   │   ├── common
+-│       │   │       │   │   │   │   └── hid-sensors
+-│       │   │       │   │   │   │       ├── hid-sensor-iio-common.ko
+-│       │   │       │   │   │   │       └── hid-sensor-trigger.ko
++│       │   │       │   │   │   │   ├── hid-sensors
++│       │   │       │   │   │   │   │   ├── hid-sensor-iio-common.ko
++│       │   │       │   │   │   │   │   └── hid-sensor-trigger.ko
++│       │   │       │   │   │   │   └── st_sensors
++│       │   │       │   │   │   │       ├── st_sensors_i2c.ko
++│       │   │       │   │   │   │       ├── st_sensors.ko
++│       │   │       │   │   │   │       └── st_sensors_spi.ko
+ │       │   │       │   │   │   ├── gyro
+ │       │   │       │   │   │   │   └── hid-sensor-gyro-3d.ko
+ │       │   │       │   │   │   ├── imu
+@@ -2129,9 +2162,14 @@
+ │       │   │       │   │   │   ├── light
+ │       │   │       │   │   │   │   ├── adjd_s311.ko
+ │       │   │       │   │   │   │   ├── hid-sensor-als.ko
++│       │   │       │   │   │   │   ├── tsl2563.ko
+ │       │   │       │   │   │   │   └── vcnl4000.ko
+ │       │   │       │   │   │   └── magnetometer
+-│       │   │       │   │   │       └── hid-sensor-magn-3d.ko
++│       │   │       │   │   │       ├── ak8975.ko
++│       │   │       │   │   │       ├── hid-sensor-magn-3d.ko
++│       │   │       │   │   │       ├── st_magn_i2c.ko
++│       │   │       │   │   │       ├── st_magn.ko
++│       │   │       │   │   │       └── st_magn_spi.ko
+ │       │   │       │   │   ├── input
+ │       │   │       │   │   │   ├── evbug.ko
+ │       │   │       │   │   │   ├── gameport
+@@ -2267,12 +2305,16 @@
+ │       │   │       │   │   │   ├── common
+ │       │   │       │   │   │   │   ├── b2c2
+ │       │   │       │   │   │   │   │   └── b2c2-flexcop.ko
++│       │   │       │   │   │   │   ├── btcx-risc.ko
++│       │   │       │   │   │   │   ├── cx2341x.ko
++│       │   │       │   │   │   │   ├── cypress_firmware.ko
+ │       │   │       │   │   │   │   ├── saa7146
+ │       │   │       │   │   │   │   │   ├── saa7146.ko
+ │       │   │       │   │   │   │   │   └── saa7146_vv.ko
+-│       │   │       │   │   │   │   └── siano
+-│       │   │       │   │   │   │       ├── smsdvb.ko
+-│       │   │       │   │   │   │       └── smsmdtv.ko
++│       │   │       │   │   │   │   ├── siano
++│       │   │       │   │   │   │   │   ├── smsdvb.ko
++│       │   │       │   │   │   │   │   └── smsmdtv.ko
++│       │   │       │   │   │   │   └── tveeprom.ko
+ │       │   │       │   │   │   ├── dvb-core
+ │       │   │       │   │   │   │   └── dvb-core.ko
+ │       │   │       │   │   │   ├── dvb-frontends
+@@ -2381,9 +2423,7 @@
+ │       │   │       │   │   │   │   ├── bt819.ko
+ │       │   │       │   │   │   │   ├── bt856.ko
+ │       │   │       │   │   │   │   ├── bt866.ko
+-│       │   │       │   │   │   │   ├── btcx-risc.ko
+ │       │   │       │   │   │   │   ├── cs5345.ko
+-│       │   │       │   │   │   │   ├── cx2341x.ko
+ │       │   │       │   │   │   │   ├── cx25840
+ │       │   │       │   │   │   │   │   └── cx25840.ko
+ │       │   │       │   │   │   │   ├── ir-kbd-i2c.ko
+@@ -2421,8 +2461,6 @@
+ │       │   │       │   │   │   │   │   ├── rj54n1cb0c.ko
+ │       │   │       │   │   │   │   │   └── tw9910.ko
+ │       │   │       │   │   │   │   ├── sr030pc30.ko
+-│       │   │       │   │   │   │   ├── tcm825x.ko
+-│       │   │       │   │   │   │   ├── tveeprom.ko
+ │       │   │       │   │   │   │   ├── tvp514x.ko
+ │       │   │       │   │   │   │   ├── tvp5150.ko
+ │       │   │       │   │   │   │   ├── tvp7002.ko
+@@ -2602,6 +2640,7 @@
+ │       │   │       │   │   │   │   │   ├── rc-pv951.ko
+ │       │   │       │   │   │   │   │   ├── rc-rc6-mce.ko
+ │       │   │       │   │   │   │   │   ├── rc-real-audio-220-32-keys.ko
++│       │   │       │   │   │   │   │   ├── rc-reddo.ko
+ │       │   │       │   │   │   │   │   ├── rc-snapstream-firefly.ko
+ │       │   │       │   │   │   │   │   ├── rc-streamzap.ko
+ │       │   │       │   │   │   │   │   ├── rc-tbs-nec.ko
+@@ -2611,6 +2650,7 @@
+ │       │   │       │   │   │   │   │   ├── rc-terratec-slim.ko
+ │       │   │       │   │   │   │   │   ├── rc-tevii-nec.ko
+ │       │   │       │   │   │   │   │   ├── rc-tivo.ko
++│       │   │       │   │   │   │   │   ├── rc-total-media-in-hand-02.ko
+ │       │   │       │   │   │   │   │   ├── rc-total-media-in-hand.ko
+ │       │   │       │   │   │   │   │   ├── rc-trekstor.ko
+ │       │   │       │   │   │   │   │   ├── rc-tt-1500.ko
+@@ -2645,6 +2685,7 @@
+ │       │   │       │   │   │   │   ├── mxl5005s.ko
+ │       │   │       │   │   │   │   ├── mxl5007t.ko
+ │       │   │       │   │   │   │   ├── qt1010.ko
++│       │   │       │   │   │   │   ├── r820t.ko
+ │       │   │       │   │   │   │   ├── tda18212.ko
+ │       │   │       │   │   │   │   ├── tda18218.ko
+ │       │   │       │   │   │   │   ├── tda18271.ko
+@@ -2654,6 +2695,7 @@
+ │       │   │       │   │   │   │   ├── tea5761.ko
+ │       │   │       │   │   │   │   ├── tea5767.ko
+ │       │   │       │   │   │   │   ├── tua9001.ko
++│       │   │       │   │   │   │   ├── tuner_it913x.ko
+ │       │   │       │   │   │   │   ├── tuner-simple.ko
+ │       │   │       │   │   │   │   ├── tuner-types.ko
+ │       │   │       │   │   │   │   ├── tuner-xc2028.ko
+@@ -2702,7 +2744,6 @@
+ │       │   │       │   │   │   │   │   ├── dvb-usb-au6610.ko
+ │       │   │       │   │   │   │   │   ├── dvb-usb-az6007.ko
+ │       │   │       │   │   │   │   │   ├── dvb-usb-ce6230.ko
+-│       │   │       │   │   │   │   │   ├── dvb_usb_cypress_firmware.ko
+ │       │   │       │   │   │   │   │   ├── dvb-usb-ec168.ko
+ │       │   │       │   │   │   │   │   ├── dvb-usb-gl861.ko
+ │       │   │       │   │   │   │   │   ├── dvb-usb-it913x.ko
+@@ -2794,9 +2835,9 @@
+ │       │   │       │   │   │   └── v4l2-core
+ │       │   │       │   │   │       ├── tuner.ko
+ │       │   │       │   │   │       ├── v4l2-common.ko
+-│       │   │       │   │   │       ├── v4l2-int-device.ko
+ │       │   │       │   │   │       ├── videobuf2-core.ko
+ │       │   │       │   │   │       ├── videobuf2-dma-contig.ko
++│       │   │       │   │   │       ├── videobuf2-dma-sg.ko
+ │       │   │       │   │   │       ├── videobuf2-memops.ko
+ │       │   │       │   │   │       ├── videobuf2-vmalloc.ko
+ │       │   │       │   │   │       ├── videobuf-core.ko
+@@ -2843,7 +2884,8 @@
+ │       │   │       │   │   │   ├── ti-st
+ │       │   │       │   │   │   │   └── st_drv.ko
+ │       │   │       │   │   │   ├── tsl2550.ko
+-│       │   │       │   │   │   └── vmw_balloon.ko
++│       │   │       │   │   │   └── vmw_vmci
++│       │   │       │   │   │       └── vmw_vmci.ko
+ │       │   │       │   │   ├── mmc
+ │       │   │       │   │   │   ├── card
+ │       │   │       │   │   │   │   └── sdio_uart.ko
+@@ -2866,7 +2908,6 @@
+ │       │   │       │   │   │   │   └── qinfo_probe.ko
+ │       │   │       │   │   │   ├── mtd_blkdevs.ko
+ │       │   │       │   │   │   ├── mtdblock.ko
+-│       │   │       │   │   │   ├── mtdchar.ko
+ │       │   │       │   │   │   ├── mtd.ko
+ │       │   │       │   │   │   ├── mtdoops.ko
+ │       │   │       │   │   │   ├── nand
+@@ -2898,7 +2939,6 @@
+ │       │   │       │   │   │   │   └── rfc1201.ko
+ │       │   │       │   │   │   ├── ethernet
+ │       │   │       │   │   │   │   ├── 3com
+-│       │   │       │   │   │   │   │   ├── 3c501.ko
+ │       │   │       │   │   │   │   │   ├── 3c509.ko
+ │       │   │       │   │   │   │   │   ├── 3c515.ko
+ │       │   │       │   │   │   │   │   ├── 3c574_cs.ko
+@@ -2906,14 +2946,9 @@
+ │       │   │       │   │   │   │   │   ├── 3c59x.ko
+ │       │   │       │   │   │   │   │   └── typhoon.ko
+ │       │   │       │   │   │   │   ├── 8390
+-│       │   │       │   │   │   │   │   ├── 3c503.ko
+ │       │   │       │   │   │   │   │   ├── 8390.ko
+ │       │   │       │   │   │   │   │   ├── 8390p.ko
+-│       │   │       │   │   │   │   │   ├── ac3200.ko
+ │       │   │       │   │   │   │   │   ├── axnet_cs.ko
+-│       │   │       │   │   │   │   │   ├── e2100.ko
+-│       │   │       │   │   │   │   │   ├── hp.ko
+-│       │   │       │   │   │   │   │   ├── hp-plus.ko
+ │       │   │       │   │   │   │   │   ├── ne2k-pci.ko
+ │       │   │       │   │   │   │   │   ├── ne.ko
+ │       │   │       │   │   │   │   │   ├── pcnet_cs.ko
+@@ -2925,12 +2960,13 @@
+ │       │   │       │   │   │   │   │   └── acenic.ko
+ │       │   │       │   │   │   │   ├── amd
+ │       │   │       │   │   │   │   │   ├── amd8111e.ko
+-│       │   │       │   │   │   │   │   ├── depca.ko
+ │       │   │       │   │   │   │   │   ├── lance.ko
+ │       │   │       │   │   │   │   │   ├── ni65.ko
+ │       │   │       │   │   │   │   │   ├── nmclan_cs.ko
+ │       │   │       │   │   │   │   │   └── pcnet32.ko
+ │       │   │       │   │   │   │   ├── atheros
++│       │   │       │   │   │   │   │   ├── alx
++│       │   │       │   │   │   │   │   │   └── alx.ko
+ │       │   │       │   │   │   │   │   ├── atl1c
+ │       │   │       │   │   │   │   │   │   └── atl1c.ko
+ │       │   │       │   │   │   │   │   ├── atl1e
+@@ -2968,7 +3004,6 @@
+ │       │   │       │   │   │   │   │   └── enic
+ │       │   │       │   │   │   │   │       └── enic.ko
+ │       │   │       │   │   │   │   ├── dec
+-│       │   │       │   │   │   │   │   ├── ewrk3.ko
+ │       │   │       │   │   │   │   │   └── tulip
+ │       │   │       │   │   │   │   │       ├── de2104x.ko
+ │       │   │       │   │   │   │   │       ├── de4x5.ko
+@@ -2978,8 +3013,6 @@
+ │       │   │       │   │   │   │   │       ├── winbond-840.ko
+ │       │   │       │   │   │   │   │       └── xircom_cb.ko
+ │       │   │       │   │   │   │   ├── dlink
+-│       │   │       │   │   │   │   │   ├── de600.ko
+-│       │   │       │   │   │   │   │   ├── de620.ko
+ │       │   │       │   │   │   │   │   ├── dl2k.ko
+ │       │   │       │   │   │   │   │   └── sundance.ko
+ │       │   │       │   │   │   │   ├── dnet.ko
+@@ -2989,20 +3022,9 @@
+ │       │   │       │   │   │   │   ├── ethoc.ko
+ │       │   │       │   │   │   │   ├── fealnx.ko
+ │       │   │       │   │   │   │   ├── fujitsu
+-│       │   │       │   │   │   │   │   ├── at1700.ko
+-│       │   │       │   │   │   │   │   ├── eth16i.ko
+ │       │   │       │   │   │   │   │   └── fmvj18x_cs.ko
+ │       │   │       │   │   │   │   ├── hp
+ │       │   │       │   │   │   │   │   └── hp100.ko
+-│       │   │       │   │   │   │   ├── i825xx
+-│       │   │       │   │   │   │   │   ├── 3c505.ko
+-│       │   │       │   │   │   │   │   ├── 3c507.ko
+-│       │   │       │   │   │   │   │   ├── 82596.ko
+-│       │   │       │   │   │   │   │   ├── eepro.ko
+-│       │   │       │   │   │   │   │   ├── eexpress.ko
+-│       │   │       │   │   │   │   │   ├── lp486e.ko
+-│       │   │       │   │   │   │   │   ├── ni52.ko
+-│       │   │       │   │   │   │   │   └── znet.ko
+ │       │   │       │   │   │   │   ├── icplus
+ │       │   │       │   │   │   │   │   └── ipg.ko
+ │       │   │       │   │   │   │   ├── intel
+@@ -3070,8 +3092,6 @@
+ │       │   │       │   │   │   │   │   ├── 8139too.ko
+ │       │   │       │   │   │   │   │   ├── atp.ko
+ │       │   │       │   │   │   │   │   └── r8169.ko
+-│       │   │       │   │   │   │   ├── seeq
+-│       │   │       │   │   │   │   │   └── seeq8005.ko
+ │       │   │       │   │   │   │   ├── sfc
+ │       │   │       │   │   │   │   │   └── sfc.ko
+ │       │   │       │   │   │   │   ├── silan
+@@ -3104,8 +3124,6 @@
+ │       │   │       │   │   │   │   │   └── w5300.ko
+ │       │   │       │   │   │   │   └── xircom
+ │       │   │       │   │   │   │       └── xirc2ps_cs.ko
+-│       │   │       │   │   │   ├── hyperv
+-│       │   │       │   │   │   │   └── hv_netvsc.ko
+ │       │   │       │   │   │   ├── ifb.ko
+ │       │   │       │   │   │   ├── macvlan.ko
+ │       │   │       │   │   │   ├── macvtap.ko
+@@ -3141,8 +3159,11 @@
+ │       │   │       │   │   │   ├── slip
+ │       │   │       │   │   │   │   └── slip.ko
+ │       │   │       │   │   │   ├── sungem_phy.ko
++│       │   │       │   │   │   ├── team
++│       │   │       │   │   │   │   └── team.ko
+ │       │   │       │   │   │   ├── usb
+ │       │   │       │   │   │   │   ├── asix.ko
++│       │   │       │   │   │   │   ├── ax88179_178a.ko
+ │       │   │       │   │   │   │   ├── catc.ko
+ │       │   │       │   │   │   │   ├── cdc_eem.ko
+ │       │   │       │   │   │   │   ├── cdc_ether.ko
+@@ -3164,6 +3185,7 @@
+ │       │   │       │   │   │   │   ├── pegasus.ko
+ │       │   │       │   │   │   │   ├── plusb.ko
+ │       │   │       │   │   │   │   ├── qmi_wwan.ko
++│       │   │       │   │   │   │   ├── r8152.ko
+ │       │   │       │   │   │   │   ├── rndis_host.ko
+ │       │   │       │   │   │   │   ├── rtl8150.ko
+ │       │   │       │   │   │   │   ├── sierra_net.ko
+@@ -3228,7 +3250,9 @@
+ │       │   │       │   │   │       ├── iwlwifi
+ │       │   │       │   │   │       │   ├── dvm
+ │       │   │       │   │   │       │   │   └── iwldvm.ko
+-│       │   │       │   │   │       │   └── iwlwifi.ko
++│       │   │       │   │   │       │   ├── iwlwifi.ko
++│       │   │       │   │   │       │   └── mvm
++│       │   │       │   │   │       │       └── iwlmvm.ko
+ │       │   │       │   │   │       ├── libertas
+ │       │   │       │   │   │       │   ├── libertas_cs.ko
+ │       │   │       │   │   │       │   ├── libertas.ko
+@@ -3270,6 +3294,7 @@
+ │       │   │       │   │   │       │   ├── rt2800pci.ko
+ │       │   │       │   │   │       │   ├── rt2800usb.ko
+ │       │   │       │   │   │       │   ├── rt2x00lib.ko
++│       │   │       │   │   │       │   ├── rt2x00mmio.ko
+ │       │   │       │   │   │       │   ├── rt2x00pci.ko
+ │       │   │       │   │   │       │   ├── rt2x00usb.ko
+ │       │   │       │   │   │       │   ├── rt61pci.ko
+@@ -3280,6 +3305,8 @@
+ │       │   │       │   │   │       │   └── rtl8187
+ │       │   │       │   │   │       │       └── rtl8187.ko
+ │       │   │       │   │   │       ├── rtlwifi
++│       │   │       │   │   │       │   ├── rtl8188ee
++│       │   │       │   │   │       │   │   └── rtl8188ee.ko
+ │       │   │       │   │   │       │   ├── rtl8192c
+ │       │   │       │   │   │       │   │   └── rtl8192c-common.ko
+ │       │   │       │   │   │       │   ├── rtl8192ce
+@@ -3323,7 +3350,6 @@
+ │       │   │       │   │   ├── pci
+ │       │   │       │   │   │   ├── hotplug
+ │       │   │       │   │   │   │   ├── acpiphp_ibm.ko
+-│       │   │       │   │   │   │   ├── acpiphp.ko
+ │       │   │       │   │   │   │   ├── cpqphp.ko
+ │       │   │       │   │   │   │   ├── ibmphp.ko
+ │       │   │       │   │   │   │   ├── pciehp.ko
+@@ -3349,6 +3375,7 @@
+ │       │   │       │   │   │       ├── asus-laptop.ko
+ │       │   │       │   │   │       ├── asus-nb-wmi.ko
+ │       │   │       │   │   │       ├── asus-wmi.ko
++│       │   │       │   │   │       ├── chromeos_laptop.ko
+ │       │   │       │   │   │       ├── classmate-laptop.ko
+ │       │   │       │   │   │       ├── compal-laptop.ko
+ │       │   │       │   │   │       ├── dell-wmi-aio.ko
+@@ -3364,6 +3391,7 @@
+ │       │   │       │   │   │       ├── ideapad-laptop.ko
+ │       │   │       │   │   │       ├── intel_ips.ko
+ │       │   │       │   │   │       ├── intel_menlow.ko
++│       │   │       │   │   │       ├── intel_mid_powerbtn.ko
+ │       │   │       │   │   │       ├── intel_mid_thermal.ko
+ │       │   │       │   │   │       ├── intel_oaktrail.ko
+ │       │   │       │   │   │       ├── lsrot.ko
+@@ -3393,7 +3421,6 @@
+ │       │   │       │   │   │   ├── tps62360-regulator.ko
+ │       │   │       │   │   │   └── virtual.ko
+ │       │   │       │   │   ├── scsi
+-│       │   │       │   │   │   ├── hv_storvsc.ko
+ │       │   │       │   │   │   ├── pcmcia
+ │       │   │       │   │   │   │   ├── aha152x_cs.ko
+ │       │   │       │   │   │   │   ├── fdomain_cs.ko
+@@ -3414,11 +3441,12 @@
+ │       │   │       │   │   │   │   └── asus_oled.ko
+ │       │   │       │   │   │   ├── bcm
+ │       │   │       │   │   │   │   └── bcm_wimax.ko
++│       │   │       │   │   │   ├── ced1401
++│       │   │       │   │   │   │   └── cedusb.ko
+ │       │   │       │   │   │   ├── comedi
+ │       │   │       │   │   │   │   ├── comedi.ko
+ │       │   │       │   │   │   │   └── drivers
+-│       │   │       │   │   │   │       ├── 8255.ko
+-│       │   │       │   │   │   │       └── pcm_common.ko
++│       │   │       │   │   │   │       └── 8255.ko
+ │       │   │       │   │   │   ├── cptm1217
+ │       │   │       │   │   │   │   └── clearpad_tm1217.ko
+ │       │   │       │   │   │   ├── crystalhd
+@@ -3426,6 +3454,10 @@
+ │       │   │       │   │   │   ├── csr
+ │       │   │       │   │   │   │   ├── csr_helper.ko
+ │       │   │       │   │   │   │   └── csr_wifi.ko
++│       │   │       │   │   │   ├── dwc2
++│       │   │       │   │   │   │   ├── dwc2.ko
++│       │   │       │   │   │   │   ├── dwc2_pci.ko
++│       │   │       │   │   │   │   └── dwc2_platform.ko
+ │       │   │       │   │   │   ├── echo
+ │       │   │       │   │   │   │   └── echo.ko
+ │       │   │       │   │   │   ├── et131x
+@@ -3448,7 +3480,6 @@
+ │       │   │       │   │   │   │   │   ├── adis16209.ko
+ │       │   │       │   │   │   │   │   ├── adis16220.ko
+ │       │   │       │   │   │   │   │   ├── adis16240.ko
+-│       │   │       │   │   │   │   │   ├── kxsd9.ko
+ │       │   │       │   │   │   │   │   └── lis3l02dq.ko
+ │       │   │       │   │   │   │   ├── adc
+ │       │   │       │   │   │   │   │   ├── ad7192.ko
+@@ -3457,19 +3488,14 @@
+ │       │   │       │   │   │   │   │   ├── ad7606.ko
+ │       │   │       │   │   │   │   │   ├── ad7780.ko
+ │       │   │       │   │   │   │   │   ├── ad7816.ko
+-│       │   │       │   │   │   │   │   ├── ad799x.ko
+-│       │   │       │   │   │   │   │   └── adt7410.ko
+-│       │   │       │   │   │   │   ├── iio_hwmon.ko
++│       │   │       │   │   │   │   │   └── ad799x.ko
+ │       │   │       │   │   │   │   ├── light
+ │       │   │       │   │   │   │   │   ├── isl29018.ko
+ │       │   │       │   │   │   │   │   ├── isl29028.ko
+-│       │   │       │   │   │   │   │   ├── tsl2563.ko
+ │       │   │       │   │   │   │   │   ├── tsl2583.ko
+ │       │   │       │   │   │   │   │   └── tsl2x7x_core.ko
+ │       │   │       │   │   │   │   ├── magnetometer
+-│       │   │       │   │   │   │   │   ├── ak8975.ko
+ │       │   │       │   │   │   │   │   └── hmc5843.ko
+-│       │   │       │   │   │   │   ├── ring_sw.ko
+ │       │   │       │   │   │   │   └── trigger
+ │       │   │       │   │   │   │       ├── iio-trig-gpio.ko
+ │       │   │       │   │   │   │       └── iio-trig-sysfs.ko
+@@ -3484,6 +3510,8 @@
+ │       │   │       │   │   │   │   │   └── dt3155v4l.ko
+ │       │   │       │   │   │   │   └── solo6x10
+ │       │   │       │   │   │   │       └── solo6x10.ko
++│       │   │       │   │   │   ├── olpc_dcon
++│       │   │       │   │   │   │   └── olpc-dcon.ko
+ │       │   │       │   │   │   ├── ozwpan
+ │       │   │       │   │   │   │   └── ozwpan.ko
+ │       │   │       │   │   │   ├── panel
+@@ -3509,6 +3537,10 @@
+ │       │   │       │   │   │   │   └── rts5139.ko
+ │       │   │       │   │   │   ├── serqt_usb2
+ │       │   │       │   │   │   │   └── serqt_usb2.ko
++│       │   │       │   │   │   ├── silicom
++│       │   │       │   │   │   │   ├── bpctl_mod.ko
++│       │   │       │   │   │   │   └── bypasslib
++│       │   │       │   │   │   │       └── bypass.ko
+ │       │   │       │   │   │   ├── slicoss
+ │       │   │       │   │   │   │   └── slicoss.ko
+ │       │   │       │   │   │   ├── sm7xxfb
+@@ -3531,12 +3563,8 @@
+ │       │   │       │   │   │   │   └── wlags49_h25_cs.ko
+ │       │   │       │   │   │   ├── wlan-ng
+ │       │   │       │   │   │   │   └── prism2_usb.ko
+-│       │   │       │   │   │   ├── xgifb
+-│       │   │       │   │   │   │   └── xgifb.ko
+-│       │   │       │   │   │   ├── zram
+-│       │   │       │   │   │   │   └── zram.ko
+-│       │   │       │   │   │   └── zsmalloc
+-│       │   │       │   │   │       └── zsmalloc.ko
++│       │   │       │   │   │   └── xgifb
++│       │   │       │   │   │       └── xgifb.ko
+ │       │   │       │   │   ├── tty
+ │       │   │       │   │   │   └── serial
+ │       │   │       │   │   │       └── 8250
+@@ -3551,11 +3579,6 @@
+ │       │   │       │   │   │   │   ├── usblp.ko
+ │       │   │       │   │   │   │   └── usbtmc.ko
+ │       │   │       │   │   │   ├── gadget
+-│       │   │       │   │   │   │   ├── amd5536udc.ko
+-│       │   │       │   │   │   │   ├── gadgetfs.ko
+-│       │   │       │   │   │   │   ├── g_hid.ko
+-│       │   │       │   │   │   │   ├── g_mass_storage.ko
+-│       │   │       │   │   │   │   ├── g_serial.ko
+ │       │   │       │   │   │   │   ├── g_webcam.ko
+ │       │   │       │   │   │   │   ├── libcomposite.ko
+ │       │   │       │   │   │   │   └── udc-core.ko
+@@ -3625,7 +3648,8 @@
+ │       │   │       │   │   │   └── storage
+ │       │   │       │   │   │       └── ums-karma.ko
+ │       │   │       │   │   ├── vhost
+-│       │   │       │   │   │   └── vhost_net.ko
++│       │   │       │   │   │   ├── vhost_net.ko
++│       │   │       │   │   │   └── vringh.ko
+ │       │   │       │   │   └── video
+ │       │   │       │   │       ├── aty
+ │       │   │       │   │       │   ├── aty128fb.ko
+@@ -3633,13 +3657,24 @@
+ │       │   │       │   │       │   └── radeonfb.ko
+ │       │   │       │   │       ├── backlight
+ │       │   │       │   │       │   ├── adp8860_bl.ko
++│       │   │       │   │       │   ├── adp8870_bl.ko
++│       │   │       │   │       │   ├── ams369fg06.ko
++│       │   │       │   │       │   ├── apple_bl.ko
+ │       │   │       │   │       │   ├── generic_bl.ko
++│       │   │       │   │       │   ├── hx8357.ko
++│       │   │       │   │       │   ├── ili922x.ko
+ │       │   │       │   │       │   ├── ili9320.ko
+ │       │   │       │   │       │   ├── kb3886_bl.ko
+ │       │   │       │   │       │   ├── l4f00242t03.ko
++│       │   │       │   │       │   ├── ld9040.ko
++│       │   │       │   │       │   ├── lm3630_bl.ko
++│       │   │       │   │       │   ├── lm3639_bl.ko
+ │       │   │       │   │       │   ├── lms283gf05.ko
++│       │   │       │   │       │   ├── lms501kf03.ko
++│       │   │       │   │       │   ├── lp855x_bl.ko
+ │       │   │       │   │       │   ├── ltv350qv.ko
+ │       │   │       │   │       │   ├── platform_lcd.ko
++│       │   │       │   │       │   ├── pwm_bl.ko
+ │       │   │       │   │       │   ├── s6e63m0.ko
+ │       │   │       │   │       │   ├── tdo24m.ko
+ │       │   │       │   │       │   └── vgg2432a4.ko
+@@ -3673,6 +3708,7 @@
+ │       │   │       │   │       ├── s3fb.ko
+ │       │   │       │   │       ├── savage
+ │       │   │       │   │       │   └── savagefb.ko
++│       │   │       │   │       ├── ssd1307fb.ko
+ │       │   │       │   │       ├── sstfb.ko
+ │       │   │       │   │       ├── svgalib.ko
+ │       │   │       │   │       ├── syscopyarea.ko
+@@ -3763,10 +3799,18 @@
+ │       │   │       │   │       └── xfs.ko
+ │       │   │       │   ├── lib
+ │       │   │       │   │   ├── crc7.ko
+-│       │   │       │   │   └── crc-itu-t.ko
++│       │   │       │   │   ├── crc-itu-t.ko
++│       │   │       │   │   └── raid6
++│       │   │       │   │       └── raid6_pq.ko
+ │       │   │       │   ├── net
+-│       │   │       │   │   ├── ipv4
+-│       │   │       │   │   │   └── inet_lro.ko
++│       │   │       │   │   ├── bluetooth
++│       │   │       │   │   │   ├── bluetooth.ko
++│       │   │       │   │   │   ├── bnep
++│       │   │       │   │   │   │   └── bnep.ko
++│       │   │       │   │   │   ├── hidp
++│       │   │       │   │   │   │   └── hidp.ko
++│       │   │       │   │   │   └── rfcomm
++│       │   │       │   │   │       └── rfcomm.ko
+ │       │   │       │   │   ├── mac80211
+ │       │   │       │   │   │   └── mac80211.ko
+ │       │   │       │   │   ├── sunrpc
+@@ -3995,6 +4039,8 @@
+ │       │   │       │       │   └── vx
+ │       │   │       │       │       └── snd-vxpocket.ko
+ │       │   │       │       ├── soc
++│       │   │       │       │   ├── atmel
++│       │   │       │       │   │   └── snd-soc-atmel-pcm.ko
+ │       │   │       │       │   ├── codecs
+ │       │   │       │       │   │   ├── snd-soc-ad1836.ko
+ │       │   │       │       │   │   ├── snd-soc-ad193x.ko
+@@ -4007,6 +4053,7 @@
+ │       │   │       │       │   │   ├── snd-soc-ak4641.ko
+ │       │   │       │       │   │   ├── snd-soc-ak4642.ko
+ │       │   │       │       │   │   ├── snd-soc-ak4671.ko
++│       │   │       │       │   │   ├── snd-soc-ak5386.ko
+ │       │   │       │       │   │   ├── snd-soc-alc5623.ko
+ │       │   │       │       │   │   ├── snd-soc-alc5632.ko
+ │       │   │       │       │   │   ├── snd-soc-cs4270.ko
+@@ -4016,6 +4063,7 @@
+ │       │   │       │       │   │   ├── snd-soc-cs42l73.ko
+ │       │   │       │       │   │   ├── snd-soc-cx20442.ko
+ │       │   │       │       │   │   ├── snd-soc-da7210.ko
++│       │   │       │       │   │   ├── snd-soc-da7213.ko
+ │       │   │       │       │   │   ├── snd-soc-da732x.ko
+ │       │   │       │       │   │   ├── snd-soc-da9055.ko
+ │       │   │       │       │   │   ├── snd-soc-dfbmcs320.ko
+@@ -4040,6 +4088,7 @@
+ │       │   │       │       │   │   ├── snd-soc-ssm2602.ko
+ │       │   │       │       │   │   ├── snd-soc-sta32x.ko
+ │       │   │       │       │   │   ├── snd-soc-sta529.ko
++│       │   │       │       │   │   ├── snd-soc-tas5086.ko
+ │       │   │       │       │   │   ├── snd-soc-tlv320aic23.ko
+ │       │   │       │       │   │   ├── snd-soc-tlv320aic26.ko
+ │       │   │       │       │   │   ├── snd-soc-tlv320aic32x4.ko
+@@ -4124,6 +4173,9 @@
+ │       │   │       ├── modules.softdep
+ │       │   │       ├── modules.symbols
+ │       │   │       └── modules.symbols.bin
++│       │   ├── plugins
++│       │   │   └── com.adobe.flashplayer
++│       │   │       └── libflashplayer.so
+ │       │   ├── soundfx
+ │       │   │   ├── libaudiopreprocessing.so
+ │       │   │   ├── libbundlewrapper.so
+@@ -4157,225 +4209,66 @@
+ │       │       │   ├── Alarm_Beep_03.ogg
+ │       │       │   ├── Alarm_Buzzer.ogg
+ │       │       │   ├── Alarm_Classic.ogg
+-│       │       │   ├── Alarm_Rooster_02.ogg
+-│       │       │   ├── Argon.ogg
+-│       │       │   ├── Barium.ogg
+-│       │       │   ├── Carbon.ogg
+-│       │       │   ├── Cesium.ogg
+-│       │       │   ├── Fermium.ogg
+-│       │       │   ├── Hassium.ogg
+-│       │       │   ├── Helium.ogg
+-│       │       │   ├── Krypton.ogg
+-│       │       │   ├── Neon.ogg
+-│       │       │   ├── Neptunium.ogg
+-│       │       │   ├── Nobelium.ogg
+-│       │       │   ├── Oxygen.ogg
+-│       │       │   ├── Plutonium.ogg
+-│       │       │   └── Scandium.ogg
++│       │       │   └── Alarm_Rooster_02.ogg
+ │       │       ├── notifications
+-│       │       │   ├── Adara.ogg
+-│       │       │   ├── Aldebaran.ogg
+-│       │       │   ├── Altair.ogg
+-│       │       │   ├── Antares.ogg
+-│       │       │   ├── Antimony.ogg
+-│       │       │   ├── arcturus.ogg
+-│       │       │   ├── Arcturus.ogg
+-│       │       │   ├── Argon.ogg
+ │       │       │   ├── Beat_Box_Android.ogg
+-│       │       │   ├── Bellatrix.ogg
+-│       │       │   ├── Beryllium.ogg
+-│       │       │   ├── Betelgeuse.ogg
+ │       │       │   ├── CaffeineSnake.ogg
+-│       │       │   ├── Canopus.ogg
+-│       │       │   ├── Capella.ogg
+-│       │       │   ├── Castor.ogg
+-│       │       │   ├── CetiAlpha.ogg
+-│       │       │   ├── Cobalt.ogg
+-│       │       │   ├── Cricket.ogg
+ │       │       │   ├── DearDeer.ogg
+-│       │       │   ├── Deneb.ogg
+-│       │       │   ├── Doink.ogg
+ │       │       │   ├── DontPanic.ogg
+-│       │       │   ├── Drip.ogg
+-│       │       │   ├── Electra.ogg
+ │       │       │   ├── F1_MissedCall.ogg
+ │       │       │   ├── F1_New_MMS.ogg
+ │       │       │   ├── F1_New_SMS.ogg
+-│       │       │   ├── Fluorine.ogg
+-│       │       │   ├── Fomalhaut.ogg
+-│       │       │   ├── Gallium.ogg
+ │       │       │   ├── Heaven.ogg
+-│       │       │   ├── Helium.ogg
+ │       │       │   ├── Highwire.ogg
+-│       │       │   ├── Hojus.ogg
+-│       │       │   ├── Iridium.ogg
+-│       │       │   ├── Krypton.ogg
+ │       │       │   ├── KzurbSonar.ogg
+-│       │       │   ├── Lalande.ogg
+-│       │       │   ├── Merope.ogg
+-│       │       │   ├── Mira.ogg
+-│       │       │   ├── moonbeam.ogg
+ │       │       │   ├── OnTheHunt.ogg
+-│       │       │   ├── Palladium.ogg
+-│       │       │   ├── pixiedust.ogg
+-│       │       │   ├── pizzicato.ogg
+-│       │       │   ├── Plastic_Pipe.ogg
+-│       │       │   ├── Polaris.ogg
+-│       │       │   ├── Pollux.ogg
+-│       │       │   ├── Procyon.ogg
+-│       │       │   ├── Proxima.ogg
+-│       │       │   ├── Radon.ogg
+-│       │       │   ├── regulus.ogg
+-│       │       │   ├── Rubidium.ogg
+-│       │       │   ├── Selenium.ogg
+-│       │       │   ├── Shaula.ogg
+-│       │       │   ├── sirius.ogg
+-│       │       │   ├── Sirrah.ogg
+-│       │       │   ├── SpaceSeed.ogg
+-│       │       │   ├── Spica.ogg
+-│       │       │   ├── Strontium.ogg
+ │       │       │   ├── TaDa.ogg
+-│       │       │   ├── Tejat.ogg
+-│       │       │   ├── Thallium.ogg
+ │       │       │   ├── Tinkerbell.ogg
+-│       │       │   ├── tweeters.ogg
+-│       │       │   ├── Upsilon.ogg
+-│       │       │   ├── vega.ogg
+-│       │       │   ├── Vega.ogg
+-│       │       │   ├── Voila.ogg
+-│       │       │   ├── Xenon.ogg
+-│       │       │   └── Zirconium.ogg
++│       │       │   └── Voila.ogg
+ │       │       ├── ringtones
+-│       │       │   ├── Andromeda.ogg
+-│       │       │   ├── ANDROMEDA.ogg
+-│       │       │   ├── Aquila.ogg
+-│       │       │   ├── ArgoNavis.ogg
+-│       │       │   ├── Backroad.ogg
+ │       │       │   ├── BeatPlucker.ogg
+ │       │       │   ├── BentleyDubs.ogg
+-│       │       │   ├── Big_Easy.ogg
+ │       │       │   ├── BirdLoop.ogg
+-│       │       │   ├── Bollywood.ogg
+-│       │       │   ├── BOOTES.ogg
+-│       │       │   ├── BussaMove.ogg
+-│       │       │   ├── Cairo.ogg
+-│       │       │   ├── Calypso_Steel.ogg
+-│       │       │   ├── CanisMajor.ogg
+-│       │       │   ├── CANISMAJOR.ogg
+ │       │       │   ├── CaribbeanIce.ogg
+-│       │       │   ├── Carina.ogg
+-│       │       │   ├── CASSIOPEIA.ogg
+-│       │       │   ├── Centaurus.ogg
+-│       │       │   ├── Champagne_Edition.ogg
+-│       │       │   ├── Club_Cubano.ogg
+-│       │       │   ├── CrayonRock.ogg
+ │       │       │   ├── CrazyDream.ogg
+ │       │       │   ├── CurveBall.ogg
+-│       │       │   ├── Cygnus.ogg
+-│       │       │   ├── DancinFool.ogg
+-│       │       │   ├── Ding.ogg
+-│       │       │   ├── DonMessWivIt.ogg
+-│       │       │   ├── Draco.ogg
+ │       │       │   ├── DreamTheme.ogg
+-│       │       │   ├── Eastern_Sky.ogg
+-│       │       │   ├── Enter_the_Nexus.ogg
+-│       │       │   ├── Eridani.ogg
+ │       │       │   ├── EtherShake.ogg
+-│       │       │   ├── FreeFlight.ogg
+ │       │       │   ├── FriendlyGhost.ogg
+-│       │       │   ├── Funk_Yall.ogg
+ │       │       │   ├── GameOverGuitar.ogg
+-│       │       │   ├── Gimme_Mo_Town.ogg
+-│       │       │   ├── Girtab.ogg
+-│       │       │   ├── Glacial_Groove.ogg
+ │       │       │   ├── Growl.ogg
+-│       │       │   ├── HalfwayHome.ogg
+-│       │       │   ├── hydra.ogg
+-│       │       │   ├── Hydra.ogg
+ │       │       │   ├── InsertCoin.ogg
+ │       │       │   ├── LoopyLounge.ogg
+ │       │       │   ├── LoveFlute.ogg
+-│       │       │   ├── Lyra.ogg
+-│       │       │   ├── Machina.ogg
+ │       │       │   ├── MidEvilJaunt.ogg
+ │       │       │   ├── MildlyAlarming.ogg
+-│       │       │   ├── Nairobi.ogg
+-│       │       │   ├── Nassau.ogg
+ │       │       │   ├── NewPlayer.ogg
+ │       │       │   ├── Noises1.ogg
+ │       │       │   ├── Noises2.ogg
+ │       │       │   ├── Noises3.ogg
+-│       │       │   ├── No_Limits.ogg
+ │       │       │   ├── OrganDub.ogg
+-│       │       │   ├── Orion.ogg
+-│       │       │   ├── Paradise_Island.ogg
+-│       │       │   ├── Pegasus.ogg
+-│       │       │   ├── Perseus.ogg
+-│       │       │   ├── PERSEUS.ogg
+-│       │       │   ├── Playa.ogg
+-│       │       │   ├── Pyxis.ogg
+-│       │       │   ├── Revelation.ogg
+-│       │       │   ├── Rigel.ogg
+ │       │       │   ├── Ring_Classic_02.ogg
+ │       │       │   ├── Ring_Digital_02.ogg
+ │       │       │   ├── Ring_Synth_02.ogg
+ │       │       │   ├── Ring_Synth_04.ogg
+-│       │       │   ├── Road_Trip.ogg
+ │       │       │   ├── RomancingTheTone.ogg
+-│       │       │   ├── Safari.ogg
+-│       │       │   ├── Savannah.ogg
+-│       │       │   ├── Scarabaeus.ogg
+-│       │       │   ├── Sceptrum.ogg
+-│       │       │   ├── Seville.ogg
+-│       │       │   ├── Shes_All_That.ogg
+-│       │       │   ├── SilkyWay.ogg
+ │       │       │   ├── SitarVsSitar.ogg
+-│       │       │   ├── Solarium.ogg
+ │       │       │   ├── SpringyJalopy.ogg
+-│       │       │   ├── Steppin_Out.ogg
+ │       │       │   ├── Terminated.ogg
+-│       │       │   ├── Testudo.ogg
+-│       │       │   ├── Themos.ogg
+-│       │       │   ├── Third_Eye.ogg
+-│       │       │   ├── Thunderfoot.ogg
+ │       │       │   ├── TwirlAway.ogg
+-│       │       │   ├── UrsaMinor.ogg
+-│       │       │   ├── URSAMINOR.ogg
+ │       │       │   ├── VeryAlarmed.ogg
+-│       │       │   ├── Vespa.ogg
+-│       │       │   ├── World.ogg
+-│       │       │   └── Zeta.ogg
++│       │       │   └── World.ogg
+ │       │       └── ui
+ │       │           ├── camera_click.ogg
+-│       │           ├── camera_focus.ogg
+-│       │           ├── Dock.ogg
+ │       │           ├── Effect_Tick.ogg
+ │       │           ├── KeypressDelete.ogg
+ │       │           ├── KeypressReturn.ogg
+ │       │           ├── KeypressSpacebar.ogg
+ │       │           ├── KeypressStandard.ogg
+-│       │           ├── Lock.ogg
+-│       │           ├── LowBattery.ogg
+-│       │           ├── Undock.ogg
+-│       │           ├── Unlock.ogg
+ │       │           └── VideoRecord.ogg
+-│       ├── tts
+-│       │   └── lang_pico
+-│       │       ├── de-DE_gl0_sg.bin
+-│       │       ├── de-DE_ta.bin
+-│       │       ├── en-GB_kh0_sg.bin
+-│       │       ├── en-GB_ta.bin
+-│       │       ├── en-US_lh0_sg.bin
+-│       │       ├── en-US_ta.bin
+-│       │       ├── es-ES_ta.bin
+-│       │       ├── es-ES_zl0_sg.bin
+-│       │       ├── fr-FR_nk0_sg.bin
+-│       │       ├── fr-FR_ta.bin
+-│       │       ├── it-IT_cm0_sg.bin
+-│       │       └── it-IT_ta.bin
+ │       ├── usr
+ │       │   ├── icu
+-│       │   │   └── icudt48l.dat
++│       │   │   └── icudt50l.dat
+ │       │   ├── idc
+ │       │   │   ├── GenericTouch.idc
+ │       │   │   ├── IDEACOM__IDC_6680.idc
+@@ -4390,14 +4283,30 @@
+ │       │   │   ├── AVRCP.kl
+ │       │   │   ├── Generic.kl
+ │       │   │   ├── qwerty.kl
++│       │   │   ├── Vendor_0079_Product_0011.kl
+ │       │   │   ├── Vendor_045e_Product_028e.kl
+ │       │   │   ├── Vendor_046d_Product_c216.kl
++│       │   │   ├── Vendor_046d_Product_c219.kl
++│       │   │   ├── Vendor_046d_Product_c21f.kl
+ │       │   │   ├── Vendor_046d_Product_c294.kl
+ │       │   │   ├── Vendor_046d_Product_c299.kl
+ │       │   │   ├── Vendor_046d_Product_c532.kl
+ │       │   │   ├── Vendor_054c_Product_0268.kl
++│       │   │   ├── Vendor_0583_Product_2060.kl
+ │       │   │   ├── Vendor_05ac_Product_0239.kl
+-│       │   │   └── Vendor_22b8_Product_093d.kl
++│       │   │   ├── Vendor_0a5c_Product_8502.kl
++│       │   │   ├── Vendor_1038_Product_1412.kl
++│       │   │   ├── Vendor_12bd_Product_d015.kl
++│       │   │   ├── Vendor_1689_Product_fd00.kl
++│       │   │   ├── Vendor_1689_Product_fd01.kl
++│       │   │   ├── Vendor_1689_Product_fe00.kl
++│       │   │   ├── Vendor_1bad_Product_f016.kl
++│       │   │   ├── Vendor_1bad_Product_f023.kl
++│       │   │   ├── Vendor_1bad_Product_f027.kl
++│       │   │   ├── Vendor_1bad_Product_f036.kl
++│       │   │   ├── Vendor_1d79_Product_0009.kl
++│       │   │   ├── Vendor_22b8_Product_093d.kl
++│       │   │   └── Vendor_2378_Product_100a.kl
+ │       │   ├── share
+ │       │   │   ├── alsa
+ │       │   │   │   ├── alsa.conf
+@@ -4430,9 +4339,7 @@
+ │       │   │   │   ├── RFFspeed_501.bmd
+ │       │   │   │   └── RFFstd_501.bmd
+ │       │   │   └── zoneinfo
+-│       │   │       ├── zoneinfo.dat
+-│       │   │       ├── zoneinfo.idx
+-│       │   │       └── zoneinfo.version
++│       │   │       └── tzdata
+ │       │   └── srec
+ │       │       └── config
+ │       │           └── en.us
+@@ -4457,10 +4364,15 @@
+ │       │                   ├── generic8.lda
+ │       │                   ├── generic8_m.swimdl
+ │       │                   └── generic.swiarb
++│       ├── vendor
++│       │   ├── lib
++│       │   │   └── libbt-vendor.so
++│       │   └── media
++│       │       ├── LMspeed_508.emd
++│       │       └── PFFprec_600.emd
+ │       └── xbin
+ │           ├── [ -> busybox
+ │           ├── [[ -> busybox
+-│           ├── add-property-tag
+ │           ├── adjtimex -> busybox
+ │           ├── arp -> busybox
+ │           ├── ash -> busybox
+@@ -4480,7 +4392,6 @@
+ │           ├── cat -> busybox
+ │           ├── catv -> busybox
+ │           ├── chattr -> busybox
+-│           ├── check-lost+found
+ │           ├── chgrp -> busybox
+ │           ├── chmod -> busybox
+ │           ├── chown -> busybox
+@@ -4571,6 +4482,7 @@
+ │           ├── mdev -> busybox
+ │           ├── mesg -> busybox
+ │           ├── micro_bench
++│           ├── micro_bench_static
+ │           ├── mkdir -> busybox
+ │           ├── mke2fs -> busybox
+ │           ├── mkfifo -> busybox
+@@ -4715,4 +4627,4 @@
+ │   └── stage2_eltorito
+ └── lost+found
+ 
+-853 directories, 3862 files
++824 directories, 3803 files
