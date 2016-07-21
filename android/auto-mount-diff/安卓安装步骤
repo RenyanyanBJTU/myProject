@@ -3,7 +3,7 @@ android-x86-安装运行实验步骤纪要
 1.创建磁盘映像.
     qemu-img create -f raw android.raw 20G
 2.启动android_x86.
-    qemu-system-x86_64 -enable-kvm -m 2.5G -cdrom android-x86-4.3-r2.iso -vga std -serial stdio -hda android-4.4.raw -boot d
+    qemu-system-x86_64 -enable-kvm -m 2.5G -cdrom android-x86-6.0.iso -vga std -serial stdio -hda android.raw -boot d
 3.进入debug mode.
 （1）输入fdisk /dev/sda，创建分区1. 
        1）"n" （新建分区）
@@ -30,7 +30,7 @@ android-x86-安装运行实验步骤纪要
 5.完成安装.
     重新启动reboot，然后关闭qemu.
 6.再次重启，进入安装后的android_x86系统. 
-    qemu-system-x86_64 -enable-kvm -m 2.5G -vga std -serial stdio -drive file=android-4.3.raw,format=raw,index=0,media=disk
+    qemu-system-x86_64 -enable-kvm -m 2.5G -vga std -serial stdio -drive file=android.raw,format=raw,index=0,media=disk
 
   
 
