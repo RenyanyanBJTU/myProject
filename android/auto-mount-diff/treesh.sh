@@ -6,6 +6,7 @@ if [ $# -eq 2 ];then
 
   if [ -d $1 ];then     
      tree $1 > treefor"$1".txt
+     tree -i -f $1 > ftreefor"$1".txt
      if [ $? -eq 0 ];then
         echo "tree for '$1' created successful."
      else
@@ -19,6 +20,7 @@ if [ $# -eq 2 ];then
 	
   if [ -d $2 ];then
      tree $2 > treefor"$2".txt
+     tree -i -f $2 > ftreefor"$2".txt
      if [ $? -eq 0 ];then
         echo "tree for '$2' created successful."
      else
@@ -34,14 +36,29 @@ else
   exit 1
 fi
 
+#get singkey
+echo "update signkey info,wait a few mimutes......"
+sh signkeysh.sh treeforandroid4.2.txt
+if [ $? -ne 0 ];then
+  echo "treeforandroid4.2.txt update signkey failed.progress running stoped."
+  exit 1
+else
+ echo "treeforandroid4.2.txt update signkey successful."
+fi
+
+sh signkeysh.sh treeforandroid4.3.txt
+
+if [ $? -ne 0 ];then
+  echo "treeforandroid4.3.txt update signkey failed.progress running stoped."
+  exit 1
+else
+ echo "treeforandroid4.3.txt update signkey successful."
+fi
+
+
 if [ $? -eq 0 ];then
    diff -Nur treefor"$1".txt treefor"$2".txt > treefor-cmp.patch
    echo "diff file treefor-cmp.patch created successful."
-
-   echo "signkey for android4.2-ramdisk.img: "
-   md5sum  android4.2/android-4.2-test/ramdisk.img 
-   echo "signkey for android4.3-ramdisk.img: "
-   md5sum  android4.3/android-4.3-test/ramdisk.img
 else
   echo "file not existed!"
 fi
@@ -49,4 +66,4 @@ fi
 echo "\n"
 echo "create file list:"
 pwd 
-ls -l | grep "treefor*"
+ls -l | grep "treef*"

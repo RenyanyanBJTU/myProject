@@ -194,11 +194,3 @@ else
  echo "treesh.sh program running successful."
 fi
 
-
-
-
-
-
-
-
-
