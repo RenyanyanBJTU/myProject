@@ -1,0 +1,68 @@
+（1）刚刚安装的系统输入时会很奇怪，输入以下命令即可解决：
+	ibus-daemon -drx
+(2)递归创建目录
+	 mkdir -p xx/xx/xx
+(3)递归查看目录
+	ls -R
+（4）查看硬盘信息
+	fdisk -l （root）
+	df -l (信息更详细些而且界面显示更好)
+	df -h (显示硬盘使用情况)
+    找到硬盘的挂在点后，进入挂在点就可以访问硬盘里的内容了，例如系统D盘挂在点是/media/ryy/0FBE15C90FBE15C9，则应该输入下列命令就可以看到硬盘上的东西了：
+	cd /media/ryy/0FBE15C90FBE15C9
+（5）QEMU
+which qemu-img查看命令的安装位置
+创建硬盘(1)：
+qemu-img create -f raw android-4.4.raw 8G
+
+创建一个10G的虚拟磁盘(2)
+qemu-img create -f qcow2 xp.qcow2 10G
+   
+安装模式命令：  
+qemu-system-x86_64 -enable-kvm -m 2.5G -hda android.raw -boot d -cdrom android_x86_64_6.0.iso -vga std -serial stdio 
+
+[
+示例：
+ qemu-system-x86_64 -hda xp.qcow2 -m 1024 -boot d -cdrom  ubuntu_x86_64.iso (-spice port=5999,disable-ticketing)
+-d指的是从光驱启动安装.iso，-c从硬盘启动，-n是从网络启动。如果是-dcn的话会按顺序找启动项。
+
+自动装配/dev目录下的设备文件：
+mdev -s
+将分区1格式化设置为数据分区：
+mke2fs -j -L DATA /dev/sda1
+
+#启动安装好的系统的命令：
+[1] qemu-system-x86_64 -enable-kvm -m 2.5G  -drive file=android-4.4.raw,format=raw,index=0,media=disk -vga std -serial stdio
+[2] qemu-system-x86_64 -enable-kvm -m 2.5G -hda xxx.raw -boot c
+#qemu虚拟机图形管理界面（试过不管用）
+virt-manager
+
+##当 QEMU 调试时出现 VNC server running on`127.0.0.1:5900' 时，需要安装 libsdl 开发库，然后再重新编译安装 QEMU。在 Debian lenny 下：
+    sudo apt-get install libsdl1.2-dev
+其中 SDL 是 Simple DirectMedia Layer 的缩写。它是一个跨平台的多媒体库，它通过 OpenGL 和 2D 音频帧缓冲对音频，键盘，鼠标，游戏杆，3D 硬件进行底层访问。
+####
+
+(6) mount 命令
+ sudo mount 源文件  目标文件夹（例如/media/data）
+
+(7)git 命令
+git clone http://....xxx.git  将git仓库克隆到本地。
+
+每次修改完提交的话执行下列两条命令：
+git add . # 将所有修改过的工作文件提交暂存区
+git commit -a -m "备注" #提交所有的更改
+git push origin master #发布到git网页上
+
+(8)安装必要编译环境
+ sudo apt-get install build-essential
+执行完后，完成了gcc,g++,make的安装。build-essential 是一整套工具，gcc，libc等等
+(9)字符串操作命令
+cut 
+sed
+cat filename | while read line #按行读文件
+do
+  echo $line
+done
+    
+
+
