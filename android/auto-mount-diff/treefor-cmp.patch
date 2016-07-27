@@ -1,9 +1,9 @@
---- treeforandroid4.2.txt	2016-07-23 18:35:30.789765568 +0800
-+++ treeforandroid4.3.txt	2016-07-23 18:40:14.849576178 +0800
+--- treeforandroid-4.2.txt	2016-07-27 20:51:53.536905040 +0800
++++ treeforandroid-4.3.txt	2016-07-27 20:56:02.188986446 +0800
 @@ -1,5 +1,5 @@
--android4.2
+-android-4.2
 -├── android-4.2-test
-+android4.3
++android-4.3
 +├── android-4.3-test
  │   ├── data
  │   │   ├── app
@@ -14,7 +14,7 @@
  │   │   │   ├── com.android.internal.backup.LocalTransport
 -│   │   │   ├── com.google.android.backup.BackupTransportService
  │   │   │   └── pending
--│   │   │       └── journal-1145105017.tmp  f84b61bca637b01611230b6a1fb3432c
+-│   │   │       └── journal1420972005.tmp  f84b61bca637b01611230b6a1fb3432c
 +│   │   │       └── journal-453396649.tmp  69b5c49160f44ebd0368731069d84e0e
 +│   │   ├── bugreports -> data/com.android.shell/files/bugreports
  │   │   ├── dalvik-cache
@@ -74,14 +74,14 @@
  │   │   │   │   └── lib -> /data/app-lib/com.android.bluetooth
  │   │   │   ├── com.android.browser
  │   │   │   │   └── lib -> /data/app-lib/com.android.browser
-@@ -52,123 +44,136 @@
+@@ -52,125 +44,136 @@
  │   │   │   │   └── lib -> /data/app-lib/com.android.calculator2
  │   │   │   ├── com.android.calendar
  │   │   │   │   ├── cache
 -│   │   │   │   │   └── com.android.renderscript.cache
  │   │   │   │   ├── lib -> /data/app-lib/com.android.calendar
  │   │   │   │   └── shared_prefs
--│   │   │   │       ├── calendar_alerts.xml  97fee2ce45913c3307c1d87cca95b831
+-│   │   │   │       ├── calendar_alerts.xml  9b44c06906242edee62bee8d28f61096
 -│   │   │   │       ├── com.android.calendar_preferences.xml  452f6122b639ee73f8f4501d93d249b2
 -│   │   │   │       └── _has_set_default_values.xml  adc5b308f06f1fd7380654241de68f69
 +│   │   │   │       ├── calendar_alerts.xml  17fd2bd5acfdb6269a37b6b038e85cb5
@@ -107,6 +107,8 @@
 -│   │   │   │       └── com.android.deskclock_preferences.xml  7ea9bd6d4af08c491c05867e78f9ec19
 +│   │   │   │       └── com.android.deskclock_preferences.xml  fd6fcd1ed62d8ca06a50654d1471bb6c
  │   │   │   ├── com.android.development
+-│   │   │   │   ├── cache
+-│   │   │   │   │   └── com.android.renderscript.cache
  │   │   │   │   └── lib -> /data/app-lib/com.android.development
 -│   │   │   ├── com.android.development_settings
 -│   │   │   │   └── lib -> /data/app-lib/com.android.development_settings
@@ -172,7 +174,7 @@
  │   │   │   │   │   └── launcher.preferences  8ece476eec60007a2ef2c80759331c17
  │   │   │   │   ├── lib -> /data/app-lib/com.android.launcher
  │   │   │   │   └── shared_prefs
--│   │   │   │       └── com.android.launcher2.prefs.xml  7be95edd1976bc5aafbdc1b0921a64a9
+-│   │   │   │       └── com.android.launcher2.prefs.xml  958735f816de1478a58e1e5d5ded4e94
 +│   │   │   │       └── com.android.launcher2.prefs.xml  85b6b1b2c53f468434eac06aeddcb795
  │   │   │   ├── com.android.location.fused
 -│   │   │   │   ├── cache
@@ -245,7 +247,7 @@
  │   │   │   │   │   └── profile.db-journal  d41d8cd98f00b204e9800998ecf8427e
  │   │   │   │   ├── files
  │   │   │   │   │   ├── photos
-@@ -176,14 +181,13 @@
+@@ -178,14 +181,13 @@
  │   │   │   │   │       └── photos
  │   │   │   │   ├── lib -> /data/app-lib/com.android.providers.contacts
  │   │   │   │   └── shared_prefs
@@ -264,16 +266,16 @@
  │   │   │   │   └── lib -> /data/app-lib/com.android.providers.downloads
  │   │   │   ├── com.android.providers.downloads.ui
  │   │   │   │   └── lib -> /data/app-lib/com.android.providers.downloads.ui
-@@ -192,76 +196,63 @@
+@@ -194,78 +196,63 @@
  │   │   │   ├── com.android.providers.media
  │   │   │   │   ├── cache
  │   │   │   │   ├── databases
--│   │   │   │   │   ├── external.db  cdd25e86f080dd2fb05f88fb46b6926c
--│   │   │   │   │   ├── external.db-shm  356566aa8db197fe47258cf31d62e68f
--│   │   │   │   │   ├── external.db-wal  2df73fbbf920c3be94d89bf431fecb1c
+-│   │   │   │   │   ├── external.db  776900edc25953e3f7e14717471f41f0
+-│   │   │   │   │   ├── external.db-shm  0572d52d8a33033e19c4eed86d5c8a4a
+-│   │   │   │   │   ├── external.db-wal  993d5851ca4f25c7b0cdf694308e6c46
 -│   │   │   │   │   ├── internal.db  4b48ca7da6d6c9443d2ffaa2ee845e09
--│   │   │   │   │   ├── internal.db-shm  6ac8a96e0f4d6696e2fe54fedf82225c
--│   │   │   │   │   └── internal.db-wal  3248236a0814e6c610da397ac7b8edfa
+-│   │   │   │   │   ├── internal.db-shm  121319a84ffecc2f044fe5811d557af1
+-│   │   │   │   │   └── internal.db-wal  2b143cef9444b737adee2dc749475de6
 +│   │   │   │   │   ├── external.db  995532a05b053c42a14a55fe23f676e8
 +│   │   │   │   │   ├── external.db-shm  335f03dfaa8d64fcec73321a33c86e20
 +│   │   │   │   │   ├── external.db-wal  2f2662f366176f1261757fa9b81a4c4b
@@ -289,8 +291,8 @@
  │   │   │   ├── com.android.providers.settings
  │   │   │   │   ├── databases
 -│   │   │   │   │   ├── settings.db  a255e8b70029a7b8d285cf4af21c2e7e
--│   │   │   │   │   ├── settings.db-shm  716b41680f755f38c042c8bbeee2f625
--│   │   │   │   │   └── settings.db-wal  0a1e06b84ef0ddeb4ea84b23a99db079
+-│   │   │   │   │   ├── settings.db-shm  bb07fe7c25b3f1593282b166f8b52ecb
+-│   │   │   │   │   └── settings.db-wal  c61c1ecc3ce0903ce8e39ca51eb9c326
 +│   │   │   │   │   ├── settings.db  9d494880676d13df0427edee2a4c701e
 +│   │   │   │   │   └── settings.db-journal  5c61ecca688b4bbab1bc7e118c86e9a0
  │   │   │   │   └── lib -> /data/app-lib/com.android.providers.settings
@@ -318,7 +320,10 @@
  │   │   │   │   └── lib -> /data/app-lib/com.android.quicksearchbox
  │   │   │   ├── com.android.settings
  │   │   │   │   ├── cache
- │   │   │   │   └── lib -> /data/app-lib/com.android.settings
+-│   │   │   │   ├── lib -> /data/app-lib/com.android.settings
+-│   │   │   │   └── shared_prefs
+-│   │   │   │       └── com.android.settings_preferences.xml  ce6e65ea66c9464c913285de8a47db4a
++│   │   │   │   └── lib -> /data/app-lib/com.android.settings
  │   │   │   ├── com.android.sharedstoragebackup
  │   │   │   │   └── lib -> /data/app-lib/com.android.sharedstoragebackup
 -│   │   │   ├── com.android.smspush
@@ -361,7 +366,7 @@
  │   │   │   ├── com.android.vpndialogs
  │   │   │   │   └── lib -> /data/app-lib/com.android.vpndialogs
  │   │   │   ├── com.android.wallpaper
-@@ -274,143 +265,119 @@
+@@ -278,143 +265,119 @@
  │   │   │   │   └── lib -> /data/app-lib/com.example.android.notepad
  │   │   │   ├── com.example.android.rssreader
  │   │   │   │   └── lib -> /data/app-lib/com.example.android.rssreader
@@ -425,8 +430,8 @@
 -│   │   │   │   ├── app_sslcache
 -│   │   │   │   ├── lib -> /data/app-lib/com.google.android.backup
 -│   │   │   │   └── shared_prefs
--│   │   │   │       ├── BackupTransport.backupScheduler.xml  a3db48b27c8ae3856f4d8c049dd8483c
--│   │   │   │       └── BackupTransport.restoreScheduler.xml  b5144d628875c95bfe5d165fde2b8159
+-│   │   │   │       ├── BackupTransport.backupScheduler.xml  45c0f4bdc5b83f69ce4d193354904b9e
+-│   │   │   │       └── BackupTransport.restoreScheduler.xml  56a35c701ef23a49c483f60680407551
  │   │   │   ├── com.google.android.feedback
  │   │   │   │   └── lib -> /data/app-lib/com.google.android.feedback
  │   │   │   ├── com.google.android.gm
@@ -477,8 +482,8 @@
  │   │   │   │   ├── app_sslcache
  │   │   │   │   ├── cache
  │   │   │   │   ├── databases
--│   │   │   │   │   ├── googlesettings.db  d2bf2644d725370f71b188ab525a8228
--│   │   │   │   │   ├── googlesettings.db-journal  855e807ae730ca6bf5b69995cb69c2b0
+-│   │   │   │   │   ├── googlesettings.db  db6e879843d857ec02e5611ae6794ccb
+-│   │   │   │   │   ├── googlesettings.db-journal  efd75584702ddb10c650eff9d64250d8
 +│   │   │   │   │   ├── googlesettings.db  322203dd29d69b15cc7cb08f079f9c1e
 +│   │   │   │   │   ├── googlesettings.db-journal  74b06b83ddc7baae8ad03fe568c96ff4
  │   │   │   │   │   ├── gservices.db  0835b0f72a423fcc911dd3425c77754c
@@ -493,8 +498,8 @@
  │   │   │   │   ├── files
  │   │   │   │   ├── lib -> /data/app-lib/com.google.android.gsf
  │   │   │   │   └── shared_prefs
--│   │   │   │       ├── CheckinService.xml  92c136c9942a02bdafc73136d545079b
--│   │   │   │       ├── EventLogService.xml  a6dc6a581801640f23d146c3032d35b4
+-│   │   │   │       ├── CheckinService.xml  5aa963732ca5df5e633970a676831f93
+-│   │   │   │       ├── EventLogService.xml  4a669186850f8098cfb67bc3486cbfbd
 -│   │   │   │       ├── StatsUploadService.xml  d8bd00f7970d51e09fe81916f53b4879
 -│   │   │   │       └── update.xml  068d0a457cc469c1bdee8ab1ffa807be
 +│   │   │   │       ├── CheckinService.xml  04ffaf2ef28bd9f63469e6a8c7a5283b
@@ -535,7 +540,7 @@
 -│   │   │   │   └── shared_prefs
 -│   │   │   │       ├── autocache.prefs.xml  1fe8dbb38eaf7f61cd6b4b3bea6ac3ad
 -│   │   │   │       ├── MusicPreferences.xml  5fcb2beaff5905f999b7c114abfc958e
--│   │   │   │       └── store.preferences.xml  c83c40075d12c177ac6b9154a548ee88
+-│   │   │   │       └── store.preferences.xml  fcb6649072b9bb046a81123301e0aa84
  │   │   │   ├── com.google.android.onetimeinitializer
  │   │   │   │   ├── cache
 -│   │   │   │   │   └── com.android.renderscript.cache
@@ -568,7 +573,7 @@
  │   │   │   ├── com.google.android.street
  │   │   │   │   └── lib -> /data/app-lib/com.google.android.street
  │   │   │   ├── com.google.android.syncadapters.calendar
-@@ -418,43 +385,24 @@
+@@ -422,43 +385,24 @@
  │   │   │   ├── com.google.android.syncadapters.contacts
  │   │   │   │   ├── app_sslcache
  │   │   │   │   └── lib -> /data/app-lib/com.google.android.syncadapters.contacts
@@ -580,15 +585,15 @@
  │   │   │   │   ├── databases
  │   │   │   │   │   ├── downloads.db  1d34cb93be69c228f67c8b47a3b09875
 -│   │   │   │   │   ├── downloads.db-journal  ee222e20258287a4d9f2d78927bbea49
--│   │   │   │   │   ├── google_analytics.db  d8d6e482a52c140d5031ca47c91cd46f
--│   │   │   │   │   └── google_analytics.db-journal  98952b5725c07cefba536a5a796a40b4
+-│   │   │   │   │   ├── google_analytics.db  156ff778df206088e076216b3f2790c9
+-│   │   │   │   │   └── google_analytics.db-journal  4a9d4e3efa53ad400012ff1db9f825fa
 +│   │   │   │   │   ├── downloads.db-journal  1f55edfcdc2ca37cd0893793c9c9e148
 +│   │   │   │   │   ├── google_analytics.db  6811a90beb17a6c46beac4fe14c9c79e
 +│   │   │   │   │   └── google_analytics.db-journal  452820e7a3786196070643cd5dcf61d5
  │   │   │   │   ├── lib -> /data/app-lib/com.google.android.youtube
  │   │   │   │   └── shared_prefs
 -│   │   │   │       ├── com.google.android.youtube_preferences.xml  b4e8c71aa1d25e0d66e7dce91a50c11c
--│   │   │   │       └── youtube.xml  e62bd51d7029c010c534cf9886074b50
+-│   │   │   │       └── youtube.xml  60f4c49980950b561fc0fbf5f0a05d11
 -│   │   │   ├── com.noshufou.android.su
 -│   │   │   │   ├── cache
 -│   │   │   │   │   └── com.android.renderscript.cache
@@ -619,7 +624,7 @@
  │   │   ├── local
  │   │   │   └── tmp
  │   │   ├── lost+found
-@@ -465,23 +413,20 @@
+@@ -469,23 +413,20 @@
  │   │   │   │   │   ├── data
  │   │   │   │   │   │   ├── com.google.android.apps.maps
  │   │   │   │   │   │   │   ├── cache
@@ -655,7 +660,7 @@
  │   │   │   │   │   │   └── com.google.android.youtube
  │   │   │   │   │   │       └── files
  │   │   │   │   │   └── obb
-@@ -495,495 +440,464 @@
+@@ -499,537 +440,463 @@
  │   │   │   │   └── Ringtones
  │   │   │   ├── legacy
  │   │   │   └── obb
@@ -669,7 +674,7 @@
 +│   │   │   │   └── bt_config.xml  fb1c73f030af708f3608e355de0ce805
  │   │   │   ├── bluetooth
  │   │   │   ├── dhcp
--│   │   │   │   ├── dhcpcd-eth0.lease  4a052beabf02c7d21ddfe450d96cd295
+-│   │   │   │   ├── dhcpcd-eth0.lease  18a1f09b8c9c55cbb8a2deb5d4ed30d2
 +│   │   │   │   ├── dhcpcd-eth0.lease  072e6a327b08257451e29bd12c1c19e3
  │   │   │   │   └── dhcpcd-eth0.pid  d41d8cd98f00b204e9800998ecf8427e
  │   │   │   ├── keychain
@@ -699,16 +704,22 @@
  │   │   ├── ssh
  │   │   │   └── empty
  │   │   ├── system
--│   │   │   ├── batterystats.bin  40a87b496f97818797de51f65cc58fdb
+-│   │   │   ├── batterystats.bin  f725d59e4d59c87c7480850ed95cf38c
 -│   │   │   ├── called_pre_boots.dat  6cf0883bac2b2f349aba3f17e1a09f95
 +│   │   │   ├── appops.xml  75a1b5c8c2531058bf2460d2957053e3
 +│   │   │   ├── batterystats.bin  463b82315d27a5863f555202b0f9912b
 +│   │   │   ├── called_pre_boots.dat  9e5e917271b3f17368790946c9984e3b
  │   │   │   ├── dropbox
+-│   │   │   │   ├── drop162.tmp  d41d8cd98f00b204e9800998ecf8427e
 -│   │   │   │   ├── event_data@1469244310322.txt  197393c36318a817f566ca5e4c48816e
 -│   │   │   │   ├── event_data@1469246200511.txt  e6d44e19349fa7efd3eca0cd6ecf21bc
+-│   │   │   │   ├── event_data@1469419599554.txt  65cecfb980d72fde57d175d6ec1c3f64
+-│   │   │   │   ├── event_data@1469419904866.txt  860b020f51559ce335374958c45131c4
 -│   │   │   │   ├── event_log@1469242791022.txt  1f2f866b5432d77db31146c8e97d34e0
 -│   │   │   │   ├── event_log@1469243948948.txt  acb6bc68c988db9f3b4c4517da7f5ddd
+-│   │   │   │   ├── event_log@1469419558851.txt  5d1ccf7db513928cec1d23aa0628f2c6
+-│   │   │   │   ├── event_log@1469419754327.txt  843bc91dc49ef668da97e0d653790de9
+-│   │   │   │   ├── event_log@1469419863636.txt  47a41b65f8e3d5c851d19987e9c6702f
 -│   │   │   │   ├── system_app_strictmode@1469242780060.txt.gz  a316480782e3823be4db5b6b69501ed1
 -│   │   │   │   ├── system_app_strictmode@1469242785613.txt.gz  2d53b76eea907dee2d381aea00a791d8
 -│   │   │   │   ├── system_app_strictmode@1469242790953.txt.gz  66acccb3897e496bbc40d44d9e4864f7
@@ -778,9 +789,37 @@
 -│   │   │   │   ├── system_app_strictmode@1469246408961.txt  9f9295a21992395c7513b49fa0c0b6c4
 -│   │   │   │   ├── system_app_strictmode@1469246458992.txt  7efe93abb5537fb59c934de883fb51b6
 -│   │   │   │   ├── system_app_strictmode@1469246508989.txt  bd2f4bd4cda5c479719b35adb5c5defb
+-│   │   │   │   ├── system_app_strictmode@1469419556259.txt.gz  b6ca0ef56f5665f720076fa3906bf07a
+-│   │   │   │   ├── system_app_strictmode@1469419560952.txt.gz  862d5aec698857f5f03be3e21aa3e272
+-│   │   │   │   ├── system_app_strictmode@1469419568620.txt  634545c73fd4ac199d34d9fbc97881f0
+-│   │   │   │   ├── system_app_strictmode@1469419753079.txt.gz  130707fc67fb45d92d334fd99991072b
+-│   │   │   │   ├── system_app_strictmode@1469419759243.txt.gz  073cb659fc10ba46688f40d74fea26ed
+-│   │   │   │   ├── system_app_strictmode@1469419860610.txt.gz  512320ba0e37511c9268655001d354a1
+-│   │   │   │   ├── system_app_strictmode@1469419868818.txt.gz  0310e6036102cf747ba2bdac082f744d
+-│   │   │   │   ├── system_app_strictmode@1469419874011.txt  c5bdcc2d1343abc235bfebfa398b49fc
+-│   │   │   │   ├── system_app_strictmode@1469419910090.txt  32611c6852eb21c72537a23e965a5c80
+-│   │   │   │   ├── system_app_strictmode@1469419923712.txt  0729515d7c4582c63669568a742dc87d
+-│   │   │   │   ├── system_app_strictmode@1469419973967.txt  b3db7fd6f574bee0f103958b699cbac9
+-│   │   │   │   ├── system_app_strictmode@1469420023725.txt  bcc35352a2d561a89cb7bf840553047b
+-│   │   │   │   ├── system_app_strictmode@1469420074278.txt  fbc3708189c94d4e828a6a80c742d90a
+-│   │   │   │   ├── system_app_strictmode@1469420101390.txt.gz  0641c9bd93bf292b1b24e9cbf0bd0717
+-│   │   │   │   ├── system_app_strictmode@1469420124512.txt.gz  48ba64c1a2ae7c9f6e2eda077730126a
+-│   │   │   │   ├── system_app_strictmode@1469420134823.txt  f974504186e435ed0ca3c2c3c5ee401c
+-│   │   │   │   ├── system_app_strictmode@1469420143481.txt.gz  77c74d3747d1229e11c46858daaf87e3
+-│   │   │   │   ├── system_app_strictmode@1469420174527.txt  e12e1f2573071d59b4b296e612cbba11
+-│   │   │   │   ├── system_app_strictmode@1469420224515.txt  1d31954d223983b98c0f2c1689fbc2aa
+-│   │   │   │   ├── system_app_strictmode@1469420274571.txt  0b7db817df8291b35bd02411f09533c0
 -│   │   │   │   ├── SYSTEM_BOOT@1469242797360.txt  4646abcb697052f0eaf4025a1c815a7b
--│   │   │   │   └── SYSTEM_BOOT@1469243951071.txt  4646abcb697052f0eaf4025a1c815a7b
--│   │   │   ├── entropy.dat  446a7e331245480c3712e7ac9c5f7f27
+-│   │   │   │   ├── SYSTEM_BOOT@1469243951071.txt  4646abcb697052f0eaf4025a1c815a7b
+-│   │   │   │   ├── SYSTEM_BOOT@1469419560297.txt  4646abcb697052f0eaf4025a1c815a7b
+-│   │   │   │   ├── SYSTEM_BOOT@1469419755139.txt  4646abcb697052f0eaf4025a1c815a7b
+-│   │   │   │   ├── SYSTEM_BOOT@1469419864692.txt  4646abcb697052f0eaf4025a1c815a7b
+-│   │   │   │   ├── SYSTEM_TOMBSTONE@1469419560487.txt.gz  d09f8e7201b816dc00541636cf19942b
+-│   │   │   │   ├── SYSTEM_TOMBSTONE@1469419560664.txt.gz  530495496b162f6180a423387e8e3bc9
+-│   │   │   │   ├── SYSTEM_TOMBSTONE@1469419560836.txt.gz  e0538688a18e0393bc79d6c432b1a463
+-│   │   │   │   ├── SYSTEM_TOMBSTONE@1469419561015.txt.gz  a8cb195988b062bb5f9982c89336d5b6
+-│   │   │   │   └── SYSTEM_TOMBSTONE@1469419561110.txt.gz  3f48b6fa0f3371a4f8c22fe55db0fb82
+-│   │   │   ├── entropy.dat  69cc733605268795d1f33b4d9a5f63f5
 +│   │   │   │   ├── event_data@1469244277613.txt  4c023085a8db0d1ab8e65d677b024e2b
 +│   │   │   │   ├── event_data@1469246077673.txt  4e1b7fc06e692f39d53507bac887d431
 +│   │   │   │   ├── event_log@1469243231920.txt  ffd770808257a82dc24895850ebcd029
@@ -820,8 +859,8 @@
 +│   │   │   ├── locksettings.db-wal  279f3080221114e7dc3e028ccce39609
 +│   │   │   ├── ndebugsocket
  │   │   │   ├── netstats
--│   │   │   ├── packages.list  150ef688c0d054f393d89f205484d5fa
--│   │   │   ├── packages.xml  bf35a1d71fdd8e003541e23085761af6
+-│   │   │   ├── packages.list  1ce2fa28904fde22d440f1c4171e57da
+-│   │   │   ├── packages.xml  41fe5c585aaad5fda4cfc4ba5ced3d94
 +│   │   │   ├── packages.list  73c4690c447f6dc1dfe9708916f6a42b
 +│   │   │   ├── packages.xml  0a79e785a516938bb5cb922786eff975
  │   │   │   ├── registered_services
@@ -829,7 +868,8 @@
 -│   │   │   │   └── android.content.SyncAdapter.xml  d56731b9de3aa1d1e46ac901404dad6e
 +│   │   │   │   ├── android.accounts.AccountAuthenticator.xml  3fa2ec380fe502b1d1e539fb367cd039
 +│   │   │   │   └── android.content.SyncAdapter.xml  2411b12d960043dd236e52cc509a3e9d
-+│   │   │   ├── shared_prefs
+ │   │   │   ├── shared_prefs
+-│   │   │   │   └── log_files.xml  da726e21967c26459a3628d9b783f579
 +│   │   │   │   └── log_files.xml  0a580ffc6aff444c639552130c7a50e5
  │   │   │   ├── sync
 -│   │   │   │   ├── accounts.xml  7fe9c8547fe906d91ba268320f99d544
@@ -843,7 +883,9 @@
 -│   │   │   ├── uiderrors.txt  bb2662d02e323c35e02014aeeeea4308
 +│   │   │   ├── uiderrors.txt  9a9f11fd3a06687eb797d6b35ef53f27
  │   │   │   ├── usagestats
- │   │   │   │   └── usage-20160723  d41d8cd98f00b204e9800998ecf8427e
+-│   │   │   │   ├── usage-20160723  d41d8cd98f00b204e9800998ecf8427e
+-│   │   │   │   └── usage-20160725  d41d8cd98f00b204e9800998ecf8427e
++│   │   │   │   └── usage-20160723  d41d8cd98f00b204e9800998ecf8427e
  │   │   │   ├── users
  │   │   │   │   ├── 0
 -│   │   │   │   │   ├── accounts.db  f4d892ee4935b6fec1a07d45631097ee
@@ -851,7 +893,7 @@
 +│   │   │   │   │   ├── accounts.db  0ed74fb0b0e93ad5623504d0b1907659
 +│   │   │   │   │   ├── accounts.db-journal  0a5dec9787f08f5d7f6a66c2053dd428
  │   │   │   │   │   ├── appwidgets.xml  4733f809e8420c04f1a66f0f6e00ef7d
--│   │   │   │   │   ├── package-restrictions.xml  b9ff56799a285eedfc20c96567be3fa1
+-│   │   │   │   │   ├── package-restrictions.xml  ed78019365e302222de9fba945d7d7ec
 +│   │   │   │   │   ├── package-restrictions.xml  a53cb5d99f3b49408cfc858358bf1c14
  │   │   │   │   │   └── wallpaper_info.xml  29e1c3b092df008308cd0bbafb3d05c9
 -│   │   │   │   ├── 0.xml  395db49bd5d3a9d194fc54f9f1d9e34e
@@ -859,7 +901,12 @@
 +│   │   │   │   ├── 0.xml  3cb3b55dd7f250d18812451a643d9fa2
 +│   │   │   │   └── userlist.xml  7fa9d0d94ccb561aeee6b74f67930b28
  │   │   │   └── wpa_supplicant
-+│   │   ├── tombstones
+ │   │   ├── tombstones
+-│   │   │   ├── tombstone_00  b8d7e50e708030c27156af4c7f2d5d23
+-│   │   │   ├── tombstone_01  483cb93ee157db38e66adaeed38006d9
+-│   │   │   ├── tombstone_02  4de42d28de6ffd16fdb0fab66b50a0ad
+-│   │   │   ├── tombstone_03  236b5705d0e55267878adfdf7d8a4009
+-│   │   │   └── tombstone_04  f1974deafe2d7feab2e9fdcbeec2bca4
 +│   │   │   └── tombstone_00  45d3a73bed2427a4185dca41fb64ce4d
  │   │   └── user
  │   │       └── 0 -> /data/data/
@@ -882,9 +929,7 @@
 +│   │   ├── init.usb.rc  189c3f54efd9dcb360593e5306abb34f
 +│   │   ├── init.x86.rc  127605f888017602cdda3698e147214b
  │   │   ├── proc
--│   │   ├── ramdisk.img  befbcafe0f23c900ffff52eef184be76
 +│   │   ├── property_contexts  99ee23a06ee7a4465b2bc6d116b4c666
-+│   │   ├── ramdisk.img  b9dd8b7223466a3b3cf2aa99e625108f
  │   │   ├── sbin
 -│   │   │   ├── adbd  32fc19b4b92f5c0c87592533f9bcdf4e
 -│   │   │   ├── modprobe -> ../init  dea42cf5eccbe077e2ed1570abc5f082
@@ -1531,7 +1576,7 @@
  │       │   ├── permissions
  │       │   │   ├── android.hardware.camera.flash-autofocus.xml  b873801b78f971bfec2862dd7c8a8729
  │       │   │   ├── android.hardware.camera.front.xml  0a926d2e08ebdceb3d63f39a0d44937f
-@@ -1005,157 +919,164 @@
+@@ -1051,157 +918,164 @@
  │       │   │   ├── com.android.location.provider.xml  bdc59a46ca2f135b85e67c22c5410dcc
  │       │   │   ├── com.google.android.maps.xml  5575cd792eaa706fa54a7465b7e12be3
  │       │   │   ├── com.google.android.media.effects.xml  86293a6533a2e6dabc6cd7748d0f3d6e
@@ -1840,7 +1885,7 @@
  │       │   ├── system_fonts.xml  0e50374cbb343630e1b48347334ea8ca
  │       │   ├── ts.conf  c3fa61954e940c0c89eb4f680162b86a
  │       │   ├── ts.env  dc47551edbda572c807b8ec13746c0dd
-@@ -1168,12 +1089,11 @@
+@@ -1214,12 +1088,11 @@
  │       │   ├── AndroidClock_Solid.ttf  d089cc50be40c81ec5c071e0012d1cca
  │       │   ├── AndroidClock.ttf  1bc565baefcdaf9d6e3ce5f1aa7b8a56
  │       │   ├── AndroidEmoji.ttf  340819d3ec0b2aadf29ccbc268450cb6
@@ -1855,7 +1900,7 @@
  │       │   ├── DroidSansDevanagari-Regular.ttf  2cbf511c544253eac3ffcf06cb925104
  │       │   ├── DroidSansEthiopic-Regular.ttf  04a82c3989ebef8a1acb321d5c594f1b
  │       │   ├── DroidSansFallback.ttf  b572afe5d10d92cb5d53e05efaed26e1
-@@ -1184,96 +1104,178 @@
+@@ -1230,96 +1103,178 @@
  │       │   ├── DroidSansTamil-Bold.ttf  3c46d647cf6350c24663903b6d4e558e
  │       │   ├── DroidSansTamil-Regular.ttf  0e5697fb599b326decbf91e791e40d5c
  │       │   ├── DroidSansThai.ttf  59416bd6a6672de4b1d253be32a94e77
@@ -2116,7 +2161,7 @@
  │       │   ├── firmware
  │       │   │   ├── 3com
  │       │   │   │   └── typhoon.bin  f5038f7bc0229fb763283323733ed124
-@@ -1283,6 +1285,45 @@
+@@ -1329,6 +1284,45 @@
  │       │   │   ├── adaptec
  │       │   │   │   ├── starfire_rx.bin  29220e3d5cd4b7fd3d4ea0f4afc73aa9
  │       │   │   │   └── starfire_tx.bin  29220e3d5cd4b7fd3d4ea0f4afc73aa9
@@ -2162,7 +2207,7 @@
  │       │   │   ├── ath3k-1.fw  1211fa34c09e10ba48381586b7c3883d
  │       │   │   ├── ath6k
  │       │   │   │   ├── AR6002
-@@ -1345,12 +1386,13 @@
+@@ -1391,12 +1385,13 @@
  │       │   │   │   └── bnx2x-e2-6.2.9.0.fw  fdf06eef3b98228270c2689a9ad681c7
  │       │   │   ├── brcm
  │       │   │   │   ├── bcm4329-fullmac-4.bin  c53608f5818b702c46a012c57b4196ee
@@ -2180,7 +2225,7 @@
  │       │   │   ├── cis
  │       │   │   │   ├── 3CCFEM556.cis  064309527ab5c6f73f17f99f6b07e471
  │       │   │   │   ├── 3CXEM556.cis  51e99ef0d234ea1b455b0555336f7379
-@@ -1398,105 +1440,29 @@
+@@ -1444,105 +1439,29 @@
  │       │   │   ├── ess
  │       │   │   │   ├── maestro3_assp_kernel.fw  b3c93bc665b5155248845050830861b9
  │       │   │   │   └── maestro3_assp_minisrc.fw  9474d9ea3c154bb43f4c1f3090472922
@@ -2289,7 +2334,7 @@
  │       │   │   ├── iwlwifi-6000g2b-6.ucode  1f1763dfd472a487c3d61eac0a12b766
  │       │   │   ├── iwlwifi-6050-4.ucode  2520eeeb638f22811e50d2d1912ef807
  │       │   │   ├── iwlwifi-6050-5.ucode  47cea8c3c90eeddf3d527685c05e5567
-@@ -1530,20 +1496,20 @@
+@@ -1576,20 +1495,20 @@
  │       │   │   │   ├── sd8686_v8_helper.bin  6edc7f5032463c294eb1b738482f734d
  │       │   │   │   ├── sd8686_v9.bin  0d2803973e444edcf304486c6d050eed
  │       │   │   │   ├── sd8686_v9_helper.bin  2a4d8f4df198ce949c350df5674f4ac6
@@ -2316,7 +2361,7 @@
  │       │   │   ├── mts_cdma.fw  7eedc9d391d172e0227b5363e1cbe92d
  │       │   │   ├── mts_edge.fw  8ebf4c924cd60d2d6c75aae28ed2364b
  │       │   │   ├── mts_gsm.fw  7eedc9d391d172e0227b5363e1cbe92d
-@@ -1554,34 +1520,45 @@
+@@ -1600,34 +1519,45 @@
  │       │   │   ├── radeon
  │       │   │   │   ├── ARUBA_me.bin  59375dccb37f974c045575cd9428009a
  │       │   │   │   ├── ARUBA_pfp.bin  b3072fac01a6eab4711c18148c8bc305
@@ -2369,7 +2414,7 @@
  │       │   │   │   ├── R100_cp.bin  f4f27d17dc204e11632cf98a8294650d
  │       │   │   │   ├── R200_cp.bin  52a30faef239f286f497d95be7d2194c
  │       │   │   │   ├── R300_cp.bin  a05f4d9e10f0cdbfa3f96300048d300f
-@@ -1590,10 +1567,10 @@
+@@ -1636,10 +1566,10 @@
  │       │   │   │   ├── R600_me.bin  f2432caf487c4b586a2c391435f3749c
  │       │   │   │   ├── R600_pfp.bin  448dbf1df580c31a0e55de22bb076be3
  │       │   │   │   ├── R600_rlc.bin  f74a5163948bde215be6b689ca24afde
@@ -2382,7 +2427,7 @@
  │       │   │   │   ├── RS600_cp.bin  801f81f19823e42e83f932d7ab73ab25
  │       │   │   │   ├── RS690_cp.bin  16ed338f3be50b60fd163ce91cd36915
  │       │   │   │   ├── RS780_me.bin  cafce27d4a77066d3980b1751cd7fd24
-@@ -1610,18 +1587,23 @@
+@@ -1656,18 +1586,23 @@
  │       │   │   │   ├── RV670_pfp.bin  d9b7b8c30048a060b6d27fbf566108bd
  │       │   │   │   ├── RV710_me.bin  a3e162705012e104727b2487bd690837
  │       │   │   │   ├── RV710_pfp.bin  89d2d6c1d169d0c2019f2388def7df56
@@ -2408,7 +2453,7 @@
  │       │   │   │   ├── TURKS_mc.bin  158f8e21ccf228ef063888c4f637fbf0
  │       │   │   │   ├── TURKS_me.bin  8012e24b187c6b1ba17fa48691c3b048
  │       │   │   │   ├── TURKS_pfp.bin  25f26ba407a9bb13528b903c617209c8
-@@ -1629,7 +1611,7 @@
+@@ -1675,7 +1610,7 @@
  │       │   │   │   ├── VERDE_mc.bin  96b18c6f7c74ad4cecb04fca967ca433
  │       │   │   │   ├── VERDE_me.bin  a291d177203e882872ba809f82010077
  │       │   │   │   ├── VERDE_pfp.bin  8929a87c20f87426578518e3fafa12f2
@@ -2417,7 +2462,7 @@
  │       │   │   ├── rt2561.bin  99bce75086ea635a2f8288d9b835f787
  │       │   │   ├── rt2561s.bin  2878d5eaa4ff907d4df36a834915aa53
  │       │   │   ├── rt2661.bin  9998485bc152cf0f39dd61a33b92ad9b
-@@ -1644,21 +1626,31 @@
+@@ -1690,21 +1625,31 @@
  │       │   │   │   └── main.img  0034020e5a32571f486849aa90a389a7
  │       │   │   ├── rtl_nic
  │       │   │   │   ├── rtl8105e-1.fw  466e72e2e3b01015cbd666424586f199
@@ -2456,7 +2501,7 @@
  │       │   │   ├── sb16
  │       │   │   │   ├── alaw_main.csp  34075a94e4352aab332fc8ec5ccf48e5
  │       │   │   │   ├── ima_adpcm_capture.csp  9e12c4ad8c940e327636d0d895bb0c42
-@@ -1677,6 +1669,7 @@
+@@ -1723,6 +1668,7 @@
  │       │   │   │   └── tg3_tso.bin  0366ccff4f095090ad2f5d20bc2c649a
  │       │   │   ├── ttusb-budget
  │       │   │   │   └── dspbootcode.bin  d21ffad81d06f5832b5d0064377dc3d2
@@ -2464,7 +2509,7 @@
  │       │   │   ├── whiteheat.fw  a9cd5cab2f849d8d4ad71b56fe49fa7f
  │       │   │   ├── whiteheat_loader.fw  887d8a58db70054088aeff6300c25ccb
  │       │   │   ├── yamaha
-@@ -1685,7 +1678,6 @@
+@@ -1731,7 +1677,6 @@
  │       │   │   │   ├── ds1e_ctrl.fw  e2d7e5b7796cf8592027fd2753fee048
  │       │   │   │   └── yss225_registers.bin  071718dbf6393bfac4428b004d9e1ed8
  │       │   │   └── zd1211
@@ -2472,7 +2517,7 @@
  │       │   │       ├── zd1211b_ub  0a8573604fa5ce9761b717610765f335
  │       │   │       ├── zd1211b_uph  432ac12a108496ea074eac59ac36bbb3
  │       │   │       ├── zd1211b_uphm  8e20edaee2720dfa1d708376477e7613
-@@ -1697,2501 +1689,2544 @@
+@@ -1743,2501 +1688,2544 @@
  │       │   │       ├── zd1211_uphr  491aeb0e0d558c9461445979fe9ef074
  │       │   │       └── zd1211_ur  24942601c03721fe605336a2facf4c15
  │       │   ├── hw
@@ -7076,7 +7121,7 @@
  │       ├── lost+found
  │       ├── media
  │       │   └── audio
-@@ -4201,247 +4236,104 @@
+@@ -4247,247 +4235,104 @@
  │       │       │   ├── Alarm_Beep_03.ogg  89f383e6e1216de0fed94361b3f4890c
  │       │       │   ├── Alarm_Buzzer.ogg  543880e686ca417ac7cffc05f4d9f9db
  │       │       │   ├── Alarm_Classic.ogg  9607e97487a86bdfc3b1c6a6c52494b9
@@ -7351,7 +7396,7 @@
  │       │   ├── share
  │       │   │   ├── alsa
  │       │   │   │   ├── alsa.conf  1a80dc4d2fba9a9f869813bb875f0085
-@@ -4474,9 +4366,7 @@
+@@ -4520,9 +4365,7 @@
  │       │   │   │   ├── RFFspeed_501.bmd  9f52ea6c32e1d7337a2e3e18698a6b3b
  │       │   │   │   └── RFFstd_501.bmd  7a1836009614c699b7fdd141df8d0b8d
  │       │   │   └── zoneinfo
@@ -7362,7 +7407,7 @@
  │       │   └── srec
  │       │       └── config
  │       │           └── en.us
-@@ -4501,262 +4391,267 @@
+@@ -4547,262 +4390,267 @@
  │       │                   ├── generic8.lda  175e524f7bf10ef723a787d8e05bee91
  │       │                   ├── generic8_m.swimdl  3e048e62bc13ed56b9a4b89dd14d7296
  │       │                   └── generic.swiarb  2eac66b359db895e6669a097a19eb27c
@@ -7875,5 +7920,5 @@
  │   └── stage2_eltorito  9473a3cf692c9521e8077512f4a49ef0
  └── lost+found
  
--854 directories, 3905 files
-+826 directories, 3828 files
+-859 directories, 3946 files
++826 directories, 3827 files

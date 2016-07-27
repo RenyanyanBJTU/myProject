@@ -8,9 +8,9 @@ if [ $# -eq 2 ];then
      tree $1 > treefor"$1".txt
      tree -i -f $1 > ftreefor"$1".txt
      if [ $? -eq 0 ];then
-        echo "tree for '$1' created successful."
+        echo "tree for $1 created successful."
      else
-        echo "tree for '$1' created failed."
+        echo "tree for $1 created failed."
         exit 1
      fi
   else
@@ -22,9 +22,9 @@ if [ $# -eq 2 ];then
      tree $2 > treefor"$2".txt
      tree -i -f $2 > ftreefor"$2".txt
      if [ $? -eq 0 ];then
-        echo "tree for '$2' created successful."
+        echo "tree for $2 created successful."
      else
-        echo "tree for '$2' created failed."
+        echo "tree for $2 created failed."
         exit 1
      fi
   else
@@ -38,21 +38,21 @@ fi
 
 #get singkey
 echo "update signkey info,wait a few mimutes......"
-sh signkeysh.sh treeforandroid4.2.txt
+sh signkeysh.sh treefor"$1".txt
 if [ $? -ne 0 ];then
-  echo "treeforandroid4.2.txt update signkey failed.progress running stoped."
+  echo "treefor$1.txt update signkey failed.progress running stoped."
   exit 1
 else
- echo "treeforandroid4.2.txt update signkey successful."
+ echo "treefor$1.txt update signkey successful."
 fi
 
-sh signkeysh.sh treeforandroid4.3.txt
+sh signkeysh.sh treefor"$2".txt
 
 if [ $? -ne 0 ];then
-  echo "treeforandroid4.3.txt update signkey failed.progress running stoped."
+  echo "treefor$2.txt update signkey failed.progress running stoped."
   exit 1
 else
- echo "treeforandroid4.3.txt update signkey successful."
+ echo "treefor$2.txt update signkey successful."
 fi
 
 
@@ -63,7 +63,3 @@ else
   echo "file not existed!"
 fi
 
-echo "\n"
-echo "create file list:"
-pwd 
-ls -l | grep "treef*"

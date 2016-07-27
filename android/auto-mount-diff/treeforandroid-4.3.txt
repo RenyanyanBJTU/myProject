@@ -1,4 +1,4 @@
-android4.3
+android-4.3
 ├── android-4.3-test
 │   ├── data
 │   │   ├── app
@@ -556,7 +556,6 @@ android4.3
 │   │   ├── init.x86.rc  127605f888017602cdda3698e147214b
 │   │   ├── proc
 │   │   ├── property_contexts  99ee23a06ee7a4465b2bc6d116b4c666
-│   │   ├── ramdisk.img  b9dd8b7223466a3b3cf2aa99e625108f
 │   │   ├── sbin
 │   │   │   ├── adbd  dac474878566fb650042cc66cc54aa9e
 │   │   │   ├── modprobe -> ../init  95bf916fcb8c6253e9ed3644ffa6b6df
@@ -4654,4 +4653,4 @@ android4.3
 │   └── stage2_eltorito  9473a3cf692c9521e8077512f4a49ef0
 └── lost+found
 
-826 directories, 3828 files
+826 directories, 3827 files

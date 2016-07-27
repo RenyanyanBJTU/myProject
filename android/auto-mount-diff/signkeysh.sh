@@ -1,7 +1,6 @@
 #!/bin/bash
 
-sudo chmod 664 treeforandroid4.2.txt
-sudo chmod 664 treeforandroid4.3.txt
+sudo chmod 664 $1
 
 if [ $# -ne 1 ];then
   echo "please input filename."
@@ -22,5 +21,4 @@ do
    rown=`expr $rown + 1`
 
 done
-
 
