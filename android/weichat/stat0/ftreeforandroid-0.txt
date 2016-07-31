@@ -10,7 +10,7 @@ android-old/android-2016-07-23/data/backup
 android-old/android-2016-07-23/data/backup/com.android.internal.backup.LocalTransport
 android-old/android-2016-07-23/data/backup/fb-schedule
 android-old/android-2016-07-23/data/backup/pending
-android-old/android-2016-07-23/data/backup/pending/journal-778466379.tmp
+android-old/android-2016-07-23/data/backup/pending/journal135113376.tmp
 android-old/android-2016-07-23/data/bugreports -> data/com.android.shell/files/bugreports
 android-old/android-2016-07-23/data/dalvik-cache
 android-old/android-2016-07-23/data/dalvik-cache/profiles
@@ -364,6 +364,7 @@ android-old/android-2016-07-23/data/data/com.android.settings/lib -> /data/app-l
 android-old/android-2016-07-23/data/data/com.android.settings/shared_prefs
 android-old/android-2016-07-23/data/data/com.android.settings/shared_prefs/charge.xml
 android-old/android-2016-07-23/data/data/com.android.settings/shared_prefs/com.android.settings_preferences.xml
+android-old/android-2016-07-23/data/data/com.android.settings/shared_prefs/lockcharge.xml
 android-old/android-2016-07-23/data/data/com.android.sharedstoragebackup
 android-old/android-2016-07-23/data/data/com.android.sharedstoragebackup/lib -> /data/app-lib/com.android.sharedstoragebackup
 android-old/android-2016-07-23/data/data/com.android.shell
@@ -473,8 +474,11 @@ android-old/android-2016-07-23/data/system/batterystats.bin
 android-old/android-2016-07-23/data/system/called_pre_boots.dat
 android-old/android-2016-07-23/data/system/device_policies.xml
 android-old/android-2016-07-23/data/system/dropbox
-android-old/android-2016-07-23/data/system/dropbox/SYSTEM_BOOT@1469448987869.txt
-android-old/android-2016-07-23/data/system/dropbox/SYSTEM_BOOT@1469449084357.txt
+android-old/android-2016-07-23/data/system/dropbox/SYSTEM_BOOT@1469781662164.txt
+android-old/android-2016-07-23/data/system/dropbox/SYSTEM_BOOT@1469782512018.txt
+android-old/android-2016-07-23/data/system/dropbox/SYSTEM_BOOT@1469782560196.txt
+android-old/android-2016-07-23/data/system/dropbox/SYSTEM_BOOT@1469783755091.txt
+android-old/android-2016-07-23/data/system/dropbox/SYSTEM_BOOT@1469784597915.txt
 android-old/android-2016-07-23/data/system/entropy.dat
 android-old/android-2016-07-23/data/system/framework_atlas.config
 android-old/android-2016-07-23/data/system/ifw
@@ -542,7 +546,6 @@ android-old/android-2016-07-23/ramdisk/init.zygote32.rc
 android-old/android-2016-07-23/ramdisk/init.zygote64_32.rc
 android-old/android-2016-07-23/ramdisk/proc
 android-old/android-2016-07-23/ramdisk/property_contexts
-android-old/android-2016-07-23/ramdisk/ramdisk.img
 android-old/android-2016-07-23/ramdisk/sbin
 android-old/android-2016-07-23/ramdisk/sbin/adbd
 android-old/android-2016-07-23/ramdisk/sbin/healthd
@@ -6355,4 +6358,4 @@ android-old/grub/stage2
 android-old/grub/stage2_eltorito
 android-old/lost+found
 
-1038 directories, 5317 files
+1038 directories, 5320 files
