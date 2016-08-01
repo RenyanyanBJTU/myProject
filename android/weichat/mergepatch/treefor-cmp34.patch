@@ -1,0 +1,308 @@
+--- treeforandroid-old.txt	2016-07-30 10:08:52.949696786 -0400
++++ treeforandroid-new.txt	2016-07-30 10:10:28.585692031 -0400
+@@ -1,4 +1,4 @@
+-android-old
++android-new
+ ├── android-2016-07-23
+ │   ├── data
+ │   │   ├── adb
+@@ -42,7 +42,7 @@
+ │   │   │   ├── com.android.internal.backup.LocalTransport
+ │   │   │   ├── fb-schedule  aa66ffdf6afa89ec9166345d7e989225ebfd0a9d
+ │   │   │   └── pending
+-│   │   │       └── journal946213456.tmp  ec5c5a6173acadb0333d8768e4366198d9f6cb9b
++│   │   │       └── journal-1495924703.tmp  ec5c5a6173acadb0333d8768e4366198d9f6cb9b
+ │   │   ├── bugreports -> data/com.android.shell/files/bugreports
+ │   │   ├── dalvik-cache
+ │   │   │   ├── profiles
+@@ -397,7 +397,7 @@
+ │   │   │   │   │   └── alarms.db-journal  1365ff11030aff5b08a0b0caf3a85c08eb318c01
+ │   │   │   │   ├── lib -> /data/app-lib/com.android.deskclock
+ │   │   │   │   └── shared_prefs
+!│   │   │   │       └── com.android.deskclock_preferences.xml  32d595f9f217437394fd8c076ec7c44f17676efd 93be88f7f4aa6b45ee505d48a5888a2bdf5aa8a0
+ │   │   │   ├── com.android.development
+ │   │   │   │   └── lib -> /data/app-lib/com.android.development
+ │   │   │   ├── com.android.documentsui
+@@ -462,8 +462,8 @@
+ │   │   │   │   │   └── launcher.db-journal  133fd6d69ab346c1734e1a051cbc298cfedb2944
+ │   │   │   │   ├── files
+ │   │   │   │   │   ├── launcher.preferences  538a9ef7fbf4120ae5af6f66b8c8468b54c64648
+!│   │   │   │   │   ├── launches.log  d2172cc9d07f7ca0b88a8d6c3f0689604a8ceda3 55556051c1173fb0f8ee22497d05c858bece15c7
+!│   │   │   │   │   └── stats.log  ebf24110e2d9e99f6e195aed3bfa2ad091bac129 18f9da436ab448a56e17dc3525541041aeb69f86
+ │   │   │   │   ├── lib -> /data/app-lib/com.android.launcher3
+ │   │   │   │   └── shared_prefs
+ │   │   │   │       └── com.android.launcher3.prefs.xml  70ab61c0c29afe93608837659470bae3d009870c
+@@ -546,11 +546,11 @@
+ │   │   │   │   ├── cache
+ │   │   │   │   ├── databases
+ │   │   │   │   │   ├── external.db  f8f0e48b8a3c5dfddb0e9632928b21479ad62345
+!│   │   │   │   │   ├── external.db-shm  bb099f25b587945ca81a86b965c983895112f24d 710d6d3d286fb4b1b3d69c2e7fab563934b5ba75
+!│   │   │   │   │   ├── external.db-wal  5338e9f9a0a761398c142ba4ecefaf4ae3eda4fc 25c2977d155b2c0fb80be6aa80fabbdf990e5ca7
+ │   │   │   │   │   ├── internal.db  bf10bb4db6e8221e6e5c231bc2da680e2d99f488
+!│   │   │   │   │   ├── internal.db-shm  66a9b2b685360b81c0413d990428eb06c64b1999 3dbe9e215e3ad2d3905ffae251d9a39c3346513f
+!│   │   │   │   │   └── internal.db-wal  10d8f0ad2e88e752f08175c9f4ac91c6f1193ead 4b79058dcb6b4c4f34a6a9a1561deb4340efb3d8
+ │   │   │   │   ├── lib -> /data/app-lib/com.android.providers.media
+ │   │   │   │   └── shared_prefs
+ │   │   │   │       ├── com.android.providers.media_preferences.xml  53eb014d1218c547e5593c254b952f4aec45b50b
+@@ -668,11 +668,13 @@
+ │   │   │   │   │   └── Web Data-journal
+ │   │   │   │   ├── app_webviewcache
+ │   │   │   │   ├── cache
+!│   │   │   │   │   └── proc_auxv  18912bb0711ab17bf8053882f3c4d612f2bc3249 1538f88f68e42bae104d11d5efcdbb432250cf6d
+ │   │   │   │   ├── code_cache
+ │   │   │   │   ├── databases
+ │   │   │   │   │   ├── http_auth.db  7e1a4b1b0890b35fe9900e80f44bd80842b5fd57
+-│   │   │   │   │   └── http_auth.db-journal  1a498e21e308842ce53cf43f2fc00a7a922ce8f1
++│   │   │   │   │   ├── http_auth.db-journal  1a498e21e308842ce53cf43f2fc00a7a922ce8f1
++│   │   │   │   │   ├── tk_file  d35474dd53df567e0a9ed5e4701a550fc471d1f6
++│   │   │   │   │   └── tk_file-journal  85029ff7125f127c0216fd2405da1cfc98a642ac
+ │   │   │   │   ├── files
+ │   │   │   │   │   ├── config
+ │   │   │   │   │   │   └── Heartbeat.ini  c62dba23a715d74162513f5914fa150e677a1b32
+@@ -682,19 +684,21 @@
+ │   │   │   │   │   │   ├── cgi-mapping_637736505.xml  d45abee9d66687a48f93c88278f3b922462075ab
+ │   │   │   │   │   │   ├── getdns.ini  f4a5751ca6c1f1e8ac4d7ede03ea07b641dfe9ae
+ │   │   │   │   │   │   ├── host-redirect.xml  ffc455f4a5a9c9df57b251017355b8c73d5baf37
+!│   │   │   │   │   │   ├── ip.ini  1f9138d396854417c9bca0c4968c59a932afc38e f901e99a97f9592f42d08fb7988ec96161065a1c
+ │   │   │   │   │   │   ├── ipportrecords2.xml  6f45a233a965f857418d035c2766df58e3940280
+!│   │   │   │   │   │   └── other_26031639.getdns2  2aafa2c7acb2989d8d4ea36d4262814b64813418 c551754a16900a045b72514dfab20790071cdc0c
+ │   │   │   │   │   ├── kvcomm
+-│   │   │   │   │   │   ├── 1843499274_637736505_3_1469882602_39_3600_input.statistic  379d95cd387aec30c26a028706411693d8907ebd
++│   │   │   │   │   │   ├── 1843499274_637736505_3_1469882602_39_3600_ready.statistic  379d95cd387aec30c26a028706411693d8907ebd
++│   │   │   │   │   │   ├── 1843499274_637736505_3_1469887299_27_3600_input.statistic  cd1a8b21e4d7dbfde5a19c28e27c721abecbd005
+ │   │   │   │   │   │   ├── config.ini  7f44c559226e5197e3f6131d15f95a63cc0c8e9a
+ │   │   │   │   │   │   ├── exception
+-│   │   │   │   │   │   ├── key_1843499274_637736505_3_1469882601_57_3600_input.statistic  e0327ea886ea4bac0ebc6faab681213d3f447ec6
++│   │   │   │   │   │   ├── key_1843499274_637736505_3_1469882601_57_3600_ready.statistic  e0327ea886ea4bac0ebc6faab681213d3f447ec6
+ │   │   │   │   │   │   ├── monitordata_0_17011  ebf051093790e7c45fb7844fcc29b50b71a57851
+ │   │   │   │   │   │   ├── monitordata_0_17012  395401b6eec760d5a0f8321103577219901c5135
++│   │   │   │   │   │   ├── monitordata_1843499274_17012  41cc19cc3d729b81eebb7220dbeaa7a6376068d0
+ │   │   │   │   │   │   ├── new_strategy_file  3548c09ff095a0909671d793dde29dd7ced25872
+-│   │   │   │   │   │   └── reportnow_1843499274_637736505_3_1469885631_4_600_input.monitor  bd56c6a80a72df095e7104ff0fd3ec9194b765ff
+!│   │   │   │   │   ├── psk.key.  841bfca6f850ab27b4d034f670382d2386f0bbf9 59fa7103aec7cebb03e46235b2140d6981606335
++│   │   │   │   │   │   └── reportnow_1843499274_637736505_3_1469887292_26_600_input.monitor  240bd3ba7487f8eafcc352ea2c7b3cae2b398aca
+ │   │   │   │   │   ├── public
+ │   │   │   │   │   │   ├── emoji
+ │   │   │   │   │   │   │   └── res
+@@ -758,61 +762,62 @@
+ │   │   │   │   │   │           ├── WNNote.html  50fa392e232fed1e0cff704596179e5a26ee28aa
+ │   │   │   │   │   │           └── WNNote.zip  1701d1bfebd8664688669ad3a88ea2d8fa8ba777
+ │   │   │   │   │   └── xlog
+!│   │   │   │   │       ├── EXDEVICE.mmap2  b1a08fec64d2cf1f9c91468c8e8fa90311ce384a 154127e08caf26f83b28a209c923250882dac20e
+!│   │   │   │   │       ├── MM.mmap2  fe80efbfe25243872d659b59843a42104b8c6c7c 257100ebbccedc6857d0bf9c1531f4e1c2858f2c
+!│   │   │   │   │       ├── PUSH.mmap2  a603b7fb8c46e25310278f72a689a9c700f02f96 c3eb5efb5dd89e8a82c927a0446ce6ba409a2b93
+!│   │   │   │   │       └── TOOL.mmap2  b0afbe3fdb7d0e6db5393c0d1a376dfe1583e359 7cdd48dfe42c01b3f93461fe25cde7206cf8d8a1
+ │   │   │   │   ├── lib -> /data/app/com.tencent.mm-1/lib/arm
+ │   │   │   │   ├── MicroMsg
+ │   │   │   │   │   ├── 35925faa23cbe92923fedc3ae3628dad
+ │   │   │   │   │   │   ├── bssidcache.bin  5c8855ef824e9704f6047a403df014ff8aa5612e
+ │   │   │   │   │   │   ├── cdn
+!│   │   │   │   │   │   │   ├── cdninfo.txt  2f3c9b9e641a841c4ba9d2e657678dace571bd5b 2334ec513a1671a0525026b75b63b88c7e312c39
+ │   │   │   │   │   │   │   ├── download
+ │   │   │   │   │   │   │   └── upload
+ │   │   │   │   │   │   ├── cdndnsinfo
+!│   │   │   │   │   │   │   ├── 1a86a771  73fad7fb000f0c69535dc62b8af2a130621de78c d3ef8f22ce331308ba472ca5bb8c21495d783b02
+!│   │   │   │   │   │   │   ├── 1a86a771app  c6a3bde6460f0511807d50c676dd8e93d8c90bd3 5916b4db05abcabdc8df04fa1e5209996b01e3f2
+!│   │   │   │   │   │   │   └── 1a86a771sns  c6a3bde6460f0511807d50c676dd8e93d8c90bd3 5916b4db05abcabdc8df04fa1e5209996b01e3f2
+ │   │   │   │   │   │   ├── checkmsgid.ini  b04924554a1c9cd623e47e4fbdc65d917e829449
+ │   │   │   │   │   │   ├── CommonOneMicroMsg.db  4ad9a668b81de9e40b4cfa6960d0ab1ef212ce7c
+ │   │   │   │   │   │   ├── CommonOneMicroMsg.db.ini  276da83fdffdbdb48b0d1d0888214a6d876c851b
++│   │   │   │   │   │   ├── eggingfo.ini  79f34fd3419971caaa346b25df8f723e12fa16a0
+ │   │   │   │   │   │   ├── enFavorite.db  9638b12869e238d81ceda7b89cfc1f3fcb7735f9
+ │   │   │   │   │   │   ├── enFavorite.db.ini  29f7f2b8565c15c5efd433c125714fd00d9e30f8
+!│   │   │   │   │   │   ├── EnMicroMsg.db  536fdbfa30c13f56e54358079df90524d7d71d34 c63f1a07d2bd88f585a38212eff982dd04c4c890
+!│   │   │   │   │   │   ├── EnMicroMsg.db.ini  a9276a557eb95d0b0fb24bd0606a2bb125c95340 a846684b5ef0dc8fee929258e28bcaf880d8a1d8
+!│   │   │   │   │   │   ├── EnMicroMsg.db-journal  dd12522fab31cfe6ab88e5e8511f942a353fccc6 7473b3f4a3f3ab9ae68e33863334c032d887b6fa
+!│   │   │   │   │   │   ├── IndexMicroMsg.db  264d6198ef2567eb5c05c99685f3df7aa157b2f5 d9f9af95bed4ad73ffb6c811740c2aa661ff0d05
+ │   │   │   │   │   │   ├── logcat
+ │   │   │   │   │   │   ├── pushSyncResp
+ │   │   │   │   │   │   ├── sfs
+ │   │   │   │   │   │   │   ├── avatar.index  0e9fafecdfc5e1caa388cfbd3b46f2f3c3a5b6ea
+!│   │   │   │   │   │   │   ├── avatar.index-shm  2879ecb82620b0d9083768a439299b0a3d10eae5 892d9f0d9972523736ded0744fdf3cad6b0c588d
+!│   │   │   │   │   │   │   ├── avatar.index-wal  ffc9c5358f2c305ef24f1e72389e70d8ac098da1 2f757f4f6505b8f4aef78f33e9a38d7971b3c4d4
+ │   │   │   │   │   │   │   ├── sfs_stats.bin  84445f6319b8b7a008e05096b7772563da0bec7d
+ │   │   │   │   │   │   │   ├── sns.index  ec116137e7fb5021e15ae36756ae9c0a2222dabb
+ │   │   │   │   │   │   │   ├── sns.index-shm  608eeb7488042453c9ca40f7e1398fc1a270f3f4
+ │   │   │   │   │   │   │   └── sns.index-wal  da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   │   │   │   ├── SnsMicroMsg.db  1d106061155bdb92240d785fdc42bc7b56aefe95
+ │   │   │   │   │   │   ├── SnsMicroMsg.db.ini  eaf0b8a541e55f60447c7e9c0fa43bc34359cec3
+!│   │   │   │   │   │   ├── SnsMicroMsg.db-shm  608eeb7488042453c9ca40f7e1398fc1a270f3f4 1b548fc224719f9c0d42aea8cf71f18c63ee809d
+!│   │   │   │   │   │   ├── SnsMicroMsg.db-wal  da39a3ee5e6b4b0d3255bfef95601890afd80709 390c0891c332b3849010e0df3ae3770850bac18e
+ │   │   │   │   │   │   ├── talkroom
+ │   │   │   │   │   │   ├── trackroom
+ │   │   │   │   │   │   └── version_history.cfg  e23be067cbd2f75ed2febf0e3a5f26b3aa185392
+ │   │   │   │   │   ├── channel_history.cfg  22980f6cd0807e719d7f1b7cf25edc9df659ba1f
+ │   │   │   │   │   ├── ClickFlow
+!│   │   │   │   │   │   ├── 1048576.bin  51969784aad697af7f78a14bb09f1fb2eb42f825 72cce535485a26ba75313965f3478b2be31eba88
+ │   │   │   │   │   │   ├── 1048576.bin.lock  da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   │   │   │   ├── 1048576.bin.lock2  da39a3ee5e6b4b0d3255bfef95601890afd80709
+!│   │   │   │   │   │   ├── stg_1048576_1843499274.cfg  b0be46a6388574f4e5cbf3073892f04419754371 132491d849a1e998debddf3622d9ac803735c6da
+!│   │   │   │   │   │   └── stg_1048576_1843499274.HashMap  9fbd384509dc17d2a5bc9a146c4d7acc08b36a79 f0334798e2d9f872993c160b5e31a36b7abfa9a0
+ │   │   │   │   │   ├── CompatibleInfo.cfg  9837482f649b0c2203b7366816232362792b7a45
+ │   │   │   │   │   ├── configlist
+ │   │   │   │   │   │   └── config_1.xml  2e9c8a9219e2341eebe75af76700401ed1c8b198
+ │   │   │   │   │   ├── deviceconfig.cfg  da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   │   │   ├── ee1da3ae2100e09165c2e52382cfe79f
+!│   │   │   │   │   │   ├── EnResDown.db  ad79589f8bda23442829a7662e1528f064b78a02 885c1b9514687304b7f8d16d48b62056c6870221
+ │   │   │   │   │   │   └── EnResDown.db.ini  d9fcc81576828612bed2662db14075858797f9be
+ │   │   │   │   │   ├── ipcallCountryCodeConfig.cfg  862f49356a4a3b3c178bac871ca2fcf05d5eaef9
+ │   │   │   │   │   ├── NowRev.ini  bff1c77912b48aeadf1448bbe1423bda343bce1f
+@@ -821,13 +826,13 @@
+ │   │   │   │   │   │   ├── mmregioncode_zh_CN.txt  8a0369c41988e6d05c94678860fbce49270fc958
+ │   │   │   │   │   │   └── mmregioncode_zh_TW.txt  5f797c2ffb3e760f180179595a47e7ec01788126
+ │   │   │   │   │   ├── SdcardInfo.cfg  63d3f02f94079d59506cb4e5599fb20447856d60
+!│   │   │   │   │   ├── staytime.cfg  a136ee5bc436686149c3a4165f2a660d2253a39b 2f9430321f491746ebc3e80982dbc80c0e517e80
+!│   │   │   │   │   ├── stepcounter.cfg  7552caf1af31c1ebd62b11e4ebc4cf3714c8b70a 03e29b77b3781afa683311dd8ed08200864fe408
+!│   │   │   │   │   ├── systemInfo.cfg  b186efa74483005b2152d6c7cb7dada56d1471fd fdd31fc50443c582db6e782c74c36b7c65f0f7a3
+ │   │   │   │   │   └── version_history.cfg  e23be067cbd2f75ed2febf0e3a5f26b3aa185392
+ │   │   │   │   └── shared_prefs
+ │   │   │   │       ├── auth_hold_prefs.xml  4156cf5dc8d71dbab734d25e5e1598b37a5456f4
+!│   │   │   │       ├── auth_info_key_prefs.xml  0ba5b137eba10cf6205fa20436ebd6e088b3f2fc 6bb0da065ef842599375c957e0293d0878ab9de3
+ │   │   │   │       ├── com.tencent.mm_exdevice_ibeacon_isNewScanning.xml  90eab99d29516f1c64f27c8a477210a8134c0b2b
+ │   │   │   │       ├── com.tencent.mm_preferences_google_aid.xml  f4e5c497d85dbb094afd5a927965b1d351f4d70a
+ │   │   │   │       ├── com.tencent.mm_preferences.xml  e182729fd344fddd78e80b649280dc50182b6ede
+@@ -835,18 +840,18 @@
+ │   │   │   │       ├── com.tencent.mm_webview_x5_preferences.xml  520479e0dab3b96be0282963673d4a0d4dd4f78d
+ │   │   │   │       ├── crash_status_file.xml  beb0b601f6887353e9e04dff695af98c65487a13
+ │   │   │   │       ├── exdevice_pref.xml  7b58328cce667525e7b8a8684757906958a64357
+!│   │   │   │       ├── mm_proc_startup.xml  61417f3fb6182f3a7c295541bb469dba1fa1fc1b aad9cc362b5a4b039d1e1f75ed214866746c08ad
+ │   │   │   │       ├── noop_prefs.xml  483d3000c32a8b7d3f19cc4febb18c732f2288dd
+ │   │   │   │       ├── notify_key_pref_no_account.xml  6447c77685fed02dfe2eb96ced8ccfae6c2dcf2a
+ │   │   │   │       ├── notify_key_pref_settings.xml  8cc7e7c63e92cd0e1cafb73ed301e81bdac32c3d
+!│   │   │   │       ├── notify_key_prefwxid_qd7pn37xv6hc22.xml  ed599615639cd60187ae269ccc4a60c919123444 6c29222653bdb40d06d36c7c0f86bd111f35ffba
+ │   │   │   │       ├── notify_key_pref.xml  f0ba869fbf41d698ca97bf28feda813e7f1a8bb5
+!│   │   │   │       ├── notify_prep.xml  8ede5a2b425c86d2b09aafc1b3f6053ad5129716 092c575f722bb6f8952b4c42e9643e3a1d7bfbd3
+!│   │   │   │       ├── notify_sync_pref.xml  01ba03ecae2fed1121184174c3c583bccd1d6590 9b9479ba455e630bd5d52028e6fb1668e634cd93
+!│   │   │   │       ├── preferences_remove_task.xml  c289194fa61085e0ea184e9ea5f5f0bc8d5ae98f 1e18c7d85215c0585a62f821390abe7b503cc5f4
+ │   │   │   │       ├── pref_MMBitmapFactory_dyncfg.xml  9c424a11495bdcabcca3ab152e48268714dcc98f
+ │   │   │   │       ├── pref_MultiProcSP_dyncfg.xml  9b6538079bb1f31f687d48f096d0bf384c0efc4d
+!│   │   │   │       ├── push_proc_startup.xml  0ba187b040263e13f627a97080a076f580557a99 1ffd5affd8a15131a75ae818568f12818ae74253
+ │   │   │   │       ├── show_rating_preferences.xml  d3c09b767301d17fdf197836e37c6197c21cf63d
+ │   │   │   │       ├── sp_sns_dynswitch_stg.xml  70fee3a7faf42f68c74181a5d92ab758aae4711b
+ │   │   │   │       ├── system_config_prefs_showdown.xml  3dcaec807d2472ed2dd1ecb6eb21c1b223229101
+@@ -893,6 +898,7 @@
+ │   │   │   │       │   │   ├── attachment
+ │   │   │   │       │   │   ├── avatar
+ │   │   │   │       │   │   ├── brandicon
++│   │   │   │       │   │   │   └── brand_8e55db22e41485eb37a35d280278f3e5  1bd009515f9835ded2d31791b738b0fa3c74dbcc
+ │   │   │   │       │   │   ├── draft
+ │   │   │   │       │   │   ├── emoji
+ │   │   │   │       │   │   ├── favorite
+@@ -902,6 +908,14 @@
+ │   │   │   │       │   │   ├── image
+ │   │   │   │       │   │   │   ├── ext
+ │   │   │   │       │   │   │   │   └── pcm
++│   │   │   │       │   │   │   ├── ReaderApp_20@S_009aa603dd73479e2220277f35ad0a47  f40699ddfd13e7bbf920090e0c190857ce9b3ae2
++│   │   │   │       │   │   │   ├── ReaderApp_20@S_07a3d54d2355035bab91e0f885b8dd3f  9b4cbbba5b7eb33b3f9a4324fa34a93f320093fb
++│   │   │   │       │   │   │   ├── ReaderApp_20@S_24ee1e38a1ab68acbf6faf834363355b  eeb80bca5e83113a0bc7521453fc34045f9b55ed
++│   │   │   │       │   │   │   ├── ReaderApp_20@S_9e616d4e3025b8f47412860b2b85879e  0d3a04c26b15bdeb6ea97068119703dc6b7febea
++│   │   │   │       │   │   │   ├── ReaderApp_20@S_c3919725ce6495976160864a2572796e  9d5a4065410f4e67c140fa20f2499967fa38c2af
++│   │   │   │       │   │   │   ├── ReaderApp_20@S_d6c7abaf2be5b8cf570ca52d74cd070a  60e588ef8408df3c8e7c527666a85de8bd2dcb7e
++│   │   │   │       │   │   │   ├── ReaderApp_20@T_0dd96b1ba1a7ff412bf97799e2c89d54  fd5a3734a27b8ff1b03de94bd46e16a4924b44de
++│   │   │   │       │   │   │   ├── ReaderApp_20@T_98731063d7970e87b2b4da2bb0f949e2  0979f54643341277be637a9966d72d4d1853c50c
+ │   │   │   │       │   │   │   ├── scan
+ │   │   │   │       │   │   │   │   ├── img
+ │   │   │   │       │   │   │   │   └── music
+@@ -956,7 +970,7 @@
+ │   │   │   │       │   │   │   ├── avatar.block.00001  5ded2d21779c61bcee1f2455fa98a08da70341fa
+ │   │   │   │       │   │   │   ├── avatar.block.00002  d3f9ec56fed227b339def10dd4af47c2b453562d
+ │   │   │   │       │   │   │   ├── avatar.block.00003  2ad9c07579579f853d2c456f83c98e0bf83bb459
+!│   │   │   │       │   │   │   ├── avatar.block.00004  c30764da84c10e58c66e4c4581b970bd32b9bc15 4bbc664d3b8f1637cfd4d26e28a3225b1e3129af
+ │   │   │   │       │   │   │   └── sns
+ │   │   │   │       │   │   ├── sns
+ │   │   │   │       │   │   │   └── temp
+@@ -971,7 +985,7 @@
+ │   │   │   │       │   ├── FailMsgFileCache
+ │   │   │   │       │   ├── Game
+ │   │   │   │       │   ├── Handler
+!│   │   │   │       │   │   └── Handler.trace  02f51246d35ae9b6b4b5741b2c6e40497feba305 8b0685daa9f0c9ba9ea9db31103f5d9da62d4284
+ │   │   │   │       │   ├── locallog
+ │   │   │   │       │   ├── newyear
+ │   │   │   │       │   ├── vusericon
+@@ -990,15 +1004,15 @@
+ │   │   │   │       │   │   └── sfs
+ │   │   │   │       │   ├── WeiXin
+ │   │   │   │       │   └── xlog
+!│   │   │   │       │       ├── EXDEVICE_20160730.xlog  5a27bb01db3d50ddec2bdf4f8b61f868677cbbc8 861c7f6a55a0e0c0b6d0128512fa34b58f6db54a
+!│   │   │   │       │       ├── MM_20160730.xlog  ada239e0d2d5dedacc31634a4248580d97a3abaf 96cce823d8abc183dfb95b4ce960ea67d235b254
+ │   │   │   │       │       ├── PUSH_20160729.xlog  0fffb6b77d93ed3533ee0613e0b1b84b8d38faec
+!│   │   │   │       │       ├── PUSH_20160730.xlog  eceb72ecba82dbecb51d286566d2aca61fb1acef 1abd84b6d79689ae7beb92d5b666f8b4d27a6fb9
+!│   │   │   │       │       └── TOOL_20160730.xlog  1baa1067436e50f7843f34f6d0aee3763cc71505 6705c4235283550f4708a3edbb7c06a602c8b6b1
+ │   │   │   │       ├── mta
+ │   │   │   │       └── tbs
+ │   │   │   │           └── tbslog
+!│   │   │   │               └── tbslog.txt  1381c10ca2b948ca7528ba73e0b6db5790d3286a ffb4934b7f5007f8f510b2ca12564060f4c4d255
+ │   │   │   ├── legacy
+ │   │   │   └── obb
+ │   │   ├── mediadrm
+@@ -1007,7 +1021,7 @@
+ │   │   │   ├── bluedroid
+ │   │   │   ├── bluetooth
+ │   │   │   ├── dhcp
+!│   │   │   │   ├── dhcpcd-eth0.lease  717f03dec4d0636a8a7de06821f711e7ba4f4c59 673591101a84bad21e03fb0a457e3f8e091cf64d
+ │   │   │   │   └── dhcpcd-eth0.pid  da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   ├── ethernet
+ │   │   │   ├── keychain
+@@ -1015,12 +1029,12 @@
+ │   │   │   │   └── user_0
+ │   │   │   ├── media
+ │   │   │   ├── net
+!│   │   │   │   ├── netd_pid  38f08625014a4a1ab414793f2fcebfea621ce9d0 4902e4c0511d08bd54b069222bae5a2587964fa4
+ │   │   │   │   └── rt_tables  3cd9bd4121211235dabdd31adab55121b69bd583
+ │   │   │   ├── radio
+ │   │   │   ├── shared_relro
+!│   │   │   │   ├── libwebviewchromium32.relro  7732cd4019176d0a78b9b3af95e7af42461aa7a8 093e3af6da0e36869e269fef51281ae2d6011bf3
+!│   │   │   │   └── libwebviewchromium64.relro  ee582cfcc87463cb64d29e18952623b27159744a 934bbacf89d9aac704343260d7271e647e8b6129
+ │   │   │   ├── sms
+ │   │   │   ├── systemkeys
+ │   │   │   ├── user
+@@ -1044,8 +1058,8 @@
+ │   │   ├── resource-cache
+ │   │   ├── security
+ │   │   ├── system
+!│   │   │   ├── appops.xml  ad670c1a003b3a761e395b916bbf87d1a90956d0 0bf388f0c650d3102c02ebc013d8f4d1de746566
+!│   │   │   ├── batterystats.bin  5cbcca7e88717f761cec56ea0ebebd42eeb51fe8 6b065180ccbbad69ddba2b88ec1f3a6b5ade79db
+ │   │   │   ├── called_pre_boots.dat  0ccbac0f71b0eb6b04391293baf8b26810a23d96
+ │   │   │   ├── device_policies.xml  3f9e6293b38e62a365a29412ff71dff6ede010a1
+ │   │   │   ├── dropbox
+@@ -1058,8 +1072,9 @@
+ │   │   │   │   ├── SYSTEM_BOOT@1469866472710.txt  9415251b6025e27090a677980392766273a59fac
+ │   │   │   │   ├── SYSTEM_BOOT@1469879497799.txt  9415251b6025e27090a677980392766273a59fac
+ │   │   │   │   ├── SYSTEM_BOOT@1469882432542.txt  9415251b6025e27090a677980392766273a59fac
+-│   │   │   │   └── SYSTEM_BOOT@1469885631642.txt  9415251b6025e27090a677980392766273a59fac
+!│   │   │   ├── entropy.dat  eb136481abe7a2c178af7c3a976a572aa3fbab36 fb61ffe276dc2195f9d0d03bbabbd2b0e16ae378
++│   │   │   │   ├── SYSTEM_BOOT@1469885631642.txt  9415251b6025e27090a677980392766273a59fac
++│   │   │   │   └── SYSTEM_BOOT@1469887294526.txt  9415251b6025e27090a677980392766273a59fac
+ │   │   │   ├── framework_atlas.config  2107a23605a300785852e71b5c41b082411cd035
+ │   │   │   ├── ifw
+ │   │   │   ├── inputmethod
+@@ -1073,7 +1088,7 @@
+ │   │   │   ├── ndebugsocket
+ │   │   │   ├── netstats
+ │   │   │   ├── packages.list  19ab099252940bffbefbbd38c8c15f329ecc327b
+!│   │   │   ├── packages.xml  7f6de1f3354c7e79987105d4cd5ef9f5edc47020 8a6b92b29b6aa74672cfd038fb7ffa0cfaf1dc98
+ │   │   │   ├── procstats
+ │   │   │   │   └── state-2016-07-30-11-51-31.bin  8ff385f6fc17eccc628b696eced7e0ad4cab0189
+ │   │   │   ├── recent_images
+@@ -1086,7 +1101,7 @@
+ │   │   │   │   ├── accounts.xml  b6ebcbc5989b3c1273dd972287d374b791b99e87
+ │   │   │   │   ├── pending.xml  da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   │   ├── stats.bin  27c3b48593430b9090e96a6ac29f4a78aa2ef53a
+!│   │   │   │   └── status.bin  eca3fcabe6080ec243aebd96cae19d4e748dfbf1 00c42114c045fa0341a392ec24bc1af6c3a08814
+ │   │   │   ├── uiderrors.txt  a7bd25703b2dcc807bdaf564f79b3e3c0f470bd5
+ │   │   │   ├── usagestats
+ │   │   │   │   └── 0
+@@ -1106,7 +1121,7 @@
+ │   │   │       │   ├── appwidgets.xml  73a52fb653b25effb41fd7fc9b87c9fd42d86c55
+ │   │   │       │   ├── package-restrictions.xml  e1963b3664ca91f7e64b87daeea4d7bd9a2da643
+ │   │   │       │   └── wallpaper_info.xml  f15e2fe5823b09238a7106ef0a625944eb0f8687
+!│   │   │       ├── 0.xml  41689c8df97a0675aed0c263d9df1fb889cb4f58 2d5e9d4408a6ea3278a73e961b8358737c80aa26
+ │   │   │       └── userlist.xml  e2ee0f5b717a9d4b8f1e0cca9b0fc6687d9513c0
+ │   │   └── user
+ │   │       └── 0 -> /data/data/
+@@ -6943,4 +6958,4 @@
+ │   └── stage2_eltorito  a9b98c289a0a72d38537324db02e2f1bfb5b2756
+ └── lost+found
+ 
+-1190 directories, 5753 files
++1190 directories, 5768 files

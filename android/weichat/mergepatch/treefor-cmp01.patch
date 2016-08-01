@@ -1,0 +1,605 @@
+--- treeforandroid-old.txt	2016-07-29 06:27:50.421638134 -0400
++++ treeforandroid-new.txt	2016-07-29 06:31:21.425461225 -0400
+@@ -1,22 +1,56 @@
+-android-old
++android-new
+ ├── android-2016-07-23
+ │   ├── data
+ │   │   ├── adb
+ │   │   ├── app
++│   │   │   └── com.tencent.mm-1
++│   │   │       ├── base.apk  081c10f259f7f99fa9e97ad4790e6971c032fbc5
++│   │   │       └── lib
++│   │   │           └── arm
++│   │   │               ├── libFFmpeg.so  9abd08719ff6063775ff3b42df2d6b434d446c7f
++│   │   │               ├── libfingerprintauth.so  674e17cc50035ce37e92b32114616e86516168e5
++│   │   │               ├── libIDCardRecog.so  305cee04a5ea7ceb662217edaf2042bc447b615e
++│   │   │               ├── libkkdb.so  14bed5b41ea233fb77e288628a8fc233c0d005a3
++│   │   │               ├── libmm_gl_disp.so  db4ae238c15281550325801fca14044e665b8729
++│   │   │               ├── libMMProtocalJni.so  d9244507f25a292835cb2f054dd2dd70bed7fdbc
++│   │   │               ├── libstlport_shared.so  acf769a3d84bf71b50a9c4ab481acebecddc6ebd
++│   │   │               ├── libtencentloc.so  af888b912355c2b095ebd7a85b98fe53f55b77d4
++│   │   │               ├── libtenpay_utils.so  7f6e534290bf2ed6be079d715b84d50d00b93cf9
++│   │   │               ├── libvoipMain.so  68dc5203d9cdbec7831610fe2d0ec1c846f5ccd3
++│   │   │               ├── libwechataccessory.so  2f5fd06501970dfcf2ce12a2c0dabe7933fb0baa
++│   │   │               ├── libwechatBankCardRecog.so  3dbca4c7752382f623876d08db85b2e1a0569b3a
++│   │   │               ├── libwechatcommon.so  8e73ed13c6add610d42c3fa14a8373b2d10a1efe
++│   │   │               ├── libwechatCrashForJni.so  115098c748b9483ec9edaacd314c13a52fdc2a12
++│   │   │               ├── libwechatImgTools.so  f8ba78fc62a141ad9fd66569e5e968515d492f14
++│   │   │               ├── libwechatmm.so  710e076c8a1ce853df59799c8e19e3a724804f35
++│   │   │               ├── libwechatnetwork.so  4e3ada8d8502cec5dbc94d49492a86a3c5ed3562
++│   │   │               ├── libwechatpack.so  8ebd4c6811f68bbbf67721788ce69d3061c26f2e
++│   │   │               ├── libwechatQAFP.so  8471b5a3eaee2ef5cff1ea993ea6a161a6b0eb8b
++│   │   │               ├── libwechatQrMod.so  e330c766495107b1a4a0feb63e0b1999bafa306d
++│   │   │               ├── libwechatsight.so  eff36485d71e5b57b19b4e16cae768e1e4f8c6d0
++│   │   │               ├── libwechatsight_v7a.so  ae92b17598292074cd3edcfa512ec741346aca72
++│   │   │               ├── libwechatvoicereco.so  c3176ccc810a0005763c90f4347e12ad5bed59ea
++│   │   │               ├── libwechatvoicesilk.so  55274482694fb1d67f695af7e78cdc9992749e38
++│   │   │               ├── libwechatvoicesilk_v5.so  c9d40eb11a48aaa2179389010610b40d7020e839
++│   │   │               ├── libwechatvoicesilk_v7a.so  e4afe3b8277e7dc18989b54f75be09b863d22d36
++│   │   │               ├── libwechatxlog.so  87f076fae12058824ff276da5b39c676d6e73175
++│   │   │               └── libwxhttpproxy.so  180a28b17d6bf61e22db9a35a4fc1b2e1d38834a
+ │   │   ├── app-asec
+ │   │   ├── app-lib
+ │   │   ├── app-private
+ │   │   ├── backup
+ │   │   │   ├── com.android.internal.backup.LocalTransport
+!│   │   │   ├── fb-schedule  45781d4e2313a5940024166f88b83d15d24f22d5 aa66ffdf6afa89ec9166345d7e989225ebfd0a9d
+ │   │   │   └── pending
+-│   │   │       └── journal135113376.tmp  ec5c5a6173acadb0333d8768e4366198d9f6cb9b
++│   │   │       └── journal1066708669.tmp  ec5c5a6173acadb0333d8768e4366198d9f6cb9b
+ │   │   ├── bugreports -> data/com.android.shell/files/bugreports
+ │   │   ├── dalvik-cache
+ │   │   │   ├── profiles
+ │   │   │   │   ├── com.android.bluetooth  da39a3ee5e6b4b0d3255bfef95601890afd80709
++│   │   │   │   ├── com.android.browser  da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   │   ├── com.android.calendar  da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   │   ├── com.android.camera2  da39a3ee5e6b4b0d3255bfef95601890afd80709
++│   │   │   │   ├── com.android.defcontainer  da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   │   ├── com.android.deskclock  da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   │   ├── com.android.documentsui  da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   │   ├── com.android.email  da39a3ee5e6b4b0d3255bfef95601890afd80709
+@@ -33,6 +67,7 @@
+ │   │   │   │   ├── com.android.music  da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   │   ├── com.android.musicfx  da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   │   ├── com.android.onetimeinitializer  da39a3ee5e6b4b0d3255bfef95601890afd80709
++│   │   │   │   ├── com.android.packageinstaller  da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   │   ├── com.android.phone  da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   │   ├── com.android.printspooler  da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   │   ├── com.android.providers.calendar  da39a3ee5e6b4b0d3255bfef95601890afd80709
+@@ -43,12 +78,18 @@
+ │   │   │   │   ├── com.android.providers.telephony  da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   │   ├── com.android.providers.userdictionary  da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   │   ├── com.android.provision  da39a3ee5e6b4b0d3255bfef95601890afd80709
++│   │   │   │   ├── com.android.quicksearchbox  da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   │   ├── com.android.server.telecom  da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   │   ├── com.android.settings  da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   │   ├── com.android.systemui  da39a3ee5e6b4b0d3255bfef95601890afd80709
++│   │   │   │   ├── com.android.webview  da39a3ee5e6b4b0d3255bfef95601890afd80709
++│   │   │   │   ├── com.cyanogenmod.filemanager  da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   │   ├── com.emindsoft.setupwizard  da39a3ee5e6b4b0d3255bfef95601890afd80709
++│   │   │   │   ├── com.svox.pico  da39a3ee5e6b4b0d3255bfef95601890afd80709
++│   │   │   │   ├── com.tencent.mm  da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   │   └── org.zeroxlab.util.tscal  da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   ├── x86
++│   │   │   │   ├── data@app@com.tencent.mm-1@base.apk@classes.dex  50824ba01cf51f3d6305a4bae141d4d661cac161
+ │   │   │   │   ├── system@app@Gallery2@Gallery2.apk@classes.dex  b0984f01209f170dfa4e7408997a3825237d0718
+ │   │   │   │   ├── system@framework@am.jar@classes.dex  30a0b967a2cf0bc3c442e4e278333ec8291e6270
+ │   │   │   │   ├── system@framework@android.test.runner.jar@classes.dex  4daf1d03265c54b2c335f2e8030ce9a2f2de95b9
+@@ -77,8 +118,10 @@
+ │   │   │   │   └── system@framework@wm.jar@classes.dex  cbb6096b336bd25623c95f974873fd678d76f502
+ │   │   │   └── x86_64
+ │   │   │       ├── system@app@Bluetooth@Bluetooth.apk@classes.dex  2bc563ec1b2abe29d4f740667bdb52957b96cbff
++│   │   │       ├── system@app@Browser@Browser.apk@classes.dex  1a9cebd33124ad5dc505f8755d0edb355b3c1248
+ │   │   │       ├── system@app@Calendar@Calendar.apk@classes.dex  351a6d32fa12ee9a60c198802d14efb6f04e50f2
+ │   │   │       ├── system@app@Camera2@Camera2.apk@classes.dex  ad58a0689fb03070b0bb9bf03c0ed8788db3574c
++│   │   │       ├── system@app@CMFileManager@CMFileManager.apk@classes.dex  63a74754f7b87d68ba676f5f3d06d7a8c70c6524
+ │   │   │       ├── system@app@DeskClock@DeskClock.apk@classes.dex  236d913da944265eb5c65f3edda1b3997e4308fd
+ │   │   │       ├── system@app@DocumentsUI@DocumentsUI.apk@classes.dex  0fcc593ed7794da1fb4cc368c48e9db14009c534
+ │   │   │       ├── system@app@Email@Email.apk@classes.dex  a325e285986a4c50ced6504719d6a6f0864dcd19
+@@ -88,9 +131,13 @@
+ │   │   │       ├── system@app@Launcher3@Launcher3.apk@classes.dex  0f4a3828356effac36dcb8538f54b897cdf77183
+ │   │   │       ├── system@app@LineRect@LineRect.apk@classes.dex  24292f0ff61b419745247258f2314f40d7e8ac4c
+ │   │   │       ├── system@app@Music@Music.apk@classes.dex  e60b3aa9e3c27c966a40c414d172245759e77302
++│   │   │       ├── system@app@PackageInstaller@PackageInstaller.apk@classes.dex  206f365256baf7c373d5523cba0b67c72f6bf3c7
++│   │   │       ├── system@app@PicoTts@PicoTts.apk@classes.dex  3200eb29a935a3ff390bcda698189be5639b5b33
+ │   │   │       ├── system@app@PrintSpooler@PrintSpooler.apk@classes.dex  37cefecc9e780f36b151961dbe6190c7bf77b125
+ │   │   │       ├── system@app@Provision@Provision.apk@classes.dex  ed0093d87443f80c578cb39ff58e6616e933b9c7
++│   │   │       ├── system@app@QuickSearchBox@QuickSearchBox.apk@classes.dex  e14fc19f0bc640c2779afd7abf683c8d170fcbc9
+ │   │   │       ├── system@app@UserDictionaryProvider@UserDictionaryProvider.apk@classes.dex  da3531559c1ea8de25eacdb001799253f24a9f5d
++│   │   │       ├── system@app@webview@webview.apk@classes.dex  e139d5176a7a8d88fa4a794dfda54bc87845fd3c
+ │   │   │       ├── system@framework@am.jar@classes.dex  f6b2fd96154dc39ce9c4b0c381023ec944db09d8
+ │   │   │       ├── system@framework@android.test.runner.jar@classes.dex  678bff86620678d95768940ed20b208ae35bfc6f
+ │   │   │       ├── system@framework@appops.jar@classes.dex  985d337589566302052c5c464c0077decd23c279
+@@ -121,6 +168,7 @@
+ │   │   │       ├── system@framework@wm.jar@classes.dex  b2d29c048e003fedcf550a18846d43ca25f09709
+ │   │   │       ├── system@priv-app@CalendarProvider@CalendarProvider.apk@classes.dex  fe1aec001d6367ab89d105ef7579078fb01d8b27
+ │   │   │       ├── system@priv-app@ContactsProvider@ContactsProvider.apk@classes.dex  4a744578e61171b68c6e8a7dc2e07c7789c24552
++│   │   │       ├── system@priv-app@DefaultContainerService@DefaultContainerService.apk@classes.dex  c2912606ff948f67ae30858bc5692a50950c39c4
+ │   │   │       ├── system@priv-app@DownloadProvider@DownloadProvider.apk@classes.dex  dd89632c124946813fc177e2bfb97ac6b7006620
+ │   │   │       ├── system@priv-app@EmindSetupWizard@EmindSetupWizard.apk@classes.dex  71aba704dcd01ed614f4029fe3a07c9633922544
+ │   │   │       ├── system@priv-app@ExternalStorageProvider@ExternalStorageProvider.apk@classes.dex  6d80bfac006fea5285d4feaf58da021e7d726f30
+@@ -146,7 +194,182 @@
+ │   │   │   │   ├── cache
+ │   │   │   │   └── lib -> /data/app-lib/com.android.bluetooth
+ │   │   │   ├── com.android.browser
+-│   │   │   │   └── lib -> /data/app-lib/com.android.browser
++│   │   │   │   ├── app_appcache
++│   │   │   │   ├── app_databases
++│   │   │   │   ├── app_geolocation
++│   │   │   │   ├── app_icons
++│   │   │   │   ├── app_webview
++│   │   │   │   │   ├── Cache
++│   │   │   │   │   │   ├── 00de17eb21bfbb20_0  2a9664586e4bd13cd8d7148bd4a627f73a76e89f
++│   │   │   │   │   │   ├── 05817cbb2f2dc9e4_0  f8d7b67e7ec5af9d85d4b6c8dbcd849ba6e3c06d
++│   │   │   │   │   │   ├── 0ba59b7f17640cd3_0  f84d2bbe8b3ddcfb62fce69d3925e5c758154ac3
++│   │   │   │   │   │   ├── 0f220531966b2ccf_0  d3f1af917f530518724488e267edf06e22619dff
++│   │   │   │   │   │   ├── 1217b5693a956270_0  63aae598ebca70317429720acd3c90e97a4ae790
++│   │   │   │   │   │   ├── 1273e36ae6aafcd0_0  51b7577c9fbd76f45cb894e5d298bacf3bf81336
++│   │   │   │   │   │   ├── 128ed5cb2e0e06a3_0  a4906c3bfe975f11694c9e8f0121808b5c4459fd
++│   │   │   │   │   │   ├── 178c6a91fcd8fc59_0  2b745e2b713801f29ecf266f92e53b170514ab1b
++│   │   │   │   │   │   ├── 1a0e5f664472856f_0  7ca46442681e196f2865d1bec45e7df46b3d7040
++│   │   │   │   │   │   ├── 1a4e8cbc7c0c6c26_0  05419880d23a53e1916f462eeed63ed12fb2c6ef
++│   │   │   │   │   │   ├── 1b0e1040e68722dc_0  50fd87721d2b1143f2e9e7cbaa2694c75624ffdc
++│   │   │   │   │   │   ├── 1c3ef5c4cb344b1e_0  547fb15774f5c11cd582f7d95f6a347dd02c94be
++│   │   │   │   │   │   ├── 21835450edd3e05e_0  81e076f466f2c4566f58edf4fa7e16daeb04254f
++│   │   │   │   │   │   ├── 24137128632236f6_0  1a3a14f77ad89cac858aaf6f201a0f1e3627afd0
++│   │   │   │   │   │   ├── 24c803401244861e_0  41839b305d94cbc4d2475c4f3439ba68e45f4fc5
++│   │   │   │   │   │   ├── 24fc7484e2a9e189_0  b7a4d2c1b1e7abeb791af6b8f83cb0659b51537f
++│   │   │   │   │   │   ├── 27f2250f90be439d_0  86bc026c768798a11855aff26ce82454945e0002
++│   │   │   │   │   │   ├── 28c1f5d94468824b_0  0e5677e73dcee66b40f57181a357d1f92599d3ed
++│   │   │   │   │   │   ├── 2e6abeee9a3da4b5_0  dec61706e6b4f76520baf4eba40f96cbe7ff4b4d
++│   │   │   │   │   │   ├── 308adcd6b2456519_0  d5d277d1635f53c20b3546409ca50a9a80963d9d
++│   │   │   │   │   │   ├── 32e849a095147101_0  6a815aaa3dbe5088cd60b7865ee4702f2d927bb8
++│   │   │   │   │   │   ├── 3331b2138ed06544_0  d33e42e32220b45a46c8c9ead97afb9a82f6c813
++│   │   │   │   │   │   ├── 368122fd160063ac_0  3cc68ace478f95547d63b647d46e30792c56d4b2
++│   │   │   │   │   │   ├── 368755ec6947c941_0  4d146e89d02dcf4d211ac027277d135468fadd31
++│   │   │   │   │   │   ├── 37691c7d22d391ba_0  9c05393b6b9e8947f46b446e509b2fd28c188349
++│   │   │   │   │   │   ├── 389bf0a775a5e1b3_0  24279510d9638db862c7cc87ff5a02e5f775564f
++│   │   │   │   │   │   ├── 3a7200280434217a_0  0c56efbabf533d69d9d58d07623e4b2403dcb9da
++│   │   │   │   │   │   ├── 3b3c98899c820dc4_0  deaeb7c26b55b1a38257b93a39329007665dd39c
++│   │   │   │   │   │   ├── 3c61f2c0e10019f0_0  a20dd2ee573d28d0b4650d23ec86ee26cb55b63f
++│   │   │   │   │   │   ├── 40b9202a4063d949_0  ed1921a3a8c9cf5816877ff95a2ad85bd80cfdd3
++│   │   │   │   │   │   ├── 42c808fc6124eda7_0  23782dc330ae83d0480363d7fdfbe763bb301fb4
++│   │   │   │   │   │   ├── 4347b7044c8ce48f_0  2344719173a95aed25b718f4ce13a61a8e792c36
++│   │   │   │   │   │   ├── 4367f60567b19860_0  24dcb00685b5c02912c58fb96b3f2f0324b7effc
++│   │   │   │   │   │   ├── 46fa2ee4dfac7a0d_0  6f1ce5fef197cfeb624199807e60eef6712da740
++│   │   │   │   │   │   ├── 4c5022a42c1fcd38_0  7e9ff9231cae2f54977ce47b8c9a20d1f51e2bb3
++│   │   │   │   │   │   ├── 4c588c4df5e82808_0  8c40b1c4836cc56465ad4492cd333d8f2365d60b
++│   │   │   │   │   │   ├── 51ea0b19d7ddf599_0  ec3f60dcca687614b720f4c555c6b1a0557606a5
++│   │   │   │   │   │   ├── 52d0458a165f30e1_0  5da4f6b246ba616899e02cba4eb302815adbe133
++│   │   │   │   │   │   ├── 53dd21b9ed532df6_0  4d41b44f1caaad21936bc79eaa6ee3d8b722e1ba
++│   │   │   │   │   │   ├── 540428aa1c793132_0  8c438ac73d7f70552b47213eb501b9fa129ae942
++│   │   │   │   │   │   ├── 55fad0d69eea0774_0  a285846e4e02a1e98d68a07373b674caf0ea323d
++│   │   │   │   │   │   ├── 5a544e519eb861a3_0  f83eb33da1f3e35f91f35eda0eb806bb72f33a34
++│   │   │   │   │   │   ├── 5db668adf3e37241_0  8bc0a002425d4657c8b1fb9ddeb5e71f3a1355d0
++│   │   │   │   │   │   ├── 5ff6354a40b8470f_0  e30a76909490b85cf1c0070de9b1733a61742cf4
++│   │   │   │   │   │   ├── 60ba77a1b844246f_0  abc5e6c706e1f78832349d341145c0a6c5adebc6
++│   │   │   │   │   │   ├── 61ace0566b8c19e4_0  0e30f4d9a1fd6a864effa5afdb92957ebbb0030b
++│   │   │   │   │   │   ├── 640d18efe467b761_0  b909330392c760ee6a475ff1e1f51eeace147ca3
++│   │   │   │   │   │   ├── 68b7766f1603ce37_0  65bfdce2b4d6956de0deb10d3005a653f7283ef8
++│   │   │   │   │   │   ├── 6927c95e715ab1b0_0  d81a1d7942333f13f5fb7b8e737be436d19614f1
++│   │   │   │   │   │   ├── 69ff1dcb2569bc71_0  5894fc89d7819ecaa3c87a24fc8dc33220dbf478
++│   │   │   │   │   │   ├── 6e8057859ad1442f_0  9629211e6fcb8674ef6aaa8003255a63e0373df4
++│   │   │   │   │   │   ├── 6f3c6f85ef6b52c5_0  7e3c76c1520fe33d965e1ca72d649d84162808b9
++│   │   │   │   │   │   ├── 722545c0aad070f6_0  c344c0d62f31d3b6996c68973be74563f69a7381
++│   │   │   │   │   │   ├── 723063a909116d96_0  29e6acff534abf14993efde8e98521435259bf00
++│   │   │   │   │   │   ├── 75c98f902ccb755a_0  194a4db4e113b6b04a8a60a96b2c58b5ff6dd173
++│   │   │   │   │   │   ├── 790137671dc57a12_0  68cf4bc1266ace7fbd155044753390056e3e7a36
++│   │   │   │   │   │   ├── 790fe799c7735950_0  33ef1df98c1b296c775b8bea7c47629e6b4aca42
++│   │   │   │   │   │   ├── 7939aa0afe0f52cb_0  168b30433a0eeaa12b6ebaff12823fdc2fb45a5f
++│   │   │   │   │   │   ├── 79c408eb4ddd5955_0  bf4e651bc6be46454150b24619f665c16c3161fd
++│   │   │   │   │   │   ├── 7bc7117c30e93938_0  09e38ee807479f470879747aef527fc10df7e05e
++│   │   │   │   │   │   ├── 7def635da00993f5_0  a8cd880f9f9185f19a09b0a20c15ce2c7c2efb38
++│   │   │   │   │   │   ├── 7ff81ffc7052df9b_0  8367f3b6916eeffbb53f5c962be9f91da0df068d
++│   │   │   │   │   │   ├── 80644c2c6d428433_0  c27dfdff9f4251a2ec65434d1778a749acb65fe1
++│   │   │   │   │   │   ├── 814b362389e4c5b7_0  e6360c4f200b9db3700703366feb088227411bd9
++│   │   │   │   │   │   ├── 818e29a3f93c5fa3_0  7d1e12ec6d890125c1f42dc7aabb274763da5ba4
++│   │   │   │   │   │   ├── 81a44454d7c02f96_0  791732dcaea10643b8380d7bd32875d07587b21c
++│   │   │   │   │   │   ├── 8233f45b1d5829fb_0  408dc2485b507b8d9372f1faafce20f9cb607922
++│   │   │   │   │   │   ├── 847383fa2350914a_0  c36541c2f7df79a89018abd37c8686e1d44a4564
++│   │   │   │   │   │   ├── 85e7f842bdb4eba4_0  e091647dc77cb074c2ea0f61305567ed4e2fafc8
++│   │   │   │   │   │   ├── 875dbd16dd27e8ac_0  36d2d14d536df0dd40542c2f57203887b1bf0f79
++│   │   │   │   │   │   ├── 87873b3a82038a30_0  2836712ab99ccdbdc1fb16e1d4563022c16868e2
++│   │   │   │   │   │   ├── 8c93bc6d92adb447_0  6d2b765d4fb209479cbe03a10203607bd75278f4
++│   │   │   │   │   │   ├── 8ce6d72b87187cf7_0  d65a06293a71cb812d9054626da9c640507501d5
++│   │   │   │   │   │   ├── 8cf3ba5a01957d94_0  15755de518946995c894db08f9dfea83fd6d1092
++│   │   │   │   │   │   ├── 8da1c064c88c5f83_0  c6016a1ff88efb83c636219c71111dba08a735f6
++│   │   │   │   │   │   ├── 90f23df037b1cef2_0  3fb629d16d7b890aacd929a5bf7d3aa16a416afb
++│   │   │   │   │   │   ├── 920fea671292be36_0  d4bb33ab7d3d65e152fa7ad9e8ca91b5b33311ae
++│   │   │   │   │   │   ├── 951f3927b686953d_0  b31226862aab011d8aebc4f3e2df228a0635cece
++│   │   │   │   │   │   ├── 9554357f78574a0d_0  0b328d078335fcd633eb97859d000243d71ff21a
++│   │   │   │   │   │   ├── 98d49aa91866bf04_0  22996175bd7bd4e5278feb442aa7a7d3d236853a
++│   │   │   │   │   │   ├── 9b13decd650bcfb7_0  6b3e850ed80ac7c261829c69cff996a1b003920f
++│   │   │   │   │   │   ├── 9be8740d91580915_0  da13f8f384258bcdaecef95780bf4971650e1ec7
++│   │   │   │   │   │   ├── 9c2d8a446187a6a3_0  ddda580b7ed9a4b20f4b0b12f407244bdc3d1e88
++│   │   │   │   │   │   ├── 9d6d5067ba1a4e0a_0  89b3474e9ebde4c7eef60d8a4b69b0be6bbda33d
++│   │   │   │   │   │   ├── 9d92baf5a37989eb_0  2b4275aa8ab99f1ca687958ac3aab984aa09de43
++│   │   │   │   │   │   ├── 9eb34305eaccfd40_0  7dc89c42c19d71149d844bd44b04ff670a9686d0
++│   │   │   │   │   │   ├── 9fbf40c24b9ac744_0  95536073b6eecef5b551bb301ce8f75b3d55b4fd
++│   │   │   │   │   │   ├── a1c24297376481d1_0  3473a78878bd7e0d01ba4af10bcf5a0d5ecbb0b2
++│   │   │   │   │   │   ├── a6dce6176cdd8214_0  586e0922e34e4a87298856b173bf7d395e6d448b
++│   │   │   │   │   │   ├── a972d7c0c630f427_0  73e65e6027ba0f3a54f3a89f2aa2861dfa9ee56c
++│   │   │   │   │   │   ├── aaf34476606b9777_0  623e1e7785e557b40636df51d9160c7081184ed9
++│   │   │   │   │   │   ├── ab3a54401a9fa503_0  fda35f83dc0ca550478601007f36b686e5338574
++│   │   │   │   │   │   ├── afae228d9d9daa70_0  17e3d3d249f096aa0da945238ded508c3c4a4e20
++│   │   │   │   │   │   ├── b0889d62c3b4ea19_0  a5a03dd60a09f48e1d6926a67d2d27fc46baf619
++│   │   │   │   │   │   ├── b11aaceca7784f4f_0  28bd30a6e6281d8a645f4e28d5037bbb8c892ee3
++│   │   │   │   │   │   ├── b1813036d1215b04_0  5453f12e2ca40b67418760bec064bad5014a56d9
++│   │   │   │   │   │   ├── b189d6b7f5de5360_0  12368bdab24cbbb31f6f9a3cdaadcb1992d0c313
++│   │   │   │   │   │   ├── b2b27182c6ce134a_0  90109d286cce3c8f081cd9cd3a2360e05fcf654d
++│   │   │   │   │   │   ├── b58dc01eeb278c71_0  dcd699eac53fcecfddd4e144484487198ed6c7d4
++│   │   │   │   │   │   ├── b8364ee863cbcaf7_0  c095b87a178a9c81a84076b55c38bc31041b65be
++│   │   │   │   │   │   ├── bab49560c086cb47_0  932155fd6c94b822b304a472508a4d6f1dd14806
++│   │   │   │   │   │   ├── bdb2fe407d723e3a_0  50ece3e3831e74ebd1bf016ecc5df02654074c51
++│   │   │   │   │   │   ├── bf09f2962ece16d0_0  d47cd809e16b36573012a25b7119b3e5f1a5ad19
++│   │   │   │   │   │   ├── c12359f9a8872574_0  11e496296f67f758d658bb1bc4ad8b8dcb50b84f
++│   │   │   │   │   │   ├── c4212ce933116ff4_0  264889446eac6f7bbc6073a393418887121a7b34
++│   │   │   │   │   │   ├── c4655feb93490a44_0  cbfb1cf8c93038b31e2f90c564275a1fead7aa68
++│   │   │   │   │   │   ├── c6871323575a25d3_0  c6ea2fb5c86ef26831c5e5c7518be947b00ff9f1
++│   │   │   │   │   │   ├── c762a22e72d5bc47_0  1e669013e389c5783789f57348f48a4b7b541dc0
++│   │   │   │   │   │   ├── caa8cc93e127f168_0  3933e0d2f173e2846f0f10aacb861d12c9c34536
++│   │   │   │   │   │   ├── cb690456549b8f2f_0  42cd210afc1f72cf2f49e26326adc63ddcedeb6f
++│   │   │   │   │   │   ├── cd38f1c9b7425d1e_0  3e48a152ce29a9ac92c5dc80a426887e726bb954
++│   │   │   │   │   │   ├── cf0d8228678cb4a8_0  4b4d481bfadd4243bedf62a3d2b8bdd405839388
++│   │   │   │   │   │   ├── d0d666c72b86526b_0  301f6539f3b433b7509b4b0fe3c5de7c5959836c
++│   │   │   │   │   │   ├── d1dbd3077187920f_0  ba462fdae98fc984cf7aca3ad54e88dafa2e6944
++│   │   │   │   │   │   ├── d49adbe5364457cf_0  d2f761209a089d6daaaa6cced0af7c0b0195c2cf
++│   │   │   │   │   │   ├── d4b7096cd8ce4707_0  24a42f6600a8abee51568ea214a30e6491cbcd3f
++│   │   │   │   │   │   ├── d8a336cd0f4e3b50_0  9d9f1d2dd686f09c96841a4fcb967502792b952f
++│   │   │   │   │   │   ├── d99558aef5c439d4_0  5c0e86c8c76eae5b16514d252d5b4ed190c920ec
++│   │   │   │   │   │   ├── da1eadb3487f248c_0  ed5b56d2f64d000357565df8c32cfcf580e07283
++│   │   │   │   │   │   ├── ddbc3113bd309acb_0  6646eb3d693e09c124eb42dc86116b00536510ec
++│   │   │   │   │   │   ├── dec4678648185569_0  1ef62b741c8cd2a68977e89c8e30109898a4d2d9
++│   │   │   │   │   │   ├── df740865804d797a_0  81bc81ae209821f5eebef58849fe98e271817ace
++│   │   │   │   │   │   ├── e1238cef1f5f93ed_0  8d95c5e1e4dfd877b13eafd26ee304c17dda8240
++│   │   │   │   │   │   ├── e1a60aba756b995b_0  dfedad7321b3c8fae42afd4bfe8edba1c56794b3
++│   │   │   │   │   │   ├── e1ea9771c8102ee3_0  8e6a22a391b31f1c76bc3a7de487e9b16bb9e817
++│   │   │   │   │   │   ├── e27539d3995160f0_0  8dd4bdb7bcb2c6f4babe448ed7bdb818d535c965
++│   │   │   │   │   │   ├── e27683da15370526_0  41bd9889dcb04fcf508d6f1c3b877812cd0ecb6a
++│   │   │   │   │   │   ├── e4550977c025faeb_0  4414662ec8a95dc1bbd561ef5a8d1475013a20d8
++│   │   │   │   │   │   ├── e5884a89fdcb7b54_0  a6b2e1c9a3fb950d70c4f96d77aac18b26bb2c61
++│   │   │   │   │   │   ├── e85eb5d94f87e819_0  11a4bded30e244494a03ab72c7b0803df9743bb8
++│   │   │   │   │   │   ├── ea03d8dc664f39f1_0  4757445c81c86fffa90828e130402e5b82e9d897
++│   │   │   │   │   │   ├── eb0195d4b1eca954_0  1dedbdde842065ec8292bca06034e025ef81c7fb
++│   │   │   │   │   │   ├── eb903146bdb306ec_0  0bbaef615e6b8056ff1ac7f96ade309107c2fd42
++│   │   │   │   │   │   ├── ed38b0103d223ec9_0  e34941ee5dc60161a7e616190bfe746a576069d1
++│   │   │   │   │   │   ├── eeea70f6ac25a714_0  2dd621df202b38ccce751c6f66cca2525f800c3e
++│   │   │   │   │   │   ├── f23194bdb77fbe8c_0  6f715d7b0fc0d10a6123878b84b4756fd464d039
++│   │   │   │   │   │   ├── f28c02f8c0cefaf0_0  849511347f1bc6a31f6bebc58b976ef6d51ceded
++│   │   │   │   │   │   ├── f3a815732c0a94ef_0  f5c25abe73468358a4688c83d5f23e5104af2906
++│   │   │   │   │   │   ├── f3f55766818de333_0  acc37b6d71082fe5e4898ce95563f449d77d2b50
++│   │   │   │   │   │   ├── f46a4b8dcf432d35_0  0905946d401bbe976f2035910c05e33aa4258d74
++│   │   │   │   │   │   ├── f535251b86d27ab8_0  bb17968ce718cb30888f28e5ca464d7f50c0617e
++│   │   │   │   │   │   ├── f7e3e6b7768bdfdf_0  7644e72cf680d3bffdc3a9b3cded335950c8a422
++│   │   │   │   │   │   ├── f840d1123da36dea_0  6312cc2e72bd663d8c59ef5d27e699fd952d090e
++│   │   │   │   │   │   ├── f8e1ecb8132d449c_0  70bae7e09be6664144a9daf594b1c4132aa471b2
++│   │   │   │   │   │   ├── fdc8705005a95918_0  2b3a86ca803ab638524b4b492c829eb1ce2eaec7
++│   │   │   │   │   │   ├── ff23cdd6db7e48f6_0  f531034455bb12454b8df9a0996964c69db6efb9
++│   │   │   │   │   │   ├── index  6e0fa286f1d41e3619d918ef31c0e377f9876ad2
++│   │   │   │   │   │   └── index-dir
++│   │   │   │   │   │       └── the-real-index  b6b079e5a40412a8f18cf0328d0222a92a041755
++│   │   │   │   │   ├── Cookies  1bae7f6eff1836ae507c9102f4229d002edb8b92
++│   │   │   │   │   ├── Cookies-journal  bb0c264a24c55a54685812e06f3bfcdd52d0fe3e
++│   │   │   │   │   ├── Local Storage
++│   │   │   │   │   │   ├── http_mobile.baidu.com_0.localstorage
++│   │   │   │   │   │   ├── http_mobile.baidu.com_0.localstorage-journal
++│   │   │   │   │   │   ├── https_www.baidu.com_0.localstorage
++│   │   │   │   │   │   └── https_www.baidu.com_0.localstorage-journal
++│   │   │   │   │   ├── paks
++│   │   │   │   │   ├── Web Data
++│   │   │   │   │   └── Web Data-journal
++│   │   │   │   ├── cache
++│   │   │   │   │   └── browser_state.parcel  c278487154e17749e504886057582d8e00c7d6a1
++│   │   │   │   ├── databases
++│   │   │   │   │   ├── browser2.db  3358af52b3e1e5beaa11796cc0a3bb3b9ee84f9a
++│   │   │   │   │   ├── browser2.db-shm  ba916eb9573152fe01f1dcaf5253ea8fdb5d98ce
++│   │   │   │   │   └── browser2.db-wal  80e47126e047e8a7177f6b3dbb8e2f0bdf3a02f5
++│   │   │   │   ├── files
++│   │   │   │   ├── lib -> /data/app-lib/com.android.browser
++│   │   │   │   └── shared_prefs
++│   │   │   │       ├── com.android.browser_preferences.xml  6a2915c67881d4d398c8a51d34d638f992d8a4ff
++│   │   │   │       └── WebViewChromiumPrefs.xml  b8cbaf0a4b62275e554f8034c894d149139163c0
+ │   │   │   ├── com.android.calculator2
+ │   │   │   │   └── lib -> /data/app-lib/com.android.calculator2
+ │   │   │   ├── com.android.calendar
+@@ -164,6 +387,7 @@
+ │   │   │   ├── com.android.certinstaller
+ │   │   │   │   └── lib -> /data/app-lib/com.android.certinstaller
+ │   │   │   ├── com.android.defcontainer
++│   │   │   │   ├── cache
+ │   │   │   │   └── lib -> /data/app-lib/com.android.defcontainer
+ │   │   │   ├── com.android.deskclock
+ │   │   │   │   ├── cache
+@@ -172,14 +396,14 @@
+ │   │   │   │   │   └── alarms.db-journal  1365ff11030aff5b08a0b0caf3a85c08eb318c01
+ │   │   │   │   ├── lib -> /data/app-lib/com.android.deskclock
+ │   │   │   │   └── shared_prefs
+!│   │   │   │       └── com.android.deskclock_preferences.xml  f097f6617290ae027b042de5fe5c71c34f6cff99 16ab0d2c01777781923a71037fd7f873d8cd02a7
+ │   │   │   ├── com.android.development
+ │   │   │   │   └── lib -> /data/app-lib/com.android.development
+ │   │   │   ├── com.android.documentsui
+ │   │   │   │   ├── cache
+ │   │   │   │   ├── databases
+!│   │   │   │   │   ├── Application_database.db  e8ff365c16948105df17d097413fd376c2a94240 75786b000769577ac6a58331b3705e7c25d9cbca
+!│   │   │   │   │   └── Application_database.db-journal  bc794109ce86020203053a50534ac5aea61f645f 51ad309003c1768487ece9853a6a15057b3205a2
+ │   │   │   │   └── lib -> /data/app-lib/com.android.documentsui
+ │   │   │   ├── com.android.dreams.basic
+ │   │   │   │   └── lib -> /data/app-lib/com.android.dreams.basic
+@@ -211,7 +435,7 @@
+ │   │   │   │   ├── cache
+ │   │   │   │   ├── lib -> /data/app-lib/com.android.gallery3d
+ │   │   │   │   └── shared_prefs
+!│   │   │   │       └── com.android.gallery3d_preferences.xml  446e802b61a618378ea9ca779f4e570bf6e4de33 447fa626f52abfe48080e8fc2c3477bb79bcadee
+ │   │   │   ├── com.android.htmlviewer
+ │   │   │   │   └── lib -> /data/app-lib/com.android.htmlviewer
+ │   │   │   ├── com.android.inputdevices
+@@ -230,17 +454,17 @@
+ │   │   │   │   └── lib -> /data/app-lib/com.android.keychain
+ │   │   │   ├── com.android.launcher3
+ │   │   │   │   ├── cache
+!│   │   │   │   │   ├── widgetpreviews.db  bf9f2c0c12716b2451483edf070d80082fc6e6fc 37c922f643ef32ae35ca2a1e4fece24d3b587e2f
+!│   │   │   │   │   └── widgetpreviews.db-journal  4c51d155503ecf0574a85548053fe9667a303c7f 1a0517a3cb06c01c41229cb884f5e89efd7ef192
+ │   │   │   │   ├── databases
+!│   │   │   │   │   ├── launcher.db  94148e6b0eae1f77377d4ca551441522984364c1 d39cb47a9addb12275420d1b370a1b7a08dd5775
+!│   │   │   │   │   └── launcher.db-journal  09275793ae3c22853397d558ecc2be4485e39559 133fd6d69ab346c1734e1a051cbc298cfedb2944
+ │   │   │   │   ├── files
+ │   │   │   │   │   ├── launcher.preferences  538a9ef7fbf4120ae5af6f66b8c8468b54c64648
+!│   │   │   │   │   └── launches.log  7ed2961b29c19617ecea62094700ce384302b915 2baf4694c066d87f14b7bc83683f11d193198be7
+ │   │   │   │   ├── lib -> /data/app-lib/com.android.launcher3
+ │   │   │   │   └── shared_prefs
+!│   │   │   │       └── com.android.launcher3.prefs.xml  48650cdf5de99dd198fc4c91ea06ee95d1339868 70ab61c0c29afe93608837659470bae3d009870c
+ │   │   │   ├── com.android.linerect
+ │   │   │   │   └── lib -> /data/app-lib/com.android.linerect
+ │   │   │   ├── com.android.location.fused
+@@ -257,7 +481,9 @@
+ │   │   │   │       └── Music.xml  e47120cc8e0a90c7b4f98c9657270db48ae1b7f1
+ │   │   │   ├── com.android.musicfx
+ │   │   │   │   ├── cache
+-│   │   │   │   └── lib -> /data/app-lib/com.android.musicfx
++│   │   │   │   ├── lib -> /data/app-lib/com.android.musicfx
++│   │   │   │   └── shared_prefs
++│   │   │   │       └── musicfx.xml  7a64130f5f55182ecc694c935f6b5377cf0bc938
+ │   │   │   ├── com.android.musicvis
+ │   │   │   │   └── lib -> /data/app-lib/com.android.musicvis
+ │   │   │   ├── com.android.onetimeinitializer
+@@ -266,6 +492,7 @@
+ │   │   │   │   └── shared_prefs
+ │   │   │   │       └── oti.xml  812cac1ef8a3a42d8e4d4839a422edf62587dc34
+ │   │   │   ├── com.android.packageinstaller
++│   │   │   │   ├── cache
+ │   │   │   │   └── lib -> /data/app-lib/com.android.packageinstaller
+ │   │   │   ├── com.android.pacprocessor
+ │   │   │   │   └── lib -> /data/app-lib/com.android.pacprocessor
+@@ -307,28 +534,29 @@
+ │   │   │   ├── com.android.providers.downloads
+ │   │   │   │   ├── cache
+ │   │   │   │   ├── databases
+!│   │   │   │   │   ├── downloads.db  022e5e11417c216c2774372f886e52f498b5729f fbf7add0eeba37bafe501a60763b36c1a54b0236
+!│   │   │   │   │   └── downloads.db-journal  e8521eb6c56571bb8ca20c8e48ffbab72ebd65ef 0599d658e390bdaf9e8b9b0aed8374924689c714
++│   │   │   │   ├── files
+ │   │   │   │   └── lib -> /data/app-lib/com.android.providers.downloads
+ │   │   │   ├── com.android.providers.downloads.ui
+ │   │   │   │   └── lib -> /data/app-lib/com.android.providers.downloads.ui
+ │   │   │   ├── com.android.providers.media
+ │   │   │   │   ├── cache
+ │   │   │   │   ├── databases
+!│   │   │   │   │   ├── external.db  671f32549425d872b8c6ef909f3eb06223de386f 33f6ac3132939469fa20839db99c339ba57ba69b
+!│   │   │   │   │   ├── external.db-shm  d1b7f6e4a88fdb1a5f34c7b70f721610fb894eb5 ee697a2c5570e86c4c0e4df40863669efabf961c
+!│   │   │   │   │   ├── external.db-wal  ad62779c4e9f26f6dbaa99ff199de8f303fd092d 2a905f71295f7e4bdf983942338adf8862930155
+ │   │   │   │   │   ├── internal.db  bf10bb4db6e8221e6e5c231bc2da680e2d99f488
+!│   │   │   │   │   ├── internal.db-shm  f940f69e0a694bbac23e116d12fe5b5af1afa3e7 290f7c4ee90a2489de1895b6df30eb42dc0e2f91
+!│   │   │   │   │   └── internal.db-wal  c9a2757df0818b30602e629c1c962ae944b7e203 15f29ff86116260770870c0c761dfaf597463888
+ │   │   │   │   ├── lib -> /data/app-lib/com.android.providers.media
+ │   │   │   │   └── shared_prefs
+ │   │   │   │       ├── com.android.providers.media_preferences.xml  53eb014d1218c547e5593c254b952f4aec45b50b
+ │   │   │   │       └── MediaUpgradeReceiver.xml  3c528cfa316d19d8325dfc2bc81737937ec1dc44
+ │   │   │   ├── com.android.providers.settings
+ │   │   │   │   ├── databases
+!│   │   │   │   │   ├── settings.db  8d1c85cb9d3c060d5b5293605bcfb4558fd21ba6 44381a276d872b0793e8441dcf1959fdf679c90b
+!│   │   │   │   │   └── settings.db-journal  ee220b8b60520f60859f9d8a2267a1851a0ba65c 392e4947adc666eb905b71e3687e15195d3f9f9e
+ │   │   │   │   └── lib -> /data/app-lib/com.android.providers.settings
+ │   │   │   ├── com.android.providers.telephony
+ │   │   │   │   ├── databases
+@@ -350,6 +578,8 @@
+ │   │   │   ├── com.android.proxyhandler
+ │   │   │   │   └── lib -> /data/app-lib/com.android.proxyhandler
+ │   │   │   ├── com.android.quicksearchbox
++│   │   │   │   ├── app_sslcache
++│   │   │   │   ├── cache
+ │   │   │   │   └── lib -> /data/app-lib/com.android.quicksearchbox
+ │   │   │   ├── com.android.server.telecom
+ │   │   │   │   ├── files
+@@ -358,8 +588,8 @@
+ │   │   │   ├── com.android.settings
+ │   │   │   │   ├── cache
+ │   │   │   │   ├── databases
+!│   │   │   │   │   ├── search_index.db  44b79706e2615d2049ea9f6acc991f61e03cc7ad b2c337f0b5f165cff677a26f53ef8f86cae57531
+!│   │   │   │   │   └── search_index.db-journal  9b5130a565190f496d97b973a8ce5c47d721f2ea 60c79dea205c585adc00e9aa2c7f114ad6c4ebad
+ │   │   │   │   ├── lib -> /data/app-lib/com.android.settings
+ │   │   │   │   └── shared_prefs
+ │   │   │   │       ├── charge.xml  9ff7f14aa8dc0ae3dd04da71f9637e71b408d321
+@@ -387,7 +617,15 @@
+ │   │   │   ├── com.android.webview
+ │   │   │   │   └── lib -> /data/app-lib/com.android.webview
+ │   │   │   ├── com.cyanogenmod.filemanager
+-│   │   │   │   └── lib -> /data/app-lib/com.cyanogenmod.filemanager
++│   │   │   │   ├── cache
++│   │   │   │   ├── databases
++│   │   │   │   │   ├── bookmarks.db  7cfb942a46a9b6bcbe9c779ba94794253e7e3590
++│   │   │   │   │   ├── bookmarks.db-journal  3b64a9de60d9fafdee0daf660a0386033ee6765b
++│   │   │   │   │   ├── mime_type_index  83e3f122197fad77ee788240d62543609df6d142
++│   │   │   │   │   └── mime_type_index-journal  12778cb9c1c8b5ebc9fa1733c2477ea3c3ed4b8b
++│   │   │   │   ├── lib -> /data/app-lib/com.cyanogenmod.filemanager
++│   │   │   │   └── shared_prefs
++│   │   │   │       └── com.cyanogenmod.filemanager.xml  cb354e5d45aa3c41c76bb1f2f2a038e5c119a0fd
+ │   │   │   ├── com.emindsoft.setupwizard
+ │   │   │   │   ├── cache
+ │   │   │   │   └── lib -> /data/app-lib/com.emindsoft.setupwizard
+@@ -398,7 +636,63 @@
+ │   │   │   ├── com.github.openthos.printer.localprint
+ │   │   │   │   └── lib -> /data/app-lib/com.github.openthos.printer.localprint
+ │   │   │   ├── com.svox.pico
++│   │   │   │   ├── cache
+ │   │   │   │   └── lib -> /data/app-lib/com.svox.pico
++│   │   │   ├── com.tencent.mm
++│   │   │   │   ├── app_cache
++│   │   │   │   ├── app_dex
++│   │   │   │   ├── app_lib
++│   │   │   │   │   └── libvoipCodec_v7a.so  4de5ab50b85eb95521802f9ca4a3a0ce52348ed7
++│   │   │   │   ├── app_recover_lib
++│   │   │   │   ├── cache
++│   │   │   │   │   └── proc_auxv  60060f26cd7a6aec25cd413c119e3d49e35a0bb3
++│   │   │   │   ├── code_cache
++│   │   │   │   ├── files
++│   │   │   │   │   ├── config
++│   │   │   │   │   │   └── Heartbeat.ini  c62dba23a715d74162513f5914fa150e677a1b32
++│   │   │   │   │   ├── err_readoffset.ini  db7c4ccdffdc35c2004721dad649cdb5edcaeba2
++│   │   │   │   │   ├── host
++│   │   │   │   │   │   ├── cgi-mapping_637736505.xml  d45abee9d66687a48f93c88278f3b922462075ab
++│   │   │   │   │   │   ├── getdns.ini  f4a5751ca6c1f1e8ac4d7ede03ea07b641dfe9ae
++│   │   │   │   │   │   ├── ip.ini  6b91d79e54742cc07c34ed1ee569230060b456dc
++│   │   │   │   │   │   ├── ipportrecords2.xml  da39a3ee5e6b4b0d3255bfef95601890afd80709
++│   │   │   │   │   │   └── other_26031639.getdns2  13b13061ab051add58422b3c17c6cbf9621cd61b
++│   │   │   │   │   ├── kvcomm
++│   │   │   │   │   │   ├── config.ini  2100522969e81decaf7cfc37a3d4c0e8b28b7680
++│   │   │   │   │   │   ├── key_0_637736505_3_1469785212_97_3600_input.statistic  ebf0bb1c49f796b54ea272939c5f9d15f50dad1a
++│   │   │   │   │   │   ├── monitordata_0_17011  ebf051093790e7c45fb7844fcc29b50b71a57851
++│   │   │   │   │   │   └── new_strategy_file  49bd09ed4cee1af3898c263f653b5be2c889b321
++│   │   │   │   │   ├── psk.key.  966b602ab8789bcc0c3a436fe0170515b7790989
++│   │   │   │   │   └── xlog
++│   │   │   │   │       ├── MM.mmap2  12dcb5b60ce432545ea255962ed2a260f9f47695
++│   │   │   │   │       └── PUSH.mmap2  d1d6fe8a80dee2518676205d689c44120f4a93da
++│   │   │   │   ├── lib -> /data/app/com.tencent.mm-1/lib/arm
++│   │   │   │   ├── MicroMsg
++│   │   │   │   │   ├── channel_history.cfg  22980f6cd0807e719d7f1b7cf25edc9df659ba1f
++│   │   │   │   │   ├── ClickFlow
++│   │   │   │   │   │   ├── 1048576.bin  63ce13cff38725d871bdb83f4eb5da9a6e887470
++│   │   │   │   │   │   ├── 1048576.bin.lock  da39a3ee5e6b4b0d3255bfef95601890afd80709
++│   │   │   │   │   │   └── 1048576.bin.lock2  da39a3ee5e6b4b0d3255bfef95601890afd80709
++│   │   │   │   │   ├── CompatibleInfo.cfg  9837482f649b0c2203b7366816232362792b7a45
++│   │   │   │   │   ├── ee1da3ae2100e09165c2e52382cfe79f
++│   │   │   │   │   │   ├── EnResDown.db  26e87ab2a5c32c497136b9e7200599e496b969b6
++│   │   │   │   │   │   └── EnResDown.db.ini  d9fcc81576828612bed2662db14075858797f9be
++│   │   │   │   │   ├── NowRev.ini  bff1c77912b48aeadf1448bbe1423bda343bce1f
++│   │   │   │   │   ├── SdcardInfo.cfg  63d3f02f94079d59506cb4e5599fb20447856d60
++│   │   │   │   │   ├── staytime.cfg  abde9f7ac89411ca9e7be9e40c5ebb0d3d0a6e65
++│   │   │   │   │   ├── stepcounter.cfg  da39a3ee5e6b4b0d3255bfef95601890afd80709
++│   │   │   │   │   ├── systemInfo.cfg  6b6090d30b2e4b8ecb0262d29931bb5eb2821086
++│   │   │   │   │   └── version_history.cfg  e23be067cbd2f75ed2febf0e3a5f26b3aa185392
++│   │   │   │   └── shared_prefs
++│   │   │   │       ├── auth_info_key_prefs.xml  5fdf9017d4dc88a04cd12aaf54798025bdd8a9a5
++│   │   │   │       ├── com.tencent.mm_preferences_google_aid.xml  f4e5c497d85dbb094afd5a927965b1d351f4d70a
++│   │   │   │       ├── com.tencent.mm_preferences.xml  62a6252be48d0e65f0957596b2fb43afd7eac228
++│   │   │   │       ├── crash_status_file.xml  51320cc9c9b3444f0786e79e679ada1c5b63a4f6
++│   │   │   │       ├── notify_key_pref.xml  f5dae373ee66690835ac482dae6802758348487f
++│   │   │   │       ├── notify_prep.xml  8ede5a2b425c86d2b09aafc1b3f6053ad5129716
++│   │   │   │       ├── push_proc_startup.xml  81392629d068ec2e6e2e0b123ad362571fc0d65f
++│   │   │   │       ├── system_config_prefs.xml  53c24b14ed0237e42a1959942ffbd1b32ced0326
++│   │   │   │       └── WLOGIN_DEVICE_INFO.xml  bfe35740db81d684fef671f049dd71969fcab7a6
+ │   │   │   ├── jackpal.androidterm
+ │   │   │   │   └── lib -> /data/app-lib/jackpal.androidterm
+ │   │   │   └── org.zeroxlab.util.tscal
+@@ -414,17 +708,33 @@
+ │   │   │   │   ├── Alarms
+ │   │   │   │   ├── Android
+ │   │   │   │   │   └── data
+!│   │   │   │   │       └── com.android.camera2  │   │   │       ├── com.android.browser  │   │   │       ├── com.android.camera2  │       └── com.cyanogenmod.filemanager
++│   │   │   │   │       │   └── files
++│   │   │   │   │       │   ├── cache
++│   │   │   │   │       │   └── files
+ │   │   │   │   │           ├── cache
+ │   │   │   │   │           └── files
+ │   │   │   │   ├── DCIM
+ │   │   │   │   ├── Download
++│   │   │   │   │   └── weixin_821.apk  081c10f259f7f99fa9e97ad4790e6971c032fbc5
+ │   │   │   │   ├── Movies
+ │   │   │   │   ├── Music
+ │   │   │   │   ├── Notifications
+ │   │   │   │   ├── Pictures
+ │   │   │   │   ├── Podcasts
+!│   │   │   │   └── Ringtones   │   │   │           ├── CheckResUpdate
++│   │   │   │   ├── Ringtones
++│   │   │   │   ├── storage
++│   │   │   │   └── tencent
++│   │   │   │       └── MicroMsg
++│   │   │   │           ├── CDNTemp
++│   │   │   │           ├── Game
++│   │   │   │           ├── vusericon
++│   │   │   │           ├── WeiXin
++│   │   │   │           └── xlog
++│   │   │   │               └── PUSH_20160729.xlog  0fffb6b77d93ed3533ee0613e0b1b84b8d38faec
+ │   │   │   ├── legacy
+ │   │   │   └── obb
+ │   │   ├── mediadrm
+@@ -433,7 +743,7 @@
+ │   │   │   ├── bluedroid
+ │   │   │   ├── bluetooth
+ │   │   │   ├── dhcp
+!│   │   │   │   ├── dhcpcd-eth0.lease  deab4bfc000289bb505728558808af6023b35245 b9eb46784f53924542c6467649dbe79141a377cb
+ │   │   │   │   └── dhcpcd-eth0.pid  da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   ├── ethernet
+ │   │   │   ├── keychain
+@@ -441,12 +751,12 @@
+ │   │   │   │   └── user_0
+ │   │   │   ├── media
+ │   │   │   ├── net
+!│   │   │   │   ├── netd_pid  b7bccbd3c257821800a8091c2232df5aef0e64f2 4902e4c0511d08bd54b069222bae5a2587964fa4
+ │   │   │   │   └── rt_tables  3cd9bd4121211235dabdd31adab55121b69bd583
+ │   │   │   ├── radio
+ │   │   │   ├── shared_relro
+!│   │   │   │   ├── libwebviewchromium32.relro  a2db97772e64b917927dc464a03bd2c85e85c57d 7b92700a423f43fafacfbe8e5bb40e96e478ff5a
+!│   │   │   │   └── libwebviewchromium64.relro  8ef1bc95d447d184ed11b6a99df16ad64ded3776 573c0489cc3437ade0ab9671943a1c648ea227d2
+ │   │   │   ├── sms
+ │   │   │   ├── systemkeys
+ │   │   │   ├── user
+@@ -470,7 +780,7 @@
+ │   │   ├── resource-cache
+ │   │   ├── security
+ │   │   ├── system
+!│   │   │   ├── batterystats.bin  610910b8dc8e59d5ea0c0076578ea00b03062e35 449b6a78b9f26abf6db23eba720d441e9f348243
+ │   │   │   ├── called_pre_boots.dat  0ccbac0f71b0eb6b04391293baf8b26810a23d96
+ │   │   │   ├── device_policies.xml  3f9e6293b38e62a365a29412ff71dff6ede010a1
+ │   │   │   ├── dropbox
+@@ -478,8 +788,9 @@
+ │   │   │   │   ├── SYSTEM_BOOT@1469782512018.txt  9415251b6025e27090a677980392766273a59fac
+ │   │   │   │   ├── SYSTEM_BOOT@1469782560196.txt  9415251b6025e27090a677980392766273a59fac
+ │   │   │   │   ├── SYSTEM_BOOT@1469783755091.txt  9415251b6025e27090a677980392766273a59fac
+-│   │   │   │   └── SYSTEM_BOOT@1469784597915.txt  9415251b6025e27090a677980392766273a59fac
+!│   │   │   ├── entropy.dat  733934474a1950c2d7fb7ecda4d6b4d7a87238d6 82a4f417ebd83b4ea6fb85b9e3b8dc6fcae84836
++│   │   │   │   ├── SYSTEM_BOOT@1469784597915.txt  9415251b6025e27090a677980392766273a59fac
++│   │   │   │   └── SYSTEM_BOOT@1469784722923.txt  9415251b6025e27090a677980392766273a59fac
+ │   │   │   ├── framework_atlas.config  2107a23605a300785852e71b5c41b082411cd035
+ │   │   │   ├── ifw
+ │   │   │   ├── inputmethod
+@@ -492,14 +803,14 @@
+ │   │   │   ├── locksettings.db-wal  c11f4a70a5878a88cc241079e112ee7e33b440ba
+ │   │   │   ├── ndebugsocket
+ │   │   │   ├── netstats
+!│   │   │   ├── packages.list  16eb6b4e8ccaa32f2177581fc1d29b2e9e9f446f 19ab099252940bffbefbbd38c8c15f329ecc327b
+!│   │   │   ├── packages.xml  f6922e26faaae0b07cbf946dfcc98c0315774529 717f03e9a0049cb81407cb7f7a0b55b327eba520
+ │   │   │   ├── procstats
+ │   │   │   ├── recent_images
+ │   │   │   ├── recent_tasks
+ │   │   │   ├── registered_services
+!│   │   │   │   ├── android.accounts.AccountAuthenticator.xml  bd33ddee7661b4ff318feb07d63fd02024a2176c 3bf5865b331e603847e71109ed6e060d6ea424ae
+!│   │   │   │   └── android.content.SyncAdapter.xml  27fc9698acb3ea459bad15b423effe0ec2ea7e38 a5411754c3e9368d53dba86cccbe1987948f7ff2
+ │   │   │   ├── seapp_hash  1cf300c1e953bd3bb24000df61d9995b194cdfc1
+ │   │   │   ├── sync
+ │   │   │   │   ├── accounts.xml  3e66d9007cbd9b2dd8eb9f803b63231d53c3cf02
+@@ -519,9 +830,9 @@
+ │   │   │       │   ├── accounts.db  7496b0997fc77148b8cce66227bc0dff20800e07
+ │   │   │       │   ├── accounts.db-journal  c4aad7d367a34138aff4e1a28a1cd8701b8d8259
+ │   │   │       │   ├── appwidgets.xml  73a52fb653b25effb41fd7fc9b87c9fd42d86c55
+!│   │   │       │   ├── package-restrictions.xml  12cdc0559921c8d0d8760fb3872402c499c4a019 a8312ade5ea73399337f1353e9fcfb8b6ce7687c
+ │   │   │       │   └── wallpaper_info.xml  f15e2fe5823b09238a7106ef0a625944eb0f8687
+!│   │   │       ├── 0.xml  0d8b4f76c3bea7f870d202df8773b7747bf3ce9a 910ef9deb8d14f18fb7fd1bfc85f8730f3962583
+ │   │   │       └── userlist.xml  e2ee0f5b717a9d4b8f1e0cca9b0fc6687d9513c0
+ │   │   └── user
+ │   │       └── 0 -> /data/data/
+@@ -6358,4 +6669,4 @@
+ │   └── stage2_eltorito  a9b98c289a0a72d38537324db02e2f1bfb5b2756
+ └── lost+found
+ 
+-1038 directories, 5320 files
++1094 directories, 5575 files
