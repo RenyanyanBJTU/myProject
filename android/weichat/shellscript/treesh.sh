@@ -35,7 +35,7 @@ do
   if [ -f $line ];then
    # signkey=`sudo md5sum $line | cut -d ' ' -f 1`
     signkey=`sudo sha1sum $line | cut -d ' ' -f 1`
-    sed -i ''"$rown"'{s/$/&'"  $signkey"'/g}' treefor"$1".txt
+    sed -i ''"$rown"'{s/$/&'" $signkey"'/g}' treefor"$1".txt
   fi
    rown=`expr $rown + 1`
 done
