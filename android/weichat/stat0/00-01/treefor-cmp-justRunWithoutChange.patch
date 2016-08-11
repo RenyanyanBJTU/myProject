@@ -1,0 +1,268 @@
+--- treeforandroid-old.txt	2016-08-10 05:03:20.187218488 -0400
++++ treeforandroid-new.txt	2016-08-10 05:04:59.961302523 -0400
+@@ -1,4 +1,4 @@
+-android-old
++android-new
+ ├── android-2016-07-23
+ │   ├── data
+ │   │   ├── adb
+@@ -10,7 +10,7 @@
+ │   │   │   ├── com.android.internal.backup.LocalTransport
+ │   │   │   ├── fb-schedule 45781d4e2313a5940024166f88b83d15d24f22d5
+ │   │   │   └── pending
+-│   │   │       └── journal895493281.tmp ec5c5a6173acadb0333d8768e4366198d9f6cb9b
++│   │   │       └── journal-576234770.tmp ec5c5a6173acadb0333d8768e4366198d9f6cb9b
+ │   │   ├── bugreports -> data/com.android.shell/files/bugreports
+ │   │   ├── dalvik-cache
+ │   │   │   ├── profiles
+@@ -170,29 +170,29 @@
+ │   │   │   ├── com.android.deskclock
+ │   │   │   │   ├── cache
+ │   │   │   │   ├── databases
+-│   │   │   │   │   ├── alarms.db f51d8a3b67d331d0ee12173efae04515d9676924
+-│   │   │   │   │   └── alarms.db-journal cff66a7860ae30281747e7e4250886270364e09c
++│   │   │   │   │   ├── alarms.db adf02ecddfee1700aa2a212b3934053f81f15893
++│   │   │   │   │   └── alarms.db-journal 74340cc16f1507ae5ec5077940104ff3387ed794
+ │   │   │   │   ├── lib -> /data/app-lib/com.android.deskclock
+ │   │   │   │   └── shared_prefs
+-│   │   │   │       └── com.android.deskclock_preferences.xml 44a9bd0f96883413ba253c05fda8fac79342de6b
++│   │   │   │       └── com.android.deskclock_preferences.xml f1d7cc739511eac2035e39a2414638055373e3e1
+ │   │   │   ├── com.android.development
+ │   │   │   │   ├── cache
+ │   │   │   │   └── lib -> /data/app-lib/com.android.development
+ │   │   │   ├── com.android.documentsui
+ │   │   │   │   ├── cache
+ │   │   │   │   ├── databases
+-│   │   │   │   │   ├── Application_database.db 8099a65fa3a8e049eef7e96c872268f7c57c9ece
+-│   │   │   │   │   └── Application_database.db-journal 688d75d086e8c3ea882daf26a1284ca073d06c72
++│   │   │   │   │   ├── Application_database.db e917c33a811e2cfbfe837af0d7bb7bbc127c33ba
++│   │   │   │   │   └── Application_database.db-journal 11f659ee1de52451b0b11e7810b4ac75612dac2b
+ │   │   │   │   └── lib -> /data/app-lib/com.android.documentsui
+ │   │   │   ├── com.android.dreams.basic
+ │   │   │   │   └── lib -> /data/app-lib/com.android.dreams.basic
+ │   │   │   ├── com.android.email
+ │   │   │   │   ├── cache
+ │   │   │   │   ├── databases
+-│   │   │   │   │   ├── EmailProviderBody.db 920b1706f4296e347cc9e594ba782e5aaa4f1658
+-│   │   │   │   │   ├── EmailProviderBody.db-journal 466edb7df399c7239f2c0a6c3d0986bd4ae67075
+-│   │   │   │   │   ├── EmailProvider.db 6f665cfac91b36078665652877e4f141dccd911e
+-│   │   │   │   │   └── EmailProvider.db-journal 3f70666d32a3a2ea94f13542f8269c172b74fa70
++│   │   │   │   │   ├── EmailProviderBody.db 78e598a0b130bc73d9e03b7115b399dd568836d3
++│   │   │   │   │   ├── EmailProviderBody.db-journal 156192897635d5d9547eb34f32001017ac7582b7
++│   │   │   │   │   ├── EmailProvider.db 52f024fdfd5ee82fe74941c5b80c5dcdc708f75b
++│   │   │   │   │   └── EmailProvider.db-journal ed8429fe0153a57d550e05fa6a4e011993f0765f
+ │   │   │   │   ├── files
+ │   │   │   │   │   └── deviceName f7e296ee7e482de44e06e77a6e3d790c63a17dad
+ │   │   │   │   ├── lib -> /data/app-lib/com.android.email
+@@ -222,10 +222,10 @@
+ │   │   │   ├── com.android.inputmethod.latin
+ │   │   │   │   ├── cache
+ │   │   │   │   ├── databases
+-│   │   │   │   │   ├── pendingUpdates d33e8dfdcff92b06a99a9aa320bcbb55f92b2bb5
+-│   │   │   │   │   ├── pendingUpdates.com.android.inputmethod.latin 4c624526140d548ba4dbdf1dbe519d738f8b29fd
+-│   │   │   │   │   ├── pendingUpdates.com.android.inputmethod.latin-journal 7f68022096f1efebdc6c8b54b5ecfaf1ed1de951
+-│   │   │   │   │   └── pendingUpdates-journal 2e2b71b75494018d5668850cd7ddcf64673720f5
++│   │   │   │   │   ├── pendingUpdates 12f2814fcb3ca694be9036b55072d766fd0078c5
++│   │   │   │   │   ├── pendingUpdates.com.android.inputmethod.latin d9988d3a173c646f4cff31459716ffbfc650e1d3
++│   │   │   │   │   ├── pendingUpdates.com.android.inputmethod.latin-journal 53b705b9541cb9665658945cfb9dbdc18b2fd32a
++│   │   │   │   │   └── pendingUpdates-journal 484d083bb90426cb841c12ba494670cd71579d1f
+ │   │   │   │   ├── files
+ │   │   │   │   └── lib -> /data/app-lib/com.android.inputmethod.latin
+ │   │   │   ├── com.android.keychain
+@@ -236,11 +236,11 @@
+ │   │   │   │   │   ├── widgetpreviews.db bf9f2c0c12716b2451483edf070d80082fc6e6fc
+ │   │   │   │   │   └── widgetpreviews.db-journal f12319e9dfcb0c962ba61d8e50a6a5d31716df85
+ │   │   │   │   ├── databases
+-│   │   │   │   │   ├── launcher.db 4f1db1a3065c3af9edbe53d5d1957c8b72493249
+-│   │   │   │   │   └── launcher.db-journal e3718688d5e58153fdca08b4b81889337d1930bb
++│   │   │   │   │   ├── launcher.db 94148e6b0eae1f77377d4ca551441522984364c1
++│   │   │   │   │   └── launcher.db-journal 5709f64a2e92f28eb4c64183ddfa5726523712df
+ │   │   │   │   ├── files
+ │   │   │   │   │   ├── launcher.preferences 538a9ef7fbf4120ae5af6f66b8c8468b54c64648
+-│   │   │   │   │   └── launches.log d5c0f3f8605f1d7b25b716a4e4c582a8b7e1fca1
++│   │   │   │   │   └── launches.log 41e93b260650d3d72872dd411d4e4ad665297a0a
+ │   │   │   │   ├── lib -> /data/app-lib/com.android.launcher3
+ │   │   │   │   └── shared_prefs
+ │   │   │   │       └── com.android.launcher3.prefs.xml 48650cdf5de99dd198fc4c91ea06ee95d1339868
+@@ -287,8 +287,8 @@
+ │   │   │   ├── com.android.providers.calendar
+ │   │   │   │   ├── cache
+ │   │   │   │   ├── databases
+-│   │   │   │   │   ├── calendar.db 135bf434b66ec8fa1b0216d3a689148837e671c9
+-│   │   │   │   │   └── calendar.db-journal ed04d88d3d33351decd4326206011361983e5139
++│   │   │   │   │   ├── calendar.db 999b3f769b0a590b44feb3e66ad226ca8f83e2ce
++│   │   │   │   │   └── calendar.db-journal f5f037bb25b3fa9c4e0888717f7b19f57907af71
+ │   │   │   │   ├── lib -> /data/app-lib/com.android.providers.calendar
+ │   │   │   │   └── shared_prefs
+ │   │   │   │       └── CalendarUpgradeReceiver.xml c4017b200eb66919eaac34fc1b0ab5d51841ce66
+@@ -310,8 +310,8 @@
+ │   │   │   ├── com.android.providers.downloads
+ │   │   │   │   ├── cache
+ │   │   │   │   ├── databases
+-│   │   │   │   │   ├── downloads.db df866459243be9cb943ba7a7969180528d501082
+-│   │   │   │   │   └── downloads.db-journal 4e17c2e3e90404cc0ef0422fd99b007780a2b87b
++│   │   │   │   │   ├── downloads.db 022e5e11417c216c2774372f886e52f498b5729f
++│   │   │   │   │   └── downloads.db-journal 22130ea17ee13a783f49e4888a5a8e3c009603ce
+ │   │   │   │   └── lib -> /data/app-lib/com.android.providers.downloads
+ │   │   │   ├── com.android.providers.downloads.ui
+ │   │   │   │   └── lib -> /data/app-lib/com.android.providers.downloads.ui
+@@ -319,33 +319,33 @@
+ │   │   │   │   ├── cache
+ │   │   │   │   ├── databases
+ │   │   │   │   │   ├── external.db b3353cb5c8e4ec445823fdfc95e088ee4fc804fa
+-│   │   │   │   │   ├── external.db-shm 998b4a8e14ccbc93e7f7aaa3fb47f6746c93a25c
+-│   │   │   │   │   ├── external.db-wal 0fc0948f456bf6acdd745c67632dd50ce858947f
++│   │   │   │   │   ├── external.db-shm 341055e2c624b6fac27f6f598621fa0d81f1b202
++│   │   │   │   │   ├── external.db-wal 0688479b5753bb04f36543706f39ff57245f341d
+ │   │   │   │   │   ├── internal.db 9c21b29c6d1f544c0ec4c1e98c4feadacfc36293
+-│   │   │   │   │   ├── internal.db-shm 6139fdf4ab3a983884d2caa399e3281c1158fa76
+-│   │   │   │   │   └── internal.db-wal d0145f5d7c6608d935ceb57266c7c36295f47e62
++│   │   │   │   │   ├── internal.db-shm 25645ecd72d56057a07b7ac57026d8a9d2656c52
++│   │   │   │   │   └── internal.db-wal 06ee78c5a2c0072b6e438ef78060460d48dd0294
+ │   │   │   │   ├── lib -> /data/app-lib/com.android.providers.media
+ │   │   │   │   └── shared_prefs
+ │   │   │   │       ├── com.android.providers.media_preferences.xml 53eb014d1218c547e5593c254b952f4aec45b50b
+ │   │   │   │       └── MediaUpgradeReceiver.xml 3c528cfa316d19d8325dfc2bc81737937ec1dc44
+ │   │   │   ├── com.android.providers.settings
+ │   │   │   │   ├── databases
+-│   │   │   │   │   ├── settings.db e90cd01989759287388c303350be7812fc7784ff
+-│   │   │   │   │   └── settings.db-journal ac80f20d205f88d940fd8a43895b1d34d9ff2bdc
++│   │   │   │   │   ├── settings.db 94c709fe43cd717384b86ddf2c78c1724d4dccc6
++│   │   │   │   │   └── settings.db-journal 7c2aa06374d372cda15c65805c0a2235312ff421
+ │   │   │   │   └── lib -> /data/app-lib/com.android.providers.settings
+ │   │   │   ├── com.android.providers.telephony
+ │   │   │   │   ├── databases
+-│   │   │   │   │   ├── HbpcdLookup.db 9a90bacf94ea13dcaee58a79e0979a47606eefe5
+-│   │   │   │   │   ├── HbpcdLookup.db-journal f4e869d4b7dda9c3cf4524ea3625695911e1e5f3
+-│   │   │   │   │   ├── mmssms.db b08754cbcc576100fa8dfb63834a5d9bf91eb588
+-│   │   │   │   │   ├── mmssms.db-journal 7f5df39f8006338cc5ec67265e80761050d391d0
+-│   │   │   │   │   ├── telephony.db 2bbd2781b0ef60edd1b6e3d1c5650feeff6a1983
+-│   │   │   │   │   └── telephony.db-journal 9a28bbbc6f004e58b00999217d415de2282c64a2
++│   │   │   │   │   ├── HbpcdLookup.db 21b8db0643b0fcb2605291422f035707971958ec
++│   │   │   │   │   ├── HbpcdLookup.db-journal 6ec729705181229d43981996dd1e929c17a11928
++│   │   │   │   │   ├── mmssms.db ce32fb85425d9884ff1bdae9aebffad3375b7a26
++│   │   │   │   │   ├── mmssms.db-journal 8cf18412bc82d8dcd4e1fc1dbbe38f583fcfcd98
++│   │   │   │   │   ├── telephony.db 2ea008d3410a42e7dcf6bcb3737c75db46ee4b76
++│   │   │   │   │   └── telephony.db-journal f25dd9819c30df5ced92d6eb842dd0e00bfbe6ee
+ │   │   │   │   └── lib -> /data/app-lib/com.android.providers.telephony
+ │   │   │   ├── com.android.providers.userdictionary
+ │   │   │   │   ├── databases
+-│   │   │   │   │   ├── user_dict.db 9bc59d078cefa8548c3810bd393997000cf8b371
+-│   │   │   │   │   └── user_dict.db-journal 9f5629b5d876c5f674b6e56a92cff0e8141dbb15
++│   │   │   │   │   ├── user_dict.db 9ae20a70a5081ba27affe09d016e7a283fa2f95b
++│   │   │   │   │   └── user_dict.db-journal 86ef5f3cad9c3d8a64999e60f9a8a8bc5a68c0e2
+ │   │   │   │   └── lib -> /data/app-lib/com.android.providers.userdictionary
+ │   │   │   ├── com.android.provision
+ │   │   │   │   ├── cache
+@@ -436,7 +436,7 @@
+ │   │   │   ├── bluedroid
+ │   │   │   ├── bluetooth
+ │   │   │   ├── dhcp
+-│   │   │   │   ├── dhcpcd-eth0.lease 622d3d33068a229e342ac45bb0da69439d0512d3
++│   │   │   │   ├── dhcpcd-eth0.lease 30368f79a66c1833949c6ac0b92e6fde7c1c92bb
+ │   │   │   │   └── dhcpcd-eth0.pid da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   ├── ethernet
+ │   │   │   ├── keychain
+@@ -444,12 +444,12 @@
+ │   │   │   │   └── user_0
+ │   │   │   ├── media
+ │   │   │   ├── net
+-│   │   │   │   ├── netd_pid 4596f0cae1cd8f2a937fee0011db55d8e191dfb0
++│   │   │   │   ├── netd_pid 78cabb767c55bb0bc62e89f3a19da1f76f422655
+ │   │   │   │   └── rt_tables 3cd9bd4121211235dabdd31adab55121b69bd583
+ │   │   │   ├── radio
+ │   │   │   ├── shared_relro
+-│   │   │   │   ├── libwebviewchromium32.relro ded719d455e3c0d9e5fc590d99f89bda72c0917a
+-│   │   │   │   └── libwebviewchromium64.relro 9aceea856a6c5d0fe5e53723046c24d27ef71659
++│   │   │   │   ├── libwebviewchromium32.relro f24f6e58dc7e4c01d53b9467bce9b62f6e68095a
++│   │   │   │   └── libwebviewchromium64.relro 5c144ddd44bdb343bcc96b43ec207b92a28e5268
+ │   │   │   ├── sms
+ │   │   │   ├── systemkeys
+ │   │   │   ├── user
+@@ -473,13 +473,14 @@
+ │   │   ├── resource-cache
+ │   │   ├── security
+ │   │   ├── system
+-│   │   │   ├── appops.xml dc75ef151bcaec043a2f0f724fe6af6a2c92983c
+-│   │   │   ├── batterystats.bin 38af02399ab5f1505de7706587200b04f5327acb
++│   │   │   ├── appops.xml 372bb9548cb18ef74ecf700a5b7d05f96056a33b
++│   │   │   ├── batterystats.bin f64482f165d2998ad82919b14714dfe306411ed0
+ │   │   │   ├── called_pre_boots.dat 9f3285a8ac5108c58bc5fa898af9f8b0bb3d0013
+ │   │   │   ├── device_policies.xml 3f9e6293b38e62a365a29412ff71dff6ede010a1
+ │   │   │   ├── dropbox
+-│   │   │   │   └── SYSTEM_BOOT@1470818132160.txt 9415251b6025e27090a677980392766273a59fac
+-│   │   │   ├── entropy.dat f1d1f75c9a51c489cb4e2fae0555539cf05a00c1
++│   │   │   │   ├── SYSTEM_BOOT@1470818132160.txt 9415251b6025e27090a677980392766273a59fac
++│   │   │   │   └── SYSTEM_BOOT@1470819625954.txt 9415251b6025e27090a677980392766273a59fac
++│   │   │   ├── entropy.dat 08febd087dbbebd5b09024b8878cc6ec13e68b3c
+ │   │   │   ├── framework_atlas.config 2107a23605a300785852e71b5c41b082411cd035
+ │   │   │   ├── ifw
+ │   │   │   ├── inputmethod
+@@ -488,15 +489,16 @@
+ │   │   │   ├── job
+ │   │   │   ├── last-fstrim da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   ├── locksettings.db 3358af52b3e1e5beaa11796cc0a3bb3b9ee84f9a
+-│   │   │   ├── locksettings.db-shm 908cb98d7fea541593c63551cf2be2e44b4c81f6
+-│   │   │   ├── locksettings.db-wal 404ecd182998338039b089e814178cd1c16385c1
++│   │   │   ├── locksettings.db-shm f65ef67aca89c0360f5df19102ed16bd0685e029
++│   │   │   ├── locksettings.db-wal 77becb930f4859c27a0ccd6b132a073b88bc4d0b
+ │   │   │   ├── ndebugsocket
+ │   │   │   ├── netstats
+ │   │   │   ├── packages.list e4f796f327ad74053a15cd4e12490a1d1838ac23
+-│   │   │   ├── packages.xml b65a2371526fdd790924e43c8ca0f6d1ff5565cd
+-│   │   │   ├── package-usage.list 1fee20e4b363a334c6d518b1acd4b07c331d1df1
++│   │   │   ├── packages.xml 5c376dd055663be41987f4f30756ba937ee16ef2
++│   │   │   ├── package-usage.list a63b0c5947ea234ce083966cd19b036c66a2d2ec
+ │   │   │   ├── procstats
+-│   │   │   │   └── state-2016-08-10-08-35-09.bin cecf8e379ca7b034cfb68decd75d833693c55dee
++│   │   │   │   ├── state-2016-08-10-08-35-09.bin cecf8e379ca7b034cfb68decd75d833693c55dee
++│   │   │   │   └── state-2016-08-10-09-00-20.bin 12b0021697dbcd923820d23e3efbe291aaba9b71
+ │   │   │   ├── recent_images
+ │   │   │   ├── recent_tasks
+ │   │   │   ├── registered_services
+@@ -504,7 +506,7 @@
+ │   │   │   │   └── android.content.SyncAdapter.xml 05e254c425d618a0c9eb40f2be45721673813f35
+ │   │   │   ├── seapp_hash 1cf300c1e953bd3bb24000df61d9995b194cdfc1
+ │   │   │   ├── sync
+-│   │   │   │   ├── accounts.xml 5d20c51e0d69903353037ffe4761ca5733a009aa
++│   │   │   │   ├── accounts.xml 6a9303d5cbf025f14d24fc15fd14d17e45e57f81
+ │   │   │   │   ├── pending.xml da39a3ee5e6b4b0d3255bfef95601890afd80709
+ │   │   │   │   ├── stats.bin 9069ca78e7450a285173431b3e52c5c25299e473
+ │   │   │   │   └── status.bin 9069ca78e7450a285173431b3e52c5c25299e473
+@@ -512,22 +514,22 @@
+ │   │   │   ├── usagestats
+ │   │   │   │   └── 0
+ │   │   │   │       ├── daily
+-│   │   │   │       │   └── 1470787200000 e0d4471b77354d5ed72d895bf4bd327532477b5a
++│   │   │   │       │   └── 1470787200000 9349df42e9cd6a5f7507bdfdde00dfcc2252116f
+ │   │   │   │       ├── monthly
+-│   │   │   │       │   └── 1469664000000 c3479c19ecfdbe01c487abcb1011ca320784463c
++│   │   │   │       │   └── 1469664000000 2e95be25656e6b2f45837b5325a479711ad6f072
+ │   │   │   │       ├── version da4b9237bacccdf19c0760cab7aec4a8359010b0
+ │   │   │   │       ├── weekly
+-│   │   │   │       │   └── 1470268800000 bd534e0121bde298e3b91ac08833d262e7f7a64e
++│   │   │   │       │   └── 1470268800000 819402c92b2d798ae64ed2d4af12e5927237abdf
+ │   │   │   │       └── yearly
+-│   │   │   │           └── 1450656000000 9cb8a7e6175d461ed90d0f8a92e36cf8030699d2
++│   │   │   │           └── 1450656000000 ceec7bc60527ccd94dffa96f4d225e60c8f0ae12
+ │   │   │   └── users
+ │   │   │       ├── 0
+-│   │   │       │   ├── accounts.db 6a9b5601ebf09f59dcdbcb0eda70e2f818df1196
+-│   │   │       │   ├── accounts.db-journal 63a30ac10e1e6177946f8ce0cb8b1aea5c18a4ad
+-│   │   │       │   ├── appwidgets.xml e96bb9147fb7b4bc59dd9978cca6e6ae02c461f3
++│   │   │       │   ├── accounts.db 7496b0997fc77148b8cce66227bc0dff20800e07
++│   │   │       │   ├── accounts.db-journal 8c6303c1aff549cf3a5f419eca1baf9ccb88c196
++│   │   │       │   ├── appwidgets.xml 73a52fb653b25effb41fd7fc9b87c9fd42d86c55
+ │   │   │       │   ├── package-restrictions.xml 12cdc0559921c8d0d8760fb3872402c499c4a019
+ │   │   │       │   └── wallpaper_info.xml f15e2fe5823b09238a7106ef0a625944eb0f8687
+-│   │   │       ├── 0.xml a6b75b9f0d5817111bf6c7545d5fabeb9ef94461
++│   │   │       ├── 0.xml 6533e2f6ee594b58e46bc1967d81db18bcd29b7c
+ │   │   │       └── userlist.xml e2ee0f5b717a9d4b8f1e0cca9b0fc6687d9513c0
+ │   │   └── user
+ │   │       └── 0 -> /data/data/
+@@ -6364,4 +6366,4 @@
+ │   └── stage2_eltorito a9b98c289a0a72d38537324db02e2f1bfb5b2756
+ └── lost+found
+ 
+-1039 directories, 5325 files
++1039 directories, 5327 files

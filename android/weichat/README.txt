@@ -1,7 +1,7 @@
 
 *各个文件夹命名解释：
 
-shellscript：存放运行的脚本
+shellscript：存放运行的脚本(mergesh.sh 使用bash命令运行)
 stat* ： 存放每次运行脚本后生成的中间txt文件，包含目录树等的txt
 patchdir：存放diff比较生成的patch文件
 mergepatch : 存放修改后的patch文件

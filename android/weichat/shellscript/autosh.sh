@@ -31,11 +31,16 @@ fi
 #get system directory
 sudo sh mountgetsh.sh $1
 if [ $? -ne 0 ];then
+   echo "running mountgetsh.sh $1 faild."
    exit 1
 fi
 
+echo "current dir:"
+pwd
+
 sudo sh mountgetsh.sh $2
 if [ $? -ne 0 ];then
+   echo "running mountgetsh.sh $2 faild."
    exit 1
 fi
 
@@ -77,4 +82,5 @@ fi
 if [ $? -eq 0 ];then
   echo "all is running successful, program end."
 fi
+
 

@@ -27,13 +27,14 @@ else
  sudo mkdir /mnt/$dirname
 fi
 
-sudo losetup /dev/loop0 $1
-sudo kpartx -av /dev/loop0
-sudo mount /dev/mapper/loop0p1 /mnt/$dirname
+sudo losetup /dev/loop1 $1
+sudo kpartx -av /dev/loop1
+sudo mount /dev/mapper/loop1p1 /mnt/$dirname
 if [ $? -ne 0 ];then
   echo "changing mount method......"
-  sudo kpartx -dv /dev/loop0
-  sudo losetup -d /dev/loop0
+  sudo umount /mnt/$dirname
+  sudo kpartx -dv /dev/loop1
+  sudo losetup -d /dev/loop1
 
   sudo modprobe nbd max_part=8
 
@@ -61,10 +62,10 @@ if [ $? -ne 0 ];then
   sudo umount /mnt/$dirname
   sudo killall qemu-nbd ##
   if [ $? -ne 0 ];then
-    echo "release qemu-nbd faild.program running stoped."
+    echo "release qemu-nbd for $1 faild.program running stoped."
     exit 1
   else
-    echo "release qemu-nbd successful."
+    echo "release qemu-nbd for $1 successful."
   fi  
 
 else
@@ -82,14 +83,14 @@ else
   
   #release mount source
   sudo umount /mnt/$dirname
-  sudo kpartx -dv /dev/loop0
-  sudo losetup -d /dev/loop0
+  sudo kpartx -dv /dev/loop1
+  sudo losetup -d /dev/loop1
 
   if [ $? -ne 0 ];then
-    echo "release loop faild.program running stoped."
+    echo "release loop for $1 faild.program running stoped."
     exit 1
   else
-    echo "release loop successful."
+    echo "release loop for $1 successful."
   fi
 fi
 
@@ -115,5 +116,6 @@ sudo rm ramdisk.img
 
 cd ../../.. 
 #back to current dir,there need improve,because it's not sure the dir is three layer.
+
 
 
