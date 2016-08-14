@@ -1,0 +1,82 @@
+1、目录树文件中前端制表符不同的同名目录或者相同校验和的同名文件在diff时被当成不同的文件了，在合并这些行时遇到的问题。
+（1）问题一
+
+-│   │   │   │   └── lib -> /data/app-lib/com.android.browser
+...
++│   │   │   │   ├── lib -> /data/app-lib/com.android.browser
+
+以及相邻的两个
+-│   │   │   │   └── lib -> /data/app-lib/com.android.musicfx
++│   │   │   │   ├── lib -> /data/app-lib/com.android.musicfx
+按照思路，这两项应该是删除掉加号的项，将减号的项前端修饰符减号去掉，但实际代码执行结果并没有，但是同名目录以及同名同校验和的文件合并成功
+
+（2）问题二
+
+合并前：
+@@ -876,8 +1126,9 @@
+ │   │   │   │   ├── SYSTEM_BOOT@1470821307242.txt 9415251b6025e27090a677980392766273a59fac
+ │   │   │   │   ├── SYSTEM_BOOT@1470821405871.txt 9415251b6025e27090a677980392766273a59fac
+ │   │   │   │   ├── SYSTEM_BOOT@1470825220525.txt 9415251b6025e27090a677980392766273a59fac
+-│   │   │   │   └── SYSTEM_BOOT@1470830398470.txt 9415251b6025e27090a677980392766273a59fac
+-│   │   │   ├── entropy.dat e78c96b35aeb2b7f52fe3d90d641babb78168912
++│   │   │   │   ├── SYSTEM_BOOT@1470830398470.txt 9415251b6025e27090a677980392766273a59fac
++│   │   │   │   └── SYSTEM_BOOT@1470831592363.txt 9415251b6025e27090a677980392766273a59fac
++│   │   │   ├── entropy.dat bfa17111475f27ff6a50b5c7af0d4ac4f37548d0
+ │   │   │   ├── framework_atlas.config 2107a23605a300785852e71b5c41b082411cd035
+ │   │   │   ├── ifw
+ │   │   │   ├── inputmethod
+
+合并后：
+@@ -876,8 +1126,9 @@
+ │   │   │   │   ├── SYSTEM_BOOT@1470821307242.txt 9415251b6025e27090a677980392766273a59fac
+ │   │   │   │   ├── SYSTEM_BOOT@1470821405871.txt 9415251b6025e27090a677980392766273a59fac
+ │   │   │   │   ├── SYSTEM_BOOT@1470825220525.txt 9415251b6025e27090a677980392766273a59fac
+ │   │   │   │   └── SYSTEM_BOOT@1470830398470.txt 9415251b6025e27090a677980392766273a59fac
+!│   │   │   ├── entropy.dat e78c96b35aeb2b7f52fe3d90d641babb78168912 bfa17111475f27ff6a50b5c7af0d4ac4f37548d0
++│   │   │   │   └── SYSTEM_BOOT@1470831592363.txt 9415251b6025e27090a677980392766273a59fac
+ │   │   │   ├── framework_atlas.config 2107a23605a300785852e71b5c41b082411cd035
+ │   │   │   ├── ifw
+ │   │   │   ├── inputmethod
+
+文本行 +│   │   │   │   └── SYSTEM_BOOT@1470831592363.txt 9415251b6025e27090a677980392766273a59fac应该在合并后的项 !│   │   │   ├── entropy.dat之前才对。
+
+（2）问题三
+diff问题，新的文件：
+│   │   │   │   │   └── data
+│   │   │   │   │       ├── com.android.browser
+│   │   │   │   │       │   └── files
+│   │   │   │   │       ├── com.android.camera2
+│   │   │   │   │       │   ├── cache
+│   │   │   │   │       │   └── files
+│   │   │   │   │       └── com.cyanogenmod.filemanager
+│   │   │   │   │           ├── cache
+│   │   │   │   │           └── files
+
+旧的文件：
+│   │   │   │   │   └── data
+│   │   │   │   │       └── com.android.camera2
+│   │   │   │   │           ├── cache
+│   │   │   │   │           └── files
+
+diff结果：
+ │   │   │   │   │   └── data
+-│   │   │   │   │       └── com.android.camera2
++│   │   │   │   │       ├── com.android.browser
++│   │   │   │   │       │   └── files
++│   │   │   │   │       ├── com.android.camera2
++│   │   │   │   │       │   ├── cache
++│   │   │   │   │       │   └── files
++│   │   │   │   │       └── com.cyanogenmod.filemanager
+ │   │   │   │   │           ├── cache
+ │   │   │   │   │           └── files
+合并后，子目录没有处理
+ │   │   │   │   │   └── data
+ │   │   │   │   │       └── com.android.camera2
++│   │   │   │   │       ├── com.android.browser
++│   │   │   │   │       │   └── files
++│   │   │   │   │       │   ├── cache
++│   │   │   │   │       │   └── files
++│   │   │   │   │       └── com.cyanogenmod.filemanager
+ │   │   │   │   │           ├── cache
+ │   │   │   │   │           └── files
+
