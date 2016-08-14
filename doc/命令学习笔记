@@ -56,13 +56,67 @@ git push origin master #发布到git网页上
 (8)安装必要编译环境
  sudo apt-get install build-essential
 执行完后，完成了gcc,g++,make的安装。build-essential 是一整套工具，gcc，libc等等
-(9)字符串操作命令
+(9)文件按行操作命令
 cut 
 sed
 cat filename | while read line #按行读文件
 do
   echo $line
 done
-    
+
+
+ test命令操作符:
+       字符串判断:
+       [ string1 = string2 ]    or    两个字符串相等时返回true.
+       [ string1 == string2 ]    
+               
+       [ string1 != string2 ]         两个字符串不等时返回true.
+       [ string ]                          string非空时返回true.
+       [ -z string ]                      为空时返回true.
+       [ -n string ]                      为非空时返回true.
+       
+       逻辑判断:(cond1可以包含元字符)
+       [ string1 -a string2 ] or     string1和string2都非空时
+       [[ cond1 && cond2 ]]        cond1和cond2都为true
+           
+       [ string1 -o string2 ] or     string1或string2为非空时
+       [[ cond1 || cond2 ]]          cond1或cond2为true.
+           
+       [ ! string ] or                    string为空
+       [[ !cond ]]                        cond为false.
+
+shell 如何获取文件某一行的行号？  比如某一行内容包含“hello” 则返回“hello”所在行！
+awk '/var/{print NR}'  file
+cat -n file |grep hello
+
+
+http://blog.csdn.net/flyeagle022/article/details/49660177
+1、逐行输出所有行，
+
+2、使用Sed命令操作行
+
+sed -n “3p” filename #输出文件的第3行
+sed -n “2,5p“ filename #输出文件的第2到5行
+sed ”/abc/d“ filename #删除包含“abc”的行
+sed “2d” filename #删除第2行
+sed ”$d“ filename #删除最后一行
+
+3、输出指定文件的特定行
+
+#!/bin/sh
+#deleteLine.sh
+FILE=$1      
+NUM=$2      
+cat $1 | sed  -n "${NUM}p"
+#!/bin/sh
+#deleteLine.sh
+FILE=$1      
+NUM=$2      
+cat $1 | sed  -n "${NUM}p"
+
+使用：./deleteLine.sh input.txt 3
+
+Shell脚本统计文件行数的8种方法 http://www.jb51.net/article/61943.htm 
+
 
 
