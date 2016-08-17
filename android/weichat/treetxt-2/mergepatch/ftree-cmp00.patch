@@ -1,0 +1,126 @@
+--- ftreeforandroid-old.txt	2016-08-16 22:43:05.569833010 +0800
++++ ftreeforandroid-new.txt	2016-08-16 22:45:47.997435757 +0800
+@@ -10,7 +10,7 @@
+ android/android-2016-07-23/data/backup/com.android.internal.backup.LocalTransport
+ android/android-2016-07-23/data/backup/fb-schedule 45781d4e2313a5940024166f88b83d15d24f22d5
+ android/android-2016-07-23/data/backup/pending
+-android/android-2016-07-23/data/backup/pending/journal-1672827584.tmp ec5c5a6173acadb0333d8768e4366198d9f6cb9b
++android/android-2016-07-23/data/backup/pending/journal999587781.tmp ec5c5a6173acadb0333d8768e4366198d9f6cb9b
+ android/android-2016-07-23/data/bugreports -> data/com.android.shell/files/bugreports
+ android/android-2016-07-23/data/dalvik-cache
+ android/android-2016-07-23/data/dalvik-cache/profiles
+@@ -172,14 +172,14 @@
+ android/android-2016-07-23/data/data/com.android.deskclock/databases/alarms.db-journal 9d789a54840307fb5213cdabef5dc1f3ee6214e2
+ android/android-2016-07-23/data/data/com.android.deskclock/lib -> /data/app-lib/com.android.deskclock
+ android/android-2016-07-23/data/data/com.android.deskclock/shared_prefs
+!android/android-2016-07-23/data/data/com.android.deskclock/shared_prefs/com.android.deskclock_preferences.xml c800710f9154327d5d4c1ad08aba2bc7b6aa1024 f097f6617290ae027b042de5fe5c71c34f6cff99
+ android/android-2016-07-23/data/data/com.android.development
+ android/android-2016-07-23/data/data/com.android.development/lib -> /data/app-lib/com.android.development
+ android/android-2016-07-23/data/data/com.android.documentsui
+ android/android-2016-07-23/data/data/com.android.documentsui/cache
+ android/android-2016-07-23/data/data/com.android.documentsui/databases
+!android/android-2016-07-23/data/data/com.android.documentsui/databases/Application_database.db 09520e3529f65b4c138ec1700ec00ab7e2e056a5 a470c05a6e235e15a998956a61f9d67f74ff7629
+!android/android-2016-07-23/data/data/com.android.documentsui/databases/Application_database.db-journal 092b89f1a8792becf573337ae9985660dc55cf43 6d9954953a282a71e885f058aa27b1f903853d7d
+ android/android-2016-07-23/data/data/com.android.documentsui/lib -> /data/app-lib/com.android.documentsui
+ android/android-2016-07-23/data/data/com.android.dreams.basic
+ android/android-2016-07-23/data/data/com.android.dreams.basic/lib -> /data/app-lib/com.android.dreams.basic
+@@ -237,7 +237,7 @@
+ android/android-2016-07-23/data/data/com.android.launcher3/databases/launcher.db-journal 3aa700778678995a971f96e8c3504cc1027ec1ee
+ android/android-2016-07-23/data/data/com.android.launcher3/files
+ android/android-2016-07-23/data/data/com.android.launcher3/files/launcher.preferences 538a9ef7fbf4120ae5af6f66b8c8468b54c64648
+!android/android-2016-07-23/data/data/com.android.launcher3/files/launches.log 41e93b260650d3d72872dd411d4e4ad665297a0a 6d2faf3cc3b9f6af7384803750167e024d278a6b
+ android/android-2016-07-23/data/data/com.android.launcher3/lib -> /data/app-lib/com.android.launcher3
+ android/android-2016-07-23/data/data/com.android.launcher3/shared_prefs
+ android/android-2016-07-23/data/data/com.android.launcher3/shared_prefs/com.android.launcher3.prefs.xml 48650cdf5de99dd198fc4c91ea06ee95d1339868
+@@ -316,11 +316,11 @@
+ android/android-2016-07-23/data/data/com.android.providers.media/cache
+ android/android-2016-07-23/data/data/com.android.providers.media/databases
+ android/android-2016-07-23/data/data/com.android.providers.media/databases/external.db 9ce8f5c4477124c0df6c68e15e4e439a6e04f04a
+!android/android-2016-07-23/data/data/com.android.providers.media/databases/external.db-shm c29d4818fa9652fd3fc2676c187acf0788c50d04 b2ac007cbdb0b0580b92d9748233a29f766557b8
+!android/android-2016-07-23/data/data/com.android.providers.media/databases/external.db-wal 33974053caa4c7d1f99fdc47ec4c2957e169b4dc e35c54f114e8291047609562e5379ebc0b802090
+ android/android-2016-07-23/data/data/com.android.providers.media/databases/internal.db e34396a4839643f444fa99adfd504154cfa00051
+!android/android-2016-07-23/data/data/com.android.providers.media/databases/internal.db-shm f8a35724a106de578608fc7a5cbbbcb25b55ff53 c750de24418a191b00d28f5f55ec4889a9233e70
+!android/android-2016-07-23/data/data/com.android.providers.media/databases/internal.db-wal cd07b581ca70bb9135da150603a28cfa912e8675 cfb62fa9fdc699abb4ae68d8fbaa59b3c28f8520
+ android/android-2016-07-23/data/data/com.android.providers.media/lib -> /data/app-lib/com.android.providers.media
+ android/android-2016-07-23/data/data/com.android.providers.media/shared_prefs
+ android/android-2016-07-23/data/data/com.android.providers.media/shared_prefs/com.android.providers.media_preferences.xml 53eb014d1218c547e5593c254b952f4aec45b50b
+@@ -433,7 +433,7 @@
+ android/android-2016-07-23/data/misc/bluedroid
+ android/android-2016-07-23/data/misc/bluetooth
+ android/android-2016-07-23/data/misc/dhcp
+!android/android-2016-07-23/data/misc/dhcp/dhcpcd-eth0.lease aefaab8eeb7503b527c38bf21c7c3367d17ca6a3 b3c211aece7d3c35df1c69afe0735e19d0ccc1f7
+ android/android-2016-07-23/data/misc/dhcp/dhcpcd-eth0.pid da39a3ee5e6b4b0d3255bfef95601890afd80709
+ android/android-2016-07-23/data/misc/ethernet
+ android/android-2016-07-23/data/misc/keychain
+@@ -445,8 +445,8 @@
+ android/android-2016-07-23/data/misc/net/rt_tables 3cd9bd4121211235dabdd31adab55121b69bd583
+ android/android-2016-07-23/data/misc/radio
+ android/android-2016-07-23/data/misc/shared_relro
+!android/android-2016-07-23/data/misc/shared_relro/libwebviewchromium32.relro 0ef12d3f08309d60870c0f9a7a43afb1c01f9eb4 3528f45575d960cce11c15263a98f21a79c0bb21
+!android/android-2016-07-23/data/misc/shared_relro/libwebviewchromium64.relro 6fbb2e70483b4158bf701d78ac4d1cab9d1df444 f0cceaae9f36922e00a186c90942400bc2b2e726
+ android/android-2016-07-23/data/misc/sms
+ android/android-2016-07-23/data/misc/systemkeys
+ android/android-2016-07-23/data/misc/user
+@@ -470,14 +470,15 @@
+ android/android-2016-07-23/data/resource-cache
+ android/android-2016-07-23/data/security
+ android/android-2016-07-23/data/system
+!android/android-2016-07-23/data/system/appops.xml 4c161eee4694b3a2e8fd3f2eab7320781a0a9ce4 d9d90e783b6a705c70551ebbb41f9769577bf21b
+!android/android-2016-07-23/data/system/batterystats.bin f7a77c6bf117673f655a7742276f18bf79e91cb2 46b70d69b683cca5616eec654e37d2da34f739f9
+ android/android-2016-07-23/data/system/called_pre_boots.dat 861608400880bdfc961627aed8f3c67e05c319a5
+ android/android-2016-07-23/data/system/device_policies.xml 3f9e6293b38e62a365a29412ff71dff6ede010a1
+ android/android-2016-07-23/data/system/dropbox
+ android/android-2016-07-23/data/system/dropbox/SYSTEM_BOOT@1471358147279.txt 9415251b6025e27090a677980392766273a59fac
+ android/android-2016-07-23/data/system/dropbox/SYSTEM_BOOT@1471358297003.txt 9415251b6025e27090a677980392766273a59fac
+!android/android-2016-07-23/data/system/entropy.dat b4adb40300dcca5771981c7472c9693b8ca69b18 6ee4bdc8b0ffcc6739d23e05d6a0bef8e8cd9788
++android/android-2016-07-23/data/system/dropbox/SYSTEM_BOOT@1471358384948.txt 9415251b6025e27090a677980392766273a59fac
+ android/android-2016-07-23/data/system/framework_atlas.config 2107a23605a300785852e71b5c41b082411cd035
+ android/android-2016-07-23/data/system/ifw
+ android/android-2016-07-23/data/system/inputmethod
+@@ -486,16 +487,17 @@
+ android/android-2016-07-23/data/system/job
+ android/android-2016-07-23/data/system/last-fstrim da39a3ee5e6b4b0d3255bfef95601890afd80709
+ android/android-2016-07-23/data/system/locksettings.db 3358af52b3e1e5beaa11796cc0a3bb3b9ee84f9a
+!android/android-2016-07-23/data/system/locksettings.db-shm 8edbdb40fff304fe81cc1c3bd10371efaa7257d8 ae69ae76c20ca53c026a98c402f16217681d768e
+ android/android-2016-07-23/data/system/locksettings.db-wal 4610d0d6e0d3a705d3398c36539975caa8715ff8
+ android/android-2016-07-23/data/system/ndebugsocket
+ android/android-2016-07-23/data/system/netstats
+ android/android-2016-07-23/data/system/packages.list b717c359444bbc7a85f387ff5957bfbd983e1d65
+!android/android-2016-07-23/data/system/packages.xml e42239c0c54bb7243762db175d3e7e3e2258e286 5d6078fb0ff930366e3cd61e76a650be8bc0b15b
+!android/android-2016-07-23/data/system/package-usage.list 18dd280450f92366db0bba0962b52eeb45a68702 5ca7b63b1bf33b862242536f976fb5f3021468a3
+ android/android-2016-07-23/data/system/procstats
+ android/android-2016-07-23/data/system/procstats/state-2016-08-16-14-35-05.bin 07da1cb62d074f3fe9ecf302954a67fe7037af2e
+ android/android-2016-07-23/data/system/procstats/state-2016-08-16-14-38-09.bin 8ba5fdeb83f0e0fcb365e1f6a8dff206fe34647a
++android/android-2016-07-23/data/system/procstats/state-2016-08-16-14-39-37.bin 84f20c941a916e6c5c838663ee8b4423fd551377
+ android/android-2016-07-23/data/system/recent_images
+ android/android-2016-07-23/data/system/recent_tasks
+ android/android-2016-07-23/data/system/registered_services
+@@ -511,14 +513,14 @@
+ android/android-2016-07-23/data/system/usagestats
+ android/android-2016-07-23/data/system/usagestats/0
+ android/android-2016-07-23/data/system/usagestats/0/daily
+!android/android-2016-07-23/data/system/usagestats/0/daily/1471305600000 fa4c053bce45a3d1281da3d34d74497e9673bcf8 d4c08ae7dc5b974f1c92969f830912a62a5b9ff5
+ android/android-2016-07-23/data/system/usagestats/0/monthly
+!android/android-2016-07-23/data/system/usagestats/0/monthly/1469664000000 b34367bed6a1d4a3dc1cff244539b3bf999c6704 0d66e10daf34d5425349f1e4976099d99d0ec8cd
+ android/android-2016-07-23/data/system/usagestats/0/version da4b9237bacccdf19c0760cab7aec4a8359010b0
+ android/android-2016-07-23/data/system/usagestats/0/weekly
+!android/android-2016-07-23/data/system/usagestats/0/weekly/1470873600000 436ae2a36ca2533acf369aca638d9b45befec232 893a6c9daa66e8003b3f278c56e846b9f5030982
+ android/android-2016-07-23/data/system/usagestats/0/yearly
+!android/android-2016-07-23/data/system/usagestats/0/yearly/1450656000000 a185a2d9618f0e4ce0a32901370c584e2b7f73e7 4b0681f0aab5af8ad3aaa08d252d0337647a345a
+ android/android-2016-07-23/data/system/users
+ android/android-2016-07-23/data/system/users/0
+ android/android-2016-07-23/data/system/users/0/accounts.db 7496b0997fc77148b8cce66227bc0dff20800e07
+@@ -526,7 +528,7 @@
+ android/android-2016-07-23/data/system/users/0/appwidgets.xml 73a52fb653b25effb41fd7fc9b87c9fd42d86c55
+ android/android-2016-07-23/data/system/users/0/package-restrictions.xml 12cdc0559921c8d0d8760fb3872402c499c4a019
+ android/android-2016-07-23/data/system/users/0/wallpaper_info.xml f15e2fe5823b09238a7106ef0a625944eb0f8687
+!android/android-2016-07-23/data/system/users/0.xml 1d946452574204a2dfd8e8ccbe2aab11a9305062 9eb35a76a4fa7acda18424f5f8f01c3a4be1aee5
+ android/android-2016-07-23/data/system/users/userlist.xml e2ee0f5b717a9d4b8f1e0cca9b0fc6687d9513c0
+ android/android-2016-07-23/data/user
+ android/android-2016-07-23/data/user/0 -> /data/data/
+@@ -6363,4 +6365,4 @@
+ android/grub/stage2_eltorito a9b98c289a0a72d38537324db02e2f1bfb5b2756
+ android/lost+found
+ 
+-1038 directories, 5325 files
++1038 directories, 5327 files

@@ -1,0 +1,464 @@
+--- ftreeforandroid-old.txt	2016-08-16 22:58:34.584828831 +0800
++++ ftreeforandroid-new.txt	2016-08-16 23:01:20.836567501 +0800
+@@ -10,11 +10,12 @@
+ android/android-2016-07-23/data/backup/com.android.internal.backup.LocalTransport
+ android/android-2016-07-23/data/backup/fb-schedule 45781d4e2313a5940024166f88b83d15d24f22d5
+ android/android-2016-07-23/data/backup/pending
+-android/android-2016-07-23/data/backup/pending/journal999587781.tmp ec5c5a6173acadb0333d8768e4366198d9f6cb9b
++android/android-2016-07-23/data/backup/pending/journal-1013180799.tmp ec5c5a6173acadb0333d8768e4366198d9f6cb9b
+ android/android-2016-07-23/data/bugreports -> data/com.android.shell/files/bugreports
+ android/android-2016-07-23/data/dalvik-cache
+ android/android-2016-07-23/data/dalvik-cache/profiles
+ android/android-2016-07-23/data/dalvik-cache/profiles/com.android.bluetooth da39a3ee5e6b4b0d3255bfef95601890afd80709
++android/android-2016-07-23/data/dalvik-cache/profiles/com.android.browser da39a3ee5e6b4b0d3255bfef95601890afd80709
+ android/android-2016-07-23/data/dalvik-cache/profiles/com.android.calendar da39a3ee5e6b4b0d3255bfef95601890afd80709
+ android/android-2016-07-23/data/dalvik-cache/profiles/com.android.camera2 da39a3ee5e6b4b0d3255bfef95601890afd80709
+ android/android-2016-07-23/data/dalvik-cache/profiles/com.android.deskclock da39a3ee5e6b4b0d3255bfef95601890afd80709
+@@ -33,6 +34,7 @@
+ android/android-2016-07-23/data/dalvik-cache/profiles/com.android.music da39a3ee5e6b4b0d3255bfef95601890afd80709
+ android/android-2016-07-23/data/dalvik-cache/profiles/com.android.musicfx da39a3ee5e6b4b0d3255bfef95601890afd80709
+ android/android-2016-07-23/data/dalvik-cache/profiles/com.android.onetimeinitializer da39a3ee5e6b4b0d3255bfef95601890afd80709
++android/android-2016-07-23/data/dalvik-cache/profiles/com.android.packageinstaller da39a3ee5e6b4b0d3255bfef95601890afd80709
+ android/android-2016-07-23/data/dalvik-cache/profiles/com.android.phone da39a3ee5e6b4b0d3255bfef95601890afd80709
+ android/android-2016-07-23/data/dalvik-cache/profiles/com.android.printspooler da39a3ee5e6b4b0d3255bfef95601890afd80709
+ android/android-2016-07-23/data/dalvik-cache/profiles/com.android.providers.calendar da39a3ee5e6b4b0d3255bfef95601890afd80709
+@@ -43,9 +45,12 @@
+ android/android-2016-07-23/data/dalvik-cache/profiles/com.android.providers.telephony da39a3ee5e6b4b0d3255bfef95601890afd80709
+ android/android-2016-07-23/data/dalvik-cache/profiles/com.android.providers.userdictionary da39a3ee5e6b4b0d3255bfef95601890afd80709
+ android/android-2016-07-23/data/dalvik-cache/profiles/com.android.provision da39a3ee5e6b4b0d3255bfef95601890afd80709
++android/android-2016-07-23/data/dalvik-cache/profiles/com.android.quicksearchbox da39a3ee5e6b4b0d3255bfef95601890afd80709
+ android/android-2016-07-23/data/dalvik-cache/profiles/com.android.server.telecom da39a3ee5e6b4b0d3255bfef95601890afd80709
+ android/android-2016-07-23/data/dalvik-cache/profiles/com.android.settings da39a3ee5e6b4b0d3255bfef95601890afd80709
+ android/android-2016-07-23/data/dalvik-cache/profiles/com.android.systemui da39a3ee5e6b4b0d3255bfef95601890afd80709
++android/android-2016-07-23/data/dalvik-cache/profiles/com.android.webview da39a3ee5e6b4b0d3255bfef95601890afd80709
++android/android-2016-07-23/data/dalvik-cache/profiles/com.cyanogenmod.filemanager da39a3ee5e6b4b0d3255bfef95601890afd80709
+ android/android-2016-07-23/data/dalvik-cache/profiles/com.emindsoft.setupwizard da39a3ee5e6b4b0d3255bfef95601890afd80709
+ android/android-2016-07-23/data/dalvik-cache/profiles/org.zeroxlab.util.tscal da39a3ee5e6b4b0d3255bfef95601890afd80709
+ android/android-2016-07-23/data/dalvik-cache/x86
+@@ -77,8 +82,10 @@
+ android/android-2016-07-23/data/dalvik-cache/x86/system@framework@wm.jar@classes.dex 49042e30fdf5be25e8cff49464a0d036b0e246a3
+ android/android-2016-07-23/data/dalvik-cache/x86_64
+ android/android-2016-07-23/data/dalvik-cache/x86_64/system@app@Bluetooth@Bluetooth.apk@classes.dex 04696a1b99d200dd9b283020a2d7ec130cbc1630
++android/android-2016-07-23/data/dalvik-cache/x86_64/system@app@Browser@Browser.apk@classes.dex a1f85e28c62af386afec9ba3d8140bdcacb3744a
+ android/android-2016-07-23/data/dalvik-cache/x86_64/system@app@Calendar@Calendar.apk@classes.dex bf3005b2b6e89aca68ae063aade7cb8eb7f0edd1
+ android/android-2016-07-23/data/dalvik-cache/x86_64/system@app@Camera2@Camera2.apk@classes.dex 84bf9e9acacad02d496ddbf894ed5c006d38ebb0
++android/android-2016-07-23/data/dalvik-cache/x86_64/system@app@CMFileManager@CMFileManager.apk@classes.dex 31e3565aaf9c8dc813e8d0f49feae9ad77a50c49
+ android/android-2016-07-23/data/dalvik-cache/x86_64/system@app@DeskClock@DeskClock.apk@classes.dex 5f50daff3bc4cc4cae14885060b32fce94f6eb65
+ android/android-2016-07-23/data/dalvik-cache/x86_64/system@app@DocumentsUI@DocumentsUI.apk@classes.dex 95b9ab7211222a33ccba47de6ddadf23941dd0b4
+ android/android-2016-07-23/data/dalvik-cache/x86_64/system@app@Email@Email.apk@classes.dex af0e32b7d5a39ce97649b4fb56b449fa00109fbf
+@@ -88,9 +95,12 @@
+ android/android-2016-07-23/data/dalvik-cache/x86_64/system@app@Launcher3@Launcher3.apk@classes.dex 411391472918b5d161676599e6f4aa7fbc40dc3b
+ android/android-2016-07-23/data/dalvik-cache/x86_64/system@app@LineRect@LineRect.apk@classes.dex a4f250bb7c311e2b9b38df15d4b389123504bb64
+ android/android-2016-07-23/data/dalvik-cache/x86_64/system@app@Music@Music.apk@classes.dex 96d270834f19d3c599c6c1c5670f9f71eb1a174d
++android/android-2016-07-23/data/dalvik-cache/x86_64/system@app@PackageInstaller@PackageInstaller.apk@classes.dex 8ed4bcb5469c49eff2a447a13cff6021aec99f5c
+ android/android-2016-07-23/data/dalvik-cache/x86_64/system@app@PrintSpooler@PrintSpooler.apk@classes.dex 4038e1cc8f890d7858695991ce2dcd6dde86df25
+ android/android-2016-07-23/data/dalvik-cache/x86_64/system@app@Provision@Provision.apk@classes.dex 145a6e759f84447d9823fad809e85f7a4f811c75
++android/android-2016-07-23/data/dalvik-cache/x86_64/system@app@QuickSearchBox@QuickSearchBox.apk@classes.dex 49f46aab52a5effa314cea985c9f9178d6e38d80
+ android/android-2016-07-23/data/dalvik-cache/x86_64/system@app@UserDictionaryProvider@UserDictionaryProvider.apk@classes.dex 7d5b4d67250d29e05569632ca7d67f4513c10a16
++android/android-2016-07-23/data/dalvik-cache/x86_64/system@app@webview@webview.apk@classes.dex 5e3a700ac511434c5d89cc387844cc7e852a63c3
+ android/android-2016-07-23/data/dalvik-cache/x86_64/system@framework@am.jar@classes.dex a7f1038206d1f01a539804ab0b6310d7625b1488
+ android/android-2016-07-23/data/dalvik-cache/x86_64/system@framework@android.test.runner.jar@classes.dex 966b68a8093a973e0594cce621dc6456778103c7
+ android/android-2016-07-23/data/dalvik-cache/x86_64/system@framework@appops.jar@classes.dex 29d0194098ded71501285c8883d31afd483091a7
+@@ -146,7 +156,219 @@
+ android/android-2016-07-23/data/data/com.android.bluetooth/cache
+ android/android-2016-07-23/data/data/com.android.bluetooth/lib -> /data/app-lib/com.android.bluetooth
+ android/android-2016-07-23/data/data/com.android.browser
++android/android-2016-07-23/data/data/com.android.browser/app_appcache
++android/android-2016-07-23/data/data/com.android.browser/app_databases
++android/android-2016-07-23/data/data/com.android.browser/app_geolocation
++android/android-2016-07-23/data/data/com.android.browser/app_icons
++android/android-2016-07-23/data/data/com.android.browser/app_webview
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/050c9262c8b68110_0 895706f5038cfe851580809fdf61623347166b80
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/069faa2c9a08bde9_0 6cca31ccf74414e167f1e3c7708353659b62c1fe
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/0825115821272783_0 7247458ee097e983da1c2e9b4dc6f18c03ab6ff5
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/08ca78292388618f_0 92404c117d69afaa5b15ecbb04a23a86e156439f
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/09ce85245b0a7e9e_0 3dbbf591d0c36873bbda9a55453c40e0044be800
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/0c6a7c5b10f06baa_0 59d287badf9bc54dff8bd14ecec7ff2abcaab785
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/0d1007400e62e9ca_0 593f9b14fb6f9277e9ff501d7266add76a6874db
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/0d47bc9bd993fe74_0 da47b414880f07c71cf0f2674a97bf0f51706027
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/0f5a84cd106e0271_0 6df7733023f8c26f32cc25d50071ef64e65eb1fa
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/107220ff0fb1751d_0 7ff0851a07f2a172818dbbb22dca7cf2e53c9cb8
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/1276cfc4b8c71c54_0 f0ecfd128eb5f06615b0038f886e68a514a55470
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/14bf4984944d0d45_0 a7ed939df8c0dc0d0435fd458213f1f30f38137c
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/178c6a91fcd8fc59_0 32659be92c429b0c9363b5ae025b6f24f1583055
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/17da2d7d61169803_0 cab513824fca5e11398015bdd830f2329d3e36b6
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/17eefaf5cadcc14c_0 9e6578cec6cdf759693c7b20f095338e9ed95ee1
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/18ab448c0111f272_0 10329c3630ec817a01fbc158dfacf4aee5648fd9
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/1a0e5f664472856f_0 6949e30f01169bf733dc7430c1fb03dd9a0b4e95
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/1dcc7843676bd415_0 d29db68a089942e143c4af4c6dd26b149fa875cd
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/1e2ecd2dc688c243_0 c0a5a3edd2b245fc69169cd86bb411dc94189f68
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/1f79929f710378b1_0 0d4edbdcd09ddad5a53edd7203eb84b398a4806d
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/21835450edd3e05e_0 7d132cf712825fb34616a6ecbb49790e32d44f72
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/24113879d067074b_0 19948adef7db4fda8e45792300937b654c9c931b
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/24c803401244861e_0 4bf8a84b92782c446f608975f3060fd53bbf5387
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/283db922e1033210_0 0a9073604ab0424ac4d549087b2f6e40f61c114b
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/28afb1c60570774e_0 82fd0952ed0fa5b4a7e1f9ccd3d18cb000f71b35
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/28c1f5d94468824b_0 4caac348cdc7ac071e312ec742a9dea8c35c0917
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/28c92ebf190b607c_0 8cea83ccc925145344189ed1306193c3ddfa64d9
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/293b7ef13b23fd95_0 270216e21659397ae883694bfa295a24fdf31b8d
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/295ba4a289216a0c_0 4648bb46043c43ae61f4fdc40d68196ed2e4c18a
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/29e111eddaed0ae5_0 33d220aec2ce3066110bc9a43304f6e4551168fa
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/2aaaa86467c8e1e3_0 44052fe428499a2470d86fb2543eb1cf08b80966
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/2b6d649bed5623ad_0 6b7bde1e1f7161f3c8f7b913651cb43f62741d6c
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/2eed2a9c88093f88_0 d7272cfc8222d1fff27652ea63f9c934dd0a159b
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/30a6b0674415b95e_0 ce3f0ff8f16689d468604e101f03a3627fc5227e
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/339c29d26e2f2db1_0 6083edd14f06910cb5a4565b83b39347cce5b244
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/35bead18721600a8_0 41f5f2511aa9195b191135ad7ebdcb34e211b05e
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/368122fd160063ac_0 6fa0d03bde30921e300606fe1225296579a8b891
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/376a3ee56bfdcdf7_0 2d0078df7a57173a22fd79932dfaf0c02ccea45e
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/3892f02260beb022_0 a60ef0d6baaca7eec3c10b6af979b86b7444bd36
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/3a316127c26b08c7_0 c9785bbbdd2a86a1051474ddd0e29b4103e823ea
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/3b481f7e53b092e9_0 b7e176c6012d36dff560629bd6d308b6fa860810
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/3da8569c077d1367_0 685ea13db3747e61e717f3e2f5b296939eb13dde
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/3df4fc6bebccb0d0_0 f517af1b0c47bd563750bf111dcd808aa7de5055
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/3ef6bbb2d0cc7f89_0 c013f4f0cf72bde90d6f86d943d29c54903d81a7
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/41a313448913824c_0 5ba9be87c845c532ab22a45fc73bbe76076e71ad
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/41b3cb0e33dfeb71_0 88493c0e36783487109d28ad58df6dfcbff68e3b
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/4276bdb2f6750ac5_0 938f69cf1c8e903e79f0a4d2da9b960d33544e1d
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/4367f60567b19860_0 c4bd3d01bf2fe29209ce6f40171e24cc126188d9
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/44f711e9669e424b_0 c4c78462e9c5aa16425c0286b98fdc20a03995bb
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/4535ad22d3310d92_0 6e76cee52f4444d0cb3c2465eba19d5149f9f894
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/47af1c79af9fad0a_0 f085eb5e7aa3718a21f639cf7668d09d6f8b9b54
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/4920726be80da4c8_0 c7fda53a3ea596597f2ae855c21f62462650fec7
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/493e8f49146d285e_0 cae6d4bf1c150babe7ed72de7e45872bf34a7230
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/499fbd67cdb03798_0 c818b37a19392b3a00b332b6ec89766d694c442c
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/4ddc75bc748ee0b8_0 bac2a5fdd702f8b700cabfc82ac33b6270e3c9b8
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/4ee41988847b4f79_0 d618695da865f8ddd07f21e621c376250a7e3fac
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/50371ee769657f7a_0 64713dfd97e8003687e304c94d05a4576c4628c7
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/511e24abdc72a2b4_0 eea959411535df31a1838d2fe81766502d0c7913
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/515cde7c02acfe5f_0 38559c02c965782c8fb451ce556bf68ae026a18b
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/5232138e3151cc62_0 e6e5f32faf06b488cf9abad23c6a96735e1134b9
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/531a45f47de1301c_0 5bb350138fb0f554fab9931def6a82fecbcfee9b
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/540428aa1c793132_0 9ca198155c4da3e499d57289d54ff4a8794aab8b
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/5471538a12bb9625_0 5e37dbd1aa4ea7f7d231349d0f34fb2ff721cd16
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/54fadd7d23c8d920_0 6279690fe8c9814ea6da75f0e754d9bd9187f40a
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/58e86bed7655eb81_0 a9a7cf091cdc0fc0534a1285b572c7bd341de5cc
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/597055c2f3742638_0 7d0d8d048ecd1cd5a1970fac0ad5846ed45419dd
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/5b88bb767798f03f_0 625efce5b0d588bd4d8c269aefba3ee1383fce9f
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/5d4ab09269c4810a_0 3eba4bf400145326615afe943f6bce4f58f891ba
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/5e09aa4345425e68_0 d1db7c09dec34d0ce4d150ce27bf81179f7908c4
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/5f6051a8130219cf_0 dba9f93a3e05a1b8996ca4d77728accadccc0339
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/6088a2c873f4aea8_0 749e464fbb4fa42f3d5375aeb5ab778642ab217c
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/60ff11d2bb2c1648_0 b53db81d5bada2116f51de959c3a14c2273f641d
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/61314d6205169e43_0 2a14707b222b1f4634d82333290d39cf7d3e0759
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/640d18efe467b761_0 f7b1815784c99cfbf5da8df575017049e3d69a26
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/682510841a2b1919_0 ccb06d22a34885079887937b00cdd638df5a866d
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/68f61fcff94e094b_0 1f507a837c75f62e4e0e7ef57da769fc41ade4e4
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/6aeff9fd4b20ec14_0 dd914402182deaba08acb8adfbd4dfa4d67fe7b8
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/6b27740344b8ed88_0 bc7bad5e92f8043fcc2f1531db566f9382059562
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/6b9a0267c3c1c21b_0 68b92575189d97258101d2426d42f44e248eebaf
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/6c1690bc873dc428_0 18cbd735b2c41c52ab8c24465dfe54f85dc6274a
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/6d4d6961f322046c_0 d08d7ca4cf86ac618a77a5b67d62610365b15570
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/6e8057859ad1442f_0 d1f9dde5f9201d2f86bab3246091b25cd835f9a8
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/6ec3a9ed69d71723_0 58a2f69a8925be46fb681b9ba00649b5dc34fb4b
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/6f1e96a2892c4959_0 585847f8d747b195ef5a8be74707ec42594630a8
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/702a6065618f4070_0 61f9fbcd232a5e0b509eaea87a914e7e38803cd6
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/73fb716c5cdedfc6_0 6a49d4f4c588c2fff80c9305771697819efeef3d
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/76793cbf9312d409_0 038e4f2b3585425cf23cd2fb7eef927e0d30a73f
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/768d891416e587d6_0 5a69ff6df39982f5adfdb0fd51150efe097c1e54
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/79c408eb4ddd5955_0 1927c7b03b6cd4d4efc29fddf628c6bef895f955
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/7a2563c179b4044f_0 acc5bb20a6482f3eca730b608e94f6329bbc5fcf
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/7a6ec6f75d90b9c0_0 ee48fdf9e24325e6c4db6c04ef560ee2d145238c
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/7b3da5e03270d129_0 dcd43faf1b52878659727c136960962ff2d07375
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/7c54c98caa580690_0 50edc63ca63e571502d99ad6f1dab5821f9661a5
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/7cd65784b9d095f3_0 e80f3f5806e7ae9f659c5afd04bcec0b7e59871d
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/7e0612557249b831_0 7a62877d008bb5af5ff2fea919f15db38259e5e9
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/7ece158a0d9fd753_0 74880ed2bb142b61fa558effb89eabf558b53a01
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/7f354c15846e2aab_0 097f5ac9e5f46785db02fc150a90bd34ad75f1a6
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/7ff81ffc7052df9b_0 e04cbd08c71be97ce43e84fcd168bc995b1b5c7d
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/80097a91537f7368_0 bdb87a80971212571186b45733441ac2a337c5ec
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/818e29a3f93c5fa3_0 1ae3cb9e78ef75e1428d3df23a45dd74f5ec2e4a
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/838b4f42555e4df0_0 a7a1e59f9fcbead409bdc22280d9685588bf98f4
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/847383fa2350914a_0 cde216fb84d78a1ed812f89539a3dbb75e5bba9a
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/84e51e43286c4918_0 0b573218908ba71724746b6900a3979030afc08d
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/875dbd16dd27e8ac_0 093cbeb661e66e266bd5c8558c98ec6a5b5246b0
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/897efbfeacabda84_0 f24adc8e3d233838ef30557ea1b23780d4c9f239
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/8b9c1a59082565eb_0 ee4e0429df2dbf18cea4ff37524659b28874ca21
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/90a3eb21dad78fe4_0 36c7924e937ad553d99833243e37e5b857d7687b
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/923d8c21b022cee1_0 159f59a091c66fd471e19700f73e62bba156311a
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/92939d77b3d0a21f_0 01e651a16aa1ccc10f8e17078d2de14bc6ef809f
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/9803c29d693ce950_0 b798b75ebd03d694476c4ac839a57890d775dd27
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/98efd27ab19501dd_0 32970ea1cce9e720689274b7f5a998c0e50879ff
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/9987799e0c785295_0 e7ed4dda5c19027a97f19d160b27afaee071091e
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/9b0d67e595a72f41_0 749c7d5ff1048a05e8f542e14507e041139a2344
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/9b13decd650bcfb7_0 6d3caac754855f42675e02350c835c5043d33abc
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/9be8740d91580915_0 c2276f6e166223a21bd4cc7ab6d72f057b392a7e
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/9c6a5ea35108867e_0 9fc7d5c44bb6e8ad08e0de7239220a8043b0a058
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/9d2fe8767cd97289_0 a01b3aaf6e24ca763cc59f408fc85e2ad2147372
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/9d9470462ce550f4_0 e768c40d8828fe187e8d72162aa35f42780c41ef
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/9fdc961897913c4d_0 b1c5df0cac0bd3a9227942375ee4eb0e907d1a64
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/a1f7909a4141eb1b_0 f723b35755224a4592379f069092ceb5dc693c55
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/a2795490a64a02bb_0 b2af07738a33231dd74e58e7556fb6abbc8e5900
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/a29e5e1eb35c7eb6_0 ed5e5329941752b37aabb284d2a7e2597d55c533
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/a4912ac556d34893_0 73ee7bf16246418147cacf7c57bf22c533d6f80b
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/a4dbe82273af13c6_0 d6b49d98c153b253391debd2c59bdf3f62e4b33e
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/a5a1c76e3551c750_0 469b05ecacceca2a74ab78d7236690dacf3f40fd
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/a81b8ec3832bdded_0 beb56f54c4e57248ae1c6951923a47449e9ec553
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/a9af3d1018736674_0 a920101712cb2e0330eb3198f0f4224689253727
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/ab6e24bd9f5594c1_0 a7f8f7858d05378277a23491783f86c1e98fc3d5
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/ad5980681eac9b53_0 8aedc9d9d53168ede0fe529c38cf07f91a14cb00
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/ae7052fbd1874710_0 7aea1114fbe3967a4410cb8e5512ab9ac76d22f3
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/b15b2aae3f41be85_0 caca3c6d66c0ba210eab66b1739c0b277bed9d77
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/b1625fb36967b896_0 11e67904744c7f4fdec0e8d030639c6410df08f8
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/b28abee6fa3fb594_0 5f2b823c9d7a2c01947d3c3a49aaa65663f9d0e1
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/b35e45e2069b0e85_0 e076b1c67b213b5056a0908ac7df3969a5a758df
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/b4d13f3293a7e8ee_0 d603ecaf48e9bbb5b1e7bb4555ca4d3b0adadb43
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/b62a9968f6a340be_0 84a2961619a065091b07588566412237a6ded14a
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/b65fe5cf90b53634_0 f22f24ee2e8222a4e5f1fe4a12bb79d7096225d4
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/b68dd8d1c8059489_0 71688e7375f02476dd663cc23814bd8e56b95fad
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/b9d14e58e67351b1_0 c1bfb2addc8c7bf0000d3147d7cea0128bbb99df
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/b9dbb720a8ecb91a_0 d302e9efbaee3a2ff23646d4aeb11c12e98cb4a5
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/c0d244f54a3738ed_0 6dbb099478512733e560557d62629b8a74de9ea9
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/c1c6f99aabe612a7_0 1400218aed57b7945745aedcb280094a8c624df7
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/c4655feb93490a44_0 13fbb77c5b507257b420c55e27b151a15b48e62f
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/c7290a8e5bbf8143_0 2928dddc60053cc9c20656b050f3c0cf47ada51b
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/c77047b2dda4d8f2_0 055e6cdf240a7662d9af0e80a1eb0e6180094bbf
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/ca3ccdf551373c04_0 295615131f7823143d9e0db95a78861b96bcd1cd
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/cb0d9b0dac60c2b8_0 153a1cb8cf961884e1927b8f6dcaa8bd91d267aa
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/cb2aca8945142569_0 5cfc4001705c1bd8209f766c669a13c675a2bc18
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/cc0b4ee915f4bb54_0 1a066831cb659b39513fed0f454cf491e318957c
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/cf0df9904d3043d2_0 532a97ef1b8e0bd8ca05882e2a7380c4e324b241
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/d191f0be362e23ee_0 f6f36f705f8ce3a82be4ba06a4a78b77821c20c2
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/d2a8cb8a8f1e5a58_0 1b5af3c1da11d88635a3965a887b929fe536add7
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/d42df9d6cbb9b45c_0 a4618fec0cf92c8534bf32541e6a48f5ef7f67ee
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/d49adbe5364457cf_0 4899e9950f59dec3a3366cef0720b85584cde29f
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/d989c2429302330f_0 b2aa17b9586ce80bcd5048e67cbe63e8812dc503
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/da1eadb3487f248c_0 6f66b4bbb10c1b8a0eb75f27abda79e64266a335
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/dac8bb61f86dc453_0 fe97494fd705d37b3b08018ae4c7eca629f2c85a
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/de45fa19c3d27f57_0 1a55e01c540e4db386bb688b691e70ab02226feb
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/de8e21461fe4df98_0 f429708bc61ba0920e8ec6b03ed5d1904b128f03
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/dee3cc36587886d2_0 5ae97632198c578087194af0c67c54da24899a00
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/dfce5640d411498d_0 45a70a8a9af07652b43f5e31f0f9e5fcdce8a6fb
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/dfd909e1ca05c059_0 d38478ead02f21e5abf83be1e76196513354844c
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/e030c51bf598096e_0 7e7a01fec3afb9ad5f0d87555e54d20fb1ba1417
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/e0defd27e482c5c5_0 404851bb2215dcc8c309b8aec831912f06e82da7
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/e27683da15370526_0 954520dd11a3965518a3a9ed3a08bbbcc4961e50
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/e5c4c8e19c955709_0 7690f3ba36650ddb99f9ba9c1ec096ba8a0ef7c5
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/e5e2e7997175382b_0 8b4dbf6ca92dc1db42f132b74b27832947184633
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/e7a2a8626968284f_0 99eba80c30480a79b53122bb548b4d4e4223117c
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/e87dc5d9acc2a7fe_0 ba269a611580ce62d6960f6dfb948a208f7089f8
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/e974153afa6d6a42_0 b8b935a98039d2febde1ea2847ed38d6f68667a4
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/e98703618b2365fb_0 b8351e06377f5e94f185afa9753a5634125776de
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/e9bb61f5d1e968f0_0 227b1c61c449e1d0643004e7a83dfa158e89a3cf
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/ea03d8dc664f39f1_0 06bec24eae0ed368a8c58704bb4fb2b88ffcafbd
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/eb0195d4b1eca954_0 02eeccef9bda67253211db5c45e668041641af92
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/ebb44e4cd9254196_0 1e467b13f7e127d94add5c3d3ef9574f41b33c67
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/ef0368a91e7b5695_0 8eebdc8ce10ac0f3563769c9e7247dbdc33136f0
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/f23194bdb77fbe8c_0 aff2d59fc1ecdff2b2da0b7e2a9574bcd0ea7abe
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/f28c02f8c0cefaf0_0 d45fc2091b88cc91e909f694aa9694aab1ab1997
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/f325c9634dc5fffb_0 e1cf4badd5b89dc26423bfb3f9a70f4eae7bf915
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/f39821f83e2eba05_0 a4a63c234fce207bd9bb07061f25900ea06c6fb4
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/f441939f117c411d_0 2df53497a5d94fa8b591038f00150ea36a6c5936
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/f4cae30f4e3a9cc4_0 c0ed86a680b3b6a9725c7b31efc0b0888b6390ea
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/f535251b86d27ab8_0 8b1e0c7dfacf5d55712b49dd744f0c1d2c084321
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/f845f7cff2007ed1_0 1a81efba53caaa5875b2f8d4b7dcbebc3f39249b
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/fda703be6623e2b2_0 59c5f7aabf3e69bc92fdd9785481cec3619205bf
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/index 6e0fa286f1d41e3619d918ef31c0e377f9876ad2
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/index-dir
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cache/index-dir/the-real-index 6ed65f826f5f8fb6b03a528e5979e8771c06c287
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cookies 2d136d67b2d9455a0d078757e15d3314205b0274
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Cookies-journal ca87ab8401be5221c40fecd0b03bfb05e7f00ba0
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Local Storage
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Local Storage/https_www.baidu.com_0.localstorage
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Local Storage/https_www.baidu.com_0.localstorage-journal
++android/android-2016-07-23/data/data/com.android.browser/app_webview/paks
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Web Data
++android/android-2016-07-23/data/data/com.android.browser/app_webview/Web Data-journal
++android/android-2016-07-23/data/data/com.android.browser/cache
++android/android-2016-07-23/data/data/com.android.browser/cache/browser_state.parcel b8f7a912030f8bd9be0306f54dbb3fb1c5e5f4d1
++android/android-2016-07-23/data/data/com.android.browser/databases
++android/android-2016-07-23/data/data/com.android.browser/databases/browser2.db 3358af52b3e1e5beaa11796cc0a3bb3b9ee84f9a
++android/android-2016-07-23/data/data/com.android.browser/databases/browser2.db-shm 9452c13237aa1444d2a30f61402641c6edd2596e
++android/android-2016-07-23/data/data/com.android.browser/databases/browser2.db-wal 419f61438521071222e71384f557b57c5aa3f130
++android/android-2016-07-23/data/data/com.android.browser/files
+ android/android-2016-07-23/data/data/com.android.browser/lib -> /data/app-lib/com.android.browser
++android/android-2016-07-23/data/data/com.android.browser/shared_prefs
++android/android-2016-07-23/data/data/com.android.browser/shared_prefs/com.android.browser_preferences.xml 6a2915c67881d4d398c8a51d34d638f992d8a4ff
++android/android-2016-07-23/data/data/com.android.browser/shared_prefs/WebViewChromiumPrefs.xml 760ce766cd8c6eb45dc894b3d5c5d4a6778e6bdd
+ android/android-2016-07-23/data/data/com.android.calculator2
+ android/android-2016-07-23/data/data/com.android.calculator2/lib -> /data/app-lib/com.android.calculator2
+ android/android-2016-07-23/data/data/com.android.calendar
+@@ -172,14 +394,14 @@
+ android/android-2016-07-23/data/data/com.android.deskclock/databases/alarms.db-journal 9d789a54840307fb5213cdabef5dc1f3ee6214e2
+ android/android-2016-07-23/data/data/com.android.deskclock/lib -> /data/app-lib/com.android.deskclock
+ android/android-2016-07-23/data/data/com.android.deskclock/shared_prefs
+!android/android-2016-07-23/data/data/com.android.deskclock/shared_prefs/com.android.deskclock_preferences.xml f097f6617290ae027b042de5fe5c71c34f6cff99 16ab0d2c01777781923a71037fd7f873d8cd02a7
+ android/android-2016-07-23/data/data/com.android.development
+ android/android-2016-07-23/data/data/com.android.development/lib -> /data/app-lib/com.android.development
+ android/android-2016-07-23/data/data/com.android.documentsui
+ android/android-2016-07-23/data/data/com.android.documentsui/cache
+ android/android-2016-07-23/data/data/com.android.documentsui/databases
+!android/android-2016-07-23/data/data/com.android.documentsui/databases/Application_database.db a470c05a6e235e15a998956a61f9d67f74ff7629 473ca1aa30ed073375082be1d8ab8212f4aee12b
+!android/android-2016-07-23/data/data/com.android.documentsui/databases/Application_database.db-journal 6d9954953a282a71e885f058aa27b1f903853d7d 44edb699cd25747e7f21a7c89cbcd9db52ebbfd0
+ android/android-2016-07-23/data/data/com.android.documentsui/lib -> /data/app-lib/com.android.documentsui
+ android/android-2016-07-23/data/data/com.android.dreams.basic
+ android/android-2016-07-23/data/data/com.android.dreams.basic/lib -> /data/app-lib/com.android.dreams.basic
+@@ -237,7 +459,7 @@
+ android/android-2016-07-23/data/data/com.android.launcher3/databases/launcher.db-journal 3aa700778678995a971f96e8c3504cc1027ec1ee
+ android/android-2016-07-23/data/data/com.android.launcher3/files
+ android/android-2016-07-23/data/data/com.android.launcher3/files/launcher.preferences 538a9ef7fbf4120ae5af6f66b8c8468b54c64648
+!android/android-2016-07-23/data/data/com.android.launcher3/files/launches.log 6d2faf3cc3b9f6af7384803750167e024d278a6b 17230e647c1bcb9d4d8550a97ddff2d6e03b86f4
+ android/android-2016-07-23/data/data/com.android.launcher3/lib -> /data/app-lib/com.android.launcher3
+ android/android-2016-07-23/data/data/com.android.launcher3/shared_prefs
+ android/android-2016-07-23/data/data/com.android.launcher3/shared_prefs/com.android.launcher3.prefs.xml 48650cdf5de99dd198fc4c91ea06ee95d1339868
+@@ -266,6 +488,7 @@
+ android/android-2016-07-23/data/data/com.android.onetimeinitializer/shared_prefs
+ android/android-2016-07-23/data/data/com.android.onetimeinitializer/shared_prefs/oti.xml 812cac1ef8a3a42d8e4d4839a422edf62587dc34
+ android/android-2016-07-23/data/data/com.android.packageinstaller
++android/android-2016-07-23/data/data/com.android.packageinstaller/cache
+ android/android-2016-07-23/data/data/com.android.packageinstaller/lib -> /data/app-lib/com.android.packageinstaller
+ android/android-2016-07-23/data/data/com.android.pacprocessor
+ android/android-2016-07-23/data/data/com.android.pacprocessor/lib -> /data/app-lib/com.android.pacprocessor
+@@ -307,20 +530,21 @@
+ android/android-2016-07-23/data/data/com.android.providers.downloads
+ android/android-2016-07-23/data/data/com.android.providers.downloads/cache
+ android/android-2016-07-23/data/data/com.android.providers.downloads/databases
+!android/android-2016-07-23/data/data/com.android.providers.downloads/databases/downloads.db 022e5e11417c216c2774372f886e52f498b5729f ce60e437991be29544abe52131601ff73faee879
+!android/android-2016-07-23/data/data/com.android.providers.downloads/databases/downloads.db-journal 0c33dc299fe1eaa82a216673d5bc51478547308c 0a068870ed5d17a1cef6080cb17b2e1a8cf1f921
++android/android-2016-07-23/data/data/com.android.providers.downloads/files
+ android/android-2016-07-23/data/data/com.android.providers.downloads/lib -> /data/app-lib/com.android.providers.downloads
+ android/android-2016-07-23/data/data/com.android.providers.downloads.ui
+ android/android-2016-07-23/data/data/com.android.providers.downloads.ui/lib -> /data/app-lib/com.android.providers.downloads.ui
+ android/android-2016-07-23/data/data/com.android.providers.media
+ android/android-2016-07-23/data/data/com.android.providers.media/cache
+ android/android-2016-07-23/data/data/com.android.providers.media/databases
+!android/android-2016-07-23/data/data/com.android.providers.media/databases/external.db 9ce8f5c4477124c0df6c68e15e4e439a6e04f04a b0d66a67648d5eb56e5c5ff9062ec9cc2f21ed85
+!android/android-2016-07-23/data/data/com.android.providers.media/databases/external.db-shm b2ac007cbdb0b0580b92d9748233a29f766557b8 23b57695c46a0907077a357ae734bce6fddcf66f
+!android/android-2016-07-23/data/data/com.android.providers.media/databases/external.db-wal e35c54f114e8291047609562e5379ebc0b802090 9eab79d00d921a7dc74928c2ebcdfda8096a2bc3
+ android/android-2016-07-23/data/data/com.android.providers.media/databases/internal.db e34396a4839643f444fa99adfd504154cfa00051
+!android/android-2016-07-23/data/data/com.android.providers.media/databases/internal.db-shm c750de24418a191b00d28f5f55ec4889a9233e70 16e2c43165993e7ccdc9fe3b4cfc295f53f6c957
+!android/android-2016-07-23/data/data/com.android.providers.media/databases/internal.db-wal cfb62fa9fdc699abb4ae68d8fbaa59b3c28f8520 2766c4982a90619c964992b6fa366c989366e2e4
+ android/android-2016-07-23/data/data/com.android.providers.media/lib -> /data/app-lib/com.android.providers.media
+ android/android-2016-07-23/data/data/com.android.providers.media/shared_prefs
+ android/android-2016-07-23/data/data/com.android.providers.media/shared_prefs/com.android.providers.media_preferences.xml 53eb014d1218c547e5593c254b952f4aec45b50b
+@@ -350,6 +574,8 @@
+ android/android-2016-07-23/data/data/com.android.proxyhandler
+ android/android-2016-07-23/data/data/com.android.proxyhandler/lib -> /data/app-lib/com.android.proxyhandler
+ android/android-2016-07-23/data/data/com.android.quicksearchbox
++android/android-2016-07-23/data/data/com.android.quicksearchbox/app_sslcache
++android/android-2016-07-23/data/data/com.android.quicksearchbox/cache
+ android/android-2016-07-23/data/data/com.android.quicksearchbox/lib -> /data/app-lib/com.android.quicksearchbox
+ android/android-2016-07-23/data/data/com.android.server.telecom
+ android/android-2016-07-23/data/data/com.android.server.telecom/files
+@@ -387,7 +613,15 @@
+ android/android-2016-07-23/data/data/com.android.webview
+ android/android-2016-07-23/data/data/com.android.webview/lib -> /data/app-lib/com.android.webview
+ android/android-2016-07-23/data/data/com.cyanogenmod.filemanager
++android/android-2016-07-23/data/data/com.cyanogenmod.filemanager/cache
++android/android-2016-07-23/data/data/com.cyanogenmod.filemanager/databases
++android/android-2016-07-23/data/data/com.cyanogenmod.filemanager/databases/bookmarks.db 7cfb942a46a9b6bcbe9c779ba94794253e7e3590
++android/android-2016-07-23/data/data/com.cyanogenmod.filemanager/databases/bookmarks.db-journal c3298807110a6241aec1591206290b7ecc49af6c
++android/android-2016-07-23/data/data/com.cyanogenmod.filemanager/databases/mime_type_index 208b4fed9fc5bfc1a0227ae6561389c5585cb52d
++android/android-2016-07-23/data/data/com.cyanogenmod.filemanager/databases/mime_type_index-journal c3fa825ebd79eafc749139be5f01d26cb87a8960
+ android/android-2016-07-23/data/data/com.cyanogenmod.filemanager/lib -> /data/app-lib/com.cyanogenmod.filemanager
++android/android-2016-07-23/data/data/com.cyanogenmod.filemanager/shared_prefs
++android/android-2016-07-23/data/data/com.cyanogenmod.filemanager/shared_prefs/com.cyanogenmod.filemanager.xml cb354e5d45aa3c41c76bb1f2f2a038e5c119a0fd
+ android/android-2016-07-23/data/data/com.emindsoft.setupwizard
+ android/android-2016-07-23/data/data/com.emindsoft.setupwizard/cache
+ android/android-2016-07-23/data/data/com.emindsoft.setupwizard/lib -> /data/app-lib/com.emindsoft.setupwizard
+@@ -414,17 +648,23 @@
+ android/android-2016-07-23/data/media/0/Alarms
+ android/android-2016-07-23/data/media/0/Android
+ android/android-2016-07-23/data/media/0/Android/data
++android/android-2016-07-23/data/media/0/Android/data/com.android.browser
++android/android-2016-07-23/data/media/0/Android/data/com.android.browser/files
+ android/android-2016-07-23/data/media/0/Android/data/com.android.camera2
+ android/android-2016-07-23/data/media/0/Android/data/com.android.camera2/cache
+ android/android-2016-07-23/data/media/0/Android/data/com.android.camera2/files
++android/android-2016-07-23/data/media/0/Android/data/com.cyanogenmod.filemanager
++android/android-2016-07-23/data/media/0/Android/data/com.cyanogenmod.filemanager/files
+ android/android-2016-07-23/data/media/0/DCIM
+ android/android-2016-07-23/data/media/0/Download
++android/android-2016-07-23/data/media/0/Download/WeChat_840.apk 085d64dfd886fb0b931de22e0ed09a44a4c22c64
+ android/android-2016-07-23/data/media/0/Movies
+ android/android-2016-07-23/data/media/0/Music
+ android/android-2016-07-23/data/media/0/Notifications
+ android/android-2016-07-23/data/media/0/Pictures
+ android/android-2016-07-23/data/media/0/Podcasts
+ android/android-2016-07-23/data/media/0/Ringtones
++android/android-2016-07-23/data/media/0/storage
+ android/android-2016-07-23/data/media/legacy
+ android/android-2016-07-23/data/media/obb
+ android/android-2016-07-23/data/mediadrm
+@@ -433,7 +673,7 @@
+ android/android-2016-07-23/data/misc/bluedroid
+ android/android-2016-07-23/data/misc/bluetooth
+ android/android-2016-07-23/data/misc/dhcp
+!android/android-2016-07-23/data/misc/dhcp/dhcpcd-eth0.lease b3c211aece7d3c35df1c69afe0735e19d0ccc1f7 bc2b4412b7551f5ad70da4ebbbe7e9e454d48007
+ android/android-2016-07-23/data/misc/dhcp/dhcpcd-eth0.pid da39a3ee5e6b4b0d3255bfef95601890afd80709
+ android/android-2016-07-23/data/misc/ethernet
+ android/android-2016-07-23/data/misc/keychain
+@@ -441,12 +681,12 @@
+ android/android-2016-07-23/data/misc/keystore/user_0
+ android/android-2016-07-23/data/misc/media
+ android/android-2016-07-23/data/misc/net
+!android/android-2016-07-23/data/misc/net/netd_pid 78cabb767c55bb0bc62e89f3a19da1f76f422655 4902e4c0511d08bd54b069222bae5a2587964fa4
+ android/android-2016-07-23/data/misc/net/rt_tables 3cd9bd4121211235dabdd31adab55121b69bd583
+ android/android-2016-07-23/data/misc/radio
+ android/android-2016-07-23/data/misc/shared_relro
+!android/android-2016-07-23/data/misc/shared_relro/libwebviewchromium32.relro 3528f45575d960cce11c15263a98f21a79c0bb21 4ce358190a8cacdcb2c9c7b0794a8f6649722d3d
+!android/android-2016-07-23/data/misc/shared_relro/libwebviewchromium64.relro f0cceaae9f36922e00a186c90942400bc2b2e726 835e5335afbcbe9c446188d4e65863d6342ab814
+ android/android-2016-07-23/data/misc/sms
+ android/android-2016-07-23/data/misc/systemkeys
+ android/android-2016-07-23/data/misc/user
+@@ -470,15 +710,16 @@
+ android/android-2016-07-23/data/resource-cache
+ android/android-2016-07-23/data/security
+ android/android-2016-07-23/data/system
+!android/android-2016-07-23/data/system/appops.xml d9d90e783b6a705c70551ebbb41f9769577bf21b bb257e59b7dc8c54f0cc33af1c2866c28a03dffc
+!android/android-2016-07-23/data/system/batterystats.bin 46b70d69b683cca5616eec654e37d2da34f739f9 c08bc0690c3873ecdb7e723eef6a16a8e22bd4f8
+ android/android-2016-07-23/data/system/called_pre_boots.dat 861608400880bdfc961627aed8f3c67e05c319a5
+ android/android-2016-07-23/data/system/device_policies.xml 3f9e6293b38e62a365a29412ff71dff6ede010a1
+ android/android-2016-07-23/data/system/dropbox
+ android/android-2016-07-23/data/system/dropbox/SYSTEM_BOOT@1471358147279.txt 9415251b6025e27090a677980392766273a59fac
+ android/android-2016-07-23/data/system/dropbox/SYSTEM_BOOT@1471358297003.txt 9415251b6025e27090a677980392766273a59fac
+ android/android-2016-07-23/data/system/dropbox/SYSTEM_BOOT@1471358384948.txt 9415251b6025e27090a677980392766273a59fac
+!android/android-2016-07-23/data/system/entropy.dat 6ee4bdc8b0ffcc6739d23e05d6a0bef8e8cd9788 8bc81a38e772df233301a8251ac9faa04e149479
++android/android-2016-07-23/data/system/dropbox/SYSTEM_BOOT@1471359081475.txt 9415251b6025e27090a677980392766273a59fac
+ android/android-2016-07-23/data/system/framework_atlas.config 2107a23605a300785852e71b5c41b082411cd035
+ android/android-2016-07-23/data/system/ifw
+ android/android-2016-07-23/data/system/inputmethod
+@@ -492,12 +733,13 @@
+ android/android-2016-07-23/data/system/ndebugsocket
+ android/android-2016-07-23/data/system/netstats
+ android/android-2016-07-23/data/system/packages.list b717c359444bbc7a85f387ff5957bfbd983e1d65
+!android/android-2016-07-23/data/system/packages.xml 5d6078fb0ff930366e3cd61e76a650be8bc0b15b 75274c17d5f46a0ac0548ef749951fc0e9aeec5c
+!android/android-2016-07-23/data/system/package-usage.list 5ca7b63b1bf33b862242536f976fb5f3021468a3 6fdb1b1229a24d00cee9d2d6625d711d3ab732e5
+ android/android-2016-07-23/data/system/procstats
+ android/android-2016-07-23/data/system/procstats/state-2016-08-16-14-35-05.bin 07da1cb62d074f3fe9ecf302954a67fe7037af2e
+ android/android-2016-07-23/data/system/procstats/state-2016-08-16-14-38-09.bin 8ba5fdeb83f0e0fcb365e1f6a8dff206fe34647a
+ android/android-2016-07-23/data/system/procstats/state-2016-08-16-14-39-37.bin 84f20c941a916e6c5c838663ee8b4423fd551377
++android/android-2016-07-23/data/system/procstats/state-2016-08-16-14-51-14.bin c026903db71a8889eb04034b9dc2a6ae73ba41a3
+ android/android-2016-07-23/data/system/recent_images
+ android/android-2016-07-23/data/system/recent_tasks
+ android/android-2016-07-23/data/system/registered_services
+@@ -513,14 +755,14 @@
+ android/android-2016-07-23/data/system/usagestats
+ android/android-2016-07-23/data/system/usagestats/0
+ android/android-2016-07-23/data/system/usagestats/0/daily
+!android/android-2016-07-23/data/system/usagestats/0/daily/1471305600000 d4c08ae7dc5b974f1c92969f830912a62a5b9ff5 c21cf2ad7a5ccb7541795014d980bd3266e76624
+ android/android-2016-07-23/data/system/usagestats/0/monthly
+!android/android-2016-07-23/data/system/usagestats/0/monthly/1469664000000 0d66e10daf34d5425349f1e4976099d99d0ec8cd 777eb8bfa5d8bf72534ce1845dccf4efd5086300
+ android/android-2016-07-23/data/system/usagestats/0/version da4b9237bacccdf19c0760cab7aec4a8359010b0
+ android/android-2016-07-23/data/system/usagestats/0/weekly
+!android/android-2016-07-23/data/system/usagestats/0/weekly/1470873600000 893a6c9daa66e8003b3f278c56e846b9f5030982 39cb61bb085ec550d4d3847322f3af22dbfd71c0
+ android/android-2016-07-23/data/system/usagestats/0/yearly
+!android/android-2016-07-23/data/system/usagestats/0/yearly/1450656000000 4b0681f0aab5af8ad3aaa08d252d0337647a345a 6d89de43c98c206ff4b171315d293eb73c44cc72
+ android/android-2016-07-23/data/system/users
+ android/android-2016-07-23/data/system/users/0
+ android/android-2016-07-23/data/system/users/0/accounts.db 7496b0997fc77148b8cce66227bc0dff20800e07
+@@ -528,7 +770,7 @@
+ android/android-2016-07-23/data/system/users/0/appwidgets.xml 73a52fb653b25effb41fd7fc9b87c9fd42d86c55
+ android/android-2016-07-23/data/system/users/0/package-restrictions.xml 12cdc0559921c8d0d8760fb3872402c499c4a019
+ android/android-2016-07-23/data/system/users/0/wallpaper_info.xml f15e2fe5823b09238a7106ef0a625944eb0f8687
+!android/android-2016-07-23/data/system/users/0.xml 9eb35a76a4fa7acda18424f5f8f01c3a4be1aee5 17319840da7878351f6c6e9ae9b43f5a1274905f
+ android/android-2016-07-23/data/system/users/userlist.xml e2ee0f5b717a9d4b8f1e0cca9b0fc6687d9513c0
+ android/android-2016-07-23/data/user
+ android/android-2016-07-23/data/user/0 -> /data/data/
+@@ -6365,4 +6607,4 @@
+ android/grub/stage2_eltorito a9b98c289a0a72d38537324db02e2f1bfb5b2756
+ android/lost+found
+ 
+-1038 directories, 5327 files
++1063 directories, 5544 files
