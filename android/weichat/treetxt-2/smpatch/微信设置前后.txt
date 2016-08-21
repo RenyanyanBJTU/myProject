@@ -1,0 +1,44 @@
+
+################## 微信设置前后文件变更 #########################
+	
+（1）android-2016-07-23/data/data/目录下
+
+	!com.android.providers.media/databases/external.db ca2adcac3f75cfbf6d65c065ddf204e16567a24b fd96c15ee625d0758b1239a682f49882c7a9e861
+
+	+com.tencent.mm/cache/wakelock
+	+com.tencent.mm/cache/wakelock/wakelock_stats.bin 4d835661ea2f58dab8d68c954fadd70201e85a7e
+	
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/enFavorite.db 44b74e05d456d829cf3ecc30151a2c9a75f5b83a 6efd284281aee69025447c94c9f29342cd5abfd0
+	+com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sfs_stats.bin 508a256eefbf94938350bdfbe02e2b5519e64d3b
+	+com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.index d09a3f31adeb7242f0bd19c5694d376ad0452e81
+	+com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.index-shm 451b5a3b3bf092c95ed7972f4fa1c480545ad325
+	+com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.index-wal f01dbc2d717dc7babc2013c6cdf22f0169978f2e
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/SnsMicroMsg.db-shm 46c68214cd0924775d10ab16bae227baa8acdb76 b6f8893a7f5363bf357dd4af6ca476f36b688683
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/SnsMicroMsg.db-wal 74e9d0a1ae5dd4bed18af089bc284ae9f372270f ddc0c2c80a2674a669098ab5442f53928611b04b
+	!com.tencent.mm/MicroMsg/ClickFlow/1048576.bin 3a805dcf2f4f16e93c1625d866079485bb60c43c 15c9f4943161bc31d1716d880a85dc2068596246
+	+com.tencent.mm/MicroMsg/ClickFlow/ReportConfig_1048576_1843499274.xml 527f80b4d4e77f86998e7db6db4f79e26609c6b2
+	+com.tencent.mm/MicroMsg/ClickFlow/stg_1048576_1843499274.cfg 36befc15b42f08fa0ac3d01b23e8d3562c300a8f
+	+com.tencent.mm/MicroMsg/ClickFlow/stg_1048576_1843499274.HashMap 877ea8ff502f7df6a5faebcc3878bc49fde6242f
+	+com.tencent.mm/MicroMsg/mobileinfo.ini 7de59ec3f466363e1ede55e15a73b1ab9ecb5c2d
+	
+	!com.tencent.mm/shared_prefs/com.tencent.mm_preferences.xml c34a1d424ddb3ba0a09705f208f1a58c798972c4 64a538dacc73b1c21731e39bcff5147cb47e4f5e
+	!com.tencent.mm/shared_prefs/exdevice_pref.xml 4f1fad064e9fe10f747f7dbd502479f0aacf7518 edfe614c23b5f6203961a2eaacc1dd0af1573e2d
+	!com.tencent.mm/shared_prefs/mm_proc_startup.xml 82c14fac188748bd6e3f1d2b6bea7be415a91a13 453f52840d8b81b793f7876b03dbdbebf5ee098e
+	!com.tencent.mm/shared_prefs/notify_key_pref_settings.xml a8e32c70cf0f436af9c206f20ea8967c2cf6149c 8cc7e7c63e92cd0e1cafb73ed301e81bdac32c3d
+	!com.tencent.mm/shared_prefs/notify_sync_pref.xml a6822a2d0f29011f978bebed3f637456830703d2 acbdd72ee4a7bdc1bfb9573ca3d6eb01c3983825
+	+com.tencent.mm/shared_prefs/preferences_remove_task.xml cc6a2c3ac2eff016f4d65f1301855e70b634e5f8
+	
+（2）android-2016-07-23/data/media/0/目录下	
+	!tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/avatar.block.00006 247392c65a21c97a5153dec0f62ed123d2304c69 419d547d45541a0f45c09d1e1e07c76bf917648c
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

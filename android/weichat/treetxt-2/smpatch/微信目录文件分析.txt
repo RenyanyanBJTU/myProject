@@ -1,0 +1,335 @@
+﻿  
+############ 微信目录文件分析 #######################
+
+
+###微信安装系统文件===========================================================================================================
+
+（1）android-2016-07-23/data/app目录下【用户安装程序的目录（系统预装程序在system/app目录），有删除权限。安装时把apk文件复制到此目录。】
+  生成com.tencent.mm-1文件夹，包含base.apk文件和lib/arm文件夹，其中
+	base.apk 是软件安装成功后生成的桌面图标文件，
+	lib/arm 文件夹包含微信软件的运行架构所需要的库文件。
+	
+（2）android-2016-07-23/data/backup/目录下
+	修改：fb-schedule文件
+	
+（3）android-2016-07-23/data/dalvik-cache/目录下【apk中的dex文件安装到dalvik-cache目录下(dex文件是dalvik虚拟机的可执行文件,其大小约为原始apk文件大小的四分之一)，存储所有App运行需要的缓存文件，包含安装卸载文件。】
+
+	在系统profiles文件夹下新增
+	+profiles/com.android.defcontainer da39a3ee5e6b4b0d3255bfef95601890afd80709 【com.android.defcontainer是应用程序媒体容器服务，是手机安装管理文件程序】
+	+profiles/com.svox.pico da39a3ee5e6b4b0d3255bfef95601890afd80709 【com.svox.pico文字语音转换工具，语音输入】
+	+profiles/com.tencent.mm da39a3ee5e6b4b0d3255bfef95601890afd80709
+	
+	在系统x86和x86_64文件夹下新增
+	+x86/data@app@com.tencent.mm-1@base.apk@classes.dex 82c037b6785d6d9759da1ac11932aed18777e5af
+	+x86/system@priv-app@DefaultContainerService@DefaultContainerService.apk@classes.dex d113e3f916b34b7956ecd8931664cd303a0cda57
+	+x86_64/system@app@PicoTts@PicoTts.apk@classes.dex accb617f1a45aeed2e34fc13e4ea2e6c48e51d97
+	+x86_64/system@priv-app@DefaultContainerService@DefaultContainerService.apk@classes.dex 17e256c372d6247ff7c50e81757a3b9e2f07505c
+
+【备注：Dalvik虚拟机是一个Android运行时的一部分，作用在于连接底层核心、周边库与上层应用，提供更多的自动管理功能，特别是内存方面的。主要作用是保证应用的兼容性，便于跨硬件平台】
+
+
+（4）android-2016-07-23/data/data/下【存放应用程序的数据。】
+  增加文件：
+	+com.android.defcontainer/cache
+	+com.android.musicfx/shared_prefs 【com.android.musicFx是音效设置应用】
+	+com.android.musicfx/shared_prefs/musicfx.xml 7a64130f5f55182ecc694c935f6b5377cf0bc938	
+	+com.svox.pico/cache 【com.svox.pico文字语音转换工具，语音输入，此目录存放语音缓存】
+	
+  +新增com.tencent.mm文件夹，主要包含文件夹cache、files、MicroMsg以及shared_prefs，其中MicroMsg为微信数据文件夹。详细如下：
+    app_cache
+    app_dex
+    app_lib
+    app_lib/libvoipCodec_v7a.so 3e2bd28132055ac93b8fd1db088233099298df83
+    app_recover_lib
+    cache
+    cache/proc_auxv b00878205669a46e7a71fb138548bbcb1c4faa21
+    code_cache
+    files
+    files/config
+    files/config/Heartbeat.ini e850e29cab3dbecaf56f0d0cdc83d7ac135d8857
+    files/err_readoffset.ini 803815ebfdfb219f28a6928ba2790505e50acaf6
+    files/host
+    files/host/cgi-mapping_637736754.xml 6d7f26b08006b4465cd3c9c0bf4186e3270d928d
+    files/host/getdns.ini f4a5751ca6c1f1e8ac4d7ede03ea07b641dfe9ae
+    files/host/ip.ini 6b91d79e54742cc07c34ed1ee569230060b456dc
+    files/host/ipportrecords2.xml da39a3ee5e6b4b0d3255bfef95601890afd80709
+    files/host/other_26031732.getdns2 ce74aaa5973bd7977ec54da81ab82dec92418ea8
+    files/kvcomm
+    files/kvcomm/exception
+    files/kvcomm/exception/push.group_monitor efdd0598adafe66e5a464c0e18bbf2e256aea709
+    files/kvcomm/exception/push.monitor 0cb40445884180952dd1126e44ecae31c3ab5d38
+    files/kvcomm/exception/push.statictis 58b636655dad241d89da4fb73dcf0d1e448b5b24
+    files/kvcomm/monitordata_0_17029 9edca202db60d0b9a66ae2d15170fec571797fc9
+    files/xlog
+    files/xlog/MM_20160816.xlog 5d73a984009f6c11106f3b0669478f922aa918e9
+    files/xlog/MM.mmap2 505a7b09b010f330a0101f741c9adc6f8dffff5b
+    files/xlog/PUSH.mmap2 7809a94b1304b7f9bb6f2a08b731763f5eb52f7f
+    lib -> /data/app/com.tencent.mm-1/lib/arm
+	
+    MicroMsg 【微信数据目录，存放聊天记录的数据文件和软件配置，包含CompatibleInfo.cfg和文件systemInfo.cfg，目前状态只有初步的配置信息】
+    MicroMsg/channel_history.cfg 7448d8798a4380162d4b56f9b452e2f6f9e24e7a
+    MicroMsg/CompatibleInfo.cfg f89c701486d164944fc59a79b2723d8a137882ae
+    MicroMsg/NowRev.ini f0a73c847f423b30eb9c0bd69b549beadf089f96
+    MicroMsg/SdcardInfo.cfg 39e7395834978f2c118084dcc1aee47be9b9cc6e
+    MicroMsg/stepcounter.cfg da39a3ee5e6b4b0d3255bfef95601890afd80709
+    MicroMsg/systemInfo.cfg 7e5c0bf12b431b0fcb542b69d6e38ba1f6cce967
+    MicroMsg/version_history.cfg 86116a5de4deda556bcb4b2a365e432d4b5e8378
+	
+    shared_prefs 【SharedPreference是Android提供的一种轻量级的数据存储方式，主要用来存储一些简单的配置信息，例如，默认欢迎语，登录用户名和密码等。其以键值对的方式存储,使得我们能很方便进行读取和存入。SharedPreference 文件保存在/data/data/<package name>/shared_prefs 路径下(如/data/data/com.android.alarmclock/shared_prefs/com.android.text_preferences.xml)】
+    shared_prefs/auth_info_key_prefs.xml 5fdf9017d4dc88a04cd12aaf54798025bdd8a9a5
+    shared_prefs/com.tencent.mm_preferences_google_aid.xml f4e5c497d85dbb094afd5a927965b1d351f4d70a
+    shared_prefs/com.tencent.mm_preferences.xml f846969b65882d793cd2c175eec7569066dee6eb
+    shared_prefs/crash_status_file.xml a9eed0c030129fb0cf591de0cbc86494e0eeb256
+    shared_prefs/notify_key_pref.xml 133c41b593bddbfa2b2cb214bfa0eeba58475338
+    shared_prefs/push_proc_startup.xml d013f610ab67d8c7e94f02145e57c34ab0bd976a
+    shared_prefs/system_config_prefs.xml 53c24b14ed0237e42a1959942ffbd1b32ced0326
+    shared_prefs/WLOGIN_DEVICE_INFO.xml bfe35740db81d684fef671f049dd71969fcab7a6
+    	
+  修改文件：
+	!com.android.launcher3/cache/widgetpreviews.db bf9f2c0c12716b2451483edf070d80082fc6e6fc 37c922f643ef32ae35ca2a1e4fece24d3b587e2f
+    !com.android.launcher3/cache/widgetpreviews.db-journal f9466f990a292859d8723bc3eb5e7d254955b70b 9571914bc9539297335bd8590d7a02abd18d8905
+    !com.android.launcher3/databases/launcher.db 94148e6b0eae1f77377d4ca551441522984364c1 01fc57c469a292123764e3e581cf5ebbff66ee45
+    !com.android.launcher3/databases/launcher.db-journal 3aa700778678995a971f96e8c3504cc1027ec1ee a13e0953feddda989935743bc8424bee68fbf0fa
+    !com.android.launcher3/shared_prefs/com.android.launcher3.prefs.xml 48650cdf5de99dd198fc4c91ea06ee95d1339868 70ab61c0c29afe93608837659470bae3d009870c	
+	【com.android.launcher3 安卓系统桌面启动程序，widgetpreviews.db窗口小部件应用程序，launcher.db桌面图标】
+	
+    !com.android.providers.media/databases/external.db b0d66a67648d5eb56e5c5ff9062ec9cc2f21ed85 ca2adcac3f75cfbf6d65c065ddf204e16567a24b
+    【com.android.providers.media 多媒体支持】
+	
+	!com.android.providers.settings/databases/settings.db e50d56150b4bdf2560c55330df20c57009f4ff62 c5272f8b96916be3c611da99c6ae017e19a0d252
+    !com.android.providers.settings/databases/settings.db-journal e1aa70f2c95ebfbf2c3ef8d390f380414f498d06 f3bae256b84f3ce3b542a7afd98d5893985e3b20
+    
+	!com.android.settings/databases/search_index.db 653e092b35c479d98b82669da0957bb26ce31f5a 8006a167408654ac13da30dd6e52b60b2494e0cc
+    !com.android.settings/databases/search_index.db-journal f350e65b88c92995270d403abcf2ffd71a925b74 37d56c94b45ca96acdf55627dcc15296f70ea80a
+    
+	!com.cyanogenmod.filemanager/databases/mime_type_index 208b4fed9fc5bfc1a0227ae6561389c5585cb52d 5a3aebe84a19a6295de8d417f4fbc1d845e92c9a
+    !com.cyanogenmod.filemanager/databases/mime_type_index-journal c3fa825ebd79eafc749139be5f01d26cb87a8960 30ccee473b6ae3bd5a6c071870d2820084c7758a
+
+	
+（5）android-2016-07-23/data/media/0目录下
+	新增tencent文件夹，包含
+    +tencnet
+  	+tencnet/MicroMsg  【微信资源目录，存储好友头像文件、聊天记录内容中的图片文件、语音文件等等】
+  	+tencnet/MicroMsg/CDNTemp 【CDN是一种加速的东西】
+  	+tencnet/MicroMsg/Game
+  	+tencnet/MicroMsg/vusericon 【用户图标文件】
+  	+tencnet/MicroMsg/WeiXin
+  	+tencnet/MicroMsg/xlog
+  	+tencnet/MicroMsg/xlog/PUSH_20160816.xlog b6ed9469d4dff7f56f81b05743720248c3a46386 
+   
+（6）android/android-2016-07-23/data/system/目录下
+
+【packages.xml：这个文件包含所有的权限和Packages/Applications。】
+
+	!packages.list b717c359444bbc7a85f387ff5957bfbd983e1d65 1f1872b8bf1c75666ac4611bfce5681fb1646d36 
+	【 packages.list是一个简单的文本文件，包含了包名、用户id、flag和数据目录，可能可提供更快速的已安装包的查找】
+    
+	!registered_services/android.accounts.AccountAuthenticator.xml bd33ddee7661b4ff318feb07d63fd02024a2176c 3bf5865b331e603847e71109ed6e060d6ea424ae
+    !registered_services/android.content.SyncAdapter.xml c757eb1a5d02fea858d9e54f5c92a251163f11c4 280e904b84c2e8b94b80b7ed38d754e51ab83dd6
+    【android.accounts.AccountAuthenticator.xml安卓账户管理文件的账户认证文件，android.content.SyncAdapter.xml向系统注册一个具有同步功能的账户适配器，例如同步手机通讯录】
+	
+	!users/0/package-restrictions.xml 12cdc0559921c8d0d8760fb3872402c499c4a019 a8312ade5ea73399337f1353e9fcfb8b6ce7687c
+	【package-restrictions.xml 默认应用相关的配置文件，例如手机有多个浏览器时的默认浏览器】
+	
+	
+####===微信登录文件变更================================================================================
+
+（1）android-2016-07-23/data/data/目录下
+	!com.android.browser/databases/browser2.db-shm 9452c13237aa1444d2a30f61402641c6edd2596e 9d65d3637273647c5a4dd2f276ec905bd832f483
+
+	!com.android.providers.contacts/databases/contacts2.db 5bfdf86b37a7916a4a5ccf2068002a8446f19e77 5f1f4257e3c0bfb2229cd9d79f95f7a37550f36e
+	!com.android.providers.contacts/databases/contacts2.db-journal da39a3ee5e6b4b0d3255bfef95601890afd80709 b76989e81d7a121a7664c382fa4d95fdc64dcea3
+	!com.android.providers.contacts/databases/profile.db d3ca528af69391b06ea11640fa7c15779a9b377a 2f42f96bb1c7961115f3d65cfa1f320e62845107
+	【com.android.providers.contacts手机通讯录相关】
+	
+	!com.android.providers.settings/databases/settings.db c5272f8b96916be3c611da99c6ae017e19a0d252 ccb520e940b45f162273400036a54579c080aab8
+	!com.android.providers.settings/databases/settings.db-journal f3bae256b84f3ce3b542a7afd98d5893985e3b20 7111b9d6380bec64e1a109ca71405066fb3e9e94
+	【com.android.providers.settings安卓系统属性设置】
+	
+在com.tencent.mm目录下，【com.tencent.mm微信程序的数据文件】
+	+com.tencent.mm/app_tbs
+	+com.tencent.mm/app_tbs/core_private
+	+com.tencent.mm/app_tbs/core_private/tbslock.txt da39a3ee5e6b4b0d3255bfef95601890afd80709
+	+com.tencent.mm/app_tbs/core_share
+	+com.tencent.mm/app_webview
+	+com.tencent.mm/app_webview/paks
+	+com.tencent.mm/app_webview/Web Data
+	+com.tencent.mm/app_webview/Web Data-journal
+	!com.tencent.mm/cache/proc_auxv b00878205669a46e7a71fb138548bbcb1c4faa21 ecb444691cb57a5298b62e524125e74c30982afc
+	+com.tencent.mm/databases
+	+com.tencent.mm/databases/tk_file d35474dd53df567e0a9ed5e4701a550fc471d1f6
+	+com.tencent.mm/databases/tk_file-journal ddfa158354a50af4d07e0f27db34e9711d269011
+	+com.tencent.mm/files/fileop_mapping 93dc60f7a4ab59bba94d35b91fbd69d7e9661b22
+	com.tencent.mm/files/host/下变更多个文件
+	com.tencent.mm/files/kvcomm/下变更多个文件
+	+com.tencent.mm/files/psk.key.
+	+com.tencent.mm/files/public
+	+com.tencent.mm/files/public/emoji及其文件夹下的文件
+	+com.tencent.mm/files/public/fts
+	+com.tencent.mm/files/public/fts/res及其文件夹下的文件
+	+com.tencent.mm/files/public/wenote
+	+com.tencent.mm/files/public/wenote/res及其文件夹下的文件
+	-com.tencent.mm/files/xlog/MM_20160816.xlog 5d73a984009f6c11106f3b0669478f922aa918e9
+	!com.tencent.mm/files/xlog/MM.mmap2 505a7b09b010f330a0101f741c9adc6f8dffff5b d0fef70b7cf072924e05b8c09adb7e9df9220144
+	!com.tencent.mm/files/xlog/PUSH.mmap2 7809a94b1304b7f9bb6f2a08b731763f5eb52f7f 121cbdea522eb91dfede93d2f3a613c70be343b3
+	+com.tencent.mm/files/xlog/EXDEVICE.mmap2 2424d7219db3866a4d2788f941eecb0b97f7d692
+	+com.tencent.mm/files/xlog/TOOL.mmap2 5f41b6f7ebeca84fd3ed2c88b3559dee9f85aa3e
+	
+	+com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad 及其文件夹下的文件 【用户账户文件】
+	!com.tencent.mm/MicroMsg/CompatibleInfo.cfg f89c701486d164944fc59a79b2723d8a137882ae 3e00d1bcb1d58e4dd172a7d9020644c9eb3bb696
+	【CompatibleInfo.cfg微信聊天记录加密程序相关文件】
+	
+	+com.tencent.mm/MicroMsg/ClickFlow及其文件夹下的文件
+	+com.tencent.mm/MicroMsg/configlist及其文件夹下的文件
+	+com.tencent.mm/MicroMsg/deviceconfig.cfg da39a3ee5e6b4b0d3255bfef95601890afd80709
+	+com.tencent.mm/MicroMsg/ee1da3ae2100e09165c2e52382cfe79f及其文件夹下的文件
+	+com.tencent.mm/MicroMsg/ipcallCountryCodeConfig.cfg 862f49356a4a3b3c178bac871ca2fcf05d5eaef9
+	+com.tencent.mm/MicroMsg/regioncode及其文件夹下的文件
+	!com.tencent.mm/MicroMsg/stepcounter.cfg da39a3ee5e6b4b0d3255bfef95601890afd80709 2c77f4533127c01ca1969aae0c17ef1a4e2e7f63
+	!com.tencent.mm/MicroMsg/systemInfo.cfg 7e5c0bf12b431b0fcb542b69d6e38ba1f6cce967 56b6e282cdbf41b8484d7d95864c14a7e42f3907
+	+com.tencent.mm/MicroMsg/staytime.cfg 447fcaddb376f801c3cbc251b6b057317d80c80d
+	 com.tencent.mm/shared_prefs/增加和修改多个文件
+	
+	
+（2）android-2016-07-23/data/media/0/目录下
+	
+	+Android/data/com.tencent.mm
+	+Android/data/com.tencent.mm/files
+	+Android/data/com.tencent.mm/files/tbslog
+	+Android/data/com.tencent.mm/files/tbslog/tbslog.txt 3ad7cdb80ba65f55e9ec38bc0f7ddf049b6754cc
+
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad  【用户账户文件】
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/attachment 【通过微信发送的文件 附件】
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/avatar 【头像】
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/brandicon 【品牌图标，朋友圈广告】
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/draft 【草稿，打字还没发出去的草稿】
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/emoji 
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/favorite 【收藏，数据在服务器上，会自动同步】
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/favorite/music
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/favorite/voice
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/favorite/web
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/image 【微信软件所用图片】
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/image/ext
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/image/ext/pcm
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/image/scan
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/image/scan/img
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/image/scan/music
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/image/shakeTranImg
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/image/spen
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/image2/及其文件夹下的多个文件 【聊天照片】
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/mailapp
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/openapi/及其文件夹下的多个文件
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/package/及其文件夹下的多个文件
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/record 【录音文件夹】
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/remark
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/及其文件夹下的多个文件  【微信的临时处理结果的聊天缓存文件】
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sns 【微信储存的图片、语音及文字】
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sns/temp
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/video 【小视频】
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/voice
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/voice2 【聊天语音】
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/voiceremind
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/wenote
+	+tencent/MicroMsg/card 【share contact】
+	+tencent/MicroMsg/CheckResUpdate
+	+tencent/MicroMsg/FailMsgFileCache
+	+tencent/MicroMsg/Handler
+	+tencent/MicroMsg/Handler/Handler.trace 1cd1298f5f9cbec45fd9cc615dc8fdc3b7cd93e2
+	+tencent/MicroMsg/locallog 【locallog 本地日志文件夹】
+	+tencent/MicroMsg/newyear
+	+tencent/MicroMsg/vusericon/及其文件夹下的多个文件 【用户图标文件】
+	+tencent/MicroMsg/wallet 【微信钱包】
+	+tencent/MicroMsg/WebviewCache
+	+tencent/MicroMsg/WebviewCache/sfs
+	+tencent/MicroMsg/xlog/ 【记录一些系统及一些程序运行的文件，比如一些程序有异常，通常可以通过读取相对应的LOG文件来查看】
+	+tencent/mta
+	
+	
+（3）android-2016-07-23/data/system/目录下
+
+	!sync/accounts.xml 397b57f06c08a39485261eaa8a5afa1364f33ccc 26396b995e008c2e86e9d2ca09d75e30293a1749
+	!sync/stats.bin 9069ca78e7450a285173431b3e52c5c25299e473 11b41cac66207b6568cd6a8378da905b1b9f8117
+	!sync/status.bin 9069ca78e7450a285173431b3e52c5c25299e473 2547077c3970a2563a8a3e176a3f60b54033fdc5
+	
+	!users/0/accounts.db 7496b0997fc77148b8cce66227bc0dff20800e07 1e966275a008327b6041d2cd2f934638b4c65716
+	!users/0/accounts.db-journal 71f3b6f952a8776190c6abef33d9dee0a856cc57 8902d0a37c7b94f299dbf7bc0dd41cbd2dcc6b8d
+	!users/0/package-restrictions.xml a8312ade5ea73399337f1353e9fcfb8b6ce7687c e1963b3664ca91f7e64b87daeea4d7bd9a2da643
+	
+#######微信设置文件
+
+（1）android-2016-07-23/data/data/目录下
+	!com.android.providers.media/databases/external.db ca2adcac3f75cfbf6d65c065ddf204e16567a24b fd96c15ee625d0758b1239a682f49882c7a9e861
+	+com.tencent.mm/cache/wakelock
+	+com.tencent.mm/cache/wakelock/wakelock_stats.bin 4d835661ea2f58dab8d68c954fadd70201e85a7e
+	
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/enFavorite.db 44b74e05d456d829cf3ecc30151a2c9a75f5b83a 6efd284281aee69025447c94c9f29342cd5abfd0
+	+com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sfs_stats.bin 508a256eefbf94938350bdfbe02e2b5519e64d3b
+	+com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.index d09a3f31adeb7242f0bd19c5694d376ad0452e81
+	+com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.index-shm 451b5a3b3bf092c95ed7972f4fa1c480545ad325
+	+com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.index-wal f01dbc2d717dc7babc2013c6cdf22f0169978f2e
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/SnsMicroMsg.db-shm 46c68214cd0924775d10ab16bae227baa8acdb76 b6f8893a7f5363bf357dd4af6ca476f36b688683
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/SnsMicroMsg.db-wal 74e9d0a1ae5dd4bed18af089bc284ae9f372270f ddc0c2c80a2674a669098ab5442f53928611b04b
+	!com.tencent.mm/MicroMsg/ClickFlow/1048576.bin 3a805dcf2f4f16e93c1625d866079485bb60c43c 15c9f4943161bc31d1716d880a85dc2068596246
+	+com.tencent.mm/MicroMsg/ClickFlow/ReportConfig_1048576_1843499274.xml 527f80b4d4e77f86998e7db6db4f79e26609c6b2
+	+com.tencent.mm/MicroMsg/ClickFlow/stg_1048576_1843499274.cfg 36befc15b42f08fa0ac3d01b23e8d3562c300a8f
+	+com.tencent.mm/MicroMsg/ClickFlow/stg_1048576_1843499274.HashMap 877ea8ff502f7df6a5faebcc3878bc49fde6242f
+	+com.tencent.mm/MicroMsg/mobileinfo.ini 7de59ec3f466363e1ede55e15a73b1ab9ecb5c2d
+	
+	!com.tencent.mm/shared_prefs/com.tencent.mm_preferences.xml c34a1d424ddb3ba0a09705f208f1a58c798972c4 64a538dacc73b1c21731e39bcff5147cb47e4f5e
+	!com.tencent.mm/shared_prefs/exdevice_pref.xml 4f1fad064e9fe10f747f7dbd502479f0aacf7518 edfe614c23b5f6203961a2eaacc1dd0af1573e2d
+	!com.tencent.mm/shared_prefs/mm_proc_startup.xml 82c14fac188748bd6e3f1d2b6bea7be415a91a13 453f52840d8b81b793f7876b03dbdbebf5ee098e
+	!com.tencent.mm/shared_prefs/notify_key_pref_settings.xml a8e32c70cf0f436af9c206f20ea8967c2cf6149c 8cc7e7c63e92cd0e1cafb73ed301e81bdac32c3d
+	!com.tencent.mm/shared_prefs/notify_sync_pref.xml a6822a2d0f29011f978bebed3f637456830703d2 acbdd72ee4a7bdc1bfb9573ca3d6eb01c3983825
+	+com.tencent.mm/shared_prefs/preferences_remove_task.xml cc6a2c3ac2eff016f4d65f1301855e70b634e5f8
+	
+（2）android-2016-07-23/data/media/0/目录下	
+	!tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/avatar.block.00006 247392c65a21c97a5153dec0f62ed123d2304c69 419d547d45541a0f45c09d1e1e07c76bf917648c
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns
+	
+##### 微信发消息
+
+（1）android-2016-07-23/data/data/目录下
+
+	!com.tencent.mm/cache/wakelock/wakelock_stats.bin 4d835661ea2f58dab8d68c954fadd70201e85a7e e8b59d564b2983bbbab48d66ca9ec9a96ff9aac0
+
+	+com.tencent.mm/files/kvcomm/monitordata_1843499274_17029 3db309491d83746228977890ece38a353fac61d1
+		
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/IndexMicroMsg.db 4b71e3097086b88992abcde98eb62d863c6ea449 f743982c3ed286b71f4a9d5f0fa37e6d5c3bc0ea
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.index-shm 451b5a3b3bf092c95ed7972f4fa1c480545ad325 b3eb25a9fba4c4bfe9ca86fa02aeec5ba1d557f8
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.index-wal f01dbc2d717dc7babc2013c6cdf22f0169978f2e 3b8b5e4dabbdd0829225f0e59cf09517a15743d2
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/SnsMicroMsg.db 53107719d81118fffce07e2e7f5b32e6dfe12f0a ae56dc190037a816c6f5ed3f05eb476b7a40634e
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/SnsMicroMsg.db-shm b6f8893a7f5363bf357dd4af6ca476f36b688683 245cba758811e3f56a9770d3cd60eedc004a70e6
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/SnsMicroMsg.db-wal ddc0c2c80a2674a669098ab5442f53928611b04b ceac6e2e21a461d940dbc4fc4ae8d13360d6fed7
+	
+	!com.tencent.mm/shared_prefs/mm_proc_startup.xml 453f52840d8b81b793f7876b03dbdbebf5ee098e e87a573b8b847a0aaab15af14f36ec1387cc2577
+	!com.tencent.mm/shared_prefs/preferences_remove_task.xml cc6a2c3ac2eff016f4d65f1301855e70b634e5f8 954e9f6b5648fd7ba4f9f7892a05555119645f49
+
+
+（2）android-2016-07-23/data/media/0/目录下
+
+	!tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/avatar.block.00006 419d547d45541a0f45c09d1e1e07c76bf917648c 0f382ca15de28fe95d3557115668a293704a3c39
+	!tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/avatar.block.00022 5eb836f98129799eda1ce084f3e70e59eee4f5f8 964d099288767a872ab395667247414a68c80924
+	
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.block.00000 bd87b1c4009e1f19183443ccf9bb132c65273d6f
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.block.00001 275468100072b8dc7dd6f4499d6616a391648822
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.block.00002 56e8360c429af4e453038062c7020a37eff6abb7
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.block.00003 ce3ea79484762f0bacac611795d6cc1838dc1b95
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.block.00004 b8d65bd0daeeb368f61b2984c79146181454773c
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.block.00005 f5a7e828ca1df82d924daa86470094da53543808
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.block.00006 4d95776ea531392c2086bac65f2c12d45035e286
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.block.00007 7cca225943587c38dd3b839385f879193a960f98
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.block.00008 6883b4e913bac1679648e12c389b49efcbfe373e
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sns/4
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sns/4/a
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sns/5
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sns/5/8
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sns/6
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sns/6/9
+
+
+
+
+
+	
+	
+	

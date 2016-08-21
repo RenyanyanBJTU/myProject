@@ -1,0 +1,53 @@
+
+###############安装微信前系统运行文件变更#######################
+
+（1）android-2016-07-23/data/backup/目录下
+	
+	-pending/journal-1672827584.tmp ec5c5a6173acadb0333d8768e4366198d9f6cb9b
+	+pending/journal999587781.tmp ec5c5a6173acadb0333d8768e4366198d9f6cb9b
+
+	
+（2）android-2016-07-23/data/data/目录下
+	
+	!com.android.deskclock/shared_prefs/com.android.deskclock_preferences.xml c800710f9154327d5d4c1ad08aba2bc7b6aa1024 f097f6617290ae027b042de5fe5c71c34f6cff99
+	
+	!com.android.documentsui/databases/Application_database.db 09520e3529f65b4c138ec1700ec00ab7e2e056a5 a470c05a6e235e15a998956a61f9d67f74ff7629
+	!com.android.documentsui/databases/Application_database.db-journal 092b89f1a8792becf573337ae9985660dc55cf43 6d9954953a282a71e885f058aa27b1f903853d7d
+
+	!com.android.launcher3/files/launches.log 41e93b260650d3d72872dd411d4e4ad665297a0a 6d2faf3cc3b9f6af7384803750167e024d278a6b
+
+	!com.android.providers.media/databases/external.db-shm c29d4818fa9652fd3fc2676c187acf0788c50d04 b2ac007cbdb0b0580b92d9748233a29f766557b8
+	!com.android.providers.media/databases/external.db-wal 33974053caa4c7d1f99fdc47ec4c2957e169b4dc e35c54f114e8291047609562e5379ebc0b802090
+	!com.android.providers.media/databases/internal.db-shm f8a35724a106de578608fc7a5cbbbcb25b55ff53 c750de24418a191b00d28f5f55ec4889a9233e70
+	!com.android.providers.media/databases/internal.db-wal cd07b581ca70bb9135da150603a28cfa912e8675 cfb62fa9fdc699abb4ae68d8fbaa59b3c28f8520
+
+
+（3）android-2016-07-23/data/misc/目录下
+
+	!dhcp/dhcpcd-eth0.lease aefaab8eeb7503b527c38bf21c7c3367d17ca6a3 b3c211aece7d3c35df1c69afe0735e19d0ccc1f7
+
+	!shared_relro/libwebviewchromium32.relro 0ef12d3f08309d60870c0f9a7a43afb1c01f9eb4 3528f45575d960cce11c15263a98f21a79c0bb21
+	!shared_relro/libwebviewchromium64.relro 6fbb2e70483b4158bf701d78ac4d1cab9d1df444 f0cceaae9f36922e00a186c90942400bc2b2e726
+
+
+（4）android-2016-07-23/data/system/目录下
+
+	!appops.xml 4c161eee4694b3a2e8fd3f2eab7320781a0a9ce4 d9d90e783b6a705c70551ebbb41f9769577bf21b
+	!batterystats.bin f7a77c6bf117673f655a7742276f18bf79e91cb2 46b70d69b683cca5616eec654e37d2da34f739f9
+	!entropy.dat b4adb40300dcca5771981c7472c9693b8ca69b18 6ee4bdc8b0ffcc6739d23e05d6a0bef8e8cd9788
+	
+	+dropbox/SYSTEM_BOOT@1471358384948.txt 9415251b6025e27090a677980392766273a59fac
+
+	!locksettings.db-shm 8edbdb40fff304fe81cc1c3bd10371efaa7257d8 ae69ae76c20ca53c026a98c402f16217681d768e
+	!packages.xml e42239c0c54bb7243762db175d3e7e3e2258e286 5d6078fb0ff930366e3cd61e76a650be8bc0b15b
+	!package-usage.list 18dd280450f92366db0bba0962b52eeb45a68702 5ca7b63b1bf33b862242536f976fb5f3021468a3
+	
+	+procstats/state-2016-08-16-14-39-37.bin 84f20c941a916e6c5c838663ee8b4423fd551377
+
+	!usagestats/0/daily/1471305600000 fa4c053bce45a3d1281da3d34d74497e9673bcf8 d4c08ae7dc5b974f1c92969f830912a62a5b9ff5
+	!usagestats/0/monthly/1469664000000 b34367bed6a1d4a3dc1cff244539b3bf999c6704 0d66e10daf34d5425349f1e4976099d99d0ec8cd
+	!usagestats/0/weekly/1470873600000 436ae2a36ca2533acf369aca638d9b45befec232 893a6c9daa66e8003b3f278c56e846b9f5030982
+	!usagestats/0/yearly/1450656000000 a185a2d9618f0e4ce0a32901370c584e2b7f73e7 4b0681f0aab5af8ad3aaa08d252d0337647a345a
+
+	!users/0.xml 1d946452574204a2dfd8e8ccbe2aab11a9305062 9eb35a76a4fa7acda18424f5f8f01c3a4be1aee5
+

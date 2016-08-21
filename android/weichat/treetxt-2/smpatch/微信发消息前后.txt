@@ -1,0 +1,41 @@
+
+################## 微信发消息前后文件变更 #########################
+	
+（1）android-2016-07-23/data/data/目录下
+
+	!com.tencent.mm/cache/wakelock/wakelock_stats.bin 4d835661ea2f58dab8d68c954fadd70201e85a7e e8b59d564b2983bbbab48d66ca9ec9a96ff9aac0
+
+	+com.tencent.mm/files/kvcomm/monitordata_1843499274_17029 3db309491d83746228977890ece38a353fac61d1
+		
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/IndexMicroMsg.db 4b71e3097086b88992abcde98eb62d863c6ea449 f743982c3ed286b71f4a9d5f0fa37e6d5c3bc0ea
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.index-shm 451b5a3b3bf092c95ed7972f4fa1c480545ad325 b3eb25a9fba4c4bfe9ca86fa02aeec5ba1d557f8
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.index-wal f01dbc2d717dc7babc2013c6cdf22f0169978f2e 3b8b5e4dabbdd0829225f0e59cf09517a15743d2
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/SnsMicroMsg.db 53107719d81118fffce07e2e7f5b32e6dfe12f0a ae56dc190037a816c6f5ed3f05eb476b7a40634e
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/SnsMicroMsg.db-shm b6f8893a7f5363bf357dd4af6ca476f36b688683 245cba758811e3f56a9770d3cd60eedc004a70e6
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/SnsMicroMsg.db-wal ddc0c2c80a2674a669098ab5442f53928611b04b ceac6e2e21a461d940dbc4fc4ae8d13360d6fed7
+	
+	!com.tencent.mm/shared_prefs/mm_proc_startup.xml 453f52840d8b81b793f7876b03dbdbebf5ee098e e87a573b8b847a0aaab15af14f36ec1387cc2577
+	!com.tencent.mm/shared_prefs/preferences_remove_task.xml cc6a2c3ac2eff016f4d65f1301855e70b634e5f8 954e9f6b5648fd7ba4f9f7892a05555119645f49
+
+
+（2）android-2016-07-23/data/media/0/目录下
+
+	!tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/avatar.block.00006 419d547d45541a0f45c09d1e1e07c76bf917648c 0f382ca15de28fe95d3557115668a293704a3c39
+	!tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/avatar.block.00022 5eb836f98129799eda1ce084f3e70e59eee4f5f8 964d099288767a872ab395667247414a68c80924
+	
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.block.00000 bd87b1c4009e1f19183443ccf9bb132c65273d6f
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.block.00001 275468100072b8dc7dd6f4499d6616a391648822
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.block.00002 56e8360c429af4e453038062c7020a37eff6abb7
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.block.00003 ce3ea79484762f0bacac611795d6cc1838dc1b95
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.block.00004 b8d65bd0daeeb368f61b2984c79146181454773c
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.block.00005 f5a7e828ca1df82d924daa86470094da53543808
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.block.00006 4d95776ea531392c2086bac65f2c12d45035e286
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.block.00007 7cca225943587c38dd3b839385f879193a960f98
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sfs/sns.block.00008 6883b4e913bac1679648e12c389b49efcbfe373e
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sns/4
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sns/4/a
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sns/5
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sns/5/8
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sns/6
+	+tencent/MicroMsg/35925faa23cbe92923fedc3ae3628dad/sns/6/9
+

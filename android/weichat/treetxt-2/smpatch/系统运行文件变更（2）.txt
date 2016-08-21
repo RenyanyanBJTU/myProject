@@ -1,0 +1,97 @@
+
+###############安装微信后系统运行文件变更#######################
+
+（1）android-2016-07-23/data/backup/目录下
+
+	-pending/journal-1182085991.tmp ec5c5a6173acadb0333d8768e4366198d9f6cb9b
+	+pending/journal-2147132120.tmp ec5c5a6173acadb0333d8768e4366198d9f6cb9b
+
+
+（2）android-2016-07-23/data/data/目录下
+
+	!com.android.deskclock/shared_prefs/com.android.deskclock_preferences.xml af6342fbba924f55c7ba51cd507ad1b873ab6c8d f40fe1ab903e9c78336e5b94fe80c44ef0104039
+	!com.android.documentsui/databases/Application_database.db 2e9bb5de662189910f7bb764821c718bb15ca5b4 1e5c55b0e67f20ae567478d79b159988e7fc69c3
+	!com.android.documentsui/databases/Application_database.db-journal e2228cd96879a31b685601fdf07799397ac8854f 22b4e6421cb9a82098ab558d07ea3beb4fd0548a
+
+	!com.android.launcher3/files/launches.log 6fdda4c57886ee1f29b21aa588aebabc47dde215 31376915a37f97cad1e83233080a125f526a5ead
+
+	!com.android.providers.media/databases/external.db-shm efd95f1f9728f1afd1112b00f2fa5eca5bf7f6e0 724806a700b2856c29842d7f025f2967795b195d
+	!com.android.providers.media/databases/external.db-wal 57f21d795eaf0d8aeb968ab4ef56b6e517ed6908 400840c0c328c683c45b54e4b659772896f86cea
+	!com.android.providers.media/databases/internal.db-shm db09b4b6243d8fc8b5b581f4a486d8f5cd534819 92801e718c340294c6b5c54ebd0c720b40ef578f
+	!com.android.providers.media/databases/internal.db-wal 93f194c8403479fe332af0dfad81a7c0a8f84b65 1b23762561c5a69094aaccc83497ff9015ae1cca
+
+	!com.tencent.mm/cache/proc_auxv bf3003442626ee556bac7869e71339b64d9ee141 319fd84d5456cc331415a9ee278816fcc969133e
+
+	!com.tencent.mm/files/host/ip.ini 1f9138d396854417c9bca0c4968c59a932afc38e 96a23a80c33f3377d379f6d0273a35a7cedd9698
+	!com.tencent.mm/files/host/ipportrecords2.xml df94478af90b108577b258a97eac4166d1f76500 07328e68c3bafedfc025f1740cf082804d03d955
+	-com.tencent.mm/files/kvcomm/0_637736754_3_1471360773_27_3600_input.statistic bf1d54c5f7da8d68a68ac6f9858eafb85ab5e55b
+	-com.tencent.mm/files/kvcomm/1843499274_637736754_3_1471360807_71_3600_input.statistic e9822a8046f94dae79c8103a5c3423b58a024e79
+	+com.tencent.mm/files/kvcomm/0_637736754_3_1471360773_27_3600_ready.statistic bf1d54c5f7da8d68a68ac6f9858eafb85ab5e55b
+	+com.tencent.mm/files/kvcomm/1843499274_637736754_3_1471360807_71_3600_ready.statistic e9822a8046f94dae79c8103a5c3423b58a024e79
+	+com.tencent.mm/files/kvcomm/1843499274_637736754_3_1471365207_84_3600_input.statistic ba434270b1b06db377d3f475c97c8c87c5e9876e
+	-com.tencent.mm/files/kvcomm/key_0_637736754_3_1471360765_70_3600_input.statistic 2c9839e1af4195217f9b0122deab6d56f831379d
+	-com.tencent.mm/files/kvcomm/key_1843499274_637736754_3_1471360807_79_3600_input.statistic 3445cb031a51846f07a3d28b5d722d457a677b85
+	+com.tencent.mm/files/kvcomm/key_0_637736754_3_1471360765_70_3600_ready.statistic 2c9839e1af4195217f9b0122deab6d56f831379d
+	+com.tencent.mm/files/kvcomm/key_1843499274_637736754_3_1471360807_79_3600_ready.statistic 3445cb031a51846f07a3d28b5d722d457a677b85
+	-com.tencent.mm/files/kvcomm/reportnow_1843499274_637736754_3_1471363592_0_600_input.monitor 24b2062604472cfc439fda1827cfc7db9db7ade8
+	!com.tencent.mm/files/psk.key. c253c34ca59cdb07d51d1392479bf812c7967f8f 1ac1470513a961c17d61c93b8807fc5d42dfe8c9
+	+com.tencent.mm/files/kvcomm/reportnow_1843499274_637736754_3_1471363592_0_600_ready.monitor 24b2062604472cfc439fda1827cfc7db9db7ade8
+	+com.tencent.mm/files/kvcomm/reportnow_1843499274_637736754_3_1471365205_79_600_input.monitor 1cab088e56b9f5239f134178ce75582ca93b52d8
+
+	!com.tencent.mm/files/xlog/EXDEVICE.mmap2 4296050c3d691311202b1d1a76058e8f304df71b 95a3245f4a9d642b4e2e536334042fc55105d2c1
+	!com.tencent.mm/files/xlog/MM.mmap2 82100ccae84474171af01d7b00fcbae88063e804 b1aa7df27caf0aa8b1dac4e9c9e3532ad6cbddca
+	!com.tencent.mm/files/xlog/PUSH.mmap2 c7c0072ec0902d6fea2459150e65d0aaf55d48ae aaaff200ad182e6b9b451bb07b53e5026f461d3c
+	
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/cdn/cdninfo.txt 26993f832c333a170d74d84a5276a4ba488228cc 0e0ddf0ffc4914861a5be705d65bd99e1bcf5e13
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/cdndnsinfo/1a86a771 e950964c97eaafb6bb77ca8c4d7cfa3b71ac1512 e8773b4d6d65ddfc19b90adecda77b963932508a
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/cdndnsinfo/1a86a771app e240662da866ea1327fde2b65dc2a0a4186e06af 5acda9ad9ae7e4fe2c46bcf83f184c731ef44fb7
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/cdndnsinfo/1a86a771safec2c d416aa48e8bd65c5fc36d8e8031f656c90e8117f c7d9e2133446afca8d2d25ad33e0d3fe4befec3d
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/cdndnsinfo/1a86a771sns e240662da866ea1327fde2b65dc2a0a4186e06af 5acda9ad9ae7e4fe2c46bcf83f184c731ef44fb7
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/EnMicroMsg.db 8e3db731c21679ae729e81ec06facb275c060e4b e62d784b6e61b7c8400de57613416ec240ee4d48
+	!com.tencent.mm/MicroMsg/35925faa23cbe92923fedc3ae3628dad/EnMicroMsg.db.ini 908ace06c42f19ab0ddca9bb683f7a6bb2abd391 9d11d9fadd5e2edadf17225e562608924a13c5e8
+	!com.tencent.mm/MicroMsg/ee1da3ae2100e09165c2e52382cfe79f/EnResDown.db ddfed50c4cf868212683f3b3f25c482aa7d2efdf 42410500944f6a3514f2613999a30aa31a37cab7
+	!com.tencent.mm/MicroMsg/stepcounter.cfg ec33a84a33dfd40d9e4cce1bf7873bcba1214724 32feec05728f9f4f1675a12dc1c8d7332ad8c7bc
+	!com.tencent.mm/MicroMsg/systemInfo.cfg ec4b43ca6349cd87224fb61efae514b601dd5767 742858c5ab803c68879e194419b144205c234a9f
+	
+	!com.tencent.mm/shared_prefs/auth_info_key_prefs.xml ac56f23062521c714c804987c2896ec7710f19c2 b729a60e5a7fff1a1c448abc7ad81227f570eb88
+	!com.tencent.mm/shared_prefs/notify_key_prefwxid_qd7pn37xv6hc22.xml a62ec176fabeae6194af5c6fd2230811c6d564e3 05f7b407abdacd4bd44d77450d69e331bde57537
+	!com.tencent.mm/shared_prefs/push_proc_startup.xml abde4ccae482faa2b81c5596ad70a4b823b72d61 e4c8dbf413b3a1622fc1a263b2739db20996aa73
+
+	
+（3）android-2016-07-23/data/media/0/目录下
+	
+	!tencent/MicroMsg/xlog/EXDEVICE_20160816.xlog 13d412f1e3a7ff190285b26821df21b503771a09 f6a2da9fb4a8493943e39e4c5bddeaf2f17aa493
+	!tencent/MicroMsg/xlog/MM_20160816.xlog 8da96dd18391f9287bcc41b107d400540116d8a6 93ba8b8b9026d5e3574d111f82c53acd86a35102
+	!tencent/MicroMsg/xlog/PUSH_20160816.xlog ca95e5b8b1f8ce31d71a20b273862c757fc9457c b86a56e676cdd15e9354b9b92b7c6a39590bf92b
+
+
+（4）android-2016-07-23/data/misc/目录下
+
+	!dhcp/dhcpcd-eth0.lease fc5de1637bd3dda05a13c02a96c1075bbeec362b 01ce37f6679d7852ef2a17f4eeb22f8f5bfbded1
+
+	!net/netd_pid 4902e4c0511d08bd54b069222bae5a2587964fa4 38f08625014a4a1ab414793f2fcebfea621ce9d0
+	!shared_relro/libwebviewchromium32.relro b80a0531f643ccfabb351a737e70a2785a4257ed 74071870720573cfee70a2741d50748b15de3c58
+	!shared_relro/libwebviewchromium64.relro afd6aae0b14c4463d681c835aa9254e4135e3648 247d61729eef6ac741343640709b39e81ea3d16d
+
+
+（5）android-2016-07-23/data/system/目录下
+
+	!appops.xml 88228fe3c7ce56ca82f05ec982b36f458822ccfd 25b5fdcd5e71b620c00a24e72306fecdb0585db9
+	!batterystats.bin 4ff89082e031f7b5f8bc146f14e5ed763eb1dc09 85d90c6f741dab09b28f87ebe3b6d3703d10bbf0
+	!entropy.dat 198efc14fef6871e1d5cd40d5a88d813dbeaf247 0b17f0fee44c9ae64b4bd9e27b1e830ecc384ea7
+	
+	+dropbox/SYSTEM_BOOT@1471365207683.txt 9415251b6025e27090a677980392766273a59fac
+
+	!packages.xml 11fc5f02a843af3c56d437c9698f458513422326 b3365319787bfa838b582a2a58d98b3426c2aa0f
+	!package-usage.list d11de8a05b32f20c875e84475a4a21a20e66e9a8 90eeb9ce059953768f0e82275cf244bea7561faa
+	
+	-procstats/state-2016-08-16-14-35-05.bin 07da1cb62d074f3fe9ecf302954a67fe7037af2e
+	+procstats/state-2016-08-16-16-33-17.bin a08ad236873a08f639dbfd78b26c133af5821673
+
+	!usagestats/0/daily/1471305600000 bc8239454b6f2e8736c974593cafa40cc50ebd6e 20e259055cda9b9fea17a8136f339b8d502b8a58
+	!usagestats/0/monthly/1469664000000 ca6edb3d7a039a876967e1f18fe5e5101b6ac4c3 90b3e26eb58ad267eb258caa6fa29f302ffc1c3c
+	!usagestats/0/weekly/1470873600000 c97ddf6fbf333f155daa2f145d095e45df7e3cc6 c2649953a8dd3113a6f723dabbdd858acca0e5f9
+	!usagestats/0/yearly/1450656000000 739c6b59112b14a3c07274ef3137a4f517e022b0 5a7b88479a4a8a70d8d868647cb0c2fb277b999e
+
+	!users/0.xml 7060004517010140b38833c4e601f9fb2d80e5dd 8a250e3cf52ede44cabba3633b075419c6bca845
+
