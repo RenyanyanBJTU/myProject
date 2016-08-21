@@ -5,7 +5,8 @@ shellscript：存放运行的脚本(mergesh.sh 使用bash命令运行)
 stat* ： 存放每次运行脚本后生成的中间txt文件，包含目录树等的txt
 patchdir：存放diff比较生成的patch文件
 mergepatch : 存放修改合并后的patch文件
-smpatch ：存放精简后的只包含变更项的mergepatch目录下的patch文件以及目录分析的txt文件
+smpatch ：存放精简后的只包含变更项的mergepatch目录下的patch文件
+doc : 目录分析的txt文件
 
 *文件或者文件夹后面的数字解释：
 
