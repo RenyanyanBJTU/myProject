@@ -103,25 +103,3 @@ fi
 #delete temp directory in /mnt
 sudo rm -R /mnt/$dirname
 
-#get $1 file system
-var=`sudo find $dirname/ -name "ramdisk.img" -exec dirname {} \;`
-cd $var
-sudo mkdir ramdisk
-sudo cp ramdisk.img ramdisk/
-cd ramdisk
-sudo mv ramdisk.img ramdisk.img.gz
-sudo gunzip ramdisk.img.gz 
-sudo cpio -i -F ramdisk.img
-if [ $? -ne 0 ];then
-  echo "get $1 ramdisk faild.program running stoped."
-  exit 1
-else
- echo "get $1 ramdisk successful."
-fi
-sudo rm ramdisk.img
-
-cd ../../.. 
-#back to current dir,there need improve,because it's not sure the dir is three layer.
-
-
-
